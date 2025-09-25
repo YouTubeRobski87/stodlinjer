@@ -1,4 +1,11 @@
 /* Grundläggande styling */
+/* ===========================
+   Grundläggande styling
+=========================== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -10,10 +17,23 @@ body {
 header {
   background-color: #4a90e2;
   color: white;
-  padding: 20px;
+  padding: 25px 20px;
   text-align: center;
 }
 
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* ===========================
+   Navigation
+=========================== */
 nav ul.menu {
   list-style: none;
   padding: 0;
@@ -38,18 +58,20 @@ nav ul.menu li a:hover {
   color: #ffcc00;
 }
 
+/* ===========================
+   Huvudinnehåll
+=========================== */
 main {
   padding: 20px;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
+section {
+  margin-bottom: 40px;
 }
 
-/* Stödlinjer styling */
+/* ===========================
+   Stödlinjer styling
+=========================== */
 .stodlinjer {
   padding: 20px;
   margin: 20px 0;
@@ -102,13 +124,16 @@ footer {
 .kategori a {
   text-decoration: underline;
   color: #333;
+  transition: color 0.3s;
 }
 
 .kategori a:hover {
-  color: #ffcc00;
+  color: #e67e22;
 }
 
-/* Telefonknappar */
+/* ===========================
+   Telefonknappar
+=========================== */
 .kategori a[href^="tel"] {
   display: inline-block;
   background-color: #4a90e2;
@@ -117,14 +142,29 @@ footer {
   margin: 2px 0;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .kategori a[href^="tel"]:hover {
   background-color: #357ab7;
+  transform: translateY(-2px);
 }
 
-/* RESPONSIV DESIGN */
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+
+/* ===========================
+   RESPONSIV DESIGN
+=========================== */
 @media (max-width: 600px) {
   nav ul.menu {
     flex-direction: column;
@@ -147,4 +187,15 @@ footer {
   .kategori li {
     font-size: 14px;
   }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+}
+
+
 }
