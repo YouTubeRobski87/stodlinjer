@@ -1,0 +1,150 @@
+/* Grundläggande styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul.menu li {
+  margin: 0 15px;
+}
+
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul.menu li a:hover {
+  color: #ffcc00;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Stödlinjer styling */
+.stodlinjer {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.stodlinjer h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a90e2;
+}
+
+.kategori {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.kategori h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Färg per kategori */
+.kategori.psykisk {
+  background-color: #e6f2ff;
+  border: 2px solid #4a90e2;
+}
+
+.kategori.barn {
+  background-color: #fff0e6;
+  border: 2px solid #ff9900;
+}
+
+.kategori.beroende {
+  background-color: #e6ffe6;
+  border: 2px solid #33cc33;
+}
+
+.kategori ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kategori li {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.kategori a {
+  text-decoration: underline;
+  color: #333;
+}
+
+.kategori a:hover {
+  color: #ffcc00;
+}
+
+/* Telefonknappar */
+.kategori a[href^="tel"] {
+  display: inline-block;
+  background-color: #4a90e2;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.kategori a[href^="tel"]:hover {
+  background-color: #357ab7;
+}
+
+/* RESPONSIV DESIGN */
+@media (max-width: 600px) {
+  nav ul.menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul.menu li {
+    margin: 10px 0;
+  }
+
+  .kategori {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .kategori h3 {
+    font-size: 18px;
+  }
+
+  .kategori li {
+    font-size: 14px;
+  }
+}
