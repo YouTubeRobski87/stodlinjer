@@ -2,6 +2,9 @@
 /* ===========================
    Grundläggande styling
 =========================== */
+/* ===========================
+   Grundläggande styling
+=========================== */
 html {
   scroll-behavior: smooth;
 }
@@ -15,10 +18,13 @@ body {
 }
 
 header {
-  background-color: #4a90e2;
+  background: linear-gradient(90deg, #4a90e2, #357ab7);
   color: white;
-  padding: 25px 20px;
+  padding: 30px 20px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 header h1 {
@@ -37,7 +43,7 @@ header p {
 nav ul.menu {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 15px 0 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -51,11 +57,12 @@ nav ul.menu li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 nav ul.menu li a:hover {
   color: #ffcc00;
+  transform: translateY(-2px);
 }
 
 /* ===========================
@@ -73,26 +80,32 @@ section {
    Stödlinjer styling
 =========================== */
 .stodlinjer {
-  padding: 20px;
+  padding: 25px;
   margin: 20px 0;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .stodlinjer h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #4a90e2;
 }
 
 .kategori {
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.kategori:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
 }
 
 .kategori h3 {
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* Färg per kategori */
@@ -117,7 +130,7 @@ section {
 }
 
 .kategori li {
-  padding: 5px 0;
+  padding: 6px 0;
   font-size: 16px;
 }
 
@@ -138,12 +151,12 @@ section {
   display: inline-block;
   background-color: #4a90e2;
   color: white;
-  padding: 5px 10px;
-  margin: 2px 0;
-  border-radius: 5px;
+  padding: 6px 12px;
+  margin: 3px 0;
+  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 }
 
 .kategori a[href^="tel"]:hover {
@@ -160,6 +173,8 @@ footer {
   text-align: center;
   padding: 20px 10px;
   font-size: 14px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 /* ===========================
@@ -176,7 +191,7 @@ footer {
   }
 
   .kategori {
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 15px;
   }
 
@@ -199,3 +214,4 @@ footer {
 
 
 }
+
