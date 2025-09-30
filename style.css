@@ -1,76 +1,136 @@
-:root {
-  --bg:#f7f8fb;
-  --card:#ffffff;
-  --accent:#0b74da;
-  --muted:#6b7280;
-  --radius:12px;
-  --max-width:980px;
-  --gap:18px;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-}
-* { box-sizing:border-box; margin:0; padding:0; }
+/* Grundinställningar */
 body {
-  background:linear-gradient(180deg,var(--bg),#fff);
-  color:#111827;
-  line-height:1.5;
-  padding:32px 16px;
-  display:flex;
-  justify-content:center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
 }
-.wrap { width:100%; max-width:var(--max-width); }
 
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
 header {
-  display:flex; justify-content:space-between; align-items:center;
-  margin-bottom:24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.brand { display:flex; align-items:center; gap:12px; }
-.logo {
-  width:46px; height:46px; border-radius:10px;
-  background:linear-gradient(135deg,var(--accent),#7cc4ff);
-  display:flex; align-items:center; justify-content:center;
-  color:white; font-weight:700;
-}
-h1 { font-size:20px; margin:0; }
-.lead { color:var(--muted); font-size:14px; }
 
-nav { display:flex; gap:8px; }
-.btn {
-  padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:600;
-  border:1px solid transparent; background:transparent;
+.brand h1 {
+  margin: 0;
+  font-size: 1.8rem;
 }
-.btn.primary { background:var(--accent); color:#fff; }
-.btn.ghost { border-color:rgba(0,0,0,.06); }
 
-.hero { display:grid; grid-template-columns:1fr; gap:16px; margin-bottom:22px; }
+.lead {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Navigation */
+nav button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+button.ghost {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+/* Card-styling */
 .card {
-  background:var(--card); border-radius:var(--radius);
-  padding:18px; box-shadow:0 6px 18px rgba(16,24,40,0.06);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  margin-bottom: 20px;
 }
-.section-title { display:flex; justify-content:space-between; margin-bottom:8px; }
-.section-title h2 { font-size:16px; }
-.muted { color:var(--muted); font-size:13px; }
 
-ul.links { list-style:none; display:grid; gap:12px; }
-ul.links li {
-  display:flex; justify-content:space-between; align-items:center;
-  padding:12px; border-radius:10px;
-  background:linear-gradient(180deg,#fbfcff,#fff);
+/* Kontaktlistor */
+.links li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
 }
-ul.links li a { color:var(--accent); font-weight:600; text-decoration:none; }
-.contact-info { flex:1; }
-.hours { font-size:12px; color:var(--muted); margin-top:6px; }
 
-.quicklinks { list-style:none; display:flex; flex-direction:column; gap:10px; }
-.quicklinks a { color:var(--accent); text-decoration:none; }
+.contact-info div {
+  margin-bottom: 4px;
+}
 
+.hours {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Snabblänkar */
+.quicklinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quicklinks li {
+  margin-bottom: 8px;
+}
+
+/* Karta */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+/* Footer */
 footer {
-  margin-top:18px; color:var(--muted); font-size:13px; text-align:center;
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  font-size: 0.9rem;
 }
 
-@media(min-width:760px) {
-  .hero { grid-template-columns:2fr 1fr; }
-}
-@media(min-width:1000px) {
-  body { padding:48px; }
-  .wrap { max-width:1100px; }
+/* Responsivitet */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav button {
+    margin: 5px 0 0 0;
+  }
+
+  .links li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links li div a {
+    margin-top: 4px;
+  }
 }

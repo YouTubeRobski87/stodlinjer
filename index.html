@@ -1,16 +1,12 @@
 <!doctype html>
 <html lang="sv">
 <head>
-  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Stödlinjer</title>
   <meta name="description" content="En enkel, tillgänglig och responsiv sida för stödlinjer och kontaktvägar">
 
-  <!-- Versionerad CSS för att alltid hämta senaste ändringarna -->
   <link rel="stylesheet" href="style.css?v=1">
-
-  <!-- Leaflet CSS (för karta) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
@@ -24,7 +20,6 @@
           <p class="lead">Snabb överblick över kontaktvägar och hjälp</p>
         </div>
       </div>
-
       <nav aria-label="Huvudnavigation">
         <button class="btn ghost" onclick="location.href='#info'">Info</button>
         <button class="btn primary" onclick="location.href='#kontakta'">Kontakta oss</button>
@@ -39,7 +34,6 @@
             <h2 id="akuta-title">Akuta kontaktvägar</h2>
             <span class="muted">Öppet dygnet runt</span>
           </div>
-
           <ul class="links" role="list">
             <li>
               <div class="contact-info">
@@ -48,7 +42,6 @@
               </div>
               <div><a href="tel:112">Ring 112</a></div>
             </li>
-
             <li>
               <div class="contact-info">
                 <div><strong>Mind — självmordslinjen</strong></div>
@@ -57,25 +50,17 @@
               </div>
               <div><a href="tel:90101">Ring 90101</a></div>
             </li>
-
-           <li>
- <div class="contact-info">
-  <div><strong>Jourhavande Medmänniska</strong></div>
-  <div class="meta">Samtals- och chattstöd</div>
-  <div class="hours"><strong>Öppettider:</strong> Alla dagar 21:00–06:00, Chatten 21:00–24:00</div>
-</div>
-<div>
-  <!-- Telefonlänk -->
-  <a href="tel:087021680">Ring 08-7021680</a>
-  <br>
-  <!-- Chatt-länk -->
-  <a href="https://www.jourhavande-medmanniska.se/" target="_blank">
-    Chatta med oss direkt
-  </a>
-</div>
-</li>
-
-
+            <li>
+              <div class="contact-info">
+                <div><strong>Jourhavande Medmänniska</strong></div>
+                <div class="meta">Samtals- och chattstöd</div>
+                <div class="hours"><strong>Öppettider:</strong> Alla dagar 21:00–06:00, Chatten 21:00–24:00</div>
+              </div>
+              <div>
+                <a href="tel:087021680">Ring 08-7021680</a><br>
+                <a href="https://www.jourhavande-medmanniska.se/" target="_blank">Chatta med oss direkt</a>
+              </div>
+            </li>
             <li>
               <div class="contact-info">
                 <div><strong>Jourhavande präst</strong></div>
@@ -86,91 +71,93 @@
             </li>
           </ul>
         </article>
-
-        <aside class="card">
-          <div class="section-title">
-            <h2>Snabblänkar</h2>
-            <span class="muted">Praktiska länkar</span>
-          </div>
-          <nav aria-label="Snabblänkar">
-            <ul class="quicklinks">
-              <li><a href="#info">Om sidan</a></li>
-              <li><a href="#kontakta">Kontakta</a></li>
-              <li><a href="#faq">Vanliga frågor</a></li>
-            </ul>
-          </nav>
-        </aside>
       </section>
-<section class="card">
-  <div class="section-title">
-    <h2>Mansjourer</h2>
-    <span class="muted">Kontakta lokala Mansjourer direkt</span>
+
+      <!-- Mansjourer -->
+      <section class="card">
+        <div class="section-title">
+          <h2>Mansjourer</h2>
+          <span class="muted">Kontakta lokala Mansjourer direkt</span>
+        </div>
+        <ul class="links" role="list">
+          <li>
+            <div class="contact-info">
+              <div><strong>Göteborg Mansjour</strong></div>
+              <div class="meta">Samtalsstöd</div>
+              <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
+            </div>
+            <div>
+              <a href="tel:031130025">Ring 031-13 00 25</a><br>
+              <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-info">
+              <div><strong>Stockholm Mansjour</strong></div>
+              <div class="meta">Samtalsstöd</div>
+              <div class="hours"><strong>Öppettider:</strong> 12–14 och 18–20 varje dag (lördag 12–14)</div>
+            </div>
+            <div>
+              <a href="tel:08303020">Ring 08-30 30 20</a><br>
+              <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-info">
+              <div><strong>Uppsala Mansjour</strong></div>
+              <div class="meta">Samtalsstöd</div>
+              <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
+            </div>
+            <div>
+              <a href="tel:018505033">Ring 018-50 50 33</a><br>
+              <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-info">
+              <div><strong>Malmö Mansjour</strong></div>
+              <div class="meta">Samtalsstöd</div>
+              <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
+            </div>
+            <div>
+              <a href="tel:040123456">Ring 040-12 34 56</a><br>
+              <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Karta -->
+        <div id="map" style="height:400px; border-radius:12px; margin-top:12px;"></div>
+      </section>
+
+      <!-- Info -->
+      <section id="info" class="card">
+        <h2>Om Stödlinjer</h2>
+        <p class="muted">Denna sida samlar viktiga telefonnummer och länkar. Informationen ersätter inte professionell vård eller akut hjälp.</p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="card">
+        <h2>Vanliga frågor</h2>
+        <details>
+          <summary>Hur kan jag få snabb hjälp?</summary>
+          <p class="muted">Vid omedelbar fara ring 112. För psykisk akuthjälp: kontakta Mind, jourhavande människa eller präst.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2025 Stödlinjer · Inga personuppgifter sparas.
+    </footer>
   </div>
 
-  <ul class="links" role="list">
-    <li>
-      <div class="contact-info">
-        <div><strong>Göteborg Mansjour</strong></div>
-        <div class="meta">Samtalsstöd</div>
-        <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
-      </div>
-      <div>
-        <a href="tel:031130025">Ring 031-13 00 25</a><br>
-        <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="contact-info">
-        <div><strong>Stockholm Mansjour</strong></div>
-        <div class="meta">Samtalsstöd</div>
-        <div class="hours"><strong>Öppettider:</strong> 12–14 och 18–20 varje dag (lördag 12–14)</div>
-      </div>
-      <div>
-        <a href="tel:08303020">Ring 08-30 30 20</a><br>
-        <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="contact-info">
-        <div><strong>Uppsala Mansjour</strong></div>
-        <div class="meta">Samtalsstöd</div>
-        <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
-      </div>
-      <div>
-        <a href="tel:018505033">Ring 018-50 50 33</a><br>
-        <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
-      </div>
-    </li>
-
-    <li>
-      <div class="contact-info">
-        <div><strong>Malmö Mansjour</strong></div>
-        <div class="meta">Samtalsstöd</div>
-        <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
-      </div>
-      <div>
-        <a href="tel:040123456">Ring 040-12 34 56</a><br>
-        <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
-      </div>
-    </li>
-  </ul>
-
-  <!-- Kartan -->
-  <div id="map" style="height:400px; border-radius:12px; margin-top:12px;"></div>
-
-  <!-- Leaflet JS med versionering för att alltid ladda senaste -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js?v=1"></script>
   <script>
-    // Initiera karta
     const map = L.map('map');
-
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    // Mansjourer och lokala stödcenter med koordinater
     const locations = [
       {name: "Göteborg Mansjour", lat: 57.7089, lon: 11.9746, tel: "031-13 00 25", hours: "Se hemsidan", url: "https://goteborg.mansjouren.se"},
       {name: "Stockholm Mansjour", lat: 59.3293, lon: 18.0686, tel: "08-30 30 20", hours: "12–14 och 18–20 varje dag (lördag 12–14)", url: "https://www.mansjouren.se/kontakt/"},
@@ -178,147 +165,15 @@
       {name: "Malmö Mansjour", lat: 55.6050, lon: 13.0038, tel: "040-12 34 56", hours: "Se hemsidan", url: "https://malmo.mansjouren.se"}
     ];
 
-    const markers = locations.map(loc => {
-      return L.marker([loc.lat, loc.lon]).bindPopup(`
-        <strong>${loc.name}</strong><br>
-        ${loc.tel ? "Telefon: " + loc.tel + "<br>" : ""}
-        ${loc.hours ? "Öppettider: " + loc.hours + "<br>" : ""}
-        ${loc.url ? `<a href="${loc.url}" target="_blank">Besök hemsidan</a>` : ""}
-      `);
-    });
+    const markers = locations.map(loc => L.marker([loc.lat, loc.lon]).bindPopup(`
+      <strong>${loc.name}</strong><br>
+      ${loc.tel ? "Telefon: " + loc.tel + "<br>" : ""}
+      ${loc.hours ? "Öppettider: " + loc.hours + "<br>" : ""}
+      ${loc.url ? `<a href="${loc.url}" target="_blank">Besök hemsidan</a>` : ""}
+    `));
 
-    const group = L.featureGroup(markers);
-    group.addTo(map);
-    map.fitBounds(group.getBounds().pad(0.2));
-  </script>
-</section>
-      <!-- Info -->
-      <section id="info" class="card">
-        <h2>Om Stödlinjer</h2>
-        <p class="muted">Denna sida samlar viktiga telefonnummer och länkar. Informationen ersätter inte professionell vård eller akut hjälp.</p>
-      </section>
-
-      <!-- Lokalt stödcenter med karta -->
-      <section id="kontakta" class="card">
-        <h2>Lokalt stödcenter & Mansjourer</h2>
-        <p class="muted">Klicka på markörerna för kontaktinfo och öppettider</p>
-        <div id="map" style="height:400px; border-radius:12px; margin-top:12px;"></div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" class="card">
-        <h2>Vanliga frågor</h2>
-        <details>
-          <summary>Hur kan jag få snabb hjälp?</summary>
-          <p class="muted">Vid omedelbar fara ring 112. För psykisk akuthjälp: kontakta Mind, jourhavande människa eller präst.</p>
-        </details>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 Stödlinjer · Inga personuppgifter sparas.
-    </footer>
-  </div>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // Initiera karta
-    const map = L.map('map');
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Mansjourer och lokala stödcenter
-    const locations = [
-      {name: "Stockholm Mansjour", lat: 59.3293, lon: 18.0686, tel: "08-30 30 20", hours: "12–14 och 18–20 varje dag (lördag 12–14)", url: "https://www.mansjouren.se/kontakt/"},
-      {name: "Uppsala Mansjour", lat: 59.8586, lon: 17.6389, tel: "018-50 50 33", hours: "Se hemsidan", url: "https://uppsalamansjour.se"},
-      {name: "Karlstad Mansjour", lat: 59.3793, lon: 13.5030, tel: "054-15 20 85", hours: "Se hemsidan", url: "#"},
-      {name: "Göteborg Mansjour", lat: 57.7089, lon: 11.9746, tel: "031-13 00 25", hours: "Se hemsidan", url: "https://goteborg.mansjouren.se"},
-      {name: "Malmö Mansjour", lat: 55.6050, lon: 13.0038, tel: "040-12 34 56", hours: "Se hemsidan", url: "https://malmo.mansjouren.se"},
-      {name: "Lokalt stödcenter Göteborg", lat: 57.7089, lon: 11.9746, tel: "", hours: "", url: "#"}
-    ];
-
-    const markers = locations.map(loc => {
-      return L.marker([loc.lat, loc.lon]).bindPopup(`
-        <strong>${loc.name}</strong><br>
-        ${loc.tel ? "Telefon: " + loc.tel + "<br>" : ""}
-        ${loc.hours ? "Öppettider: " + loc.hours + "<br>" : ""}
-        ${loc.url && loc.url !== "#" ? `<a href="${loc.url}" target="_blank">Besök hemsidan</a>` : ""}
-      `);
-    });
-
-    const group = L.featureGroup(markers);
-    group.addTo(map);
-    map.fitBounds(group.getBounds().pad(0.2));
-  </script>
-</body>
-</html>
-
-        </aside>
-      </section>
-
-      <!-- Info -->
-      <section id="info" class="card">
-        <h2>Om Stödlinjer</h2>
-        <p class="muted">Denna sida samlar viktiga telefonnummer och länkar. Informationen ersätter inte professionell vård eller akut hjälp.</p>
-      </section>
-
-      <!-- Lokalt stödcenter med karta -->
-      <section id="kontakta" class="card">
-        <h2>Lokalt stödcenter & Mansjourer</h2>
-        <p class="muted">Klicka på markörerna för kontaktinfo och öppettider</p>
-        <div id="map" style="height:400px; border-radius:12px; margin-top:12px;"></div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="faq" class="card">
-        <h2>Vanliga frågor</h2>
-        <details>
-          <summary>Hur kan jag få snabb hjälp?</summary>
-          <p class="muted">Vid omedelbar fara ring 112. För psykisk akuthjälp: kontakta Mind, jourhavande människa eller präst.</p>
-        </details>
-      </section>
-    </main>
-
-    <footer>
-      &copy; 2025 Stödlinjer · Inga personuppgifter sparas.
-    </footer>
-  </div>
-
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // Initiera karta
-    const map = L.map('map');
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Mansjourer och lokala stödcenter
-    const locations = [
-      {name: "Stockholm Mansjour", lat: 59.3293, lon: 18.0686, tel: "08-30 30 20", hours: "12–14 och 18–20 varje dag (lördag 12–14)", url: "https://www.mansjouren.se/kontakt/"},
-      {name: "Göteborg Mansjour", lat: 57.7089, lon: 11.9746, tel: "031-13 00 25", hours: "Se hemsidan", url: "https://goteborg.mansjouren.se"},
-      {name: "Uppsala Mansjour", lat: 59.8586, lon: 17.6389, tel: "018-50 50 33", hours: "Se hemsidan", url: "https://uppsalamansjour.se"},
-      {name: "Karlstad Mansjour", lat: 59.3793, lon: 13.5030, tel: "054-15 20 85", hours: "Se hemsidan", url: "#"},
-      {name: "Malmö Mansjour", lat: 55.6050, lon: 13.0038, tel: "040-12 34 56", hours: "Se hemsidan", url: "https://malmo.mansjouren.se"},
-      {name: "Lokalt stödcenter Göteborg", lat: 57.7089, lon: 11.9746, tel: "", hours: "", url: "#"}
-    ];
-
-    const markers = locations.map(loc => {
-      return L.marker([loc.lat, loc.lon]).bindPopup(`
-        <strong>${loc.name}</strong><br>
-        ${loc.tel ? "Telefon: " + loc.tel + "<br>" : ""}
-        ${loc.hours ? "Öppettider: " + loc.hours + "<br>" : ""}
-        ${loc.url && loc.url !== "#" ? `<a href="${loc.url}" target="_blank">Besök hemsidan</a>` : ""}
-      `);
-    });
-
-    const group = L.featureGroup(markers);
-    group.addTo(map);
-    map.fitBounds(group.getBounds().pad(0.2));
+    L.featureGroup(markers).addTo(map);
+    map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
   </script>
 </body>
 </html>
