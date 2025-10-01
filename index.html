@@ -168,43 +168,113 @@
         <h2>Vanliga frågor</h2>
         <details>
           <summary>Hur kan jag få snabb hjälp?</summary>
-          <p class="muted">Vid omedelbar fara ring 112. För psykisk akuthjälp: kontakta Mind, Jourhavande Medmänniska eller präst.</p>
-        </details>
-      </section>
+          <p class="muted">Vid omedelbar fara ring 1<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stödlinjer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
 
-    </main>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">SL</div>
+      <div class="brand-text">
+        <h1>Stödlinjer</h1>
+        <p class="lead">Snabb överblick över kontaktvägar och hjälp</p>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-      &copy; 2025 Stödlinjer · Inga personuppgifter sparas.
-    </footer>
-  </div>
+  <!-- Stödlinjer -->
+  <section id="stodlinjer">
+    <h2>Stödlinjer och organisationer</h2>
+    <ul class="links">
+      <li class="card-link">
+        <h3>Killar.se – Stöd för unga killar</h3>
+        <p class="muted">Öppettider: Alla dagar, dygnet runt</p>
+        🌐 <a href="https://findahelpline.com/organizations/killar-se" target="_blank">Besök hemsidan</a>
+      </li>
+      <li class="card-link">
+        <h3>BRIS – Barnens rätt i samhället</h3>
+        <p class="muted">Öppettider: Alla dagar, dygnet runt</p>
+        🌐 <a href="https://findahelpline.com/organizations/bris-02156dec-b66a-4835-a270-753d53495d68" target="_blank">Besök hemsidan</a>
+      </li>
+      <li class="card-link">
+        <h3>SPES – För efterlevande vid suicid</h3>
+        <p class="muted">Öppettider: Alla dagar, dygnet runt</p>
+        🌐 <a href="https://findahelpline.com/organizations/spes-for-survivors-of-suicide-loss" target="_blank">Besök hemsidan</a>
+      </li>
+      <li class="card-link">
+        <h3>Kriscentrum för män (Göteborg)</h3>
+        <p class="muted">Öppettider: Kontakta direkt</p>
+        🌐 <a href="https://goteborg.se/wps/portal/enhetssida/kriscentrum-for-man/kontakt" target="_blank">Besök hemsidan</a>
+      </li>
+    </ul>
+  </section>
 
-  <!-- Leaflet JS för karta -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js?v=1"></script>
-  <script>
-    const map = L.map('map');
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+  <!-- Mansjourer -->
+  <section id="mansjourer">
+    <div class="section-title">
+      <h2>Mansjourer</h2>
+      <span class="muted">Kontakt för lokala Mansjourer direkt</span>
+    </div>
+    <ul class="links">
+      <li>
+        <div class="contact-info">
+          <div><strong>Göteborg Mansjour</strong></div>
+          <div class="meta">Samtalsstöd</div>
+          <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
+        </div>
+        <div>
+          📞 <a href="tel:031130025">031-13 00 25</a><br>
+          🌐 <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
+        </div>
+      </li>
+      <li>
+        <div class="contact-info">
+          <div><strong>Stockholm Mansjour</strong></div>
+          <div class="meta">Samtalsstöd</div>
+          <div class="hours"><strong>Öppettider:</strong> 12–14 och 18–20 varje dag (lördag 12–14)</div>
+        </div>
+        <div>
+          📞 <a href="tel:08303020">08-30 30 20</a><br>
+          🌐 <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
+        </div>
+      </li>
+      <li>
+        <div class="contact-info">
+          <div><strong>Uppsala Mansjour</strong></div>
+          <div class="meta">Samtalsstöd</div>
+          <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
+        </div>
+        <div>
+          📞 <a href="tel:018505033">018-50 50 33</a><br>
+          🌐 <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
+        </div>
+      </li>
+      <li>
+        <div class="contact-info">
+          <div><strong>Malmö Mansjour</strong></div>
+          <div class="meta">Samtalsstöd</div>
+          <div class="hours"><strong>Öppettider:</strong> Se hemsidan</div>
+        </div>
+        <div>
+          📞 <a href="tel:040123456">040-12 34 56</a><br>
+          🌐 <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-    const locations = [
-      {name: "Göteborg Mansjour", lat: 57.7089, lon: 11.9746, tel: "031-13 00 25", hours: "Se hemsidan", url: "https://goteborg.mansjouren.se"},
-      {name: "Stockholm Mansjour", lat: 59.3293, lon: 18.0686, tel: "08-30 30 20", hours: "12–14 och 18–20 varje dag (lördag 12–14)", url: "https://www.mansjouren.se/kontakt/"},
-      {name: "Uppsala Mansjour", lat: 59.8586, lon: 17.6389, tel: "018-50 50 33", hours: "Se hemsidan", url: "https://uppsalamansjour.se"},
-      {name: "Malmö Mansjour", lat: 55.6050, lon: 13.0038, tel: "040-12 34 56", hours: "Se hemsidan", url: "https://malmo.mansjouren.se"}
-    ];
-
-    const markers = locations.map(loc => L.marker([loc.lat, loc.lon]).bindPopup(`
-      <strong>${loc.name}</strong><br>
-      ${loc.tel ? "Telefon: " + loc.tel + "<br>" : ""}
-      ${loc.hours ? "Öppettider: " + loc.hours + "<br>" : ""}
-      ${loc.url ? `<a href="${loc.url}" target="_blank">Besök hemsidan</a>` : ""}
-    `));
-
-    L.featureGroup(markers).addTo(map);
-    map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
-  </script>
-
+  <footer>
+    &copy; 2025 Stödlinjer · Inga personuppgifter sparas.
+  </footer>
+</div>
 </body>
 </html>
 
