@@ -233,21 +233,23 @@ footer {
   .card-link {
     width: 100%;
 /* ---------- Stödlinjer och organisationer ---------- */
+/* ---------- Stödlinjer och organisationer (vänsterjusterad) ---------- */
 #stodlinjer {
   margin: 40px 20px;
-  text-align: left; /* vänsterjusterar rubrik */
+  text-align: left; /* rubrik och text vänsterställd */
 }
 
 #stodlinjer h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 #stodlinjer .links {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start; /* vänsterjusterar korten */
+  align-items: flex-start; /* korten vänsterställda */
 }
 
 .card-link {
@@ -255,8 +257,8 @@ footer {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
-  margin: 0;       /* tar bort auto-marginal */
+  text-align: left; /* text i korten vänsterställd */
+  margin: 0;       /* tar bort centrering */
   width: 100%;
   max-width: 450px;
 }
@@ -277,7 +279,6 @@ footer {
   background-color: #005fa3;
 }
 
-/* Text för öppettider */
 .card-link .muted {
   color: #666;
   font-size: 0.9rem;
@@ -291,7 +292,9 @@ footer {
 }
 
 
+
 }
+
 
 
 
