@@ -75,6 +75,15 @@
       <section id="stodlinjer">
 <section id="stodlinjer">
   <h2>Stödlinjer och organisationer</h2>
+
+  <!-- Uppdatera-knappen -->
+  <div id="refresh">
+    <button onclick="location.reload()">
+      🔄 Uppdatera sidan
+    </button>
+  </div>
+
+  <!-- Länkarna -->
   <div class="links">
     <a href="https://findahelpline.com/organizations/killar-se" target="_blank" class="btn">Killar.se – Stöd för unga killar</a>
     <a href="https://findahelpline.com/organizations/bris-02156dec-b66a-4835-a270-753d53495d68" target="_blank" class="btn">BRIS – Barnens rätt i samhället</a>
@@ -91,6 +100,23 @@
   #stodlinjer h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
+  }
+  #refresh {
+    margin: 15px 0 30px 0;
+  }
+  #refresh button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  #refresh button:hover {
+    background-color: #218838;
   }
   #stodlinjer .links {
     display: flex;
@@ -225,5 +251,6 @@
   </script>
 </body>
 </html>
+
 
 
