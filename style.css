@@ -88,30 +88,22 @@ button.ghost {
 }
 
 /* Kontaktlistor */
-.links li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.contact-info div {
-  margin-bottom: 4px;
-}
-
-.hours {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-a {
-  color: #007bff;
+/* Lägg under rad 91 i style.css */
+.links a {
+  display: block;
+  margin: 10px 0;
+  padding: 12px 20px;
+  background-color: #007acc;
+  color: #fff;
   text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.links a:hover {
+  background-color: #005fa3;
 }
 
 /* Telefon- och webblänkar i kontaktlistor */
@@ -168,3 +160,4 @@ footer {
     margin-top: 4px;
   }
 }
+
