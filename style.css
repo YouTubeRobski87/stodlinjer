@@ -1,4 +1,4 @@
-/* Grundinställningar */
+/* ---------- Grundinställningar ---------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,7 +13,7 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* ---------- Header ---------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -52,7 +52,7 @@ header {
   color: #666;
 }
 
-/* Navigation */
+/* ---------- Navigation ---------- */
 nav button {
   margin-left: 10px;
   padding: 8px 16px;
@@ -72,7 +72,7 @@ button.ghost {
   border: 1px solid #007bff;
 }
 
-/* Card-styling */
+/* ---------- Card-styling ---------- */
 .card {
   background: white;
   border-radius: 12px;
@@ -87,32 +87,39 @@ button.ghost {
   transform: translateY(-2px);
 }
 
-/* Kontaktlistor */
-/* Lägg under rad 91 i style.css */
-.links a {
-  display: block;
-  margin: 10px 0;
-  padding: 12px 20px;
-  background-color: #007acc;
-  color: #fff;
+/* ---------- Kontaktlistor ---------- */
+.links li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-info div {
+  margin-bottom: 4px;
+}
+
+.hours {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+a {
+  color: #007bff;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  text-align: center;
-  transition: background 0.3s ease;
 }
 
-.links a:hover {
-  background-color: #005fa3;
+a:hover {
+  text-decoration: underline;
 }
 
-/* Telefon- och webblänkar i kontaktlistor */
 .links li div a {
   display: inline-block;
   margin-top: 4px;
 }
 
-/* Snabblänkar */
+/* ---------- Snabblänkar ---------- */
 .quicklinks {
   list-style: none;
   padding: 0;
@@ -123,7 +130,7 @@ button.ghost {
   margin-bottom: 8px;
 }
 
-/* Karta */
+/* ---------- Karta ---------- */
 #map {
   width: 100%;
   height: 400px;
@@ -131,37 +138,7 @@ button.ghost {
   margin-top: 12px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  color: #666;
-  font-size: 0.9rem;
-  background: #f1f1f1; /* lite mjukare bakgrund */
-}
-
-/* Responsivitet */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav button {
-    margin: 5px 0 0 0;
-  }
-
-  .links li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .links li div a {
-    margin-top: 4px;
-  }
-  /* -------- Befintliga regler ovanför -------- */
-
-/* Footer */
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -170,72 +147,10 @@ footer {
   background: #f1f1f1;
 }
 
-/* Responsivitet */
-@media (max-width: 600px) {
-  header { ... }
-  .links li { ... }
-}
-
-/* -------- NYA REGLER FÖR STÖDLINJER SEKTION -------- */
-
-#stodlinjer {
-  margin: 40px 0;
-  text-align: center;
-}
-
-#stodlinjer {
-  margin: 40px 20px;
-  text-align: left; /* här vänsterjusterar du rubriken */
-}
-
-#stodlinjer h2 {
-  text-align: left; /* kolumnen/linjen där rubrikens justering sker */
-}
-
-#stodlinjer .links {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-start; /* här vänsterjusteras korten */
-}
-
-.card-link {
-  text-align: left;
-  margin: 0;       /* tar bort centrering */
-  width: 100%;
-  max-width: 450px;
-}
-
-
-
-#refresh {
-  display: none;
-}
-
-.card-link .btn {
-  margin-top: 10px;
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007acc;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.card-link .btn:hover {
-  background-color: #005fa3;
-}
-
-@media (max-width: 600px) {
-  .card-link {
-    width: 100%;
-/* ---------- Stödlinjer och organisationer ---------- */
 /* ---------- Stödlinjer och organisationer (vänsterjusterad) ---------- */
 #stodlinjer {
   margin: 40px 20px;
-  text-align: left; /* rubrik och text vänsterställd */
+  text-align: left;
 }
 
 #stodlinjer h2 {
@@ -248,7 +163,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start; /* korten vänsterställda */
+  align-items: flex-start;
 }
 
 .card-link {
@@ -256,8 +171,8 @@ footer {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left; /* text i korten vänsterställd */
-  margin: 0;       /* tar bort centrering */
+  text-align: left;
+  margin: 0;
   width: 100%;
   max-width: 450px;
 }
@@ -283,21 +198,32 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsivitet */
+/* ---------- Ta bort uppdatera-knappen ---------- */
+#refresh {
+  display: none;
+}
+
+/* ---------- Responsivitet ---------- */
 @media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav button {
+    margin: 5px 0 0 0;
+  }
+
+  .links li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links li div a {
+    margin-top: 4px;
+  }
+
   .card-link {
     width: 100%;
   }
 }
-
-
-
-}
-
-
-
-
-
-
-
-
