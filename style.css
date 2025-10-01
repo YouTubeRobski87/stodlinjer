@@ -185,28 +185,27 @@ footer {
 
 #stodlinjer {
   margin: 40px 20px;
-  text-align: left; /* vänsterjusterar rubrik + text */
+  text-align: left; /* här vänsterjusterar du rubriken */
 }
 
 #stodlinjer h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  text-align: left; /* säkerställ rubrik är vänsterställd */
+  text-align: left; /* kolumnen/linjen där rubrikens justering sker */
 }
 
 #stodlinjer .links {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start; /* vänsterjusterar korten */
+  align-items: flex-start; /* här vänsterjusteras korten */
 }
 
 .card-link {
-  text-align: left; /* text i korten vänsterställd */
-  margin: 0;         /* tar bort eventuell centrering */
+  text-align: left;
+  margin: 0;       /* tar bort centrering */
   width: 100%;
   max-width: 450px;
 }
+
 
 
 #refresh {
@@ -294,6 +293,7 @@ footer {
 
 
 }
+
 
 
 
