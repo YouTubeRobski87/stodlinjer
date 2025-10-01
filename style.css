@@ -224,6 +224,9 @@ footer {
   width: 80%;
   max-width: 450px;
 }
+#refresh {
+  display: none;
+}
 
 .card-link .btn {
   margin-top: 10px;
@@ -248,5 +251,6 @@ footer {
 }
 
 }
+
 
 
