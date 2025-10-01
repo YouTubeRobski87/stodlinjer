@@ -212,7 +212,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center;
+  align-items: flex-start; /* flyttar innehållet åt vänster */
 }
 
 .card-link {
@@ -220,10 +220,11 @@ footer {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  width: 80%;
-  max-width: 450px;
+  text-align: left; /* rubriker och text vänsterjusteras */
+  width: 100%; /* kan justera max-width nedan */
+  max-width: 450px; /* valfri maxbredd */
 }
+
 #refresh {
   display: none;
 }
@@ -251,6 +252,7 @@ footer {
 }
 
 }
+
 
 
 
