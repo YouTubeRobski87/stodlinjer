@@ -159,5 +159,94 @@ footer {
   .links li div a {
     margin-top: 4px;
   }
+  /* -------- Befintliga regler ovanför -------- */
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  font-size: 0.9rem;
+  background: #f1f1f1;
 }
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  header { ... }
+  .links li { ... }
+}
+
+/* -------- NYA REGLER FÖR STÖDLINJER SEKTION -------- */
+
+#stodlinjer {
+  margin: 40px 0;
+  text-align: center;
+}
+
+#stodlinjer h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+#refresh {
+  margin: 15px 0 30px 0;
+}
+
+#refresh button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#refresh button:hover {
+  background-color: #005fa3;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.card-link {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 80%;
+  max-width: 450px;
+}
+
+.card-link .btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.card-link .btn:hover {
+  background-color: #005fa3;
+}
+
+@media (max-width: 600px) {
+  .card-link {
+    width: 100%;
+  }
+}
+
+}
+
 
