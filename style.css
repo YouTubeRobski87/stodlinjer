@@ -234,5 +234,67 @@ footer {
   .card-link {
     width: 100%;
   }
+  /* Centrerad rubrik och undertext för Mansjourer */
+#mansjourer .section-title {
+  text-align: center; /* Centrerar rubrik och undertext */
+  margin-bottom: 20px;
 }
+
+#mansjourer .section-title h2 {
+  margin-bottom: 5px;
+}
+
+#mansjourer .section-title .muted {
+  display: block; /* Undertext på egen rad */
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Listan med Mansjourer */
+#mansjourer .links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#mansjourer .links li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#mansjourer .links li div a {
+  display: inline-block;
+  margin-top: 4px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+#mansjourer .links li div a:hover {
+  text-decoration: underline;
+}
+
+/* Öppettider och meta-info */
+#mansjourer .hours, 
+#mansjourer .meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsivitet */
+@media (max-width: 600px) {
+  #mansjourer .links li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #mansjourer .links li div a {
+    margin-top: 4px;
+  }
+}
+
+
+
 
