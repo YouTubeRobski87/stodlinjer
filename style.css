@@ -148,38 +148,46 @@ footer {
 }
 
 /* ---------- Stödlinjer och organisationer (vänsterjusterad) ---------- */
+/* Sektion för stödlinjer */
 #stodlinjer {
   margin: 40px 20px;
-  text-align: left;
+  text-align: center; /* Centrerar innehållet */
 }
 
 #stodlinjer h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
-  text-align: left;
 }
 
 #stodlinjer .links {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrerar korten */
+  gap: 20px;
 }
 
 .card-link {
   background: #fff;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
-  margin: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 300px;
+}
+
+.card-link h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-link p {
+  font-size: 1em;
+  margin-bottom: 15px;
 }
 
 .card-link .btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 20px;
   background-color: #007acc;
   color: #fff;
@@ -227,3 +235,4 @@ footer {
     width: 100%;
   }
 }
+
