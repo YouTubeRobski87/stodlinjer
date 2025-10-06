@@ -116,7 +116,28 @@
   </li>
 </ul>
 
-      <div id="map"></div>
+      <div id="map" style="height: 400px;"></div>
+<script>
+  var map = L.map('map').setView([59.3293, 18.0686], 6);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var locations = [
+    { name: "Göteborg Mansjour", lat: 57.7089, lon: 11.9746, url: "https://goteborg.mansjouren.se" },
+    { name: "Stockholm Mansjour", lat: 59.3293, lon: 18.0686, url: "https://www.mansjouren.se" },
+    { name: "Uppsala Mansjour", lat: 59.8586, lon: 17.6389, url: "https://uppsalamansjour.se" },
+    { name: "Malmö Mansjour", lat: 55.6050, lon: 13.0038, url: "https://malmo.mansjouren.se" }
+  ];
+
+  locations.forEach(function(location) {
+    L.marker([location.lat, location.lon])
+      .addTo(map)
+      .bindPopup('<a href="' + location.url + '" target="_blank">' + location.name + '</a>');
+  });
+</script>
+
     </section>
 
     <!-- Akuta kontaktvägar -->
@@ -216,5 +237,6 @@
 
 </body>
 </html>
+
 
 
