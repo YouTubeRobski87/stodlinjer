@@ -8,25 +8,179 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .section-title h2 { margin-bottom: 5px; }
+    .section-title .muted {
+      display: block;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .links li {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 16px;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .links li h3 { margin: 0 0 10px; }
+    .links li p { margin-bottom: 10px; }
+
+    .links li a {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .links li a:hover { background-color: #005fa3; }
+
+    /* Akuta + Snabblänkar layout */
+    .extras {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .extras section {
+      flex: 1;
+      min-width: 250px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #666;
+      font-size: 0.9rem;
+      background: #f1f1f1;
+    }
+
+    #map {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul { flex-direction: column; gap: 8px; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Default Statcounter code for Support for mental illness
-https://stodlinjer.se/ -->
-<script type="text/javascript">
-var sc_project=13173545; 
-var sc_invisible=0; 
-var sc_security="8787acd1"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web statistics"
-href="https://statcounter.com/" target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13173545/0/8787acd1/0/" alt="web statistics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-<a href="https://statcounter.com/p13173545/?guest=1">View My Stats</a>
- <header>
+  <!-- Statcounter -->
+  <script type="text/javascript">
+  var sc_project=13173545; 
+  var sc_invisible=0; 
+  var sc_security="8787acd1"; 
+  var scJsHost = "https://";
+  document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+  "statcounter.com/counter/counter.js'></"+"script>");
+  </script>
+  <noscript><div class="statcounter"><a title="web statistics"
+  href="https://statcounter.com/" target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/13173545/0/8787acd1/0/" alt="web statistics"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+
+<header>
   <div class="brand">
     <div class="logo">S</div>
     <div class="brand-text">
@@ -37,134 +191,114 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 
   <nav>
     <ul>
-      <li><a href="#stodlinjer">Alla stödlinjer</a></li>
+      <li><a href="#stodlinjer">Stödlinjer</a></li>
       <li><a href="#mansjourer">Mansjourer</a></li>
-      <li><a href="#info">Info</a></li>
+      <li><a href="#contact">Info</a></li>
     </ul>
   </nav>
 </header>
 
-  <main>
+<main>
 
-    <!-- Mansjourer -->
-    <section id="mansjourer" class="card">
-      <div class="section-title">
-        <h2>Mansjourer</h2>
-        <span class="muted">Kontakt för lokala Mansjourer direkt</span>
-      </div>
-      <ul class="links">
-        <li>
-          <h3>Göteborg Mansjour</h3>
-          <p>Se hemsidan för öppettider</p>
-          <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
-        </li>
-        <li>
-          <h3>Stockholm Mansjour</h3>
-          <p>12–14 och 18–20 varje dag (lördag 12–14)</p>
-          <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
-        </li>
-        <li>
-          <h3>Uppsala Mansjour</h3>
-          <p>Se hemsidan för öppettider</p>
-          <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
-        </li>
-        <li>
-          <h3>Malmö Mansjour</h3>
-          <p>Se hemsidan för öppettider</p>
-          <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
-        </li>
+  <!-- Mansjourer -->
+  <section id="mansjourer" class="card">
+    <div class="section-title">
+      <h2>Mansjourer</h2>
+      <span class="muted">Kontakt för lokala Mansjourer direkt</span>
+    </div>
+    <ul class="links">
+      <li>
+        <h3>Göteborg Mansjour</h3>
+        <p>Se hemsidan för öppettider</p>
+        <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
+      </li>
+      <li>
+        <h3>Stockholm Mansjour</h3>
+        <p>12–14 och 18–20 varje dag (lördag 12–14)</p>
+        <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
+      </li>
+      <li>
+        <h3>Uppsala Mansjour</h3>
+        <p>Se hemsidan för öppettider</p>
+        <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
+      </li>
+      <li>
+        <h3>Malmö Mansjour</h3>
+        <p>Se hemsidan för öppettider</p>
+        <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
+      </li>
+    </ul>
+    <div id="map"></div>
+  </section>
+
+  <!-- Stödlinjer -->
+  <section id="stodlinjer" class="card">
+    <div class="section-title">
+      <h2>Stödlinjer</h2>
+      <span class="muted">Nationella stödlinjer och hjälpnummer</span>
+    </div>
+    <ul class="links">
+      <li>
+        <h3>Äldrelinjen</h3>
+        <p>För dig som är 65+ och behöver någon att prata med</p>
+        <a href="https://findahelpline.com/organizations/aldrelinjen" target="_blank">Mer info</a>
+      </li>
+      <!-- fler stödlinjer här -->
+    </ul>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="contact" class="card">
+    <h2>Kontakt</h2>
+    <p>Om du har förslag eller vill kontakta oss kan du skriva till 
+       <a href="mailto:info@stodlinjer.se">info@stodlinjer.se</a>.
+    </p>
+  </section>
+
+  <!-- Akuta + Snabblänkar -->
+  <div class="extras">
+    <section id="akuta">
+      <h2>Akuta kontaktvägar</h2>
+      <p><em>Öppet dygnet runt</em></p>
+      <ul>
+        <li><strong>112</strong> — Vid fara för liv. <a href="tel:112">Ring 112</a></li>
+        <li><strong>Mind – Självmordslinjen</strong> — Alla dagar, dygnet runt. <a href="tel:90101">Ring 90101</a></li>
+        <li><strong>Jourhavande Medmänniska</strong> — 21–06, chatten 21–24. 
+            <a href="tel:087021680">Ring 08-702 16 80</a> | 
+            <a href="https://jourhavande-medmanniska.se/chatt" target="_blank">Chatta</a></li>
+        <li><strong>Jourhavande präst</strong> — Varje natt 21–06. Ring via <a href="tel:112">112</a></li>
       </ul>
-      <div id="map"></div>
     </section>
 
-    <!-- Nya sektioner här -->
-<section id="akuta">
-  <h2>Akuta kontaktvägar</h2>
-  <p><em>Öppet dygnet runt</em></p>
-  <ul>
-    <li><strong>112</strong> — Vid fara för liv. Ring alltid vid direkt nödläge. 
-        <a href="tel:112">Ring 112</a></li>
-    <li><strong>Mind – Självmordslinjen</strong> — För dig med självmordstankar eller som är orolig för någon.<br>
-        Öppet alla dagar, dygnet runt.<br>
-        <a href="tel:90101">Ring 90101</a></li>
-    <li><strong>Jourhavande Medmänniska</strong> — Samtals- och chattstöd.<br>
-        Öppet alla dagar 21:00–06:00, chatten 21:00–24:00.<br>
-        <a href="tel:087021680">Ring 08-702 16 80</a> | <a href="https://jourhavande-medmanniska.se/chatt" target="_blank">Chatta med oss</a></li>
-    <li><strong>Jourhavande präst</strong> — Svenska kyrkan, konfidentiellt stöd.<br>
-        Öppet varje natt 21:00–06:00.<br>
-        Ring via <a href="tel:112">112</a></li>
-  </ul>
-</section>
+    <section id="quicklinks">
+      <h2>Snabblänkar</h2>
+      <ul>
+        <li><a href="#contact">Om sidan</a></li>
+        <li><a href="#contact">Kontakta</a></li>
+      </ul>
+    </section>
+  </div>
 
-<section id="quicklinks">
-  <h2>Snabblänkar</h2>
-  <ul>
-    <li><a href="#info">Om sidan</a></li>
-    <li><a href="#contact">Kontakta</a></li>
-  </ul>
-</section>
+</main>
 
 <footer>
   &copy; 2025 Stödlinjer. All rights reserved.
 </footer>
 
+<script>
+  // Initiera kartan
+  var map = L.map('map').setView([59.3293, 18.0686], 5);
 
-    <!-- Stödlinjer -->
-    <section id="stodlinjer" class="card">
-      <div class="section-title">
-        <h2>Stödlinjer</h2>
-        <span class="muted">Nationella stödlinjer och hjälpnummer</span>
-      </div>
-      <ul class="links">
-        <li>
-          <h3>Äldrelinjen</h3>
-          <p>För dig som är 65+ och behöver någon att prata med</p>
-          <a href="https://findahelpline.com/organizations/aldrelinjen" target="_blank">Mer info</a>
-        </li>
-        <!-- fler stödlinjer här -->
-      </ul>
-    </section>
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
 
-    <!-- Info -->
-    <section id="contact">
-  <h2>Kontakt</h2>
-  <p>Om du har förslag eller vill kontakta oss kan du skriva till oss på 
-     <a href="mailto:info@stodlinjer.se">info@stodlinjer.se</a>.
-  </p>
-</section>
-
-
-  </main>
-
-  <footer>
-    &copy; 2025 Stödlinjer.
-  </footer>
-
-  <script>
-    // Initiera kartan
-    var map = L.map('map').setView([59.3293, 18.0686], 5); // Start i Sverige
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '© OpenStreetMap'
-    }).addTo(map);
-
-    // Markörer för mansjourerna
-    L.marker([57.7089, 11.9746]).addTo(map).bindPopup('Göteborg Mansjour');
-    L.marker([59.3293, 18.0686]).addTo(map).bindPopup('Stockholm Mansjour');
-    L.marker([59.8586, 17.6389]).addTo(map).bindPopup('Uppsala Mansjour');
-    L.marker([55.6050, 13.0038]).addTo(map).bindPopup('Malmö Mansjour');
-  </script>
+  // Markörer för mansjourerna
+  L.marker([57.7089, 11.9746]).addTo(map).bindPopup('Göteborg Mansjour');
+  L.marker([59.3293, 18.0686]).addTo(map).bindPopup('Stockholm Mansjour');
+  L.marker([59.8586, 17.6389]).addTo(map).bindPopup('Uppsala Mansjour');
+  L.marker([55.6050, 13.0038]).addTo(map).bindPopup('Malmö Mansjour');
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
