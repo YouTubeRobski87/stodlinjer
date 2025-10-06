@@ -8,11 +8,23 @@ body {
 }
 
 a {
-  color: #0056b3;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+
+/* ---------- Knapp ---------- */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background-color: #005fa3;
 }
 
 /* ---------- Header ---------- */
@@ -44,15 +56,8 @@ header {
   margin-right: 10px;
 }
 
-.brand-text h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.lead {
-  margin: 0;
-  font-size: 14px;
-}
+.brand-text h1 { margin: 0; font-size: 1.8rem; }
+.lead { margin: 0; font-size: 14px; }
 
 /* ---------- Navigation ---------- */
 nav ul {
@@ -63,66 +68,37 @@ nav ul {
   gap: 15px;
 }
 
-nav a {
-  color: white;
-  font-weight: bold;
-}
+nav a { color: white; font-weight: bold; }
 
 /* ---------- Main ---------- */
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
+main { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+section { margin-top: 40px; }
 
 /* ---------- Kort / Card ---------- */
 .card {
   background: white;
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.section-title {
-  margin-bottom: 15px;
-}
+.section-title { margin-bottom: 15px; }
+.muted { color: #777; font-size: 14px; }
 
-.muted {
-  color: #777;
-  font-size: 14px;
-}
+/* ---------- Links ---------- */
+ul.links { list-style: none; padding: 0; }
+ul.links li { margin-bottom: 15px; }
+ul.links li h3 { margin: 0 0 5px; }
 
-/* ---------- Länkar / listor ---------- */
-ul.links {
-  list-style: none;
-  padding: 0;
-}
+/* ---------- Mansjourer karta ---------- */
+#map { height: 300px; margin-top: 15px; border-radius: 10px; }
 
-ul.links li {
-  margin-bottom: 15px;
-}
-
-ul.links li h3 {
-  margin: 0 0 5px;
-}
-
-/* ---------- Karta ---------- */
-#map {
-  height: 300px;
-  margin-top: 15px;
-  border-radius: 10px;
-}
+/* ---------- Akuta kontaktvägar ---------- */
+#akuta { background-color: #fff7e6; padding: 20px; border-radius: 10px; }
 
 /* ---------- Snabblänkar ---------- */
-#quicklinks ul {
-  list-style: none;
-  padding: 0;
-}
-
-#quicklinks li {
-  margin-bottom: 10px;
-}
+#quicklinks ul { list-style: none; padding: 0; }
+#quicklinks li { margin-bottom: 10px; }
 
 /* ---------- Footer ---------- */
 footer {
@@ -133,24 +109,14 @@ footer {
   margin-top: 20px;
 }
 
+/* ---------- Hover effekter ---------- */
+.links li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
+}
+
 /* ---------- Responsivitet ---------- */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .links li {
-    width: 100%;
-  }
-
-  #map {
-    height: 250px;
-  }
-}
+  header { flex-direction: column; align-items: flex-start; }
+  nav ul { flex-direction: column; gap
