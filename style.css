@@ -101,4 +101,14 @@ footer { text-align:center; padding:20px 0; color:#666; font-size:0.9rem; backgr
   nav ul { flex-direction:column; gap:10px; margin-top:10px; }
   .links { flex-direction:column; align-items:center; }
   .links li { max-width:100%; }
+
+  /* ---------- Färgade ramar för Mansjourer & Psykakuter ---------- */
+.mansjour-goteborg { border-top: 5px solid #007bff; } /* blå */
+.mansjour-stockholm { border-top: 5px solid #ff0000; } /* röd */
+.mansjour-uppsala { border-top: 5px solid #00aa00; } /* grön */
+.mansjour-malmo { border-top: 5px solid #ff9900; } /* orange */
+.psykaut-goteborg { border-top: 5px solid #800080; } /* lila */
+.psykaut-varberg { border-top: 5px solid #ff69b4; } /* rosa */
+
 }
+
