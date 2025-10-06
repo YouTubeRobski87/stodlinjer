@@ -16,10 +16,11 @@ body {
 /* ---------- Header ---------- */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* centrera allt */
   align-items: center;
   margin-bottom: 20px;
 }
+
 
 .brand {
   display: flex;
@@ -326,4 +327,5 @@ footer {
   .links li div a { margin-top: 4px; }
   .card-link, #mansjourer .links li { width: 100%; }
 }
+
 
