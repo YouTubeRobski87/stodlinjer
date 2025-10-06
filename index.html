@@ -37,13 +37,54 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   <nav>
     <ul>
       <li><a href="#stodlinjer">Alla stödlinjer</a></li>
-      <li><a href="#mansjourer">Mansjourer</a></li>
+      <li><a href="#mansjourer">Mansjourer & Psykakuter</a></li>
       <li><a href="#info">Info</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
+
+<!-- Mansjourer & Psykuter -->
+<section id="mansjourer" class="card">
+  <div class="section-title">
+    <h2>Mansjourer & Psykakuter</h2>
+    <span class="muted">Kontakt för lokala Mansjourer och akutmottagningar</span>
+  </div>
+  <ul class="links">
+    <li>
+      <h3>Göteborg Mansjour</h3>
+      <p>Se hemsidan för öppettider</p>
+      <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
+    </li>
+    <li>
+      <h3>Stockholm Mansjour</h3>
+      <p>12–14 och 18–20 varje dag (lördag 12–14)</p>
+      <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
+    </li>
+    <li>
+      <h3>Uppsala Mansjour</h3>
+      <p>Se hemsidan för öppettider</p>
+      <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
+    </li>
+    <li>
+      <h3>Malmö Mansjour</h3>
+      <p>Se hemsidan för öppettider</p>
+      <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
+    </li>
+    <li>
+      <h3>Psykiatrisk akutmottagning Östra, Göteborg</h3>
+      <p>Akut psykiatrisk hjälp i Göteborg</p>
+      <a href="https://www.sahlgrenska.se/omraden/omrade-2/beroende/enheter/psykiatrisk-akutmottagning-ostra/" target="_blank">Mer info</a>
+    </li>
+    <li>
+      <h3>Psykiatrisk akutmottagning Varberg</h3>
+      <p>Akut psykiatrisk hjälp i Varberg</p>
+      <a href="https://www.1177.se/hitta-vard/kontaktkort/Psykiatriska-akutmottagningen-Varberg/" target="_blank">Mer info</a>
+    </li>
+  </ul>
+  <div id="map" style="height:400px;"></div>
+</section>
 
 <!-- Stödlinjer -->
 <section id="stodlinjer" class="card">
@@ -67,53 +108,7 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
       <p>Stöd för barn och unga</p>
       <a href="https://bris.se/" target="_blank">Mer info</a>
     </li>
-    <li>
-      <h3>Kvinnojourer / Mansjourer</h3>
-      <p>För dig som är utsatt i nära relationer</p>
-      <a href="#mansjourer">Se lokala jourer</a>
-    </li>
   </ul>
-</section>
-
-<!-- Mansjourer & Psykakuter -->
-<section id="mansjourer" class="card">
-  <div class="section-title">
-    <h2>Mansjourer & Psykakuter</h2>
-    <span class="muted">Kontakt för lokala Mansjourer och akutmottagningar</span>
-  </div>
-  <ul class="links">
-    <li class="mansjour-gbg">
-      <h3>Göteborg Mansjour</h3>
-      <p>Se hemsidan för öppettider</p>
-      <a href="https://goteborg.mansjouren.se" target="_blank">Besök hemsidan</a>
-    </li>
-    <li class="mansjour-sth">
-      <h3>Stockholm Mansjour</h3>
-      <p>12–14 och 18–20 varje dag (lördag 12–14)</p>
-      <a href="https://www.mansjouren.se/kontakt/" target="_blank">Besök hemsidan</a>
-    </li>
-    <li class="mansjour-ups">
-      <h3>Uppsala Mansjour</h3>
-      <p>Se hemsidan för öppettider</p>
-      <a href="https://uppsalamansjour.se" target="_blank">Besök hemsidan</a>
-    </li>
-    <li class="mansjour-mal">
-      <h3>Malmö Mansjour</h3>
-      <p>Se hemsidan för öppettider</p>
-      <a href="https://malmo.mansjouren.se" target="_blank">Besök hemsidan</a>
-    </li>
-    <li class="mansjour-var">
-      <h3>Psykiatriska akutmottagningen Varberg</h3>
-      <p>Akut psykiatrisk hjälp i Varberg</p>
-      <a href="https://www.1177.se/hitta-vard/kontaktkort/Psykiatriska-akutmottagningen-Varberg/" target="_blank">Mer info</a>
-    </li>
-    <li class="mansjour-gbg">
-      <h3>Psykiatrisk akutmottagning Östra, Göteborg</h3>
-      <p>Akut psykiatrisk hjälp i Göteborg</p>
-      <a href="https://www.sahlgrenska.se/omraden/omrade-2/beroende/enheter/psykiatrisk-akutmottagning-ostra/" target="_blank">Mer info</a>
-    </li>
-  </ul>
-  <div id="map"></div>
 </section>
 
 <!-- Akuta kontaktvägar -->
@@ -149,83 +144,33 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   &copy; 2025 Stödlinjer. All rights reserved.
 </footer>
 
-<!-- Leaflet-kartscript -->
+<!-- Leaflet script -->
 <script>
-  // Initiera kartan
   var map = L.map('map').setView([59.3293, 18.0686], 6);
 
-  // OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // Ikon
-  var blueIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
+  // Ikoner
+  var blueIcon = new L.Icon({iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',shadowUrl:'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]});
+  var redIcon = new L.Icon({iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',shadowUrl:'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]});
+  var greenIcon = new L.Icon({iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',shadowUrl:'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]});
+  var orangeIcon = new L.Icon({iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',shadowUrl:'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]});
+  var purpleIcon = new L.Icon({iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',shadowUrl:'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]});
+  var pinkIcon = new L.Icon({iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-pink.png',shadowUrl:'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]});
 
-  var redIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
+    // Mansjourer
+  L.marker([57.7089,11.9746], {icon: blueIcon}).addTo(map).bindPopup('Göteborg Mansjour');
+  L.marker([59.3293,18.0686], {icon: redIcon}).addTo(map).bindPopup('Stockholm Mansjour');
+  L.marker([59.8586,17.6389], {icon: greenIcon}).addTo(map).bindPopup('Uppsala Mansjour');
+  L.marker([55.6050,13.0038], {icon: orangeIcon}).addTo(map).bindPopup('Malmö Mansjour');
 
-  var greenIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  var orangeIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  var purpleIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  var pinkIcon = new L.Icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-pink.png',
-    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  // Mansjourer
-  L.marker([57.7089, 11.9746], {icon: blueIcon}).addTo(map).bindPopup('Göteborg Mansjour');
-  L.marker([59.3293, 18.0686], {icon: redIcon}).addTo(map).bindPopup('Stockholm Mansjour');
-  L.marker([59.8586, 17.6389], {icon: greenIcon}).addTo(map).bindPopup('Uppsala Mansjour');
-  L.marker([55.6050, 13.0038], {icon: orangeIcon}).addTo(map).bindPopup('Malmö Mansjour');
-
-  // Psykakuter med liten offset så de inte hamnar exakt ovanpå Mansjourer
-  L.marker([57.7100, 11.9746], {icon: purpleIcon}).addTo(map)
+  // Psykakuter
+  L.marker([57.7100,11.9746], {icon: purpleIcon}).addTo(map)
     .bindPopup('<a href="https://www.sahlgrenska.se/omraden/omrade-2/beroende/enheter/psykiatrisk-akutmottagning-ostra/" target="_blank">Psykiatrisk akutmottagning Östra, Göteborg</a>');
-
-  L.marker([57.1060, 12.2500], {icon: pinkIcon}).addTo(map)
-    .bindPopup('<a href="https://www.1177.se/hitta-vard/kontaktkort/Psykiatriska-akutmottagningen-Varberg/" target="_blank">Psykiatriska akutmottagningen Varberg</a>');
+  L.marker([57.1060,12.2500], {icon: pinkIcon}).addTo(map)
+    .bindPopup('<a href="https://www.1177.se/hitta-vard/kontaktkort/Psykiatriska-akutmottagningen-Varberg/" target="_blank">Psykiatrisk akutmottagning Varberg</a>');
 
 </script>
