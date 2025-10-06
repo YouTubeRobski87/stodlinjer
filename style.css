@@ -16,15 +16,16 @@ body {
 /* ---------- Header ---------- */
 header {
   display: flex;
-  justify-content: center; /* centrera allt */
+  justify-content: flex-start; /* allt till vänster */
   align-items: center;
+  gap: 40px; /* mellan brand och nav */
   margin-bottom: 20px;
 }
-
 
 .brand {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .logo {
@@ -38,8 +39,37 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-right: 12px;
 }
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.brand-text .lead {
+  margin: 2px 0 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 
 .brand-text h1 {
   margin: 0;
@@ -327,5 +357,6 @@ footer {
   .links li div a { margin-top: 4px; }
   .card-link, #mansjourer .links li { width: 100%; }
 }
+
 
 
