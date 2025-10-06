@@ -15,17 +15,37 @@ a {
 .btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #007acc;
-  color: white;
   border-radius: 6px;
   font-weight: bold;
+  color: white;
   text-decoration: none;
   transition: background 0.2s;
 }
 
-.btn:hover {
-  background-color: #005fa3;
-}
+/* Färger för olika knappar */
+.btn-elder { background-color: #8B5E3C; } /* Äldrelinjen */
+.btn-elder:hover { background-color: #6a4529; }
+
+.btn-mind { background-color: #E53935; } /* Mind */
+.btn-mind:hover { background-color: #b72b28; }
+
+.btn-kvinna { background-color: #FF69B4; } /* Kvinnofridslinjen */
+.btn-kvinna:hover { background-color: #e65aa3; }
+
+.btn-bris { background-color: #F4B400; } /* BRIS */
+.btn-bris:hover { background-color: #d49a00; }
+
+.btn-jour { background-color: #1E88E5; } /* Jourhavande Medmänniska & Mansjourer */
+.btn-jour:hover { background-color: #1565c0; }
+
+.btn-prest { background-color: #6A1B9A; } /* Jourhavande präst */
+.btn-prest:hover { background-color: #4a0e6c; }
+
+.btn-urgent { background-color: #D32F2F; } /* Akuta kontaktvägar */
+.btn-urgent:hover { background-color: #a82828; }
+
+.btn-contact { background-color: #009688; } /* Kontakt */
+.btn-contact:hover { background-color: #00796b; }
 
 /* ---------- Header ---------- */
 header {
@@ -86,9 +106,17 @@ section { margin-top: 40px; }
 .muted { color: #777; font-size: 14px; }
 
 /* ---------- Links ---------- */
-ul.links { list-style: none; padding: 0; }
-ul.links li { margin-bottom: 15px; }
-ul.links li h3 { margin: 0 0 5px; }
+ul.links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; }
+ul.links li {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  flex: 1 1 250px;
+}
+
+ul.links li h3 { margin: 0 0 5px; font-size: 1.1rem; }
+ul.links li p { margin: 0 0 10px; }
 
 /* ---------- Mansjourer karta ---------- */
 #map { height: 300px; margin-top: 15px; border-radius: 10px; }
@@ -119,4 +147,7 @@ footer {
 /* ---------- Responsivitet ---------- */
 @media (max-width: 600px) {
   header { flex-direction: column; align-items: flex-start; }
-  nav ul { flex-direction: column; gap
+  nav ul { flex-direction: column; gap: 10px; margin-top: 10px; }
+  ul.links { flex-direction: column; }
+  ul.links li { flex: 1 1 100%; }
+}
