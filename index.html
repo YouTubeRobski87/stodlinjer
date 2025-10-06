@@ -194,34 +194,89 @@
     &copy; 2025 Stödlinjer.
   </footer>
 
- <script>
+<script>
   // Initiera kartan
   var map = L.map('map').setView([59.3293, 18.0686], 6);
 
+  // Lägg till OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // Befintliga markörer för Mansjourer
-  L.marker([57.7089, 11.9746]).addTo(map).bindPopup('Göteborg Mansjour');
-  L.marker([59.3293, 18.0686]).addTo(map).bindPopup('Stockholm Mansjour');
-  L.marker([59.8586, 17.6389]).addTo(map).bindPopup('Uppsala Mansjour');
-  L.marker([55.6050, 13.0038]).addTo(map).bindPopup('Malmö Mansjour');
+  // Ikoner för olika färger
+  var blueIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
 
-  // Ny markör för Psykakuten Göteborg
-  L.marker([57.7089, 11.9746], {icon: blueIcon})
-    .addTo(map)
+  var redIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  var greenIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  var orangeIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  var purpleIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  var pinkIcon = new L.Icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-pink.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  // Markörer för Mansjourer
+  L.marker([57.7089, 11.9746], {icon: blueIcon}).addTo(map).bindPopup('Göteborg Mansjour');
+  L.marker([59.3293, 18.0686], {icon: redIcon}).addTo(map).bindPopup('Stockholm Mansjour');
+  L.marker([59.8586, 17.6389], {icon: greenIcon}).addTo(map).bindPopup('Uppsala Mansjour');
+  L.marker([55.6050, 13.0038], {icon: orangeIcon}).addTo(map).bindPopup('Malmö Mansjour');
+
+  // Markörer för Psykakuter
+  L.marker([57.7089, 11.9746], {icon: purpleIcon}).addTo(map)
     .bindPopup('<a href="https://www.sahlgrenska.se/omraden/omrade-2/beroende/enheter/psykiatrisk-akutmottagning-ostra/" target="_blank">Psykiatrisk akutmottagning Östra, Göteborg</a>');
 
-  // Ny markör för Psykakuten Varberg
-  L.marker([57.1060, 12.2500], {icon: orangeIcon})
-    .addTo(map)
+  L.marker([57.1060, 12.2500], {icon: pinkIcon}).addTo(map)
     .bindPopup('<a href="https://www.1177.se/hitta-vard/kontaktkort/Psykiatriska-akutmottagningen-Varberg/" target="_blank">Psykiatriska akutmottagningen Varberg</a>');
 </script>
 
+
 </body>
 </html>
+
 
 
 
