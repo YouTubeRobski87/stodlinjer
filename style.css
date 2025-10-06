@@ -108,11 +108,12 @@ section { margin-top: 40px; }
 /* ---------- Links ---------- */
 ul.links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; }
 ul.links li {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 15px;
-  flex: 1 1 250px;
+  /* Mansjourer färgade kort */
+li.mansjour-gbg { border-top: 5px solid #1E88E5; }   /* Blå – Göteborg */
+li.mansjour-sth { border-top: 5px solid #D32F2F; }   /* Röd – Stockholm */
+li.mansjour-ups { border-top: 5px solid #43A047; }   /* Grön – Uppsala */
+li.mansjour-mal { border-top: 5px solid #FB8C00; }   /* Orange – Malmö */
+
 }
 
 ul.links li h3 { margin: 0 0 5px; font-size: 1.1rem; }
@@ -151,3 +152,4 @@ footer {
   ul.links { flex-direction: column; }
   ul.links li { flex: 1 1 100%; }
 }
+
