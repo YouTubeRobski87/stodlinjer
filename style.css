@@ -113,6 +113,8 @@ ul.links li {
 .mansjour-sth { border-left: 5px solid #D32F2F; }
 .mansjour-ups { border-left: 5px solid #43A047; }
 .mansjour-mal { border-left: 5px solid #FB8C00; }
+.mansjour-var { border-top: 5px solid #FF5722; } /* Orange-röd för Varberg */
+
 
 
 }
@@ -153,5 +155,6 @@ footer {
   ul.links { flex-direction: column; }
   ul.links li { flex: 1 1 100%; }
 }
+
 
 
