@@ -7,54 +7,20 @@ body {
   line-height: 1.5;
 }
 
-a {
-  text-decoration: none;
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-/* ---------- Knapp ---------- */
-.btn {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-/* Färger för olika knappar */
-.btn-elder { background-color: #8B5E3C; } /* Äldrelinjen */
-.btn-elder:hover { background-color: #6a4529; }
-
-.btn-mind { background-color: #E53935; } /* Mind */
-.btn-mind:hover { background-color: #b72b28; }
-
-.btn-kvinna { background-color: #FF69B4; } /* Kvinnofridslinjen */
-.btn-kvinna:hover { background-color: #e65aa3; }
-
-.btn-bris { background-color: #F4B400; } /* BRIS */
-.btn-bris:hover { background-color: #d49a00; }
-
-.btn-jour { background-color: #1E88E5; } /* Jourhavande Medmänniska & Mansjourer */
-.btn-jour:hover { background-color: #1565c0; }
-
-.btn-prest { background-color: #6A1B9A; } /* Jourhavande präst */
-.btn-prest:hover { background-color: #4a0e6c; }
-
-.btn-urgent { background-color: #D32F2F; } /* Akuta kontaktvägar */
-.btn-urgent:hover { background-color: #a82828; }
-
-.btn-contact { background-color: #009688; } /* Kontakt */
-.btn-contact:hover { background-color: #00796b; }
 
 /* ---------- Header ---------- */
 header {
-  background: #004080;
-  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .brand {
@@ -63,21 +29,29 @@ header {
 }
 
 .logo {
-  background: white;
-  color: #004080;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
   font-weight: bold;
-  font-size: 24px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  font-size: 1.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
+  border-radius: 50%;
+  margin-right: 12px;
 }
 
-.brand-text h1 { margin: 0; font-size: 1.8rem; }
-.lead { margin: 0; font-size: 14px; }
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.brand-text .lead {
+  margin: 2px 0 0 0;
+  font-size: 1rem;
+  color: #666;
+}
 
 /* ---------- Navigation ---------- */
 nav ul {
@@ -88,73 +62,153 @@ nav ul {
   gap: 15px;
 }
 
-nav a { color: white; font-weight: bold; }
+nav ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
 
-/* ---------- Main ---------- */
-main { max-width: 900px; margin: 20px auto; padding: 0 15px; }
-section { margin-top: 40px; }
+nav ul li a:hover {
+  text-decoration: underline;
+}
 
-/* ---------- Kort / Card ---------- */
+/* ---------- Sektioner ---------- */
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.section-title { margin-bottom: 15px; }
-.muted { color: #777; font-size: 14px; }
-
-/* ---------- Links ---------- */
-ul.links { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; }
-ul.links li {
-  /* Mansjourer färgade kort */
-.mansjour-gbg { border-left: 5px solid #1E88E5; }
-.mansjour-sth { border-left: 5px solid #D32F2F; }
-.mansjour-ups { border-left: 5px solid #43A047; }
-.mansjour-mal { border-left: 5px solid #FB8C00; }
-.mansjour-var { border-top: 5px solid #FF5722; } /* Orange-röd för Varberg */
-
-
-
-}
-
-ul.links li h3 { margin: 0 0 5px; font-size: 1.1rem; }
-ul.links li p { margin: 0 0 10px; }
-
-/* ---------- Mansjourer karta ---------- */
-#map { height: 300px; margin-top: 15px; border-radius: 10px; }
-
-/* ---------- Akuta kontaktvägar ---------- */
-#akuta { background-color: #fff7e6; padding: 20px; border-radius: 10px; }
-
-/* ---------- Snabblänkar ---------- */
-#quicklinks ul { list-style: none; padding: 0; }
-#quicklinks li { margin-bottom: 10px; }
-
-/* ---------- Footer ---------- */
-footer {
-  background: #004080;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-/* ---------- Hover effekter ---------- */
-.links li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  margin: 20px;
   transition: all 0.2s ease;
 }
 
-/* ---------- Responsivitet ---------- */
-@media (max-width: 600px) {
-  header { flex-direction: column; align-items: flex-start; }
-  nav ul { flex-direction: column; gap: 10px; margin-top: 10px; }
-  ul.links { flex-direction: column; }
-  ul.links li { flex: 1 1 100%; }
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
+
+.section-title h2 {
+  margin-bottom: 5px;
+}
+
+.section-title .muted {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* ---------- Listor ---------- */
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links li {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.links li h3 {
+  margin: 0 0 10px 0;
+}
+
+.links li p {
+  margin-bottom: 10px;
+}
+
+.links li a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.links li a:hover {
+  background-color: #005fa3;
+}
+
+/* ---------- Akuta kontaktvägar ---------- */
+#akuta ul {
+  list-style: none;
+  padding: 0;
+}
+
+#akuta ul li {
+  margin-bottom: 10px;
+}
+
+/* ---------- Snabblänkar ---------- */
+#quicklinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+#quicklinks ul li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Karta ---------- */
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- Kontakt ---------- */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  font-size: 0.9rem;
+  background: #f1f1f1;
+}
+
+/* ---------- Responsivitet ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links li {
+    max-width: 100%;
+  }
+}
+
 
 
 
