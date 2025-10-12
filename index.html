@@ -1,149 +1,253 @@
 <!doctype html>
 <html lang="sv">
-  <!-- Default Statcounter code for Support for mental illness
-https://stodlinjer.se/ -->
-<script type="text/javascript">
-var sc_project=13173545; 
-var sc_invisible=0; 
-var sc_security="8787acd1"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/13173545/0/8787acd1/0/"
-alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-<a href="https://statcounter.com/p13173545/?guest=1">View My
-Stats</a>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stödlinjer</title>
-  <meta name="description" content="Nationella stödlinjer, kvinnojourer, mansjourer och psykakuter i Sverige.">
-  
-  <!-- Leaflet -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stödlinjer — Hjälp & stöd när livet är tungt</title>
+  <meta name="description" content="En översikt över stödlinjer, jourtelefoner och hjälpresurser. Tillgänglig och trygg design." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: "Inter", Arial, sans-serif;
-      background: #f4f7fb;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent1:#7dd3fc; /* cyan */
+      --accent2:#a78bfa; /* purple */
+      --glass: rgba(255,255,255,0.04);
+      --radius:18px;
+      color-scheme: dark;
+    }
+    /* Reset */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(167,139,250,0.08), transparent 10%),
+                  radial-gradient(1000px 500px at 90% 90%, rgba(125,211,252,0.04), transparent 15%),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:1100px;
     }
 
-    header {
-      background: #e9f2ff;
-      padding: 1.2rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      border-bottom: 3px solid #bcd2f7;
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:28px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+    }
+    .logo{
+      width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:#052033;box-shadow:0 6px 18px rgba(0,0,0,0.6);
+    }
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:10px 14px;border-radius:12px;font-weight:600;cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#052033;border:none}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:28px;
+    }
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .hero h2{margin:0 0 8px 0;font-size:28px}
+    .hero p{color:var(--muted);margin:0 0 18px 0}
+
+    .search{
+      display:flex;gap:10px;align-items:center;background:rgba(255,255,255,0.02);padding:10px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)
+    }
+    .search input{background:transparent;border:none;outline:none;color:inherit;padding:8px;font-size:15px;flex:1}
+    .quick-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;border:1px solid rgba(255,255,255,0.03)}
+
+    .stats{display:flex;gap:12px;margin-top:12px}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:10px;border-radius:12px;min-width:110px;text-align:center}
+    .stat h3{margin:0;font-size:18px}
+    .stat p{margin:0;color:var(--muted);font-size:13px}
+
+    .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+    .resource{display:flex;gap:12px;align-items:flex-start}
+    .icon{
+      min-width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent2),var(--accent1));display:flex;align-items:center;justify-content:center;color:#052033;font-weight:700;font-size:18px
+    }
+    .resource h4{margin:0 0 6px 0}
+    .resource p{margin:0;color:var(--muted);font-size:14px}
+
+    .right-aside{display:flex;flex-direction:column;gap:16px}
+    .notice{padding:14px;border-radius:12px;background:linear-gradient(90deg, rgba(167,139,250,0.06), rgba(125,211,252,0.03));border:1px solid rgba(255,255,255,0.03)}
+
+    footer{margin-top:20px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.01);display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .cards-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      body{padding:18px}
+      .cards-grid{grid-template-columns:1fr}
+      nav{display:none}
+      .brand p{display:none}
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+    /* Accessibility focus */
+    a:focus,button:focus,input:focus{outline:3px solid rgba(167,139,250,0.18);outline-offset:3px}
 
-    .logo {
-      background: #5a88f0;
-      color: white;
-      font-weight: bold;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
+    /* Tiny animations */
+    .fade-up{transform:translateY(8px);opacity:0;animation:fadeUp .6s forwards}
+    @keyframes fadeUp{to{transform:none;opacity:1}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade-up">
+      <div class="brand">
+        <div class="logo" aria-hidden>SL</div>
+        <div>
+          <h1>Stödlinjer</h1>
+          <p>Snabb överblick över hjälp, jourtelefoner och stöd.</p>
+        </div>
+      </div>
+      <nav>
+        <button class="btn">Om oss</button>
+        <button class="btn">Kontakta</button>
+        <button class="btn primary">Ring 24/7</button>
+      </nav>
+    </header>
 
-    .brand-text h1 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    .brand-text p {
-      margin: 0;
-      color: #555;
-      font-size: 0.9rem;
-    }
+    <main>
+      <section class="hero">
+        <div class="card fade-up" style="animation-delay: .05s">
+          <h2>När livet känns tungt — du är inte ensam</h2>
+          <p>Sök snabbt stöd, hitta rätt journummer eller läs råd för den första stunden. All information är anonym och lättillgänglig.</p>
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
+          <div class="search" role="search" aria-label="Sök stödlinje">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.5"></circle></svg>
+            <input type="search" placeholder="Sök: t.ex. ångest, självmordstankar, missbruk, kvinnor" aria-label="Sök stöd" />
+            <button class="btn">Sök</button>
+          </div>
 
-    nav a {
-      text-decoration: none;
-      color: #3367d6;
-      font-weight: 500;
-    }
+          <div class="quick-links" aria-hidden>
+            <div class="pill">Krisstöd</div>
+            <div class="pill">Sorg</div>
+            <div class="pill">Missbruk</div>
+            <div class="pill">Våld i nära relation</div>
+            <div class="pill">Barn & unga</div>
+          </div>
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+          <div class="stats" aria-hidden>
+            <div class="stat"><h3>24/7</h3><p>Journummer öppet alltid</p></div>
+            <div class="stat"><h3>Flera språk</h3><p>Information och stöd</p></div>
+            <div class="stat"><h3>Anonymt</h3><p>Ingen registrering krävs</p></div>
+          </div>
+        </div>
 
-    main {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
+        <aside class="right-aside">
+          <div class="card notice fade-up" style="animation-delay:.12s">
+            <h3 style="margin:0 0 8px 0">Akut?</h3>
+            <p style="margin:0 0 10px 0;color:var(--muted)">Om du är i omedelbar fara: ring 112. För psykisk akut hjälp, kontakta din lokala psykiatri eller den nationella stödlinjen.</p>
+            <div style="display:flex;gap:8px;">
+              <button class="btn primary">Ring 112</button>
+              <button class="btn">Nationell stödlinje</button>
+            </div>
+          </div>
 
-    section.card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
+          <div class="card fade-up" style="animation-delay:.15s">
+            <h4 style="margin:0 0 8px 0">Populära resurser</h4>
+            <ul style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>Chat för unga</li>
+              <li>Kvinnojourer</li>
+              <li>Missbrukslinjen</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
 
-    .section-title h2 {
-      margin: 0 0 .3rem 0;
-      color: #3367d6;
-    }
+      <section class="cards-grid fade-up" style="animation-delay:.18s">
+        <div class="card resource" role="article">
+          <div class="icon" aria-hidden>24</div>
+          <div>
+            <h4>Jourtelefon för akuta samtal</h4>
+            <p>Öppen dygnet runt. Professionell personal som lyssnar.</p>
+          </div>
+        </div>
 
-    .section-title .muted {
-      color: #777;
-      font-size: 0.9rem;
-    }
+        <div class="card resource">
+          <div class="icon">KJ</div>
+          <div>
+            <h4>Kvinnojourer & skydd</h4>
+            <p>Hjälp vid våld i nära relation, stöd och skyddat boende.</p>
+          </div>
+        </div>
 
-    ul.links {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0 0;
-    }
+        <div class="card resource">
+          <div class="icon">BU</div>
+          <div>
+            <h4>Barn & unga</h4>
+            <p>Anpassade stödlinjer för unga och deras anhöriga.</p>
+          </div>
+        </div>
+      </section>
 
-    ul.links li {
-      background: #f6f9ff;
-      border-left: 5px solid #a7c7f5;
-      padding: 0.8rem 1rem;
-      margin-bottom: .8rem;
-      border-radius: 6px;
-    }
+      <section class="card fade-up" style="animation-delay:.2s;margin-bottom:18px">
+        <h3>Vill du bidra?</h3>
+        <p style="color:var(--muted);margin-top:6px">Stöd oss genom att dela sidan, donera eller bli volontär. Varje liten handling hjälper någon att stanna kvar.</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn primary">Donera</button>
+          <button class="btn">Bli volontär</button>
+        </div>
+      </section>
 
-    ul.links li h3 {
-      margin: 0.2rem 0;
-      font-size: 1.1rem;
-      color: #333;
-    }
+      <section class="card fade-up" style="animation-delay:.22s">
+        <h3 style="margin-top:0">Kontakta oss</h3>
+        <p style="color:var(--muted);margin-bottom:12px">Skicka feedback eller förslag — vi svarar så fort vi kan.</p>
+        <form onsubmit="event.preventDefault();alert('Tack! Ditt meddelande skickades (demo)')" style="display:grid;gap:8px">
+          <label style="display:flex;flex-direction:column;font-size:13px">Namn (valfritt)
+            <input type="text" placeholder="Ditt namn" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit" />
+          </label>
+          <label style="display:flex;flex-direction:column;font-size:13px">Meddelande
+            <textarea required placeholder="Hur kan vi förbättra?" rows="4" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:inherit"></textarea>
+          </label>
+          <div style="display:flex;gap:8px">
+            <button type="submit" class="btn primary">Skicka</button>
+            <button type="reset" class="btn">Rensa</button>
+          </div>
+        </form>
+      </section>
 
-    ul.links li p {
-      margin: 0.2rem 0 0.4rem;
-      color: #555;
-    }
+    </main>
+
+    <footer>
+      <div>© Stödlinjer — tillgängligt stöd för alla</div>
+      <div style="font-size:13px">Designad för tydlighet • <button class="btn" style="padding:6px 8px;border-radius:8px">Tillgänglighetslänk</button></div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple progressive enhancement: focus first input on load for keyboard users
+    window.addEventListener('load', ()=>{
+      const s = document.querySelector('input[type="search"]');
+      if(s) s.setAttribute('autofocus','');
+    });
+  </script>
+</body>
+</html>
 
     ul.links li a {
       color: #3367d6;
@@ -352,4 +456,5 @@ L.marker([55.6050, 13.0038], {icon: icon('green')}).addTo(map).bindPopup('Malmö
 
 </body>
                                                                               </html>
+
 
