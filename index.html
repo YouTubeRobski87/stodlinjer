@@ -1,100 +1,197 @@
-<!DOCTYPE html><html lang="sv">
+<!doctype html>
+<html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stödlinjer.se</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stödlinjer – Hjälp & stöd när livet är tungt</title>
+  <meta name="description" content="En översikt över stödlinjer, jourtelefoner och hjälpresurser. Tillgänglig och trygg design." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
-    <header>
+    <header class="fade-up">
       <div class="brand">
-        <div class="logo">SL</div>
+        <div class="logo" aria-hidden="true">SL</div>
         <div>
-          <h1>Stödlinjer.se</h1>
-          <p>Hjälp & stöd när livet är tungt</p>
+          <h1>Stödlinjer</h1>
+          <p>Snabb överblick över hjälp, jourtelefoner och stöd.</p>
         </div>
       </div>
       <nav>
-        <a href="#stodlinjer" class="btn">Stödlinjer</a>
-        <a href="#om" class="btn">Om sidan</a>
-        <a href="#kontakt" class="btn">Kontakt</a>
+        <button class="btn">Om oss</button>
+        <button class="btn">Kontakta</button>
+        <button class="btn primary">Ring 24/7</button>
       </nav>
-    </header><!-- Hero -->
-<section class="hero">
-  <div>
-    <h2>Behöver du prata med någon?</h2>
-    <p>Här finns stödlinjer som lyssnar.</p>
-    <div class="search">
-      <input type="text" placeholder="Sök stödlinje..." id="searchInput">
-      <button class="btn primary" onclick="searchResources()">Sök</button>
-    </div>
-  </div>
-</section>
+    </header>
 
-<!-- Stödlinjer Cards -->
-<section id="stodlinjer" class="cards-grid">
-  <div class="resource">
-    <div class="icon">M</div>
-    <div>
-      <h4><a href="https://mind.se/" target="_blank">Mind — Självmordslinjen</a></h4>
-      <p>Stöd dygnet runt för psykisk hälsa.</p>
-      <a href="tel:90101">Ring 90101</a>
-    </div>
-  </div>
-  <div class="resource">
-    <div class="icon">K</div>
-    <div>
-      <h4><a href="https://www.kvinnofridslinjen.se/" target="_blank">Kvinnofridslinjen</a></h4>
-      <p>Stöd för våldsutsatta kvinnor.</p>
-      <a href="tel:020505050">Ring 020-50 50 50</a>
-    </div>
-  </div>
-  <div class="resource">
-    <div class="icon">J</div>
-    <div>
-      <h4><a href="https://jourhavande-medmanniska.se/" target="_blank">Jourhavande Medmänniska</a></h4>
-      <p>Nattöppet stöd för samtal.</p>
-      <a href="tel:0840002000">Ring 08-400 200 00</a>
-    </div>
-  </div>
-  <div class="resource">
-    <div class="icon">B</div>
-    <div>
-      <h4><a href="https://brottsofferjouren.se/" target="_blank">Brottsofferjouren</a></h4>
-      <p>Stöd för brottsutsatta och vittnen.</p>
-      <a href="tel:116006">Ring 116 006</a>
-    </div>
-  </div>
-  <div class="resource">
-    <div class="icon">Ä</div>
-    <div>
-      <h4><a href="https://www.aldrelinjen.se/" target="_blank">Äldrelinjen</a></h4>
-      <p>Stödtelefon för äldre personer som känner sig ensamma.</p>
-      <a href="tel:020224400">Ring 020-22 44 00</a>
-    </div>
-  </div>
-</section>
+    <main>
+      <section class="hero">
+        <div class="card fade-up">
+          <h2>När livet känns tungt – du är inte ensam</h2>
+          <p>Sök snabbt stöd, hitta rätt journummer eller läs råd för den första stunden. All information är anonym och lättillgänglig.</p>
+          <div class="search" role="search" aria-label="Sök stödlinje">
+            <input type="search" id="searchInput" placeholder="Sök: t.ex. ångest, självmordstankar, missbruk, kvinnor" aria-label="Sök stöd" />
+            <button class="btn" onclick="filterResources()">Sök</button>
+          </div>
+        </div>
 
-<!-- Om sidan -->
-<section id="om" class="notice fade-up">
-  <p>Stodlinjer.se är en ideell sida som samlar viktiga stödresurser för dig som behöver någon att prata med.</p>
-</section>
+        <aside class="right-aside">
+          <div class="card notice fade-up">
+            <h3>Akut?</h3>
+            <p style="color:var(--muted)">Om du är i omedelbar fara: ring 112. För psykisk akut hjälp, kontakta din lokala psykiatri eller den nationella stödlinjen.</p>
+            <div style="display:flex;gap:8px;">
+              <a href="tel:112" class="btn primary">Ring 112</a>
+              <a href="https://mind.se/" target="_blank" rel="noopener" class="btn">Nationell stödlinje</a>
+            </div>
+          </div>
+        </aside>
+      </section>
 
-<!-- Kontakt -->
-<section id="kontakt" class="notice fade-up">
-  <p>Vill du kontakta oss? Skicka e-post till <a href="mailto:kontakt@stodlinjer.se">kontakt@stodlinjer.se</a></p>
-</section>
+      <section class="cards-grid fade-up" id="resources">
+        <!-- Resurser fylls via script -->
+      </section>
+    </main>
 
-  </div>  <script>
-    function searchResources(){
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const resources = document.querySelectorAll('.resource');
-      resources.forEach(r => {
-        const text = r.textContent.toLowerCase();
-        r.style.display = text.includes(input) ? 'flex' : 'none';
+    <footer>
+      <div>© Stödlinjer – tillgängligt stöd för alla</div>
+    </footer>
+  </div>
+
+  <script>
+    // Alla stödlinjer och resurser
+    const resources = [
+      {
+        icon: '24', 
+        title: 'Mind – Självmordslinjen', 
+        tel: '90101', 
+        link: 'https://mind.se/', 
+        description: 'Stöd dygnet runt för psykisk hälsa.',
+        keywords: ['självmord', 'psykisk', 'hälsa', 'depression', 'ångest', 'kris', 'mind']
+      },
+      {
+        icon: 'KJ', 
+        title: 'Kvinnofridslinjen', 
+        tel: '020505050', 
+        link: 'https://kvinnofridslinjen.se/', 
+        description: 'Stöd vid hot och våld, öppet 24/7.',
+        keywords: ['kvinnor', 'våld', 'hot', 'misshandel', 'relationsvåld', 'fridskränkning']
+      },
+      {
+        icon: 'MJ', 
+        title: 'Mansjouren', 
+        tel: '020500000', 
+        link: 'https://mansjouren.se/', 
+        description: 'Stöd för män som utsätts för våld eller hot.',
+        keywords: ['män', 'våld', 'hot', 'misshandel', 'relationsvåld']
+      },
+      {
+        icon: 'BU', 
+        title: 'Barnens Rätt i Samhället (BRIS)', 
+        tel: '116111', 
+        link: 'https://www.bris.se/', 
+        description: 'Stöd och råd för barn och unga, öppet varje dag.',
+        keywords: ['barn', 'unga', 'ungdomar', 'tonåringar', 'bris', 'mobbning', 'familj']
+      },
+      {
+        icon: 'MA', 
+        title: 'Missbrukslinjen', 
+        tel: '020-801 801', 
+        link: 'https://www.missbrukslinjen.se/', 
+        description: 'Hjälp och stöd vid alkohol- och narkotikaproblem.',
+        keywords: ['missbruk', 'alkohol', 'narkotika', 'droger', 'beroende', 'spel', 'gambling']
+      },
+      {
+        icon: 'SO', 
+        title: 'Sorglinjen', 
+        tel: '020-800 100', 
+        link: 'https://sorglinjen.se/', 
+        description: 'Stöd till den som sörjer, öppet varje dag.',
+        keywords: ['sorg', 'förlust', 'död', 'dödsfall', 'begravning', 'saknad']
+      },
+    ];
+
+    // Renderar alla resurser
+    function renderResources(resourcesToRender = resources) {
+      const container = document.getElementById('resources');
+      container.innerHTML = '';
+      
+      if (resourcesToRender.length === 0) {
+        container.innerHTML = '<div class="card fade-up" style="grid-column: 1/-1; text-align:center;"><p style="color:var(--muted)">Inga resultat hittades. Försök med andra sökord.</p></div>';
+        return;
+      }
+      
+      resourcesToRender.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'card resource fade-up';
+        div.innerHTML = `
+          <div class="icon" aria-hidden="true">${r.icon}</div>
+          <div>
+            <h4>${r.title}</h4>
+            <p class="small">
+              Telefon: ${r.tel ? `<a href='tel:${r.tel}'>${r.tel}</a>` : 'Ej tillgängligt'} – 
+              <a href='${r.link}' target='_blank' rel='noopener'>Mer info</a>
+            </p>
+            <p class="small">${r.description}</p>
+          </div>
+        `;
+        container.appendChild(div);
       });
     }
-  </script></body>
+
+    // Filtrera resurser baserat på sökning
+    function filterResources() {
+      const searchInput = document.getElementById('searchInput');
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      
+      if (searchTerm === '') {
+        renderResources(resources);
+        return;
+      }
+      
+      const filtered = resources.filter(resource => {
+        // Sök i titel
+        if (resource.title.toLowerCase().includes(searchTerm)) {
+          return true;
+        }
+        
+        // Sök i beskrivning
+        if (resource.description.toLowerCase().includes(searchTerm)) {
+          return true;
+        }
+        
+        // Sök i nyckelord
+        if (resource.keywords && resource.keywords.some(keyword => 
+          keyword.toLowerCase().includes(searchTerm)
+        )) {
+          return true;
+        }
+        
+        return false;
+      });
+      
+      renderResources(filtered);
+    }
+
+    // Lyssna på Enter-tangenten i sökfältet
+    document.addEventListener('DOMContentLoaded', function() {
+      renderResources();
+      
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          filterResources();
+        }
+      });
+      
+      // Rensa sökning och visa alla när input är tom
+      searchInput.addEventListener('input', function(e) {
+        if (e.target.value === '') {
+          renderResources(resources);
+        }
+      });
+    });
+  </script>
+</body>
 </html>
