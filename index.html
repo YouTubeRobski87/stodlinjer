@@ -87,4 +87,14 @@
   <p>Vill du kontakta oss? Skicka e-post till <a href="mailto:kontakt@stodlinjer.se">kontakt@stodlinjer.se</a></p>
 </section>
 
-  </div>
+  </div>  <script>
+    function searchResources(){
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const resources = document.querySelectorAll('.resource');
+      resources.forEach(r => {
+        const text = r.textContent.toLowerCase();
+        r.style.display = text.includes(input) ? 'flex' : 'none';
+      });
+    }
+  </script></body>
+</html>
