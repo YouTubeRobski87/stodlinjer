@@ -1,47 +1,90 @@
-<!-- Uppdaterad HTML med klickbara namn och Äldrelinjen --><!doctype html>
-
-<html lang="sv">
+<!DOCTYPE html><html lang="sv">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stödlinjer — Hjälp & stöd när livet är tungt</title>
-  <meta name="description" content="En översikt över stödlinjer, jourtelefoner och hjälpresurser. Tillgänglig och trygg design." />
-  <style>
-    body { font-family: Arial, sans-serif; background:#f8f8f8; margin:0; padding:20px; }
-    .card { background:#fff; padding:20px; margin-bottom:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-    .title { font-size:18px; font-weight:bold; margin-bottom:5px; }
-    .desc { font-size:14px; margin-bottom:8px; }
-    a { color:#0077cc; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stödlinjer.se</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header style="text-align:center; padding:20px; font-size:20px; font-weight:bold;">
-    Behöver du prata med någon? Här finns stödlinjer som lyssnar.
-    <nav style="margin-top:10px; font-size:16px; font-weight:normal;">
-      <a href="#stodlinjer" style="margin:0 10px;">Stödlinjer</a>
-      <a href="#om" style="margin:0 10px;">Om sidan</a>
-      <a href="#kontakt" style="margin:0 10px;">Kontakt</a>
-    </nav>
-  </header>  <div class="card">
-    <div class="title"><a href="https://mind.se/" target="_blank">Mind — Självmordslinjen</a></div>
-    <div class="desc">Stöd dygnet runt för psykisk hälsa.</div>
-    <a href="tel:90101">Ring 90101</a>
-  </div>  <div class="card">
-    <div class="title"><a href="https://www.kvinnofridslinjen.se/" target="_blank">Kvinnofridslinjen</a></div>
-    <div class="desc">Stöd för våldsutsatta kvinnor.</div>
-    <a href="tel:020505050">Ring 020-50 50 50</a>
-  </div>  <div class="card">
-    <div class="title"><a href="https://jourhavande-medmanniska.se/" target="_blank">Jourhavande Medmänniska</a></div>
-    <div class="desc">Nattöppet stöd för samtal.</div>
-    <a href="tel:0840002000">Ring 08-400 200 00</a>
-  </div>  <div class="card">
-    <div class="title"><a href="https://brottsofferjouren.se/" target="_blank">Brottsofferjouren</a></div>
-    <div class="desc">Stöd för brottsutsatta och vittnen.</div>
-    <a href="tel:116006">Ring 116 006</a>
-  </div>  <div class="card">
-    <div class="title"><a href="https://www.aldrelinjen.se/" target="_blank">Äldrelinjen</a></div>
-    <div class="desc">Stödtelefon för äldre personer som känner sig ensamma.</div>
-    <a href="tel:020224400">Ring 020-22 44 00</a>
-  </div></body>
-</html>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">SL</div>
+        <div>
+          <h1>Stödlinjer.se</h1>
+          <p>Hjälp & stöd när livet är tungt</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#stodlinjer" class="btn">Stödlinjer</a>
+        <a href="#om" class="btn">Om sidan</a>
+        <a href="#kontakt" class="btn">Kontakt</a>
+      </nav>
+    </header><!-- Hero -->
+<section class="hero">
+  <div>
+    <h2>Behöver du prata med någon?</h2>
+    <p>Här finns stödlinjer som lyssnar.</p>
+    <div class="search">
+      <input type="text" placeholder="Sök stödlinje..." id="searchInput">
+      <button class="btn primary" onclick="searchResources()">Sök</button>
+    </div>
+  </div>
+</section>
+
+<!-- Stödlinjer Cards -->
+<section id="stodlinjer" class="cards-grid">
+  <div class="resource">
+    <div class="icon">M</div>
+    <div>
+      <h4><a href="https://mind.se/" target="_blank">Mind — Självmordslinjen</a></h4>
+      <p>Stöd dygnet runt för psykisk hälsa.</p>
+      <a href="tel:90101">Ring 90101</a>
+    </div>
+  </div>
+  <div class="resource">
+    <div class="icon">K</div>
+    <div>
+      <h4><a href="https://www.kvinnofridslinjen.se/" target="_blank">Kvinnofridslinjen</a></h4>
+      <p>Stöd för våldsutsatta kvinnor.</p>
+      <a href="tel:020505050">Ring 020-50 50 50</a>
+    </div>
+  </div>
+  <div class="resource">
+    <div class="icon">J</div>
+    <div>
+      <h4><a href="https://jourhavande-medmanniska.se/" target="_blank">Jourhavande Medmänniska</a></h4>
+      <p>Nattöppet stöd för samtal.</p>
+      <a href="tel:0840002000">Ring 08-400 200 00</a>
+    </div>
+  </div>
+  <div class="resource">
+    <div class="icon">B</div>
+    <div>
+      <h4><a href="https://brottsofferjouren.se/" target="_blank">Brottsofferjouren</a></h4>
+      <p>Stöd för brottsutsatta och vittnen.</p>
+      <a href="tel:116006">Ring 116 006</a>
+    </div>
+  </div>
+  <div class="resource">
+    <div class="icon">Ä</div>
+    <div>
+      <h4><a href="https://www.aldrelinjen.se/" target="_blank">Äldrelinjen</a></h4>
+      <p>Stödtelefon för äldre personer som känner sig ensamma.</p>
+      <a href="tel:020224400">Ring 020-22 44 00</a>
+    </div>
+  </div>
+</section>
+
+<!-- Om sidan -->
+<section id="om" class="notice fade-up">
+  <p>Stodlinjer.se är en ideell sida som samlar viktiga stödresurser för dig som behöver någon att prata med.</p>
+</section>
+
+<!-- Kontakt -->
+<section id="kontakt" class="notice fade-up">
+  <p>Vill du kontakta oss? Skicka e-post till <a href="mailto:kontakt@stodlinjer.se">kontakt@stodlinjer.se</a></p>
+</section>
+
+  </div>
