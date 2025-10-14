@@ -1,72 +1,39 @@
-<!doctype html>
+<!-- Uppdaterad HTML med klickbara namn och Äldrelinjen --><!doctype html>
+
 <html lang="sv">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stödlinjer — Hjälp & stöd när livet är tungt</title>
   <meta name="description" content="En översikt över stödlinjer, jourtelefoner och hjälpresurser. Tillgänglig och trygg design." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background:#f8f8f8; margin:0; padding:20px; }
+    .card { background:#fff; padding:20px; margin-bottom:15px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    .title { font-size:18px; font-weight:bold; margin-bottom:5px; }
+    .desc { font-size:14px; margin-bottom:8px; }
+    a { color:#0077cc; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
 </head>
-<body>
-  <div class="container">
-    <header class="fade-up">
-      <div class="brand">
-        <div class="logo" aria-hidden>SL</div>
-        <div>
-          <h1>Stödlinjer</h1>
-          <p>Snabb överblick över hjälp, jourtelefoner och stöd.</p>
-        </div>
-      </div>
-      <nav>
-        <button class="btn">Om oss</button>
-        <button class="btn">Kontakta</button>
-        <button class="btn primary">Ring 24/7</button>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="card fade-up">
-          <h2>När livet känns tungt — du är inte ensam</h2>
-          <p>Sök snabbt stöd, hitta rätt journummer eller läs råd för den första stunden. All information är anonym och lättillgänglig.</p>
-          <div class="search" role="search" aria-label="Sök stödlinje">
-            <input type="search" placeholder="Sök: t.ex. ångest, självmordstankar, missbruk, kvinnor" aria-label="Sök stöd" />
-            <button class="btn" onclick="filter()">Sök</button>
-          </div>
-        </div>
-
-        <aside class="right-aside">
-          <div class="card notice fade-up">
-            <h3>Akut?</h3>
-            <p style="color:var(--muted)">Om du är i omedelbar fara: ring 112. För psykisk akut hjälp, kontakta din lokala psykiatri eller den nationella stödlinjen.</p>
-            <div style="display:flex;gap:8px;">
-              <a href="tel:112" class="btn primary">Ring 112</a>
-              <a href="https://mind.se/" target="_blank" rel="noopener" class="btn">Nationell stödlinje</a>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Resurssektion -->
-      <section class="cards-grid fade-up" id="resources">
-        <!-- Fylls via script.js -->
-      </section>
-    </main>
-
-    <section class="card fade-up" style="margin-top:28px; padding:20px; text-align:center;">
-  <h3>Kontakta oss</h3>
-  <p>Har du frågor eller behöver mer information? Kontakta oss gärna:</p>
-  <a href="mailto:info@stodlinjer.se" class="btn primary">info@stodlinjer.se</a>
-</section>
-
-    <footer>
-      <div>© Stödlinjer — tillgängligt stöd för alla</div>
-    </footer>
-  </div>
-
-  <!-- Länk till script.js som sköter resurserna -->
-  <script src="script.js"></script>
-</body>
+<body>  <div class="card">
+    <div class="title"><a href="https://mind.se/" target="_blank">Mind — Självmordslinjen</a></div>
+    <div class="desc">Stöd dygnet runt för psykisk hälsa.</div>
+    <a href="tel:90101">Ring 90101</a>
+  </div>  <div class="card">
+    <div class="title"><a href="https://www.kvinnofridslinjen.se/" target="_blank">Kvinnofridslinjen</a></div>
+    <div class="desc">Stöd för våldsutsatta kvinnor.</div>
+    <a href="tel:020505050">Ring 020-50 50 50</a>
+  </div>  <div class="card">
+    <div class="title"><a href="https://jourhavande-medmanniska.se/" target="_blank">Jourhavande Medmänniska</a></div>
+    <div class="desc">Nattöppet stöd för samtal.</div>
+    <a href="tel:0840002000">Ring 08-400 200 00</a>
+  </div>  <div class="card">
+    <div class="title"><a href="https://brottsofferjouren.se/" target="_blank">Brottsofferjouren</a></div>
+    <div class="desc">Stöd för brottsutsatta och vittnen.</div>
+    <a href="tel:116006">Ring 116 006</a>
+  </div>  <div class="card">
+    <div class="title"><a href="https://www.aldrelinjen.se/" target="_blank">Äldrelinjen</a></div>
+    <div class="desc">Stödtelefon för äldre personer som känner sig ensamma.</div>
+    <a href="tel:020224400">Ring 020-22 44 00</a>
+  </div></body>
 </html>
