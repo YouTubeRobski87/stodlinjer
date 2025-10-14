@@ -1,347 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psykakuten - Akut psykiatrisk hjälp</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            color: white;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.95;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .emergency-banner {
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .emergency-banner h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        .emergency-banner .phone {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin: 15px 0;
-            letter-spacing: 2px;
-        }
-
-        .emergency-banner p {
-            font-size: 1.1em;
-            opacity: 0.95;
-        }
-
-        .cities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .city-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            border-top: 5px solid #667eea;
-        }
-
-        .city-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .city-card h3 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .city-icon {
-            font-size: 1.2em;
-        }
-
-        .info-section {
-            margin-bottom: 20px;
-        }
-
-        .info-section h4 {
-            color: #555;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .phone-number {
-            font-size: 1.6em;
-            font-weight: bold;
-            color: #2c3e50;
-            margin: 5px 0;
-        }
-
-        .phone-number a {
-            color: #667eea;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .phone-number a:hover {
-            color: #764ba2;
-        }
-
-        .location {
-            color: #666;
-            font-size: 1em;
-            line-height: 1.5;
-        }
-
-        .hours {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 15px;
-            border-left: 4px solid #667eea;
-        }
-
-        .hours p {
-            color: #555;
-            font-size: 0.95em;
-        }
-
-        .note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        .note p {
-            color: #856404;
-            font-size: 1em;
-            line-height: 1.6;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid rgba(255,255,255,0.2);
-            color: white;
-        }
-
-        .footer a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid white;
-            transition: opacity 0.3s ease;
-        }
-
-        .footer a:hover {
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .emergency-banner .phone {
-                font-size: 2em;
-            }
-            
-            .city-card h3 {
-                font-size: 1.5em;
-            }
-            
-            .phone-number {
-                font-size: 1.3em;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stödlinjer — Hjälp & stöd när livet är tungt</title>
+  <meta name="description" content="En översikt över stödlinjer, jourtelefoner och hjälpresurser. Tillgänglig och trygg design." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>🏥 Psykakuten - Akut Psykiatrisk Hjälp</h1>
-            <p>När livet känns tungt och du behöver akut psykiatrisk hjälp – du är inte ensam. Här hittar du kontaktuppgifter till psykakuten i Sverige.</p>
+  <div class="container">
+    <header class="fade-up">
+      <div class="brand">
+        <div class="logo" aria-hidden>SL</div>
+        <div>
+          <h1>Stödlinjer</h1>
+          <p>Snabb överblick över hjälp, jourtelefoner och stöd.</p>
+        </div>
+      </div>
+      <nav>
+        <button class="btn">Om oss</button>
+        <button class="btn">Kontakta</button>
+        <button class="btn primary">Ring 24/7</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card fade-up">
+          <h2>När livet känns tungt — du är inte ensam</h2>
+          <p>Sök snabbt stöd, hitta rätt journummer eller läs råd för den första stunden. All information är anonym och lättillgänglig.</p>
+          <div class="search" role="search" aria-label="Sök stödlinje">
+            <input type="search" placeholder="Sök: t.ex. ångest, självmordstankar, missbruk, kvinnor" aria-label="Sök stöd" />
+            <button class="btn" onclick="filter()">Sök</button>
+          </div>
         </div>
 
-        <div class="emergency-banner">
-            <h2>⚠️ Akut Nödsituation?</h2>
-            <div class="phone">112</div>
-            <p>Vid livshotande tillstånd eller om du är i omedelbar fara - ring alltid 112</p>
-        </div>
-
-        <div class="cities-grid">
-            <div class="city-card">
-                <h3><span class="city-icon">📍</span> Göteborg</h3>
-                
-                <div class="info-section">
-                    <h4>Telefon</h4>
-                    <div class="phone-number">
-                        <a href="tel:031-342-10-00">031-342 10 00</a>
-                    </div>
-                    <p style="color: #666; font-size: 0.9em; margin-top: 5px;">(Växel - be att bli kopplad till psykiatriska akutmottagningen)</p>
-                </div>
-
-                <div class="info-section">
-                    <h4>Plats</h4>
-                    <div class="location">
-                        Psykiatrisk akutmottagning Östra<br>
-                        Östra sjukhuset, Göteborg<br>
-                        Journalvägen 5<br>
-                        416 50 Göteborg
-                    </div>
-                </div>
-
-                <div class="hours">
-                    <p><strong>Öppettider:</strong> Dygnet runt, alla dagar</p>
-                    <p><strong>Ålder:</strong> 18 år och äldre</p>
-                </div>
+        <aside class="right-aside">
+          <div class="card notice fade-up">
+            <h3>Akut?</h3>
+            <p style="color:var(--muted)">Om du är i omedelbar fara: ring 112. För psykisk akut hjälp, kontakta din lokala psykiatri eller den nationella stödlinjen.</p>
+            <div style="display:flex;gap:8px;">
+              <a href="tel:112" class="btn primary">Ring 112</a>
+              <a href="https://mind.se/" target="_blank" rel="noopener" class="btn">Nationell stödlinje</a>
             </div>
+          </div>
+        </aside>
+      </section>
 
-            <div class="city-card">
-                <h3><span class="city-icon">📍</span> Varberg</h3>
-                
-                <div class="info-section">
-                    <h4>Telefon</h4>
-                    <div class="phone-number">
-                        <a href="tel:0340-66-27-77">0340-66 27 77</a>
-                    </div>
-                </div>
+      <section class="cards-grid fade-up" id="resources">
+        <!-- Resurser fylls via script -->
+      </section>
 
-                <div class="info-section">
-                    <h4>Plats</h4>
-                    <div class="location">
-                        Psykiatriska akutmottagningen<br>
-                        Hallands sjukhus Varberg<br>
-                        Ingång K1<br>
-                        Träslövsvägen 68<br>
-                        432 81 Varberg
-                    </div>
-                </div>
-
-                <div class="hours">
-                    <p><strong>Öppettider:</strong> Dygnet runt, alla dagar</p>
-                    <p><strong>Ålder:</strong> 18 år och äldre</p>
-                    <p><strong>Extra:</strong> Telefonrådgivning dygnet runt</p>
-                </div>
-            </div>
-
-            <div class="city-card">
-                <h3><span class="city-icon">📍</span> Malmö</h3>
-                
-                <div class="info-section">
-                    <h4>Telefon</h4>
-                    <div class="phone-number">
-                        <a href="tel:040-33-80-00">040-33 80 00</a>
-                    </div>
-                </div>
-
-                <div class="info-section">
-                    <h4>Plats</h4>
-                    <div class="location">
-                        Akutmottagning vuxenpsykiatri<br>
-                        Carl-Bertil Laurells gata 7, plan 1<br>
-                        Malmö<br>
-                        <br>
-                        <em>Kollektivtrafik: Bussar till Södervärn eller Tandvårdshögskolan, eller tåg till Triangeln station (södra uppgången)</em>
-                    </div>
-                </div>
-
-                <div class="hours">
-                    <p><strong>Öppettider:</strong> Dygnet runt, alla dagar</p>
-                    <p><strong>Ålder:</strong> 18 år och äldre</p>
-                </div>
-            </div>
-
-            <div class="city-card">
-                <h3><span class="city-icon">📍</span> Stockholm</h3>
-                
-                <div class="info-section">
-                    <h4>Telefon</h4>
-                    <div class="phone-number">
-                        <a href="tel:08-123-492-00">08-123 492 00</a>
-                    </div>
-                </div>
-
-                <div class="info-section">
-                    <h4>Plats</h4>
-                    <div class="location">
-                        Psykiatriska akutmottagningen<br>
-                        S:t Görans sjukhusområde<br>
-                        Vårdvägen 5<br>
-                        112 81 Stockholm<br>
-                        <br>
-                        <em>Tunnelbana: Gröna linjen till Fridhemsplan eller Blå linjen till Stadshagen</em>
-                    </div>
-                </div>
-
-                <div class="hours">
-                    <p><strong>Öppettider:</strong> Dygnet runt, alla dagar</p>
-                    <p><strong>Ålder:</strong> 18 år och äldre</p>
-                    <p><strong>Anmälan:</strong> I kassan kl 8:00-20:45, övrig tid ring på dörrklockan</p>
-                </div>
-            </div>
+      <section class="fade-up" style="margin-top: 3rem;">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Psykakuten — Akut psykiatrisk hjälp</h3>
+        <p style="margin-bottom: 1.5rem; color: var(--muted);">Om du behöver akut psykiatrisk specialistvård och är 18 år eller äldre. Öppet dygnet runt, alla dagar.</p>
+        <div class="cards-grid" id="psykakuten">
+          <!-- Psykakuten fylls via script -->
         </div>
+      </section>
+    </main>
 
-        <div class="note">
-            <p><strong>💡 Viktigt att veta:</strong> Ta alltid med giltig legitimation när du besöker psykakuten. Om du är under 18 år finns det särskilda barn- och ungdomspsykiatriska akutmottagningar (BUP Akut) i respektive region. För mer information och stöd kan du också kontakta 1177 Vårdguiden eller besöka deras webbplats <a href="https://www.1177.se" target="_blank" style="color: #667eea; font-weight: 600;">1177.se</a></p>
-        </div>
+    <footer>
+      <div>© Stödlinjer — tillgängligt stöd för alla</div>
+    </footer>
+  </div>
 
-        <div class="footer">
-            <p>För fler stödlinjer och hjälp, besök <a href="https://stodlinjer.se">Stödlinjer.se</a></p>
-            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">Informationen uppdaterades oktober 2025. Kontrollera alltid aktuella kontaktuppgifter via 1177 eller respektive vårdgivares webbplats.</p>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const resources = [
+      {icon: '24', title: 'Mind — Självmordslinjen', tel: '90101', link: 'https://mind.se/', description: 'Stöd dygnet runt för psykisk hälsa.'},
+      {icon: 'KJ', title: 'Kvinnofridslinjen', tel: '020505050', link: 'https://kvinnofridslinjen.se/', description: 'Stöd vid hot och våld, öppet 24/7.'},
+      {icon: 'MJ', title: 'Mansjouren', tel: '020500000', link: 'https://mansjouren.se/', description: 'Stöd för män som utsätts för våld eller hot.'},
+      {icon: 'BU', title: 'Barnens Rätt i Samhället (BRIS)', tel: '116111', link: 'https://www.bris.se/', description: 'Stöd och råd för barn och unga, öppet varje dag.'},
+      {icon: 'MA', title: 'Missbrukslinjen', tel: '020-801 801', link: 'https://www.missbrukslinjen.se/', description: 'Hjälp och stöd vid alkohol- och narkotikaproblem.'},
+      {icon: 'SO', title: 'Sorglinjen', tel: '020-800 100', link: 'https://sorglinjen.se/', description: 'Stöd till den som sörjer, öppet varje dag.'},
+    ];
+
+    const psykakuten = [
+      {icon: 'GB', title: 'Psykakuten Göteborg', tel: '031-342 10 00', link: 'https://www.1177.se/hitta-vard/kontaktkort/Psykiatrisk-akutmottagning-Ostra-Goteborg/', description: 'Psykiatrisk akutmottagning Östra sjukhuset, Journalvägen 5. Öppet dygnet runt.'},
+      {icon: 'VB', title: 'Psykakuten Varberg', tel: '0340-66 27 77', link: 'https://www.1177.se/hitta-vard/kontaktkort/Psykiatriska-akutmottagningen-Varberg/', description: 'Hallands sjukhus Varberg, ingång K1, Träslövsvägen 68. Öppet dygnet runt.'},
+      {icon: 'MM', title: 'Psykakuten Malmö', tel: '040-33 80 00', link: 'https://www.1177.se/hitta-vard/kontaktkort/Akutmottagning-vuxenpsykiatri-Malmo/', description: 'Carl-Bertil Laurells gata 7, plan 1. Öppet dygnet runt.'},
+      {icon: 'ST', title: 'Psykakuten Stockholm', tel: '08-123 492 00', link: 'https://www.1177.se/Stockholm/hitta-vard/kontaktkort/Psykiatrisk-akutmottagning/', description: 'S:t Görans sjukhusområde, Vårdvägen 5. Öppet dygnet runt.'},
+    ];
+
+    const container = document.getElementById('resources');
+    resources.forEach(r => {
+      const div = document.createElement('div');
+      div.className = 'card resource fade-up';
+      div.innerHTML = `
+        <div class="icon" aria-hidden>${r.icon}</div>
+        <div>
+          <h4>${r.title}</h4>
+          <p class="small">
+            Telefon: ${r.tel ? `<a href='tel:${r.tel}'>${r.tel}</a>` : 'Ej tillgängligt'} — 
+            <a href='${r.link}' target='_blank' rel='noopener'>Mer info</a>
+          </p>
+          <p class="small">${r.description}</p>
         </div>
-    </div>
+      `;
+      container.appendChild(div);
+    });
+
+    const psykakutenContainer = document.getElementById('psykakuten');
+    psykakuten.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'card resource fade-up';
+      div.innerHTML = `
+        <div class="icon" aria-hidden>${p.icon}</div>
+        <div>
+          <h4>${p.title}</h4>
+          <p class="small">
+            Telefon: <a href='tel:${p.tel}'>${p.tel}</a> — 
+            <a href='${p.link}' target='_blank' rel='noopener'>Mer info</a>
+          </p>
+          <p class="small">${p.description}</p>
+        </div>
+      `;
+      psykakutenContainer.appendChild(div);
+    });
+  });
+  </script>
 </body>
 </html>
