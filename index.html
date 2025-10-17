@@ -297,4 +297,111 @@
                 description: "Sjukvårdsrådgivning dygnet runt. Ring 1177 för medicinska råd och frågor om din hälsa.",
                 category: "halsa",
                 available: "Dygnet runt, alla dagar",
-                tags: ["sjukvård", "hälsa", "medicinskt", "vårdguiden
+                tags: ["sjukvård", "hälsa", "medicinskt", "vårdguiden", "sjuk", "läkare"]
+            },
+            {
+                id: 8,
+                name: "Äldrelinjen",
+                number: "020-22 22 33",
+                description: "För äldre och deras anhöriga. Stöd och information om åldrande, pensionsfrågor och vardagsstöd.",
+                category: "aldre",
+                available: "Vardagar 10-18",
+                tags: ["äldre", "pension", "anhöriga", "åldrande", "senior"]
+            }
+        ];
+
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        function filterLines() {
+            let filtered = supportLines;
+
+            if (currentCategory !== 'all') {
+                filtered = filtered.filter(line => line.category === currentCategory);
+            }
+
+            if (searchQuery.trim()) {
+                const query = searchQuery.toLowerCase();
+                filtered = filtered.filter(line =>
+                    line.name.toLowerCase().includes(query) ||
+                    line.description.toLowerCase().includes(query) ||
+                    line.tags.some(tag => tag.toLowerCase().includes(query))
+                );
+            }
+
+            filtered.sort((a, b) => {
+                if (a.urgent && !b.urgent) return -1;
+                if (!a.urgent && b.urgent) return 1;
+                return 0;
+            });
+
+            return filtered;
+        }
+
+        function renderLines() {
+            const grid = document.getElementById('linesGrid');
+            const noResults = document.getElementById('noResults');
+            const filtered = filterLines();
+
+            if (filtered.length === 0) {
+                grid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+
+            grid.innerHTML = filtered.map(line => `
+                <article class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all transform hover:-translate-y-1 ${line.urgent ? 'ring-2 ring-red-400 ring-offset-2 ring-offset-[#0f1724]' : ''}" itemscope itemtype="https://schema.org/ContactPoint">
+                    ${line.urgent ? `
+                        <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                            <span>Akut hjälp</span>
+                        </div>
+                    ` : ''}
+                    <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">${line.name}</h3>
+                    <a href="tel:${line.number.replace(/\s/g, '').replace(/-/g, '')}" class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors" itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>${line.number}</span>
+                    </a>
+                    <p class="text-gray-300 mb-4 leading-relaxed" itemprop="description">${line.description}</p>
+                    <div class="flex items-center gap-2 text-sm text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span itemprop="hoursAvailable">${line.available}</span>
+                    </div>
+                    <meta itemprop="contactType" content="Crisis Support">
+                    <meta itemprop="areaServed" content="SE">
+                    <meta itemprop="availableLanguage" content="Swedish">
+                </article>
+            `).join('');
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderLines();
+        });
+
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const button = e.currentTarget;
+                currentCategory = button.dataset.category;
+                
+                document.querySelectorAll('.category-btn').forEach(b => {
+                    b.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10';
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                
+                button.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg';
+                button.setAttribute('aria-pressed', 'true');
+                
+                renderLines();
+            });
+        });
+
+        // Initial render
+        renderLines();
+    </script>
+</body>
+</html>
