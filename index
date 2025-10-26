@@ -294,7 +294,7 @@ Stats</a>
             },
             {
                 id: 2,
-                name:<a href="https://mind.se/hitta-hjalp/sjalvmordslinjen/" target="_blank">Mind Självmordslinjen</a>
+                name: "Mind Självmordslinjen",
                 number: "020-18 18 00",
                 description: "Chatt och telefon för dig med självmordstankar. Mind erbjuder professionellt stöd.",
                 category: "akut",
@@ -402,7 +402,7 @@ Stats</a>
             noResults.classList.add('hidden');
 
             grid.innerHTML = filtered.map(line => `
-                <article class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all transform hover:-translate-y-1 ${line.urgent ? 'ring-2 ring-red-400 ring-offset-2 ring-offset-[#0f1724]' : ''}" itemscope itemtype="https://schema.org/ContactPoint">
+              <a href="https://mind.se/hitta-hjalp/sjalvmordslinjen/" target="_blank"> <article class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all transform hover:-translate-y-1 ${line.urgent ? 'ring-2 ring-red-400 ring-offset-2 ring-offset-[#0f1724]' : ''}" itemscope itemtype="https://schema.org/ContactPoint">
                     ${line.urgent ? `
                         <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
@@ -422,7 +422,7 @@ Stats</a>
                     <meta itemprop="contactType" content="Crisis Support">
                     <meta itemprop="areaServed" content="SE">
                     <meta itemprop="availableLanguage" content="Swedish">
-                </article>
+                </article></a>
             `).join('');
         }
 
