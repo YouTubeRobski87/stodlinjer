@@ -283,174 +283,203 @@
   </footer>
 
   <script>
-    const supportLines = [
-  {
-    id: 1,
-    name: "Mind – Självmordslinjen",
-    url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/",
-    number: "90101",
-    description: "För dig med självmordstankar eller som är orolig för någon. Anonymt och kostnadsfritt, telefon och chatt.",
-    category: "akut",
-    available: "Dygnet runt, alla dagar",
-    urgent: true,
-    tags: ["självmord", "akut", "kris", "självmordstankar", "depression", "ångest"]
-  },
-  {
-    id: 2,
-    name: "112 – Akut nödsituation",
-    url: "https://www.sosalarm.se/",
-    number: "112",
-    description: "Vid akut fara för liv och hälsa. Be om ambulans, polis eller brandkår.",
-    category: "akut",
-    available: "Dygnet runt, alla dagar",
-    urgent: true,
-    tags: ["akut", "nödsituation", "112", "livsfara"]
-  },
-  {
-    id: 3,
-    name: "BRIS – Barn och unga",
-    url: "https://www.bris.se/",
-    number: "116 111",
-    description: "För dig under 18. Prata om vad som helst, anonymt.",
-    category: "barn-unga",
-    available: "Vardagar 10–21, helger 13–21",
-    tags: ["barn", "unga", "tonåring", "mobbning", "skola", "ångest"]
-  },
-  {
-    id: 4,
-    name: "Kvinnofridslinjen",
-    url: "https://kvinnofridslinjen.se/",
-    number: "020-50 50 50",
-    description: "Stöd för dig som utsätts för våld, hot eller övergrepp. Anonymt och kostnadsfritt.",
-    category: "vald",
-    available: "Dygnet runt, alla dagar",
-    urgent: true,
-    tags: ["våld", "hot", "relationsvåld", "övergrepp", "kvinna"]
-  },
-  {
-    id: 5,
-    name: "Jourhavande präst",
-    url: "https://www.svenskakyrkan.se/jourhavandeprast",
-    number: "112",
-    description: "Ring 112 och be att bli kopplad till Jourhavande präst. Samtals- och krisstöd kvällar och nätter.",
-    category: "samtal",
-    available: "Alla dagar 21–06",
-    tags: ["existentiellt", "sorg", "ensamhet", "ångest", "samtal", "präst"]
-  },
-  {
-    id: 6,
-    name: "Jourhavande Medmänniska",
-    url: "https://www.jourhavande-medmanniska.se/",
-    number: "08-702 16 80",
-    description: "En röst i natten när du behöver någon som lyssnar.",
-    category: "samtal",
-    available: "Alla dagar 21–06 (telefon), chatt enligt schema",
-    tags: ["ensamhet", "oro", "samtal", "natten", "stöd"]
-  },
-  {
-    id: 7,
-    name: "1177 Vårdguiden",
-    url: "https://www.1177.se/",
-    number: "1177",
-    description: "Råd om vård och psykisk hälsa, och info om närmaste psykiatriska akutmottagning.",
-    category: "halsa",
-    available: "Dygnet runt, alla dagar",
-    tags: ["sjukvård", "hälsa", "psykisk hälsa", "rådgivning"]
-  },
-  {
-    id: 8,
-    name: "Äldrelinjen (Mind)",
-    url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
-    number: "020-22 22 33",
-    description: "För äldre och anhöriga. Någon som lyssnar när livet känns tungt.",
-    category: "aldre",
-    available: "Se aktuella tider på Mind",
-    tags: ["äldre", "anhörig", "ensamhet", "stöd"]
+  // ----- DATA -----
+  const supportLines = [
+    {
+      id: 1,
+      name: "Mind – Självmordslinjen",
+      url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/",
+      number: "90101",
+      description: "För dig med självmordstankar eller som är orolig för någon. Anonymt och kostnadsfritt, telefon och chatt.",
+      category: "akut",
+      available: "Dygnet runt, alla dagar",
+      urgent: true,
+      tags: ["självmord", "akut", "kris", "självmordstankar", "depression", "ångest"]
+    },
+    {
+      id: 2,
+      name: "SOS Alarm",
+      url: "https://www.sosalarm.se/",
+      number: "112",
+      description: "Vid akut fara för liv och hälsa. Be om ambulans, polis eller brandkår.",
+      category: "akut",
+      available: "Dygnet runt, alla dagar",
+      urgent: true,
+      tags: ["akut", "nödsituation", "112", "livsfara"]
+    },
+    {
+      id: 3,
+      name: "BRIS – Barn och unga",
+      url: "https://www.bris.se/",
+      number: "116 111",
+      description: "För dig under 18. Prata om vad som helst, anonymt.",
+      category: "barn-unga",
+      available: "Vardagar 10–21, helger 13–21",
+      tags: ["barn", "unga", "tonåring", "mobbning", "skola", "ångest"]
+    },
+    {
+      id: 4,
+      name: "Kvinnofridslinjen",
+      url: "https://kvinnofridslinjen.se/",
+      number: "020-50 50 50",
+      description: "Stöd för dig som utsätts för våld, hot eller övergrepp. Anonymt och kostnadsfritt.",
+      category: "vald",
+      available: "Dygnet runt, alla dagar",
+      urgent: true,
+      tags: ["våld", "hot", "relationsvåld", "övergrepp", "kvinna"]
+    },
+    {
+      id: 5,
+      name: "Jourhavande präst",
+      url: "https://www.svenskakyrkan.se/jourhavandeprast",
+      number: "112",
+      description: "Ring 112 och be att bli kopplad till Jourhavande präst. Samtals- och krisstöd kvällar och nätter.",
+      category: "samtal",
+      available: "Alla dagar 21–06",
+      tags: ["existentiellt", "sorg", "ensamhet", "ångest", "samtal", "präst"]
+    },
+    {
+      id: 6,
+      name: "Jourhavande Medmänniska",
+      url: "https://www.jourhavande-medmanniska.se/",
+      number: "08-702 16 80",
+      description: "En röst i natten när du behöver någon som lyssnar.",
+      category: "samtal",
+      available: "Alla dagar 21–06 (telefon), chatt enligt schema",
+      tags: ["ensamhet", "oro", "samtal", "natten", "stöd"]
+    },
+    {
+      id: 7,
+      name: "1177 Vårdguiden",
+      url: "https://www.1177.se/",
+      number: "1177",
+      description: "Råd om vård och psykisk hälsa, info om närmaste psykiatriska akutmottagning.",
+      category: "halsa",
+      available: "Dygnet runt, alla dagar",
+      tags: ["sjukvård", "hälsa", "psykisk hälsa", "rådgivning"]
+    },
+    {
+      id: 8,
+      name: "Äldrelinjen (Mind)",
+      url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
+      number: "020-22 22 33",
+      description: "För äldre och anhöriga. Någon som lyssnar när livet känns tungt.",
+      category: "aldre",
+      available: "Se aktuella tider på Mind",
+      tags: ["äldre", "anhörig", "ensamhet", "stöd"]
+    }
+  ];
+
+  // ----- STATE -----
+  let currentCategory = 'all';
+  let searchQuery = '';
+
+  // ----- FILTER -----
+  function filterLines() {
+    let filtered = supportLines.slice();
+
+    if (currentCategory !== 'all') {
+      filtered = filtered.filter(line => line.category === currentCategory);
+    }
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      filtered = filtered.filter(line =>
+        line.name.toLowerCase().includes(q) ||
+        line.description.toLowerCase().includes(q) ||
+        (line.tags && line.tags.some(tag => tag.toLowerCase().includes(q)))
+      );
+    }
+
+    // prioritera akut
+    filtered.sort((a, b) => (a.urgent === b.urgent ? 0 : a.urgent ? -1 : 1));
+    return filtered;
   }
-];
 
-    ];
+  // ----- RENDER -----
+  function renderLines() {
+    const grid = document.getElementById('linesGrid');
+    const noResults = document.getElementById('noResults');
+    const items = filterLines();
 
-    let currentCategory = 'all';
-    let searchQuery = '';
+    if (!grid || !noResults) return;
 
-    function filterLines() {
-      let filtered = supportLines;
-      if (currentCategory !== 'all') filtered = filtered.filter(line => line.category === currentCategory);
-      if (searchQuery.trim()) {
-        const q = searchQuery.toLowerCase();
-        filtered = filtered.filter(line =>
-          line.name.toLowerCase().includes(q) ||
-          line.description.toLowerCase().includes(q) ||
-          line.tags.some(tag => tag.toLowerCase().includes(q))
-        );
-      }
-      filtered.sort((a, b) => (a.urgent === b.urgent ? 0 : a.urgent ? -1 : 1));
-      return filtered;
+    if (items.length === 0) {
+      grid.classList.add('hidden');
+      noResults.classList.remove('hidden');
+      return;
     }
 
-    function renderLines() {
-      const grid = document.getElementById('linesGrid');
-      const noResults = document.getElementById('noResults');
-      const filtered = filterLines();
+    grid.classList.remove('hidden');
+    noResults.classList.add('hidden');
 
-      if (filtered.length === 0) {
-        grid.classList.add('hidden');
-        noResults.classList.remove('hidden');
-        return;
-      }
-      grid.classList.remove('hidden');
-      noResults.classList.add('hidden');
+    grid.innerHTML = items.map(line => `
+      <article class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all transform hover:-translate-y-1 ${line.urgent ? 'ring-2 ring-red-400 ring-offset-2 ring-offset-[#0f1724]' : ''}" itemscope itemtype="https://schema.org/ContactPoint">
+        ${line.urgent ? `
+          <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Akut hjälp</span>
+          </div>` : ''}
 
-      grid.innerHTML = filtered.map(line => `
-        <article class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all transform hover:-translate-y-1 ${line.urgent ? 'ring-2 ring-red-400 ring-offset-2 ring-offset-[#0f1724]' : ''}" itemscope itemtype="https://schema.org/ContactPoint">
-          ${line.urgent ? `
-            <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-              <span>Akut hjälp</span>
-            </div>` : ''}
-          <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">
-            ${line.url ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors">${line.name}</a>` : line.name}
-          </h3>
-          <a href="tel:${line.number.replace(/\s/g, '').replace(/-/g, '')}" class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors" itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <span>${line.number}</span>
-          </a>
-          <p class="text-gray-300 mb-4 leading-relaxed" itemprop="description">${line.description}</p>
-          <div class="flex items-center gap-2 text-sm text-gray-400">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <span itemprop="hoursAvailable">${line.available}</span>
-          </div>
-          <meta itemprop="contactType" content="Crisis Support">
-          <meta itemprop="areaServed" content="SE">
-          <meta itemprop="availableLanguage" content="Swedish">
-        </article>
-      `).join('');
-    }
+        <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">
+          ${line.url ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors">${line.name}</a>` : line.name}
+        </h3>
 
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-      searchQuery = e.target.value;
+        <a href="tel:${(line.number || '').toString().replace(/\s/g, '').replace(/-/g, '')}"
+           class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors"
+           itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>${line.number}</span>
+        </a>
+
+        <p class="text-gray-300 mb-4 leading-relaxed" itemprop="description">${line.description}</p>
+
+        <div class="flex items-center gap-2 text-sm text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span itemprop="hoursAvailable">${line.available}</span>
+        </div>
+
+        <meta itemprop="contactType" content="Crisis Support">
+        <meta itemprop="areaServed" content="SE">
+        <meta itemprop="availableLanguage" content="Swedish">
+      </article>
+    `).join('');
+  }
+
+  // ----- EVENTS -----
+  const searchEl = document.getElementById('searchInput');
+  if (searchEl) {
+    searchEl.addEventListener('input', (e) => {
+      searchQuery = e.target.value || '';
       renderLines();
     });
+  }
 
-    document.querySelectorAll('.category-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const button = e.currentTarget;
-        currentCategory = button.dataset.category;
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const button = e.currentTarget;
+      currentCategory = button.dataset.category || 'all';
 
-        document.querySelectorAll('.category-btn').forEach(b => {
-          b.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10';
-          b.setAttribute('aria-pressed', 'false');
-        });
-
-        button.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg';
-        button.setAttribute('aria-pressed', 'true');
-
-        renderLines();
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10';
+        b.setAttribute('aria-pressed', 'false');
       });
-    });
 
-    renderLines();
-  </script>
+      button.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg';
+      button.setAttribute('aria-pressed', 'true');
+
+      renderLines();
+    });
+  });
+
+  // ----- INITIALIZE -----
+  renderLines();
+</script>
 </body>
 </html>
