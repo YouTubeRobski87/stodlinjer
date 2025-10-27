@@ -250,89 +250,91 @@
 
   <script>
     const supportLines = [
-      {
-        id: 1,
-        name: "Självmordslinjen",
-        url: "https://www.selbst.se/",
-        number: "90101",
-        description: "För dig som har tankar på att ta ditt liv, eller är orolig för någon annan. Utbildade volontärer lyssnar och ger stöd.",
-        category: "akut",
-        available: "Dygnet runt, alla dagar",
-        urgent: true,
-        tags: ["självmord", "akut", "kris", "självmordstankar", "livsfarligt", "depression"]
-      },
-      {
-        id: 2,
-        name: "Mind Självmordslinjen",
-        url: "https://mind.se/",
-        number: "020-18 18 00",
-        description: "Chatt och telefon för dig med självmordstankar. Mind erbjuder professionellt stöd.",
-        category: "akut",
-        available: "Varje dag 13-22",
-        urgent: true,
-        tags: ["självmord", "chatt", "kris", "mind", "självmordstankar"]
-      },
-      {
-        id: 3,
-        name: "BRIS – Barn och unga",
-        url: "https://www.bris.se/",
-        number: "116 111",
-        description: "För dig som är ung och behöver prata med någon. BRIS finns för barn och ungdomar upp till 18 år.",
-        category: "barn-unga",
-        available: "Vardagar 10-21, helger 13-21",
-        tags: ["barn", "unga", "tonåring", "bris", "ungdom", "mobbning", "skola"]
-      },
-      {
-        id: 4,
-        name: "Kvinnofridslinjen",
-        url: "https://kvinnofridslinjen.se/",
-        number: "020-50 50 50",
-        description: "För dig som utsätts för våld, hot eller övergrepp. Stöd för både kvinnor och barn som upplever våld.",
-        category: "vald",
-        available: "Dygnet runt, alla dagar",
-        urgent: true,
-        tags: ["våld", "hot", "kvinna", "relationsvåld", "misshandel", "övergrepp"]
-      },
-      {
-        id: 5,
-        name: "Jourhavande präst",
-        url: "https://www.svenskakyrkan.se/jourhavandeprast",
-        number: "021-65 65 65",
-        description: "För alla som behöver någon att prata med om livsfrågor, sorg, existentiella frågor eller behöver andligt stöd.",
-        category: "samtal",
-        available: "Dygnet runt, alla dagar",
-        tags: ["existentiellt", "sorg", "samtal", "tro", "livsfrågor", "andlighet", "präst"]
-      },
-      {
-        id: 6,
-        name: "Jourhavande Medmänniska",
-        url: "https://www.jourhavande-medmanniska.se/",
-        number: "08-702 16 80",
-        description: "För dig som känner dig ensam och vill prata. Här finns någon som lyssnar när livet känns tungt.",
-        category: "samtal",
-        available: "Vardagar 20-03, helger dygnet runt",
-        tags: ["ensamhet", "samtal", "stöd", "ensam", "prata"]
-      },
-      {
-        id: 7,
-        name: "1177 Vårdguiden",
-        url: "https://www.1177.se/",
-        number: "1177",
-        description: "Sjukvårdsrådgivning dygnet runt. Ring 1177 för medicinska råd och frågor om din hälsa.",
-        category: "halsa",
-        available: "Dygnet runt, alla dagar",
-        tags: ["sjukvård", "hälsa", "medicinskt", "vårdguiden", "sjuk", "läkare"]
-      },
-      {
-        id: 8,
-        name: "Äldrelinjen",
-        url: "https://mind.se/hitta-hjalp/aldrelinjen/",
-        number: "020-22 22 33",
-        description: "För äldre och deras anhöriga. Stöd och information om åldrande, pensionsfrågor och vardagsstöd.",
-        category: "aldre",
-        available: "Vardagar 10-18",
-        tags: ["äldre", "pension", "anhöriga", "åldrande", "senior"]
-      }
+  {
+    id: 1,
+    name: "Mind – Självmordslinjen",
+    url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/",
+    number: "90101",
+    description: "För dig med självmordstankar eller som är orolig för någon. Anonymt och kostnadsfritt, telefon och chatt.",
+    category: "akut",
+    available: "Dygnet runt, alla dagar",
+    urgent: true,
+    tags: ["självmord", "akut", "kris", "självmordstankar", "depression", "ångest"]
+  },
+  {
+    id: 2,
+    name: "112 – Akut nödsituation",
+    url: "https://www.sosalarm.se/",
+    number: "112",
+    description: "Vid akut fara för liv och hälsa. Be om ambulans, polis eller brandkår.",
+    category: "akut",
+    available: "Dygnet runt, alla dagar",
+    urgent: true,
+    tags: ["akut", "nödsituation", "112", "livsfara"]
+  },
+  {
+    id: 3,
+    name: "BRIS – Barn och unga",
+    url: "https://www.bris.se/",
+    number: "116 111",
+    description: "För dig under 18. Prata om vad som helst, anonymt.",
+    category: "barn-unga",
+    available: "Vardagar 10–21, helger 13–21",
+    tags: ["barn", "unga", "tonåring", "mobbning", "skola", "ångest"]
+  },
+  {
+    id: 4,
+    name: "Kvinnofridslinjen",
+    url: "https://kvinnofridslinjen.se/",
+    number: "020-50 50 50",
+    description: "Stöd för dig som utsätts för våld, hot eller övergrepp. Anonymt och kostnadsfritt.",
+    category: "vald",
+    available: "Dygnet runt, alla dagar",
+    urgent: true,
+    tags: ["våld", "hot", "relationsvåld", "övergrepp", "kvinna"]
+  },
+  {
+    id: 5,
+    name: "Jourhavande präst",
+    url: "https://www.svenskakyrkan.se/jourhavandeprast",
+    number: "112",
+    description: "Ring 112 och be att bli kopplad till Jourhavande präst. Samtals- och krisstöd kvällar och nätter.",
+    category: "samtal",
+    available: "Alla dagar 21–06",
+    tags: ["existentiellt", "sorg", "ensamhet", "ångest", "samtal", "präst"]
+  },
+  {
+    id: 6,
+    name: "Jourhavande Medmänniska",
+    url: "https://www.jourhavande-medmanniska.se/",
+    number: "08-702 16 80",
+    description: "En röst i natten när du behöver någon som lyssnar.",
+    category: "samtal",
+    available: "Alla dagar 21–06 (telefon), chatt enligt schema",
+    tags: ["ensamhet", "oro", "samtal", "natten", "stöd"]
+  },
+  {
+    id: 7,
+    name: "1177 Vårdguiden",
+    url: "https://www.1177.se/",
+    number: "1177",
+    description: "Råd om vård och psykisk hälsa, och info om närmaste psykiatriska akutmottagning.",
+    category: "halsa",
+    available: "Dygnet runt, alla dagar",
+    tags: ["sjukvård", "hälsa", "psykisk hälsa", "rådgivning"]
+  },
+  {
+    id: 8,
+    name: "Äldrelinjen (Mind)",
+    url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
+    number: "020-22 22 33",
+    description: "För äldre och anhöriga. Någon som lyssnar när livet känns tungt.",
+    category: "aldre",
+    available: "Se aktuella tider på Mind",
+    tags: ["äldre", "anhörig", "ensamhet", "stöd"]
+  }
+];
+
     ];
 
     let currentCategory = 'all';
