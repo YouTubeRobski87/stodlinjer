@@ -8,7 +8,7 @@
   <!-- Primary Title & SEO -->
   <title>Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt | Jourhavande Präst, BRIS, Självmordslinjen</title>
   <meta name="description" content="Stödlinjer samlar alla svenska hjälplinjer på ett ställe. Ring 90101 för akut kris, BRIS 116 111 för unga, Kvinnofridslinjen 020-50 50 50 för våldsutsatta. Gratis, anonymt, dygnet runt.">
-  <meta name="keywords" content="stödlinjer, hjälplinjer, självmordslinjen, BRIS, jourhavande präst, kvinnofridslinjen, mental hälsa, kris, depression, ångest, ensamhet, våld, akut hjälp">
+  <meta name="keywords" content="stödlinjer, hjälplinjer, självmordslinjen, BRIS, jourhavande präst, kvinnofridslinjen, mental hälsa, kris, depression, ångest, ensamhet, våld, akut hjälp, anhörig, närstående">
   <link rel="canonical" href="https://stodlinjer.se/">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#0f1724">
@@ -52,7 +52,7 @@
     "@type": "Organization",
     "name": "Stödlinjer.se",
     "url": "https://stodlinjer.se/",
-    "description": "Samlingsplats för svenska stödlinjer och hjälplinjer för psykisk hälsa, våld, missbruk och kris.",
+    "description": "Samlingsplats för svenska stödlinjer och hjälplinjer för psykisk hälsa, våld, missbruk, kris och anhöriga.",
     "logo": "https://stodlinjer.se/logo.png",
     "sameAs": [
       "https://www.facebook.com",
@@ -206,7 +206,7 @@
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.3-4.3"></path>
               </svg>
-              <input type="search" id="searchInput" placeholder="Sök efter t.ex. BRIS, ångest, våld..."
+              <input type="search" id="searchInput" placeholder="Sök efter t.ex. BRIS, ångest, våld, anhörig..."
                      class="flex-1 bg-transparent border-none outline-none text-sm text-white placeholder-gray-500"
                      aria-label="Sök bland stödlinjer">
             </div>
@@ -261,7 +261,7 @@
     </section>
 
     <!-- Results Grid -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12">
       <div id="resultsInfo" class="text-sm text-gray-400 mb-3"></div>
       <div id="linesGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         <!-- Fylls av JavaScript -->
@@ -271,6 +271,30 @@
         Inga stödlinjer matchar din sökning. Testa att ändra sökord eller välja en annan kategori.
       </p>
     </section>
+
+    <!-- Dedicated section for relatives -->
+    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+      <div class="bg-black/40 border border-white/5 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">För dig som är anhörig eller närstående</h2>
+        <p class="text-gray-300 text-sm leading-relaxed mb-3">
+          Att stå bredvid någon som mår dåligt, har ett beroende, är sjuk eller har tagit sitt liv kan vara minst lika tungt
+          som att vara drabbad själv. Du får känna dig trött, arg, maktlös eller uppgiven – och du har rätt till stöd.
+        </p>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          Här är några stödlinjer som vänder sig särskilt till dig som är anhörig eller närstående:
+        </p>
+        <ul class="list-disc list-inside text-gray-300 text-sm space-y-2">
+          <li><strong>Anhöriglinjen</strong> – för dig som är anhörig eller närstående till någon som är sjuk, har funktionsnedsättning,
+            beroende eller andra svårigheter.</li>
+          <li><strong>SPES stödlinje</strong> – för dig som har förlorat någon i suicid och vill prata med någon som varit med om liknande.</li>
+          <li><strong>Föräldralinjen</strong> – för dig som är förälder eller annan viktig vuxen kring barn och unga och känner oro.</li>
+          <li><strong>Al-Anon Familjegrupper</strong> – gemenskap för anhöriga till alkoholister, med möten runt om i Sverige och online.</li>
+        </ul>
+        <p class="text-gray-400 text-xs mt-4">
+          Information om telefontider och kontaktvägar kan förändras. Kontrollera alltid aktuella uppgifter på respektive organisations webbplats.
+        </p>
+      </div>
+    </article>
 
     <!-- FAQ / Info -->
     <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
@@ -416,6 +440,46 @@
       available: "Alla dagar 12–14 & 18–20 (lördagar endast 12–14)",
       urgent: true,
       tags: ["män", "våld", "psykisk ohälsa", "kris", "hot", "livskris"]
+    },
+    {
+      id: 10,
+      name: "Anhöriglinjen",
+      url: "https://anhorigasriksforbund.se/anhoriglinjen/",
+      number: "0200-239 500",
+      description: "Nationell stödtelefon för dig som är anhörig eller närstående och behöver råd, stöd eller någon att prata med.",
+      category: "anhörig",
+      available: "Se aktuella telefontider på Anhörigas Riksförbunds webbplats",
+      tags: ["anhörig", "närstående", "rättigheter", "stöd"]
+    },
+    {
+      id: 11,
+      name: "SPES – stödlinje för efterlevande",
+      url: "https://spes.se/stodlinjer/",
+      number: "020-18 18 00",
+      description: "Stödlinje för dig som mist någon i suicid. Samtal från andra efterlevande.",
+      category: "anhörig",
+      available: "Alla dagar 19–22",
+      tags: ["anhörig", "efterlevande", "suicid", "sorg"]
+    },
+    {
+      id: 12,
+      name: "Föräldralinjen (Mind)",
+      url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/",
+      number: "020-85 20 00",
+      description: "För dig som är förälder eller annan viktig vuxen och känner oro för ett barn eller en ung person.",
+      category: "anhörig",
+      available: "Se aktuella tider på Mind",
+      tags: ["förälder", "anhörig", "barn", "unga", "oro"]
+    },
+    {
+      id: 13,
+      name: "Al-Anon Familjegrupper",
+      url: "https://www.al-anon.se/",
+      number: "08-643 13 93",
+      description: "Gemenskap för anhöriga till alkoholister. Möten och stödgrupper i hela landet och online.",
+      category: "anhörig",
+      available: "Se möten och kontakt på al-anon.se",
+      tags: ["anhörig", "alkohol", "medberoende", "stödgrupp"]
     }
   ];
 
@@ -471,7 +535,6 @@
       article.setAttribute('itemscope', '');
       article.setAttribute('itemtype', 'https://schema.org/ContactPoint');
 
-      // Akut-label
       const urgentLabel = line.urgent
         ? `
           <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
@@ -487,6 +550,8 @@
           </div>`
         : '';
 
+      const telHref = (line.number || '').toString().replace(/\s/g, '').replace(/-/g, '');
+
       article.innerHTML = `
         ${urgentLabel}
         <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">
@@ -495,17 +560,20 @@
             : line.name}
         </h3>
 
-        <a href="tel:${(line.number || '').toString().replace(/\s/g, '').replace(/-/g, '')}"
-           class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors"
-           itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-               viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-               aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-          </svg>
-          <span>${line.number}</span>
-        </a>
+        ${line.number
+          ? `<a href="tel:${telHref}"
+               class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors"
+               itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>${line.number}</span>
+            </a>`
+          : ''
+        }
 
         <p class="text-gray-300 mb-4 leading-relaxed" itemprop="description">${line.description}</p>
 
