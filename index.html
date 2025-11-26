@@ -18,17 +18,16 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stodlinjer.se/">
   <meta property="og:title" content="Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt">
-  <meta property="og:description" content="Alla svenska hjälplinjer samlat. Anonymt, gratis, dygnet runt. Du är inte ensam.">
-  <meta property="og:locale" content="sv_SE">
-  <meta property="article:author" content="Robert Claesson">
+  <meta property="og:description" content="Hitta rätt stödlinje i Sverige när livet känns tungt. Självmordslinjen, BRIS, Kvinnofridslinjen, Jourhavande präst med flera – samlade på ett ställe.">
+  <meta property="og:image" content="https://stodlinjer.se/og-image.jpg">
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://stodlinjer.se/">
   <meta name="twitter:title" content="Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt">
-  <meta name="twitter:description" content="Alla svenska hjälplinjer samlat. Anonymt, gratis, dygnet runt.">
+  <meta name="twitter:description" content="Alla viktiga stödlinjer i Sverige samlade på ett ställe. Ring 90101 vid akut kris, BRIS för unga, Kvinnofridslinjen för våldsutsatta.">
+  <meta name="twitter:image" content="https://stodlinjer.se/og-image.jpg">
 
-  <!-- Schema.org JSON-LD -->
+  <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,24 +45,47 @@
   }
   </script>
 
+  <!-- JSON-LD: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Stödlinjer",
+    "name": "Stödlinjer.se",
     "url": "https://stodlinjer.se/",
-    "description": "En samling av alla viktiga stödlinjer och hjälptelefoner i Sverige",
+    "description": "Samlingsplats för svenska stödlinjer och hjälplinjer för psykisk hälsa, våld, missbruk och kris.",
+    "logo": "https://stodlinjer.se/logo.png",
+    "sameAs": [
+      "https://www.facebook.com",
+      "https://www.instagram.com",
+      "https://x.com"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "contactType": "Crisis Support",
-      "areaServed": "SE",
-      "availableLanguage": "Swedish"
+      "contactType": "kundsupport",
+      "email": "info@stodlinjer.se",
+      "availableLanguage": ["sv"]
     }
   }
   </script>
 
-  <!-- Tailwind (CDN for simplicity) -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'media',
+      theme: {
+        extend: {
+          colors: {
+            'background': '#020617',
+            'card': 'rgba(15,23,42,0.9)'
+          },
+          boxShadow: {
+            'glow': '0 0 30px rgba(59,130,246,0.4)'
+          }
+        }
+      }
+    }
+  </script>
 
   <style>
     body {
@@ -83,7 +105,7 @@
 
 <body class="min-h-screen">
   <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white/90 focus:text-black focus:px-3 focus:py-2 focus:rounded-md">Hoppa till innehåll</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Hoppa till innehåll</a>
 
   <!-- Header -->
   <header class="bg-gray-900/40 backdrop-blur-sm border-b border-white/5 sticky top-0 z-10">
@@ -104,156 +126,178 @@
       <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
         <div class="max-w-3xl">
           <h2 class="text-3xl sm:text-4xl font-bold mb-4">Akut kris? Ring nu</h2>
-          <p class="text-xl text-blue-100 mb-8">Dessa nummer svarar dygnet runt, alla dagar om året. Samtalen är anonyma och kostnadsfria.</p>
+          <p class="text-xl text-blue-100 mb-8">
+            Dessa nummer svarar dygnet runt, alla dagar om året. Samtalen är anonyma och kostnadsfria.
+          </p>
           <div class="grid sm:grid-cols-2 gap-4">
-           <a href="tel:90101" 
-   class="bg-white text-blue-700 px-8 py-5 rounded-2xl font-bold text-xl hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-3" 
-   aria-label="Ring Mind – Självmordslinjen 90101">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-       viewBox="0 0 24 24" fill="none" stroke="currentColor" 
-       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-       aria-hidden="true">
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 
-             19.79 19.79 0 0 1-8.63-3.07 
-             19.5 19.5 0 0 1-6-6 
-             19.79 19.79 0 0 1-3.07-8.67 
-             A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 
-             12.84 12.84 0 0 0 .7 2.81 
-             2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6 
-             l1.27-1.27a2 2 0 0 1 2.11-.45 
-             12.84 12.84 0 0 0 2.81.7 
-             A2 2 0 0 1 22 16.92z">
-    </path>
-  </svg>
-  <span>Mind – Självmordslinjen (90101)</span>
-</a>
 
+            <!-- Mind – Självmordslinjen -->
+            <a href="tel:90101"
+               class="bg-white text-blue-700 px-8 py-5 rounded-2xl font-bold text-xl hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-3"
+               aria-label="Ring Mind – Självmordslinjen 90101">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Mind – Självmordslinjen (90101)</span>
+            </a>
 
+            <!-- SOS Alarm -->
+            <a href="tel:112"
+               class="bg-red-600 text-white px-8 py-5 rounded-2xl font-bold text-xl hover:bg-red-500 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-3"
+               aria-label="Ring SOS Alarm 112">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>SOS Alarm 112</span>
+            </a>
+          </div>
 
-             <!-- SOS Alarm -->
-          <a href="tel:112"
-             class="bg-red-600 text-white px-8 py-5 rounded-2xl font-bold text-xl hover:bg-red-700 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-3"
-             aria-label="Ring SOS Alarm 112">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-            <span>SOS Alarm (112)</span>
-          </a>
+          <p class="mt-6 text-sm text-blue-200">
+            Alla samtal är konfidentiella och anonyma. Du behöver inte berätta vem du är. Hjälpen är alltid gratis.
+          </p>
         </div>
-
-        <p class="mt-6 text-sm text-blue-200">
-          Alla samtal är konfidentiella och anonyma. Du behöver inte berätta vem du är. Hjälpen är alltid gratis.
-        </p>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
     <!-- Intro Text for SEO -->
     <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
       <div class="bg-white/5 rounded-2xl p-8 border border-white/5 mb-8">
-        <h2 class="text-2xl font-bold text-white mb-4">Varför Stödlinjer finns</h2>
-        <p class="text-gray-300 leading-relaxed mb-4">
-          Stödlinjer Sverige samlar alla viktiga hjälptelefoner och stödlinjer på ett och samma ställe. När livet känns tungt och du behöver någon att prata med kan det vara svårt att veta vart du ska vända dig. Här hittar du direkt rätt nummer för din situation - vare sig du har självmordstankar, är ung och behöver stöd, utsätts för våld, känner dig ensam eller behöver akut sjukvårdsrådgivning.
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Hitta rätt stödlinje i Sverige</h2>
+        <p class="text-gray-300 leading-relaxed mb-3">
+          Ibland känns livet övermäktigt. Det kan handla om ångest, depression, ensamhet, våld, missbruk eller oro för någon annan.
+          Då kan det vara skönt att prata med någon som lyssnar utan att döma.
         </p>
-        <p class="text-gray-300 leading-relaxed">
-          Alla stödlinjer i Sverige som vi listar är kostnadsfria, konfidentiella och bemannade av utbildade personer som är här för att lyssna och hjälpa. Du behöver aldrig känna dig ensam. Oavsett om du befinner dig i Stockholm, Göteborg, Malmö eller någon annanstans i Sverige kan du alltid ringa dessa nummer.
+        <p class="text-gray-300 leading-relaxed mb-3">
+          På Stödlinjer.se samlar vi Sveriges viktigaste stödlinjer på ett ställe – så att du snabbt kan hitta rätt nummer att ringa eller chatt att skriva till.
+          Alla stödlinjer här är seriösa aktörer som erbjuder anonymt stöd.
+        </p>
+        <p class="text-gray-400 text-sm">
+          Om du eller någon i din närhet är i omedelbar fara: ring alltid <strong>112</strong>.
         </p>
       </div>
     </article>
 
-    <!-- Search and Filter -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
-      <div class="bg-white/5 rounded-2xl shadow-lg p-6 mb-6 border border-white/5">
-        <label for="searchInput" class="sr-only">Sök efter stödlinje eller hjälp</label>
-        <div class="relative">
-          <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-          <input type="search" id="searchInput" placeholder="Sök efter hjälp, t.ex. 'ensamhet', 'våld', 'barn', 'depression', 'ångest'..." class="w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border-2 border-white/10 focus:border-purple-400 focus:outline-none text-lg text-white placeholder-gray-500" aria-label="Sök bland stödlinjer">
+    <!-- Search & Filters -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-10" aria-labelledby="filter-heading">
+      <div class="bg-gray-900/60 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/5 shadow-2xl shadow-blue-500/20">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
+          <div>
+            <h2 id="filter-heading" class="text-xl sm:text-2xl font-semibold text-white mb-1">Sök bland stödlinjer</h2>
+            <p class="text-sm text-gray-400">Filtrera på område eller sök efter namn, nummer eller beskrivning.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="relative">
+            <label for="searchInput" class="sr-only">Sök stödlinjer</label>
+            <div class="flex items-center gap-2 rounded-2xl bg-black/40 border border-white/10 px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true" class="text-gray-400">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+              <input type="search" id="searchInput" placeholder="Sök efter t.ex. BRIS, ångest, våld..."
+                     class="flex-1 bg-transparent border-none outline-none text-sm text-white placeholder-gray-500"
+                     aria-label="Sök bland stödlinjer">
+            </div>
+          </div>
+
+          <nav aria-label="Kategorier" class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" id="categories">
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg"
+                    data-category="all" aria-pressed="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"></path>
+              </svg>
+              <span>Alla</span>
+            </button>
+
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
+                    data-category="psykisk-halsa" aria-pressed="false">
+              <span>🧠 Psykisk hälsa</span>
+            </button>
+
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
+                    data-category="barn-unga" aria-pressed="false">
+              <span>🧒 Barn & unga</span>
+            </button>
+
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
+                    data-category="vald" aria-pressed="false">
+              <span>🛡 Våld & utsatthet</span>
+            </button>
+
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
+                    data-category="missbruk" aria-pressed="false">
+              <span>🍺 Missbruk & beroende</span>
+            </button>
+
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
+                    data-category="anhörig" aria-pressed="false">
+              <span>👨‍👩‍👧 Anhörig</span>
+            </button>
+
+            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
+                    data-category="aldre" aria-pressed="false">
+              <span>👵 Äldre</span>
+            </button>
+          </nav>
         </div>
       </div>
-
-      <nav aria-label="Kategorier" class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" id="categories">
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg" data-category="all" aria-pressed="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
-          <span>Alla stödlinjer</span>
-        </button>
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10" data-category="akut" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-          <span>Akut hjälp & kris</span>
-        </button>
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10" data-category="barn-unga" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
-          <span>Barn & unga</span>
-        </button>
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10" data-category="vald" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
-          <span>Våld & hot</span>
-        </button>
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10" data-category="samtal" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-          <span>Någon att prata med</span>
-        </button>
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10" data-category="halsa" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <span>Hälsa & sjukvård</span>
-        </button>
-        <button class="category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10" data-category="aldre" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>Äldre</span>
-        </button>
-      </nav>
     </section>
 
-    <!-- Support Lines Grid -->
+    <!-- Results Grid -->
     <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
-      <div id="noResults" class="text-center py-16 bg-white/5 rounded-2xl border border-white/5 hidden" role="status">
-        <p class="text-xl text-gray-400">Inga resultat hittades. Försök med andra sökord.</p>
+      <div id="resultsInfo" class="text-sm text-gray-400 mb-3"></div>
+      <div id="linesGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <!-- Fylls av JavaScript -->
       </div>
-      <div id="linesGrid" class="grid gap-6 sm:grid-cols-2"></div>
-      <noscript>
-        <div class="mt-6 space-y-3 text-sm text-gray-300">
-          <p>JavaScript är avstängt. Här är några viktiga nummer:</p>
-          <ul class="list-disc list-inside">
-            <li><strong>112</strong> – Akut nödsituation</li>
-            <li><strong>1177</strong> – Vårdguiden</li>
-            <li><strong>90101</strong> – Självmordslinjen</li>
-            <li><strong>020-50 50 50</strong> – Kvinnofridslinjen</li>
-          </ul>
-        </div>
-      </noscript>
+
+      <p id="noResults" class="hidden text-gray-400 text-sm mt-6">
+        Inga stödlinjer matchar din sökning. Testa att ändra sökord eller välja en annan kategori.
+      </p>
     </section>
 
-    <!-- Additional SEO Content -->
+    <!-- FAQ / Info -->
     <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
-      <div class="bg-white/5 rounded-2xl p-8 border border-white/5">
-        <h2 class="text-2xl font-bold text-white mb-6">Vanliga frågor om stödlinjer</h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-2">Vad kostar det att ringa en stödlinje?</h3>
-            <p class="text-gray-300">Alla stödlinjer i Sverige är helt kostnadsfria. Du betalar inget för samtalet, oavsett hur länge du pratar eller hur ofta du ringer.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-2">Är samtalen anonyma?</h3>
-            <p class="text-gray-300">Ja, alla samtal är helt anonyma och konfidentiella. Du behöver inte berätta ditt namn eller var du bor.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-2">När kan jag ringa stödlinjer?</h3>
-            <p class="text-gray-300">Många stödlinjer som Självmordslinjen (90101), Kvinnofridslinjen (020-50 50 50) och Jourhavande präst är öppna dygnet runt. Andra har specifika öppettider.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-2">Vem svarar när jag ringer?</h3>
-            <p class="text-gray-300">Stödlinjerna bemannas av utbildade volontärer, kuratorer, präster eller annan yrkeskunnig personal.</p>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-2">Vad händer om jag ringer 112?</h3>
-            <p class="text-gray-300">112 är SOS Alarms akutnummer för livshotande situationer.</p>
-          </div>
-        </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <section class="bg-black/40 border border-white/5 rounded-2xl p-6">
+          <h2 class="text-xl font-semibold text-white mb-3">När ska jag ringa 90101?</h2>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Mind Självmordslinjen på <strong>90101</strong> finns för dig som har allvarliga tankar på att skada dig själv,
+            eller för dig som är orolig för någon annan. Du kan vara anonym och de som svarar är utbildade volontärer.
+          </p>
+        </section>
+
+        <section class="bg-black/40 border border-white/5 rounded-2xl p-6">
+          <h2 class="text-xl font-semibold text-white mb-3">När ska jag ringa 112?</h2>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Ring <strong>112</strong> vid akuta, livshotande situationer – till exempel om någon inte andas, har tagit en överdos,
+            blivit allvarligt skadad eller om du bedömer att det finns omedelbar fara för liv.
+          </p>
+        </section>
+
+        <section class="bg-black/40 border border-white/5 rounded-2xl p-6 md:col-span-2">
+          <h2 class="text-xl font-semibold text-white mb-3">Är samtalen anonyma?</h2>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            De stödlinjer som listas här är i regel anonyma och du behöver inte uppge ditt namn.
+            Läs alltid mer på respektive organisations webbplats om vad som gäller.
+          </p>
+        </section>
       </div>
     </article>
   </main>
@@ -261,30 +305,46 @@
   <!-- Footer -->
   <footer class="bg-black/20 backdrop-blur-sm border-t border-white/5 text-gray-400 py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid sm:grid-cols-3 gap-8 mb-8">
+      <div class="grid sm:grid-cols-2 gap-6 items-start">
         <div>
-          <h4 class="text-white font-bold text-lg mb-3">Om Stödlinjer Sverige</h4>
-          <p class="text-sm leading-relaxed">Stödlinjer samlar alla viktiga svenska hjälptelefoner och stödlinjer på ett ställe. All information är anonym, kostnadsfri och lättillgänglig.</p>
+          <p class="text-sm">
+            Stödlinjer.se är en ideell informationssida som samlar svenska stödlinjer på ett ställe.
+            Informationen kan förändras – kontrollera alltid aktuella öppettider och kontaktuppgifter på respektive organisations webbplats.
+          </p>
         </div>
-        <div>
-          <h4 class="text-white font-bold text-lg mb-3">Din integritet och säkerhet</h4>
-          <p class="text-sm leading-relaxed">Vi sparar ingen information om ditt besök på denna webbplats. Alla samtal till de listade stödlinjerna är konfidentiella och anonyma.</p>
+        <div class="text-sm sm:text-right space-y-1">
+          <p>Kontakt: <a href="mailto:info@stodlinjer.se" class="underline hover:text-gray-200">info@stodlinjer.se</a></p>
+          <p>Skapad av Robert Claesson</p>
         </div>
-        <div>
-          <h4 class="text-white font-bold text-lg mb-3">Vid akut livsfara</h4>
-          <p class="text-sm leading-relaxed">Ring alltid 112 vid akut fara för liv och hälsa. SOS Alarm kan skicka ambulans, polis eller räddningstjänst direkt till dig.</p>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 pt-8 text-center text-sm">
-        <p>© 2025 Stödlinjer Sverige. Skapad med omsorg för dig som behöver stöd. Alla stödlinjer i Sverige samlade.</p>
-        <p class="mt-2 text-xs text-gray-500">Sökord: stödlinjer, hjälplinjer, självmordslinjen, BRIS, kvinnofridslinjen, jourhavande präst, mental hälsa Sverige, krishjälp, depression, ångest, självmordstankar</p>
       </div>
     </div>
   </footer>
 
+  <!-- Logic for cards & filters -->
   <script>
   // ----- DATA -----
   const supportLines = [
+    {
+      id: 1,
+      name: "Mind – Självmordslinjen",
+      url: "https://mind.se/sjalvmordslinjen/",
+      number: "90101",
+      description: "För dig som har tankar på att avsluta livet eller är orolig för någon annan.",
+      category: "psykisk-halsa",
+      available: "Dygnet runt, alla dagar",
+      urgent: true,
+      tags: ["självmordstankar", "akut", "kris", "oro för annan"]
+    },
+    {
+      id: 2,
+      name: "Jourhavande präst",
+      url: "https://www.svenskakyrkan.se/jourhavandeprast",
+      number: "112 (be att få tala med Jourhavande präst)",
+      description: "För samtal om existentiella frågor, oro, sorg, ensamhet och livskriser.",
+      category: "psykisk-halsa",
+      available: "Alla nätter 21–06 via 112, chatt vissa tider",
+      tags: ["oro", "existentiella frågor", "tro", "sorg", "ensamhet"]
+    },
     {
       id: 3,
       name: "BRIS – Barn och unga",
@@ -300,41 +360,41 @@
       name: "Kvinnofridslinjen",
       url: "https://kvinnofridslinjen.se/",
       number: "020-50 50 50",
-      description: "Stöd för dig som utsätts för våld, hot eller övergrepp. Anonymt och kostnadsfritt.",
+      description: "För dig som är utsatt för våld eller hot i nära relation, eller är anhörig.",
       category: "vald",
       available: "Dygnet runt, alla dagar",
       urgent: true,
-      tags: ["våld", "hot", "relationsvåld", "övergrepp", "kvinna"]
+      tags: ["våld", "relation", "hot", "kvinna", "anhörig"]
     },
     {
       id: 5,
-      name: "Jourhavande präst",
-      url: "https://www.svenskakyrkan.se/jourhavandeprast",
-      number: "112",
-      description: "Ring 112 och be att bli kopplad till Jourhavande präst. Samtals- och krisstöd kvällar och nätter.",
-      category: "samtal",
-      available: "Alla dagar 21–06",
-      tags: ["existentiellt", "sorg", "ensamhet", "ångest", "samtal", "präst"]
+      name: "Alkohollinjen",
+      url: "https://www.1177.se/liv--halsa/beroende-och-missbruk/alkoholmissbruk-och-alkoholberoende/",
+      number: "020-84 44 48",
+      description: "För dig som funderar över dina eller någon annans alkoholvanor.",
+      category: "missbruk",
+      available: "Se aktuella tider på webbplatsen",
+      tags: ["alkohol", "missbruk", "beroende", "anhörig"]
     },
     {
       id: 6,
-      name: "Jourhavande Medmänniska",
-      url: "https://www.jourhavande-medmanniska.se/",
-      number: "08-702 16 80",
-      description: "En röst i natten när du behöver någon som lyssnar.",
-      category: "samtal",
-      available: "Alla dagar 21–06 (telefon), chatt enligt schema",
-      tags: ["ensamhet", "oro", "samtal", "natten", "stöd"]
+      name: "ANONYMA ALKOHOLISTER (AA)",
+      url: "https://aa.se/",
+      number: "",
+      description: "Gemenskap för dig som vill sluta dricka. Möten runt om i landet och online.",
+      category: "missbruk",
+      available: "Tider varierar – se aa.se",
+      tags: ["alkohol", "beroende", "stödgrupp"]
     },
     {
       id: 7,
-      name: "1177 Vårdguiden",
-      url: "https://www.1177.se/",
-      number: "1177",
-      description: "Råd om vård och psykisk hälsa, info om närmaste psykiatriska akutmottagning.",
-      category: "halsa",
-      available: "Dygnet runt, alla dagar",
-      tags: ["sjukvård", "hälsa", "psykisk hälsa", "rådgivning"]
+      name: "Spelberoendegruppen",
+      url: "https://spelberoende.se/",
+      number: "020-81 91 00",
+      description: "Stöd till dig som har problem med spel om pengar, och till anhöriga.",
+      category: "missbruk",
+      available: "Se aktuella tider på webbplatsen",
+      tags: ["spel", "beroende", "skulder", "anhörig"]
     },
     {
       id: 8,
@@ -347,17 +407,16 @@
       tags: ["äldre", "anhörig", "ensamhet", "stöd"]
     },
     {
-  id: 9,
-  name: "Mansjouren",
-  url: "https://mansjouren.se/",
-  number: "020-50 00 00",
-  description: "Stöd för män som är utsatta för psykisk ohälsa, våld, hot eller livskriser. Anonymt och kostnadsfritt.",
-  category: "vald",
-  available: "Alla dagar 12–14 & 18–20 (lördagar endast 12–14)",
-  urgent: true,
-  tags: ["män", "våld", "psykisk ohälsa", "kris", "hot", "livskris"]
-}
-
+      id: 9,
+      name: "Mansjouren",
+      url: "https://mansjouren.se/",
+      number: "020-50 00 00",
+      description: "Stöd för män som är utsatta för psykisk ohälsa, våld, hot eller livskriser. Anonymt och kostnadsfritt.",
+      category: "vald",
+      available: "Alla dagar 12–14 & 18–20 (lördagar endast 12–14)",
+      urgent: true,
+      tags: ["män", "våld", "psykisk ohälsa", "kris", "hot", "livskris"]
+    }
   ];
 
   // ----- STATE -----
@@ -372,56 +431,78 @@
       filtered = filtered.filter(line => line.category === currentCategory);
     }
 
-    if (searchQuery.trim()) {
+    if (searchQuery.trim() !== '') {
       const q = searchQuery.toLowerCase();
-      filtered = filtered.filter(line =>
-        line.name.toLowerCase().includes(q) ||
-        line.description.toLowerCase().includes(q) ||
-        (line.tags && line.tags.some(tag => tag.toLowerCase().includes(q)))
-      );
+      filtered = filtered.filter(line => {
+        return (
+          (line.name && line.name.toLowerCase().includes(q)) ||
+          (line.description && line.description.toLowerCase().includes(q)) ||
+          (line.number && line.number.toLowerCase().includes(q)) ||
+          (line.tags && line.tags.some(tag => tag.toLowerCase().includes(q)))
+        );
+      });
     }
 
-    // prioritera akut
-    filtered.sort((a, b) => (a.urgent === b.urgent ? 0 : a.urgent ? -1 : 1));
     return filtered;
   }
 
   // ----- RENDER -----
   function renderLines() {
     const grid = document.getElementById('linesGrid');
+    const resultsInfo = document.getElementById('resultsInfo');
     const noResults = document.getElementById('noResults');
-    const items = filterLines();
 
-    if (!grid || !noResults) return;
+    const filtered = filterLines();
 
-    if (items.length === 0) {
-      grid.classList.add('hidden');
+    grid.innerHTML = '';
+
+    if (!filtered.length) {
+      resultsInfo.textContent = '';
       noResults.classList.remove('hidden');
       return;
     }
 
-    grid.classList.remove('hidden');
     noResults.classList.add('hidden');
+    resultsInfo.textContent = `Visar ${filtered.length} stödlinje${filtered.length > 1 ? 'r' : ''}.`;
 
-    grid.innerHTML = items.map(line => `
-      <article class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-400/30 transition-all transform hover:-translate-y-1 ${line.urgent ? 'ring-2 ring-red-400 ring-offset-2 ring-offset-[#0f1724]' : ''}" itemscope itemtype="https://schema.org/ContactPoint">
-        ${line.urgent ? `
+    filtered.forEach(line => {
+      const article = document.createElement('article');
+      article.className = 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-lg shadow-blue-500/10 flex flex-col gap-3';
+      article.setAttribute('itemscope', '');
+      article.setAttribute('itemtype', 'https://schema.org/ContactPoint');
+
+      // Akut-label
+      const urgentLabel = line.urgent
+        ? `
           <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
             <span>Akut hjälp</span>
-          </div>` : ''}
+          </div>`
+        : '';
 
+      article.innerHTML = `
+        ${urgentLabel}
         <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">
-          ${line.url ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition-colors">${line.name}</a>` : line.name}
+          ${line.url
+            ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors">${line.name}</a>`
+            : line.name}
         </h3>
 
         <a href="tel:${(line.number || '').toString().replace(/\s/g, '').replace(/-/g, '')}"
            class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors"
            itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
           <span>${line.number}</span>
         </a>
@@ -429,39 +510,48 @@
         <p class="text-gray-300 mb-4 leading-relaxed" itemprop="description">${line.description}</p>
 
         <div class="flex items-center gap-2 text-sm text-gray-400">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+               viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+               aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
           </svg>
           <span itemprop="hoursAvailable">${line.available}</span>
         </div>
 
-        <meta itemprop="contactType" content="Crisis Support">
-        <meta itemprop="areaServed" content="SE">
-        <meta itemprop="availableLanguage" content="Swedish">
-      </article>
-    `).join('');
-  }
+        ${line.tags && line.tags.length
+          ? `<div class="flex flex-wrap gap-2 mt-3">
+              ${line.tags
+                .map(tag => `<span class="px-2.5 py-1 rounded-full bg-black/40 border border-white/10 text-xs text-gray-300">${tag}</span>`)
+                .join('')}
+             </div>`
+          : ''}
+      `;
 
-  // ----- EVENTS -----
-  const searchEl = document.getElementById('searchInput');
-  if (searchEl) {
-    searchEl.addEventListener('input', (e) => {
-      searchQuery = e.target.value || '';
-      renderLines();
+      grid.appendChild(article);
     });
   }
 
-  document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const button = e.currentTarget;
+  // ----- EVENTS -----
+  const searchInput = document.getElementById('searchInput');
+  const categoryButtons = Array.from(document.querySelectorAll('.category-btn'));
+
+  searchInput.addEventListener('input', (e) => {
+    searchQuery = e.target.value || '';
+    renderLines();
+  });
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
       currentCategory = button.dataset.category || 'all';
 
-      document.querySelectorAll('.category-btn').forEach(b => {
-        b.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10';
-        b.setAttribute('aria-pressed', 'false');
+      categoryButtons.forEach(btn => {
+        btn.className = 'category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors';
+        btn.setAttribute('aria-pressed', 'false');
       });
 
-      button.className = 'category-btn flex items-center gap-2 px-5 py-3 rounded-xl font-medium whitespace-nowrap transition-all bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg';
+      button.className = 'category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg';
       button.setAttribute('aria-pressed', 'true');
 
       renderLines();
@@ -470,6 +560,7 @@
 
   // ----- INITIALIZE -----
   renderLines();
-</script>
+  </script>
 </body>
 </html>
+
