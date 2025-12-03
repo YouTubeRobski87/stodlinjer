@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="sv-SE" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Robert Claesson" />
+    <title>Kontakt | Stödlinjer Sverige</title>
+    <meta
+      name="description"
+      content="Hör av dig med rättelser, nya stödlinjer eller feedback. Fyll i formuläret eller maila info@stodlinjer.se."
+    />
+    <meta
+      name="keywords"
+      content="kontakt, stödlinjer, feedback, tips, uppdatering, förslag, info@stodlinjer.se"
+    />
+    <link rel="canonical" href="https://stodlinjer.se/kontakt.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0f1724" />
+    <script>
+      (function () {
+        var t =
+          localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = t;
+        if (t === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+
+    <!-- Tailwind CSS via CDN (configured in assets/js/tailwind-config.js) -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/johanna-fageras/static/fonts/gt-pressura/index.css"
+    />
+    <link rel="stylesheet" href="./assets/css/fa-solid.css" />
+    <link rel="stylesheet" href="assets/css/fa-regular.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+
+  <body class="min-h-screen flex flex-col page-shell">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md"
+      >Hoppa till innehåll</a
+    >
+
+    <!-- Header -->
+    <header class="header-shell">
+      <div class="header-inner">
+        <div class="header-brand">
+          <div class="brand-mark" aria-hidden="true">
+            <i class="fas fas-envelope-open-text"></i>
+          </div>
+          <div class="header-text">
+            <p
+              class="text-xs font-semibold uppercase tracking-wide"
+              style="margin: 0; color: var(--accent)"
+            >
+              Kontakt
+            </p>
+            <h1>Hör av dig till oss</h1>
+            <p>Tips, rättelser eller samarbeten? Skriv några rader.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" class="header-link" aria-label="Till startsidan"
+            ><i class="fas fas-house"></i><span>Startsida</span></a
+          >
+          <a href="anhoriga.html" class="header-link" aria-label="Till sidan för anhöriga"
+            ><i class="fas fas-people-roof"></i><span>Anhörig</span></a
+          >
+          <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
+            <span id="themeIcon" aria-hidden="true"><i class="fas fas-moon"></i></span>
+            <span id="themeLabel">Mörkt läge</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="flex-1">
+      <!-- Hero Section -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <div class="hero-grid">
+          <div class="surface-card strong-card p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="pill"><i class="fas fas-envelope-circle-check"></i> Hör av dig</span>
+              <span class="stat-chip"><i class="far far-clock"></i> Svar inom 1-2 dagar</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-slate-900 dark:text-white">
+              Skicka ett meddelande
+            </h2>
+            <p class="text-lg muted mb-6">
+              Berätta kort vad du behöver hjälp med. Vi svarar så snart vi kan och sparar inget
+              utöver ditt meddelande.
+            </p>
+
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="contactName"
+                    >Ditt namn <span class="label-optional">(valfritt)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="För- och efternamn"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="contactEmail"
+                    >E-post <span class="required-dot" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="din@adress.se"
+                    required
+                  />
+                  <span class="form-helper">Används bara för att svara dig tillbaka.</span>
+                </div>
+                <div class="form-field">
+                  <label for="contactTopic">Ämne</label>
+                  <select id="contactTopic" name="topic">
+                    <option value="update">Rätta eller uppdatera en stödlinje</option>
+                    <option value="new-line">Lägga till en ny stödlinje</option>
+                    <option value="technical">Tekniskt problem</option>
+                    <option value="collab">Samarbete eller press</option>
+                    <option value="other">Övrigt</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="contactChannel">Hur vill du bli kontaktad?</label>
+                  <select id="contactChannel" name="preferred_channel">
+                    <option value="email">E-post</option>
+                    <option value="phone">Telefon (ange nummer i meddelandet)</option>
+                    <option value="no-response">Jag behöver inget svar</option>
+                  </select>
+                </div>
+                <div class="form-field form-full">
+                  <label for="contactMessage"
+                    >Meddelande <span class="required-dot" aria-hidden="true">*</span></label
+                  >
+                  <textarea
+                    id="contactMessage"
+                    name="message"
+                    rows="5"
+                    placeholder="Beskriv kort vad du vill tipsa om, rätta eller fråga."
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-foot form-full">
+                  <label class="form-checkbox">
+                    <input type="checkbox" name="ok_to_follow_up" value="yes" />
+                    Jag godkänner att du sparar mina uppgifter för att kunna svara.
+                  </label>
+                  <p class="form-note">
+                    Ingen spårning eller onödiga cookies. Behöver du akut hjälp? Ring
+                    <a href="tel:112" class="inline-link">112</a> eller
+                    <a href="tel:90101" class="inline-link">90101</a>.
+                  </p>
+                </div>
+              </div>
+              <button type="submit" class="form-submit">
+                <i class="fas fas-paper-plane"></i> Skicka meddelande
+              </button>
+              <p class="form-disclaimer">
+                Formuläret kan kopplas till t.ex. Formspree – byt ut <code>your-form-id</code> i
+                <code>action</code> när du väljer tjänst.
+              </p>
+            </form>
+          </div>
+
+          <div class="surface-card p-6 sm:p-7 flex flex-col gap-4">
+            <div class="pill w-fit"><i class="fas fas-compass"></i> Snabb info</div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Andra sätt att nå oss</h3>
+            <div class="flex flex-col gap-3 text-sm sm:text-base">
+              <div class="contact-row">
+                <span class="card-icon" aria-hidden="true"><i class="fas fas-envelope"></i></span>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white mb-1">Maila direkt</p>
+                  <p class="muted mb-1">info@stodlinjer.se</p>
+                  <a href="mailto:info@stodlinjer.se" class="inline-link"
+                    ><i class="fas fas-paper-plane"></i> Öppna mailklient</a
+                  >
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="card-icon" aria-hidden="true"
+                  ><i class="fas fas-shield-heart"></i
+                ></span>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white mb-1">Akut hjälp</p>
+                  <p class="muted mb-1">
+                    Vid fara för liv: ring 112. Vid självmordstankar: ring 90101.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <a href="tel:112" class="badge-urgent"
+                      ><i class="fas fas-triangle-exclamation"></i> 112</a
+                    >
+                    <a href="tel:90101" class="tag">90101 Självmordslinjen</a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="card-icon" aria-hidden="true"
+                  ><i class="fas fas-clipboard-check"></i
+                ></span>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white mb-1">
+                    Vad som händer sen
+                  </p>
+                  <p class="muted mb-1">
+                    Vi läser alla meddelanden, prioriterar rättelser och publicerar uppdateringar så
+                    snabbt som möjligt.
+                  </p>
+                  <p class="muted text-xs mb-0">
+                    Dela gärna källor eller länkar för snabbare hantering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-10">
+        <figure class="quote-block" role="figure" aria-label="Uppmuntrande citat">
+          <blockquote id="dailyQuote" class="quote-text">
+            <span class="quote-icon" aria-hidden="true"><i class="fas fas-quote-left"></i></span>
+            <p></p>
+          </blockquote>
+          <figcaption id="quoteAuthor" class="quote-author"></figcaption>
+        </figure>
+      </section>
+
+      <!-- Info Block -->
+      <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+        <div class="surface-card p-6 sm:p-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+            Varför vi ber om detaljer
+          </h2>
+          <p class="muted leading-relaxed mb-3">
+            Ju mer exakt du beskriver linjen eller felet, desto snabbare kan vi uppdatera sidan och
+            hjälpa fler. Länka gärna till officiella källor eller skriv tider/nummer som ändrats.
+          </p>
+          <p class="muted leading-relaxed mb-3">
+            Vi är en ideell infosida och sparar inga uppgifter längre än nödvändigt för att svara på
+            ditt ärende.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="stat-chip"><i class="fas fas-lock"></i> Ingen spårning</span>
+            <span class="stat-chip"><i class="fas fas-users"></i> Community-driven</span>
+            <span class="stat-chip"><i class="fas fas-heart"></i> Tack för din hjälp</span>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-shell">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-block">
+            <div class="footer-heading"><i class="fas fas-life-ring"></i> Om Stödlinjer.se</div>
+            <p>
+              En ideell infosida som samlar svenska stödlinjer på ett ställe. Kontrollera alltid
+              aktuella tider på respektive webbplats.
+            </p>
+            <p class="footer-meta">Senast uppdaterad: manuellt underhåll – tipsa om ändringar!</p>
+          </div>
+          <div class="footer-block">
+            <div class="footer-heading"><i class="fas fas-envelope"></i> Kontakt</div>
+            <p>
+              Maila
+              <a href="mailto:info@stodlinjer.se" class="footer-link"
+                ><i class="fas fas-paper-plane"></i> info@stodlinjer.se</a
+              >
+              med förbättringar.
+            </p>
+            <a
+              href="https://github.com/YouTubeRobski87"
+              target="_blank"
+              style="text-decoration: none"
+              ><p class="footer-meta">Skapad av Robert Claesson.</p></a
+            >
+          </div>
+        </div>
+        <div class="footer-quick">
+          <div class="footer-heading"><i class="fas fas-rocket"></i> Snabba länkar</div>
+          <div class="footer-quick-links">
+            <a class="footer-link" href="index.html"><i class="fas fas-house"></i> Startsidan</a>
+            <a class="footer-link" href="anhoriga.html"
+              ><i class="fas fas-people-roof"></i> För anhöriga</a
+            >
+            <a class="footer-link" href="tel:112"
+              ><i class="fas fas-triangle-exclamation"></i> Ring 112 vid akut fara</a
+            >
+            <a class="footer-link" href="tel:90101"
+              ><i class="fas fas-phone-volume"></i> Självmordslinjen 90101</a
+            >
+            <a class="footer-link" href="kontakt.html"
+              ><i class="fas fas-envelope-open-text"></i> Kontakta oss</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

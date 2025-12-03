@@ -1,0 +1,248 @@
+:root {
+  /* Light theme */
+  --bg: #fdf8f3;
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(252, 244, 237, 0.92) 45%,
+    rgba(248, 236, 224, 0.9) 100%
+  );
+  --card: #ffffff;
+  --card-strong: #fffaf3;
+  --border: #e7d9c9;
+  --text: #1f2937;
+  --muted: #5b6470;
+  --muted-soft: #7b8490;
+  --pill: #f7ede3;
+  --pill-text: #2f3945;
+  --accent: #d97757;
+  --accent-2: #c65f3d;
+  --accent-3: #f4a261;
+  --shadow: 0 6px 14px rgba(31, 41, 55, 0.06);
+  --shadow-strong: 0 10px 22px rgba(31, 41, 55, 0.1);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  /* Dark theme */
+  --bg: #0f0f12;
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(18, 18, 24, 0.96) 0%,
+    rgba(12, 12, 18, 0.98) 60%,
+    rgba(10, 10, 14, 1) 100%
+  );
+  --card: #13141a;
+  --card-strong: #171821;
+  --border: #1f2530;
+  --text: #e6e7ec;
+  --muted: #a9adb7;
+  --muted-soft: #cfd2d9;
+  --pill: #181924;
+  --pill-text: #e6e7ec;
+  --accent: #f59e63;
+  --accent-2: #f6ad78;
+  --accent-3: #8bd6c0;
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  --shadow-strong: 0 10px 22px rgba(0, 0, 0, 0.28);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Athletics', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--bg);
+  background-image: var(--bg-pattern);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+}
+
+/* ==========================================================================
+   Typography Scale & Rhythm for Athletics
+   ========================================================================== */
+
+.page-shell h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-shell h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-shell h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-shell h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Large display headings (hero sections) */
+.page-shell .text-3xl {
+  font-size: 1.875rem !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+}
+
+.page-shell .text-4xl {
+  font-size: 2.25rem !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.1 !important;
+}
+
+@media (min-width: 640px) {
+  .page-shell .sm\:text-4xl {
+    font-size: 2.25rem !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* Body text */
+.page-shell p,
+.page-shell li {
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+}
+
+.page-shell .muted {
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+}
+
+.page-shell .text-lg {
+  font-size: 1.0625rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.005em !important;
+}
+
+.page-shell .text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.page-shell .text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.015em !important;
+}
+
+/* Strong/bold text */
+.page-shell strong,
+.page-shell b {
+  font-weight: 700;
+}
+
+/* Medium weight for UI elements (Athletics has no 600, use 500) */
+.page-shell .font-semibold {
+  font-weight: 500 !important;
+}
+
+.page-shell .font-bold {
+  font-weight: 700 !important;
+}
+
+.page-shell .font-extrabold {
+  font-weight: 800 !important;
+}
+
+/* Normalize Tailwind text utility when theme switches */
+.page-shell .text-slate-900 {
+  color: var(--text) !important;
+}
+
+/* ==========================================================================
+   Phone Numbers - Critical Information Styling
+
+   Phone numbers use tabular figures (monospaced numerals) and increased
+   letter-spacing for maximum scanability. This is critical for users in
+   distress who need to quickly read and dial numbers.
+   ========================================================================== */
+
+.phone-number {
+  font-family: 'Athletics', system-ui, sans-serif;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   Focus States - Accessibility
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sm\:pb-7 {
+    padding-bottom: 1rem !important;
+  }
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OG Image Generator - Stödlinjer.se</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/johanna-fageras/static/fonts/gt-walsheim/index.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Athletics', system-ui, sans-serif;
+        background: #1a1a2e;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+
+      .og-image {
+        width: 1200px;
+        height: 630px;
+        background: linear-gradient(135deg, #0f0f12 0%, #1a1a2e 50%, #0f0f12 100%);
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .og-image::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+            ellipse 800px 400px at 20% 20%,
+            rgba(217, 119, 87, 0.15),
+            transparent 50%
+          ),
+          radial-gradient(ellipse 600px 300px at 80% 80%, rgba(245, 158, 99, 0.1), transparent 50%);
+        pointer-events: none;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 60px;
+      }
+
+      .icon {
+        width: 100px;
+        height: 100px;
+        background: #d97757;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 40px;
+        font-size: 48px;
+        color: white;
+        box-shadow: 0 20px 60px rgba(217, 119, 87, 0.4);
+      }
+
+      .title {
+        font-size: 72px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 24px;
+      }
+
+      .subtitle {
+        font-size: 32px;
+        font-weight: 400;
+        color: #a9adb7;
+        letter-spacing: -0.01em;
+        max-width: 800px;
+      }
+
+      .tagline {
+        display: flex;
+        gap: 16px;
+        margin-top: 48px;
+        justify-content: center;
+      }
+
+      .tag {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #e6e7ec;
+      }
+
+      .accent-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        background: linear-gradient(90deg, #d97757, #f59e63, #d97757);
+      }
+
+      .instructions {
+        margin-top: 40px;
+        padding: 24px;
+        background: #fff;
+        border-radius: 12px;
+        max-width: 600px;
+        text-align: left;
+        color: #1f2937;
+      }
+
+      .instructions h2 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .instructions p {
+        font-size: 14px;
+        line-height: 1.45;
+        color: #5b6470;
+      }
+
+      .instructions ol {
+        margin: 12px 0;
+        padding-left: 20px;
+      }
+
+      .instructions li {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #5b6470;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="og-image" id="og-image">
+        <div class="content">
+          <div class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l2 2" />
+            </svg>
+          </div>
+          <h1 class="title">Stödlinjer Sverige</h1>
+          <p class="subtitle">Hitta rätt hjälp när livet känns tungt</p>
+          <div class="tagline">
+            <span class="tag">🆘 Självmordslinjen 90101</span>
+            <span class="tag">👨‍👩‍👧 BRIS 116 111</span>
+            <span class="tag">🛡️ Kvinnofridslinjen</span>
+          </div>
+        </div>
+        <div class="accent-bar"></div>
+      </div>
+
+      <div class="instructions">
+        <h2>Så skapar du OG-bilden</h2>
+        <p>Denna sida genererar en förhandsvisning av Open Graph-bilden för stodlinjer.se.</p>
+        <ol>
+          <li>Öppna denna fil i en webbläsare</li>
+          <li>Använd webbläsarens utvecklarverktyg (F12) eller ett screenshot-verktyg</li>
+          <li>Ta en skärmbild av den mörka rutan ovan (1200×630 px)</li>
+          <li>Spara som <code>og-image.jpg</code> i projektets rotmapp</li>
+          <li>
+            Alternativt: använd ett verktyg som
+            <a href="https://htmlcsstoimage.com">htmlcsstoimage.com</a>
+          </li>
+        </ol>
+        <p style="margin-top: 12px">
+          <strong>Tips:</strong> I Chrome DevTools kan du högerklicka på elementet och välja
+          "Capture node screenshot".
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
