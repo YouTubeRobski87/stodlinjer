@@ -101,7 +101,8 @@
             </p>
 
             <form class="contact-form" action="https://formspree.io/f/mnnezdjq" method="POST">
-              <div class="form-grid">
+
+             <div class="form-grid">
                 <div class="form-field">
                   <label for="contactName"
                     >Ditt namn <span class="label-optional">(valfritt)</span></label
@@ -116,8 +117,11 @@
                 <div class="form-field">
                   <label for="contactEmail"
                     >E-post <span class="required-dot" aria-hidden="true">*</span></label
-                 <input type="hidden" name="_replyto" value="">
-                  >
+                <input type="hidden" name="_replyto" value="">
+                <input type="hidden" name="_subject" value="Nytt meddelande från Stödlinjer.se">
+                <input type="hidden" name="_replyto" value="">
+                <input type="hidden" name="_next" value="https://stodlinjer.se/tack.html">
+
                   <input
                     type="email"
                     id="contactEmail"
@@ -147,7 +151,7 @@
                 </div>
                 <div class="form-field form-full">
                   <label for="contactMessage"
-                    >Meddelande <span class="required-dot" aria-hidden="true">*</span></label
+                    >Meddelande <span class="required-dot" aria-hidden="true">*</span></label4
                   >
                   <textarea
                     id="contactMessage"
