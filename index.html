@@ -475,7 +475,46 @@
     <script type="module" src="assets/js/app.js"></script>
     <!-- ... annat innehåll på sidan ... -->
 
-<!--Start of Stödlinjer Tawk.to Chat Script-->
+<!--Start of Stödlinjer Tawk.to Chat Script (Animera-knapp)-->
+<style>
+  /* Anpassad större knapp längst ner till höger med animation */
+  #tawk-button-custom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e90ff; /* Blå färg */
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    animation: pulse 2s infinite;
+  }
+
+  #tawk-button-custom img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Animation: lätt pulserande rörelse */
+  @keyframes pulse {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+
+<div id="tawk-button-custom">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat ikon"/>
+  Chatta anonymt
+</div>
+
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -485,18 +524,10 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     s1.charset='UTF-8';
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
-
-    // Anpassa välkomstmeddelande och utseende
-    Tawk_API.onLoad = function(){
-        Tawk_API.setAttributes({
-            'widget_color':'#1e90ff', // blå färg
-            'widget_title':'Stödlinjer Chat',
-            'widget_welcome':'Hej! Behöver du prata med någon? Chatten är anonym och kostnadsfri.'
-        }, function(error){});
-    };
 })();
-</script>
-<!--End of Stödlinjer Tawk.to Chat Script-->
+
+// Öppna Tawk.to chatten när knappen klickas
+document.getElementById('tawk-button-custom').addEv
 
 </body>
 </html>
