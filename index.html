@@ -475,7 +475,7 @@
     <script type="module" src="assets/js/app.js"></script>
     <!-- ... annat innehåll på sidan ... -->
 
-<!--Start of Stödlinjer Tawk.to Chat Script (Animera-knapp - fixad)-->
+<!--Start of Stödlinjer Tawk.to Chat Script (Ren & färdig)-->
 <style>
   #tawk-button-custom {
     position: fixed;
@@ -524,17 +524,17 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     s0.parentNode.insertBefore(s1,s0);
 })();
 
-// Säker metod: vänta tills Tawk_API finns innan toggle
+// Vänta tills Tawk_API är redo innan öppning
 document.getElementById('tawk-button-custom').addEventListener('click', function() {
-    if(typeof Tawk_API !== 'undefined' && Tawk_API.toggle) {
-        Tawk_API.toggle();
-    } else {
-        alert("Chatten laddas fortfarande, försök om några sekunder.");
-    }
+    var checkTawk = setInterval(function() {
+        if(typeof Tawk_API !== 'undefined' && Tawk_API.toggle) {
+            Tawk_API.toggle();
+            clearInterval(checkTawk);
+        }
+    }, 500);
 });
 </script>
 <!--End of Stödlinjer Tawk.to Chat Script-->
-
 
 </body>
 </html>
