@@ -475,67 +475,20 @@
     <script type="module" src="assets/js/app.js"></script>
     <!-- ... annat innehåll på sidan ... -->
 
-<!--Start of Stödlinjer Tawk.to Chat Script (Ren & färdig)-->
-<style>
-  #tawk-button-custom {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #1e90ff;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    z-index: 1000;
-    animation: pulse 2s infinite;
-  }
-
-  #tawk-button-custom img {
-    width: 24px;
-    height: 24px;
-  }
-
-  @keyframes pulse {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-  }
-</style>
-
-<div id="tawk-button-custom">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/chat.png" alt="Chat ikon"/>
-  Chatta anonymt
-</div>
-
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
-    var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/693682addab0d3197cd6061a/1jbuestdc';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693682addab0d3197cd6061a/1jbuestdc';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
 })();
-
-// Vänta tills Tawk_API är redo innan öppning
-document.getElementById('tawk-button-custom').addEventListener('click', function() {
-    var checkTawk = setInterval(function() {
-        if(typeof Tawk_API !== 'undefined' && Tawk_API.toggle) {
-            Tawk_API.toggle();
-            clearInterval(checkTawk);
-        }
-    }, 500);
-});
 </script>
-<!--End of Stödlinjer Tawk.to Chat Script-->
-
+<!--End of Tawk.to Script-->
+    
 </body>
 </html>
 
