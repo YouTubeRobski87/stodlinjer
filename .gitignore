@@ -1,0 +1,32 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.chatdata/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+*.log
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Build output / cache
+site/
+.cache/
+
+# Package manager files
+package-lock.json
+
+# Local Netlify folder
+.netlify/
+deno.lock
+
+# Misc
+chatbot-prompt.md
+CLAUDE.md
