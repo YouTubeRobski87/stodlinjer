@@ -1,0 +1,96 @@
+{% macro hotlineGrid() %}
+  <div class="grid-hotlines">
+    <a
+      href="tel:90101"
+      class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+      aria-label="Ring Mind Självmordslinjen 90101"
+    >
+      <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+        <i class="fas fas-headset"></i> Mind Självmordslinjen
+      </div>
+      <div class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number">
+        90101
+      </div>
+      <span class="tag">Samtal &amp; chatt</span>
+    </a>
+    <a
+      href="tel:112"
+      class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+      aria-label="Ring SOS Alarm 112"
+    >
+      <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+        <i class="fas fas-triangle-exclamation"></i> SOS Alarm
+      </div>
+      <div class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number">
+        112
+      </div>
+      <span class="badge-urgent">Akut fara</span>
+    </a>
+    <a
+      href="tel:020505050"
+      class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+      aria-label="Ring Kvinnofridslinjen 020-505050"
+    >
+      <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+        <i class="fas fas-shield-halved"></i> Kvinnofridslinjen
+      </div>
+      <div class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number">
+        020-505050
+      </div>
+      <span class="tag">Våld &amp; hot</span>
+    </a>
+  </div>
+{% endmacro %}
+
+{% macro heroWithHotlines(config) %}
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    <div class="hero-grid">
+      <div class="surface-card strong-card p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="pill"
+            ><i class="{{ config.left.pill.icon }}"></i> {{ config.left.pill.text }}</span
+          >
+          <span class="stat-chip"
+            ><i class="{{ config.left.stat.icon }}"></i> {{ config.left.stat.text }}</span
+          >
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 dark:text-white">
+          {{ config.left.title }}
+        </h2>
+        <p class="text-lg muted mb-6">
+          {{ config.left.description }}
+        </p>
+        {{ hotlineGrid() }}
+        <div class="floating-strip mt-5 text-sm">
+          {% for strip in config.left.highlights %}
+            <div>
+              <strong><i class="{{ strip.icon }}"></i> {{ strip.title }}</strong
+              ><br /><span class="muted">{{ strip.text }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="surface-card p-6 sm:p-7 flex flex-col gap-4">
+        <div class="pill w-fit">
+          <i class="{{ config.right.pill.icon }}"></i> {{ config.right.pill.text }}
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">{{ config.right.title }}</h3>
+        <ul class="space-y-3 text-sm sm:text-base muted">
+          {% for item in config.right.items %}
+            <li class="flex gap-3">
+              <i class="fas fas-check text-[var(--accent)]"></i>{{ item | safe }}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if config.right.tags %}
+          <div class="flex flex-wrap gap-2">
+            {% for tag in config.right.tags %}
+              <span class="stat-chip"><i class="{{ tag.icon }}"></i> {{ tag.text }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endmacro %}

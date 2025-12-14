@@ -1,0 +1,122 @@
+.support-card {
+  background: var(--card);
+  border: none;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.support-card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: var(--pill);
+  border: none;
+  color: var(--accent);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.grid-hotlines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.floating-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--card);
+  border: none;
+  color: var(--text);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+:root[data-theme='dark'] .floating-strip {
+  color: var(--text);
+}
+
+.card-number {
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--pill);
+  border: none;
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration: none;
+  font-family: 'Söhne', system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.card-number svg {
+  width: 18px;
+  height: 18px;
+}
+
+.card-number:hover {
+  color: var(--accent-2);
+}
+
+h3 a.card-title-link {
+  line-height: 1.2 !important;
+}
+.card-title-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.card-title-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--accent);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card-meta i {
+  color: var(--accent);
+}
+
+.phone-number {
+  font-family: 'Söhne', system-ui, sans-serif;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+}

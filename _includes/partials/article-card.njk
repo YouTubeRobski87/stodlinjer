@@ -1,0 +1,33 @@
+{% macro articleCard(post) %}
+  {% set samlingInfo = (post.data.samling | getSamling) or { title: post.data.samling, icon: 'fas fas-folder' } %}
+  <article class="article-card" data-samling-item="{{ post.data.samling }}">
+    <div class="article-card-top">
+      {% if post.data.samling %}
+        <a
+          class="samling-chip"
+          href="{{ baseUrl }}/samlingar/{{ post.data.samling }}/"
+          aria-label="Visa fler artiklar i samlingen {{ samlingInfo.title }}"
+        >
+          <i class="{{ samlingInfo.icon or 'fas fas-folder' }}"></i>
+          <span>{{ samlingInfo.title }}</span>
+        </a>
+      {% endif %}
+      <span class="article-date">{{ post.date | formatDate }}</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="{{ baseUrl }}{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+
+    {% if post.data.description %}
+      <p class="article-card-excerpt">{{ post.data.description }}</p>
+    {% endif %}
+
+    <div class="article-card-footer">
+      <a class="read-more" href="{{ baseUrl }}{{ post.url }}">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+{% endmacro %}

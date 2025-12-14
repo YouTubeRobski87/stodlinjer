@@ -1,0 +1,1008 @@
+{
+  "apiUrl": "/.netlify/functions/chat",
+  "greetings": [
+    "Hej!👋 Hur är det med dig? ✨",
+    "Hej!👋 Vad har du på hjärtat idag? 💜",
+    "Hej!👋 Hur mår du just nu? 🌈",
+    "Hej!👋 Finns det något du vill prata om? 🌸",
+    "Hej!👋 Jag finns här om du vill prata 🌷",
+    "Hej!👋 Hur kan jag hjälpa dig idag? 💐",
+    "Hej!👋 Berätta gärna vad som känns viktigt just nu 🌿",
+    "Hej!👋 Vad fick dig att kika in här just nu? 🦋",
+    "Hej!👋 Fint att du är här. Vill du berätta lite om hur du har det? 🦄",
+    "Hej!👋 Du får skriva precis så mycket eller lite du vill 🐳",
+    "Hej!👋 Vi kan ta det i din takt 🍓",
+    "Hej!👋 Är det något som känns extra jobbigt idag? 🍒",
+    "Hej!👋 Vill du berätta om hur din dag varit? 🧸",
+    "Hej!👋 Jag lyssnar – vad känns mest just nu? 💕",
+    "Hej!👋 Det kan vara svårt att ta kontakt, bra att du gjorde det 🎀",
+    "Hej!👋 Är du orolig för dig själv eller någon annan? 🌼",
+    "Hej!👋 Vill du ha hjälp att hitta rätt stöd, eller bara skriva av dig? 🌹",
+    "Hej!👋 Om du vill kan vi börja med en kort beskrivning av hur du mår 🌺",
+    "Hej!👋 Du behöver inte ha allt formulerat – vi kan reda ut det tillsammans 🌻",
+    "Hej!👋 Vad skulle kännas skönt att få ur sig först? 🪴",
+    "Hej!👋 Hur har det känts den senaste tiden? 🩷",
+    "Hej!👋 Är det något särskilt som tynger dig just nu? 🐼",
+    "Hej!👋 Du är inte ensam här 🌤️",
+    "Hej!👋 Vi tar ett steg i taget, okej? 🌴",
+    "Hej!👋 Finns det något du skulle vilja ha stöd med just idag? 🌱"
+  ],
+  "externalSources": [
+    {
+      "title": "1177 Vårdguiden",
+      "url": "https://1177.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "1177",
+      "hoursLabel": "Dygnet runt",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon", "webb"]
+        }
+      ]
+    },
+    {
+      "title": "Folkhälsomyndigheten",
+      "url": "https://folkhalsomyndigheten.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "010-205 20 00",
+      "hoursLabel": "Vardagar kl. 08:00–16:30 (Växel)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "08:00",
+          "close": "16:30",
+          "channels": ["telefon", "webb"]
+        }
+      ]
+    },
+    {
+      "title": "Socialstyrelsen",
+      "url": "https://www.socialstyrelsen.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb", "e-post"],
+      "phone": "075-247 30 00",
+      "hoursLabel": "Vardagar kl. 08:00–17:00 (Växel)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "08:00",
+          "close": "17:00",
+          "channels": ["telefon", "webb", "e-post"]
+        }
+      ]
+    },
+    {
+      "title": "Mind (Riksföreningen för psykisk hälsa)",
+      "url": "https://mind.se",
+      "type": "link",
+      "contactTypes": ["webb"],
+      "hours": "Se webbplatsen för kontaktvägar och öppettider."
+    },
+    {
+      "title": "Självmordslinjen (Mind)",
+      "url": "https://mind.se/sjalvmordslinjen/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "90 101",
+      "hoursLabel": "Dygnet runt, årets alla dagar",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon", "chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Äldrelinjen (Mind)",
+      "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
+      "type": "link",
+      "contactTypes": ["telefon"],
+      "phone": "020-22 22 33",
+      "hoursLabel": "Telefon: Mån–fre 08:00–19:00, lör–sön 10:00–16:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "08:00",
+          "close": "19:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "open": "10:00",
+          "close": "16:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Föräldralinjen (Mind)",
+      "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/",
+      "type": "link",
+      "contactTypes": ["telefon"],
+      "phone": "020-85 20 00",
+      "hoursLabel": "Telefon: Mån–tors 10:00–15:00 (helgfria vardagar), extra öppet tors 19:00–21:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu"],
+          "open": "10:00",
+          "close": "15:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["thu"],
+          "open": "19:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Livslinjen (Mind)",
+      "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/livslinjen/",
+      "type": "link",
+      "contactTypes": ["chatt", "webb"],
+      "phone": "",
+      "hoursLabel": "Chatt: Sön–tors 17:00–24:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["sun", "mon", "tue", "wed", "thu"],
+          "open": "17:00",
+          "close": "24:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Killar.se",
+      "url": "https://killar.se/",
+      "type": "link",
+      "contactTypes": ["chatt", "telefon", "webb", "e-post"],
+      "phone": "076-265 32 65",
+      "hoursLabel": "Chatt: sön–tors 19:00–21:00. Samtalsmottagning: kontakt via mail/telefon, tid efter överenskommelse.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["sun", "mon", "tue", "wed", "thu"],
+          "open": "19:00",
+          "close": "21:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Al-Anon Familjegrupper i Sverige",
+      "url": "https://www.al-anon.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "webb", "e-post"],
+      "phone": "070-610 96 61",
+      "hoursLabel": "Telefon: måndagar kl. 19:00–21:00 (övrig tid ibland svar eller telefonsvarare)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon"],
+          "open": "19:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Anhöriglinjen (Anhörigas Riksförbund)",
+      "url": "https://anhorigasriksforbund.se/anhoriglinjen/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "0200-239 500",
+      "hoursLabel": "Telefon: Mån–tis, tors–fre 10:00–15:00, ons & sön 18:00–21:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "thu", "fri"],
+          "open": "10:00",
+          "close": "15:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["wed", "sun"],
+          "open": "18:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Mansjouren",
+      "url": "https://www.mansjouren.se",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "08-30 30 20",
+      "hoursLabel": "Telefon: sön–fre 12:00–14:00 & 18:00–20:00, lör 12:00–14:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["sun", "mon", "tue", "wed", "thu", "fri"],
+          "open": "12:00",
+          "close": "14:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sun", "mon", "tue", "wed", "thu", "fri"],
+          "open": "18:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sat"],
+          "open": "12:00",
+          "close": "14:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Spelberoendes Riksförbund",
+      "url": "https://spelberoende.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "webb", "e-post"],
+      "phone": "072-503 48 08",
+      "hoursLabel": "Telefon Sthlm: mån–tors 09:00–17:00, fre 09:00–15:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu"],
+          "open": "09:00",
+          "close": "17:00",
+          "channels": ["telefon", "webb", "e-post"]
+        },
+        {
+          "days": ["fri"],
+          "open": "09:00",
+          "close": "15:00",
+          "channels": ["telefon", "webb", "e-post"]
+        }
+      ]
+    },
+    {
+      "title": "Anonyma Narkomaner (NA)",
+      "url": "https://www.nasverige.org/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "0771-13 80 00",
+      "hoursLabel": "Telefon: vardagar 18:00–21:00, helger 17:00–21:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "18:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "open": "17:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Anonyma Alkoholister (AA)",
+      "url": "https://aa.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "08-720 38 42",
+      "hoursLabel": "Telefon: alla dagar 11:00–20:00 (även helgdagar)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "11:00",
+          "close": "20:00",
+          "channels": ["telefon", "e-post"]
+        }
+      ]
+    },
+    {
+      "title": "Bris",
+      "url": "https://www.bris.se",
+      "type": "link",
+      "contactTypes": ["telefon", "sms", "chatt", "mejl", "webb"],
+      "phone": "116 111",
+      "hoursLabel": "Dygnet runt, varje dag, året om (telefon, sms, chatt och mejl för barn och unga upp till 18 år)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon", "sms", "chatt", "mejl"]
+        }
+      ]
+    },
+    {
+      "title": "Brottsofferjouren",
+      "url": "https://www.brottsofferjouren.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "e-post", "webb"],
+      "phone": "116 006",
+      "hoursLabel": "Telefon: Mån–tis 09:00–19:00, ons–fre 09:00–17:00, helg 09:00–12:00 & 13:00–16:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue"],
+          "open": "09:00",
+          "close": "19:00",
+          "channels": ["telefon", "chatt", "e-post"]
+        },
+        {
+          "days": ["wed", "thu", "fri"],
+          "open": "09:00",
+          "close": "17:00",
+          "channels": ["telefon", "chatt", "e-post"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "open": "09:00",
+          "close": "12:00",
+          "channels": ["telefon", "chatt", "e-post"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "open": "13:00",
+          "close": "16:00",
+          "channels": ["telefon", "chatt", "e-post"]
+        }
+      ]
+    },
+    {
+      "title": "Droghjälpen",
+      "url": "https://droghjalpen.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "020-91 91 91",
+      "hoursLabel": "Telefon: mån & tors 09:00–16:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "thu"],
+          "open": "09:00",
+          "close": "16:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Giftinformationscentralen",
+      "url": "https://giftinformation.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "010-456 6700",
+      "hoursLabel": "Dygnet runt, året runt (vid akut förgiftning ring 112 och begär Giftinformation; i mindre brådskande fall 010-456 6700)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon", "webb"]
+        }
+      ]
+    },
+    {
+      "title": "Hjälplinjen",
+      "url": "https://hjalplinjen.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "90390",
+      "hoursLabel": "Dygnet runt, året runt",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon", "webb"]
+        }
+      ]
+    },
+    {
+      "title": "Jourhavande Kompis",
+      "url": "https://www.rkuf.se/fa-stod/jourhavande-kompis",
+      "type": "link",
+      "contactTypes": ["chatt", "webb"],
+      "phone": "",
+      "hoursLabel": "Chatt: mån–fre 18:00–21:00, lör–sön 14:00–17:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "18:00",
+          "close": "21:00",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "open": "14:00",
+          "close": "17:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Jourhavande Medmänniska",
+      "url": "https://www.jourhavande-medmanniska.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "08-702 16 80",
+      "hoursLabel": "Telefon: alla nätter 21:00–06:00 (året runt). Chatt: lör–tis 21:00–24:00.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "21:00",
+          "close": "24:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "06:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sat", "sun", "mon", "tue"],
+          "open": "21:00",
+          "close": "24:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Kollegahjälpen",
+      "url": "https://kollegahjalpen.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "020-59 60 00",
+      "hoursLabel": "Dygnet runt (numret går till SOS Alarm som förmedlar kontakt med kollegahjälpare)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Kvinnofridslinjen",
+      "url": "https://kvinnofridslinjen.se",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "116 016",
+      "hoursLabel": "Telefon: dygnet runt, årets alla dagar. Chatt: mån & tors 15:00–21:00, sön 11:00–17:00.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["mon", "thu"],
+          "open": "15:00",
+          "close": "21:00",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["sun"],
+          "open": "11:00",
+          "close": "17:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Kyrkans SOS",
+      "url": "https://kyrkanssos.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "0771-800 650",
+      "hoursLabel": "Telefon: vardagar 13:00–21:00, helger/helgdagar 16:00–21:00. Chatt: tis 13:00–16:00, tors 18:00–21:00. Digitala brev: dygnet runt.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "13:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "open": "16:00",
+          "close": "21:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["tue"],
+          "open": "13:00",
+          "close": "16:00",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["thu"],
+          "open": "18:00",
+          "close": "21:00",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "24:00",
+          "channels": ["webb"]
+        }
+      ]
+    },
+    {
+      "title": "Roks (Riksorganisationen för kvinnojourer och tjejjourer i Sverige)",
+      "url": "https://www.roks.se/",
+      "type": "link",
+      "contactTypes": ["webb"],
+      "hours": "Se webbplatsen för kontaktvägar och öppettider."
+    },
+    {
+      "title": "Spelberoendes Riksförbund",
+      "url": "https://spelberoende.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "webb", "e-post"],
+      "phone": "072-503 48 08",
+      "hoursLabel": "Telefontider Stockholm: mån–tors 09:00–17:00, fre 09:00–15:00 (bemannat kansli)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu"],
+          "open": "09:00",
+          "close": "17:00",
+          "channels": ["telefon", "webb", "e-post"]
+        },
+        {
+          "days": ["fri"],
+          "open": "09:00",
+          "close": "15:00",
+          "channels": ["telefon", "webb", "e-post"]
+        }
+      ]
+    },
+    {
+      "title": "Stödlinjen för Spelare och Anhöriga",
+      "url": "https://stodlinjen.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "020-81 91 00",
+      "hoursLabel": "Helgfria vardagar: mån 09:00–19:00, tis–ons 09:00–17:00, tors 11:00–19:00, fre 09:00–15:00 (telefon). Chatten har något kortare öppettider.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon"],
+          "open": "09:00",
+          "close": "19:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["tue", "wed"],
+          "open": "09:00",
+          "close": "17:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["thu"],
+          "open": "11:00",
+          "close": "19:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["fri"],
+          "open": "09:00",
+          "close": "15:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["mon"],
+          "open": "09:00",
+          "close": "18:45",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["tue", "wed"],
+          "open": "09:00",
+          "close": "16:45",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["thu"],
+          "open": "11:00",
+          "close": "18:45",
+          "channels": ["chatt"]
+        },
+        {
+          "days": ["fri"],
+          "open": "09:00",
+          "close": "14:45",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Röda Korset (Svenska Röda Korset)",
+      "url": "https://www.rodakorset.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "0771-19 95 00",
+      "hoursLabel": "Infoservice: vardagar 10:00–12:00 och 13:00–16:00 (kortare öppettider sommartid)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "10:00",
+          "close": "12:00",
+          "channels": ["telefon", "e-post"]
+        },
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "13:00",
+          "close": "16:00",
+          "channels": ["telefon", "e-post"]
+        }
+      ]
+    },
+    {
+      "title": "Stiftelsen Tryggare Sverige",
+      "url": "https://tryggaresverige.org/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "08-29 20 00",
+      "hoursLabel": "Växel: kontorstid (inga exakta öppettider angivna)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    {
+      "title": "Ångestförbundet",
+      "url": "https://www.angest.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "031-13 70 91",
+      "hoursLabel": "Telefon: vardagar 13:00–15:00 (ÅSS Göteborg jourtelefon för personer med ångest och anhöriga)",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "13:00",
+          "close": "15:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Alkoholhjälpen",
+      "url": "https://www.alkoholhjalpen.se",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "020-84 44 48",
+      "hoursLabel": "Helgfria vardagar: mån–tors 11:00–19:00, fre 11:00–16:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu"],
+          "open": "11:00",
+          "close": "19:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["fri"],
+          "open": "11:00",
+          "close": "16:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Barnombudsmannen",
+      "url": "https://www.barnombudsmannen.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "08-692 29 50",
+      "hoursLabel": "Växel & telefon för dig under 18: mån & ons 13:00–15:00, tis–fre 10:00–12:00",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "wed"],
+          "open": "13:00",
+          "close": "15:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["tue", "thu", "fri"],
+          "open": "10:00",
+          "close": "12:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "PrevenTell",
+      "url": "https://www.karolinska.se/preventell/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "020-66 77 88",
+      "hoursLabel": "Telefon: vardagar 12:00–15:00. Chatt: mån, ons & tors 15:00–16:00. Telefonsvarare dygnet runt – återuppringning nästkommande vardag.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "12:00",
+          "close": "15:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["mon", "wed", "thu"],
+          "open": "15:00",
+          "close": "16:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Riksförbundet för Suicidprevention och Efterlevandestöd (SPES)",
+      "url": "https://spes.se/",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "020-18 18 00",
+      "hoursLabel": "Stödlinje: alla dagar 19:00–22:00. Stödchatt: ons & sön 19:00–21:00 (första söndagen i månaden till 22:00).",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "19:00",
+          "close": "22:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["wed", "sun"],
+          "open": "19:00",
+          "close": "21:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "Unizon",
+      "url": "https://www.unizonjourer.se/",
+      "type": "link",
+      "contactTypes": ["webb"],
+      "hours": "Se webbplatsen för kontaktvägar och öppettider."
+    },
+    {
+      "title": "Frisk & Fri – Ätstörningslinjen",
+      "url": "https://www.friskfri.se/fa-stod/telefonlinjer/",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "020-20 80 18",
+      "hoursLabel": "Mån 19:00–20:00, tis & ons 13:00–14:00 och 19:00–20:00, tors 19:00–20:00, sön 19:00–20:00 (ojämna veckor). Extra telefontid på engelska fre 12:15–13:15 (ojämna veckor). Röda dagar stängt.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["tue"],
+          "open": "13:00",
+          "close": "14:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["tue"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["wed"],
+          "open": "13:00",
+          "close": "14:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["wed"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["thu"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["fri"],
+          "open": "12:15",
+          "close": "13:15",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["sun"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Frisk & Fri – Närståendelinjen",
+      "url": "https://www.friskfri.se/fa-stod/narstaendelinjen/",
+      "type": "link",
+      "contactTypes": ["telefon", "webb"],
+      "phone": "0200-125 085",
+      "hoursLabel": "Mån 19:00–20:00, tis 19:00–20:00, ons 16:00–17:00 & 19:00–20:00, tors 09:00–11:00 & 19:00–20:00, fre 16:00–17:00. Röda dagar vanligtvis stängt.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["tue"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["wed"],
+          "open": "16:00",
+          "close": "17:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["wed"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["thu"],
+          "open": "09:00",
+          "close": "11:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["thu"],
+          "open": "19:00",
+          "close": "20:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["fri"],
+          "open": "16:00",
+          "close": "17:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Tjejzonen – stödchatt för unga tjejer (10–25 år)",
+      "url": "https://tjejzonen.se/hitta-hjalp/allmanna-chatten/",
+      "type": "link",
+      "contactTypes": ["chatt", "webb"],
+      "phone": "",
+      "hoursLabel": "Allmänna chatten: alla dagar (mån–sön) 20:00–22:00.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "20:00",
+          "close": "22:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "SHEDO – Självskadechatten",
+      "url": "https://www.shedo.se/chatt",
+      "type": "link",
+      "contactTypes": ["chatt", "e-post", "webb"],
+      "phone": "",
+      "hoursLabel": "Självskadechatten: mån, tis, ons & sön 20:00–22:00.",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "sun"],
+          "open": "20:00",
+          "close": "22:00",
+          "channels": ["chatt"]
+        }
+      ]
+    },
+    {
+      "title": "RFSL Stödmottagning",
+      "url": "https://www.rfsl.se/verksamhet/stod/stodmottagning/",
+      "type": "link",
+      "contactTypes": ["telefon", "e-post", "webb"],
+      "phone": "020-34 13 16",
+      "hoursLabel": "Telefon: ring och lämna meddelande för uppringning. Helt anonym telefontid tors 09:00–12:00 (direkt till kurator).",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["thu"],
+          "open": "09:00",
+          "close": "12:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Somaya stödjour",
+      "url": "https://www.somaya.se/fa-hjalp/var-stodlinje",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "e-post", "webb"],
+      "phone": "020-81 82 83",
+      "hoursLabel": "Stödlinje: vardagar 09:00–16:00. Chatt: öppen onsdag & torsdag (se hemsidan för aktuella tider).",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "09:00",
+          "close": "16:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    {
+      "title": "Jourhavande präst",
+      "url": "https://www.svenskakyrkan.se/jourhavandeprast",
+      "type": "link",
+      "contactTypes": ["telefon", "chatt", "webb"],
+      "phone": "112 (be om Jourhavande präst)",
+      "hoursLabel": "Telefon via 112: alla dagar 21:00–06:00. Chatt: alla dagar 20:00–24:00. Digitalt brev: dygnet runt (svar inom 24 timmar).",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "21:00",
+          "close": "24:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "00:00",
+          "close": "06:00",
+          "channels": ["telefon"]
+        },
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "open": "20:00",
+          "close": "24:00",
+          "channels": ["chatt"]
+        }
+      ]
+    }
+  ]
+}

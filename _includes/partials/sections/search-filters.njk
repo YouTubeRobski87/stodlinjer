@@ -1,0 +1,68 @@
+{% macro searchFiltersSection(placeholder, stats) %}
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12" aria-labelledby="filter-heading">
+    <div class="surface-card search-panel p-6 sm:p-7">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-5">
+        <div>
+          <h2 id="filter-heading" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+            Sök bland stödlinjer
+          </h2>
+          <p class="text-sm muted">Filtrera på område eller sök efter namn, nummer eller beskrivning.</p>
+        </div>
+        <div class="flex gap-3 items-center text-sm muted-soft">
+          {% for stat in stats %}
+            <span class="stat-chip">{{ stat }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="search-shell">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            class="text-slate-400"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+          <label for="searchInput" class="sr-only">Sök stödlinjer</label>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="{{ placeholder }}"
+            aria-label="Sök bland stödlinjer"
+          />
+        </div>
+
+        <nav aria-label="Kategorier" class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" id="categories">
+          <button class="category-btn is-active" data-category="all" aria-pressed="true">
+            <span>Alla</span>
+          </button>
+          <button class="category-btn" data-category="psykiskhalsa" aria-pressed="false">
+            <span><i class="fas fas-brain"></i> Psykisk hälsa</span>
+          </button>
+          <button class="category-btn" data-category="barn-unga" aria-pressed="false">
+            <span><i class="fas fas-children"></i> Barn &amp; unga</span>
+          </button>
+          <button class="category-btn" data-category="vald" aria-pressed="false">
+            <span><i class="fas fas-shield-halved"></i> Våld &amp; utsatthet</span>
+          </button>
+          <button class="category-btn" data-category="missbruk" aria-pressed="false">
+            <span><i class="fas fas-wine-bottle"></i> Missbruk &amp; beroende</span>
+          </button>
+          <button class="category-btn" data-category="aldre" aria-pressed="false">
+            <span><i class="fas fas-person-cane"></i> Äldre</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </section>
+{% endmacro %}
