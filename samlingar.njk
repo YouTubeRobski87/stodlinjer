@@ -1,0 +1,62 @@
+---
+pagination:
+  data: collections.samlingar
+  size: 1
+  alias: samling
+permalink: "/samlingar/{{ samling.slug }}/"
+pageClass: "archive-shell"
+eleventyComputed:
+  title: "{{ samling.title }} | Artiklar | Stödlinjer Sverige"
+  description: "{{ samling.description or samling.summary }}"
+  header:
+    icon: "{{ samling.icon or 'fas fas-books' }}"
+    label: "Samling"
+    title: "Samling: {{ samling.title }}"
+    subtitle: "{{ samling.summary }}"
+    links:
+      - url: "/artiklar/"
+        icon: "fas fas-newspaper"
+        text: "Alla artiklar"
+        aria: "Till artikelarkivet"
+      - url: "/"
+        icon: "fas fas-house"
+        text: "Startsida"
+        aria: "Till startsidan"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/article-card.njk" import articleCard %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="surface-card strong-card p-6 sm:p-8 mb-6">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div class="flex flex-col gap-2">
+          <p class="pill w-fit"><i class="{{ samling.icon }}"></i> Samling</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-1">
+            {{ samling.title }}
+          </h2>
+          {% if samling.description %}
+            <p class="muted text-base max-w-3xl mb-0">{{ samling.description }}</p>
+          {% endif %}
+        </div>
+        <div class="hero-chips">
+          <span class="stat-chip"><i class="fas fas-newspaper"></i> {{ samling.items | length }} artiklar</span>
+          <a class="stat-chip inline-link" href="{{ baseUrl }}/artiklar/">
+            <i class="fas fas-arrow-left"></i> Till arkivet
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-grid">
+      {% for post in samling.items %}
+        {{ articleCard(post) }}
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

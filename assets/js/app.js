@@ -1,4 +1,9 @@
 // ==========================================================================
+// Base URL (set by template, defaults to '' for local dev)
+// ==========================================================================
+const BASE_URL = window.BASE_URL || '';
+
+// ==========================================================================
 // Motivational Quotes
 // ==========================================================================
 
@@ -9,7 +14,7 @@ async function initQuote() {
   if (!quoteEl || !authorEl) return;
 
   try {
-    const res = await fetch('data/quotes.json', { cache: 'no-cache' });
+    const res = await fetch(`${BASE_URL}/data/quotes.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error('Could not load quotes');
     const quotes = await res.json();
 
@@ -17,7 +22,7 @@ async function initQuote() {
     const quote = quotes[randomIndex];
 
     quoteEl.textContent = quote.text;
-    authorEl.textContent = quote.author;
+    authorEl.textContent = quote.author ? `— ${quote.author}` : '';
   } catch (err) {
     console.error('Error loading quotes:', err);
     // Hide the quote block if loading fails
@@ -33,6 +38,8 @@ const state = {
   searchQuery: '',
   isLoading: true
 };
+
+let themeTransitionTimer;
 
 // ==========================================================================
 // Loading State
@@ -89,7 +96,7 @@ async function loadSupportLines() {
   showLoadingState();
 
   try {
-    const res = await fetch('data/support-lines.json', { cache: 'no-cache' });
+    const res = await fetch(`${BASE_URL}/data/support-lines.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`Kunde inte ladda data (${res.status})`);
     state.lines = await res.json();
     hideLoadingState();
@@ -211,7 +218,7 @@ function renderLines() {
         <div class="card-title">
           <span class="card-icon">${categoryIcon(line.category)}</span>
           <div>
-            <h3 class="text-lg font-extrabold mb-1" itemprop="name">
+            <h3 class="text-lg font-bold mb-1" itemprop="name">
               ${
                 line.url
                   ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="card-title-link">${line.name}</a>`
@@ -326,39 +333,179 @@ function initFilters() {
 }
 
 // ==========================================================================
-// Theme Toggle
+// Article filtering (Samling)
 // ==========================================================================
 
-function applyTheme(mode) {
+function initArticleFilters() {
+  const grid = document.querySelector('[data-article-grid]');
+  const filterButtons = Array.from(document.querySelectorAll('[data-samling-filter]'));
+  const paginationEl = document.querySelector('[data-pagination]');
+
+  if (!grid || !filterButtons.length) return;
+
+  const cards = Array.from(grid.querySelectorAll('[data-samling-item]'));
+  const counter = document.getElementById('articleCount');
+  const state = {
+    filter: 'all',
+    page: 1,
+    pageSize: parseInt(grid.dataset.pageSize, 10) || 9
+  };
+
+  const setFilterButtonState = (value) => {
+    filterButtons.forEach((btn) => {
+      const isActive = btn.dataset.samlingFilter === value;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+  };
+
+  const getFilteredCards = () =>
+    cards.filter(
+      (card) => state.filter === 'all' || card.dataset.samlingItem === state.filter
+    );
+
+  const renderPaginationControls = (totalPages) => {
+    if (!paginationEl) return;
+
+    if (totalPages <= 1) {
+      paginationEl.innerHTML = '';
+      return;
+    }
+
+    const makeLink = (page, label, disabled, rel) => {
+      if (disabled) {
+        return `<span class="pagination-link is-disabled">${label}</span>`;
+      }
+      return `<a class="pagination-link" href="#" data-page="${page}"${rel ? ` rel="${rel}"` : ''}>${label}</a>`;
+    };
+
+    const prev = makeLink(
+      state.page - 1,
+      '<i class="fas fas-arrow-left" aria-hidden="true"></i> Föregående',
+      state.page === 1,
+      'prev'
+    );
+    const next = makeLink(
+      state.page + 1,
+      `Nästa <i class="fas fas-arrow-right" aria-hidden="true"></i>`,
+      state.page === totalPages,
+      'next'
+    );
+    const info = `<span class="pagination-info">Sida ${state.page} av ${totalPages}</span>`;
+
+    paginationEl.innerHTML = `
+      <div class="pagination-prev">${prev}</div>
+      <div class="pagination-center">${info}</div>
+      <div class="pagination-next">${next}</div>
+    `;
+  };
+
+  const render = () => {
+    const filteredCards = getFilteredCards();
+    const totalPages = Math.max(1, Math.ceil(filteredCards.length / state.pageSize));
+
+    if (state.page > totalPages) {
+      state.page = totalPages;
+    }
+
+    cards.forEach((card) => card.classList.add('hidden'));
+
+    const start = (state.page - 1) * state.pageSize;
+    const visible = filteredCards.slice(start, start + state.pageSize);
+    visible.forEach((card) => card.classList.remove('hidden'));
+
+    if (counter) {
+      const startDisplay = filteredCards.length ? start + 1 : 0;
+      const endDisplay = filteredCards.length
+        ? Math.min(filteredCards.length, start + visible.length)
+        : 0;
+      counter.textContent = filteredCards.length
+        ? `Visar ${startDisplay}-${endDisplay} av ${filteredCards.length} artiklar`
+        : 'Inga artiklar matchar filtret';
+    }
+
+    renderPaginationControls(totalPages);
+  };
+
+  const initial = filterButtons.find((btn) => btn.classList.contains('is-active'));
+  state.filter = initial ? initial.dataset.samlingFilter || 'all' : 'all';
+  setFilterButtonState(state.filter);
+  render();
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const value = btn.dataset.samlingFilter || 'all';
+      state.filter = value;
+      state.page = 1;
+      setFilterButtonState(value);
+      render();
+    });
+  });
+
+  if (paginationEl) {
+    paginationEl.addEventListener('click', (e) => {
+      const link = e.target.closest('[data-page]');
+      if (!link) return;
+      e.preventDefault();
+      const page = parseInt(link.dataset.page, 10);
+      if (Number.isNaN(page) || page === state.page) return;
+      state.page = page;
+      render();
+    });
+  }
+}
+
+function applyThemeMode(mode) {
+  const themeMode = mode === 'dark' ? 'dark' : 'light';
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
   const themeLabel = document.getElementById('themeLabel');
 
-  const isDark = mode === 'dark';
-  document.documentElement.dataset.theme = mode;
-  document.documentElement.classList.toggle('dark', isDark);
+  // Smooth transition to reduce flicker
+  document.documentElement.classList.add('theme-transition');
+  if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
+  themeTransitionTimer = setTimeout(() => {
+    document.documentElement.classList.remove('theme-transition');
+  }, 220);
 
-  if (themeToggle) themeToggle.setAttribute('aria-pressed', isDark.toString());
-  if (themeIcon)
-    themeIcon.innerHTML = isDark ? '<i class="fas fas-moon"></i>' : '<i class="fas fas-sun"></i>';
-  if (themeLabel) themeLabel.textContent = isDark ? 'Mörkt läge' : 'Ljust läge';
+  document.documentElement.dataset.theme = themeMode;
+  document.documentElement.classList.toggle('dark', themeMode === 'dark');
 
-  localStorage.setItem('theme', mode);
+  if (themeToggle) themeToggle.setAttribute('aria-pressed', themeMode === 'dark');
+  if (themeIcon) themeIcon.classList.toggle('is-dark', themeMode === 'dark');
+  if (themeLabel) themeLabel.textContent = themeMode === 'dark' ? 'Mörkt läge' : 'Ljust läge';
+
+  localStorage.setItem('theme-mode', themeMode);
+  syncThemeMeta();
 }
 
-function initThemeToggle() {
+function syncThemeMeta() {
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (!meta) return;
+  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+  if (accent) meta.setAttribute('content', accent);
+}
+
+function initThemeControls() {
   const themeToggle = document.getElementById('themeToggle');
   if (!themeToggle) return;
 
-  // Sync UI with current theme (already set by inline script to prevent flash)
-  const currentTheme = document.documentElement.dataset.theme || 'light';
-  applyTheme(currentTheme);
+  const html = document.documentElement;
+  const legacyTheme = localStorage.getItem('theme');
+  const storedTheme =
+    html.dataset.theme || localStorage.getItem('theme-mode') || (legacyTheme === 'dark' && 'dark');
 
-  // Handle toggle clicks
-  themeToggle.addEventListener('click', () => {
-    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
-  });
+  const startTheme = storedTheme === 'dark' ? 'dark' : 'light';
+
+  applyThemeMode(startTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+      applyThemeMode(next);
+    });
+  }
 }
 
 // ==========================================================================
@@ -383,8 +530,9 @@ function initUrlSearch() {
 // ==========================================================================
 
 function init() {
-  initThemeToggle();
+  initThemeControls();
   initQuote();
+  initArticleFilters();
 
   const hasListings = document.getElementById('linesGrid');
   if (hasListings) {
@@ -394,4 +542,8 @@ function init() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
