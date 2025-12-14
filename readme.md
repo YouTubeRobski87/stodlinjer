@@ -66,7 +66,7 @@ src/
 ├── index.njk               # Startsida (sök + grid)
 ├── kontakt.njk             # Kontaktformulär
 ├── _data/
-│   ├── supportData.json     # Alla stödlinjer + chatbot-källor
+│   ├── support-lines.json  # Alla stödlinjer
 │   ├── chatbot.json        # Konfiguration för stödchatten (API-url, externa källor)
 │   └── quotes.json         # Motiverande citat
 ├── _includes/
@@ -86,56 +86,35 @@ Output: `site/` (Eleventy skriver färdiga HTML-filer och kopierar assets).
 
 ## ➕ Lägg till eller ändra stödlinjer
 
-All data finns i `src/_data/supportData.json`. Filen innehåller både de stödlinjer som visas på startsidan och de externa källor som chatbotten använder. Varje objekt följer detta format (visa värden för Mind Självmordslinjen som exempel):
+All data finns i `src/_data/support-lines.json`. Varje stödlinje följer detta format:
 
 ```json
 {
   "id": 1,
-  "title": "Självmordslinjen (Mind)",
-  "resource": {
-    "url": "https://mind.se/sjalvmordslinjen/",
-    "type": "link"
-  },
-  "contactTypes": ["telefon", "chatt", "webb"],
-  "phone": "90101",
-  "description": "För dig med suicidtankar eller oro för någon annan. Här får du anonymt, professionellt stöd dygnet runt, alla dagar.",
-  "category": "psykisk-halsa",
+  "name": "Namn på stödlinjen",
+  "url": "https://exempel.se/",
+  "number": "020-12 34 56",
+  "description": "Kort beskrivning av vem linjen hjälper.",
+  "category": "psykiskhalsa",
+  "available": "Dygnet runt, alla dagar",
   "urgent": true,
-  "tags": ["akut", "psykisk-halsa", "suicid"],
-  "availability": {
-    "label": "Dygnet runt, årets alla dagar",
-    "timezone": "Europe/Stockholm",
-    "openingHours": [
-      {
-        "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-        "open": "00:00",
-        "close": "24:00",
-        "channels": ["telefon", "chatt"]
-      }
-    ]
-  },
-  "lastVerified": "2025-12-10",
-  "active": true
+  "tags": ["akut", "samtal", "anonymt"]
 }
 ```
 
-`resource.type` beskriver vilken typ av länk det är (oftast `link`). `availability` används för att visa öppettider, `lastVerified` markerar när datan senast kontrollerades och `active` kan sättas till `false` för att dölja en linje temporärt.
-
 ### Tillgängliga kategorier
 
-| Kategori               | Värde            |
-| ---------------------- | ---------------- |
-| 🧠 Psykisk hälsa       | `psykisk-halsa`  |
-| 👶 Barn & unga         | `barn-unga`      |
-| 🛡️ Våld & utsatthet    | `vald`           |
-| 🍷 Missbruk & beroende | `missbruk`       |
-| 🧓 Äldre               | `aldre`          |
-| 👥 Anhöriga            | `anhoriga`       |
-| ℹ️ Övrigt              | `ovrigt`         |
+| Kategori               | Värde          |
+| ---------------------- | -------------- |
+| 🧠 Psykisk hälsa       | `psykiskhalsa` |
+| 👶 Barn & unga         | `barn-unga`    |
+| 🛡️ Våld & utsatthet    | `vald`         |
+| 🍷 Missbruk & beroende | `missbruk`     |
+| 🧓 Äldre               | `aldre`        |
 
 ### Tillgängliga taggar
 
-`akut`, `psykiskhalsa`, `suicid`, `samtal`, `chatt`, `anonymt`, `anhorig`, `missbruk`, `barn-unga`, `killarman`, `hbtqi`, `stodgrupp`, `vald`, `sorg`, `trauma`, `spelproblem`, `aldre`, `angest`, `sjalvskada`, `myndighet`
+`akut`, `psykiskhalsa`, `suicid`, `samtal`, `chatt`, `anonymt`, `valdbrott`, `sorgtrauma`, `anhorig`, `missbruk`, `barn-unga`, `killarman`, `hbtqi`, `stodgrupp`
 
 ### Lägg till citat
 
@@ -154,7 +133,7 @@ All data finns i `src/_data/supportData.json`. Filen innehåller både de stödl
 
 - Ligger som komponent i `src/_includes/partials/chatbot.njk` och aktiveras av `src/assets/js/chatbot.js`.
 - Backend via Netlify Function `/.netlify/functions/chat` (fil: `netlify/functions/chat.js`).
-- Använder ett genererat innehållsindex + `src/_data/supportData.json` för externa källor (1177, Mind m.fl.). `chatbot.json` innehåller numera bara `apiUrl` och `greetings`.
+- Använder ett genererat innehållsindex + `src/_data/chatbot.json` för externa källor (1177, Mind m.fl.).
 - Kräver miljövariabeln `OPENAI_API_KEY` för AI-svar. Utan nyckel visar chatten fallbackförslag från innehållsindexet.
 - Källor i chatten (artiklar, stödlinjer, externa länkar) är klickbara.
 

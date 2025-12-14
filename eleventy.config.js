@@ -13,13 +13,6 @@ module.exports = function (eleventyConfig) {
   // Make baseUrl available in templates
   eleventyConfig.addGlobalData('baseUrl', pathPrefix === '/' ? '' : pathPrefix);
 
-  // ISO 8601 date for Schema.org
-  eleventyConfig.addFilter('isoDate', (value) => {
-    if (!value) return '';
-    const date = typeof value === 'string' ? new Date(value) : value;
-    return date.toISOString().split('T')[0];
-  });
-
   eleventyConfig.addFilter('formatDate', (value) => {
     if (!value) return '';
     const date = typeof value === 'string' ? new Date(value) : value;
