@@ -1,0 +1,217 @@
+[
+  {
+    "id": 1,
+    "name": "Mind Självmordslinjen",
+    "url": "https://mind.se/sjalvmordslinjen/",
+    "number": "90101",
+    "description": "För dig med suicidtankar eller oro för någon annan. Här får du anonymt, professionellt stöd av utbildade volontärer dygnet runt, alla dagar.",
+    "category": "psykiskhalsa",
+    "available": "Dygnet runt, alla dagar",
+    "urgent": true,
+    "tags": ["akut", "psykiskhalsa", "suicid", "samtal", "chatt", "anonymt"]
+  },
+  {
+    "id": 2,
+    "name": "Jourhavande präst",
+    "url": "https://www.svenskakyrkan.se/jourhavandeprast",
+    "number": "112",
+    "description": "För dig som behöver samtala om existentiella frågor, oro, sorg eller ensamhet. Här får du anonymt stöd nattetid via 112.",
+    "category": "psykiskhalsa",
+    "available": "Kl 21–06 via 112. Chatt vissa tider",
+    "tags": ["psykiskhalsa", "sorgtrauma", "samtal", "anonymt"]
+  },
+  {
+    "id": 3,
+    "name": "BRIS – Barn och unga",
+    "url": "https://www.bris.se/",
+    "number": "116 111",
+    "description": "För dig under arton som behöver prata om oro, konflikter, mående eller svåra känslor. Anonymt stöd via chatt och telefon.",
+    "category": "barn-unga",
+    "available": "Vardagar 10–21, helger 13–21",
+    "tags": ["barn-unga", "psykiskhalsa", "samtal", "chatt", "anonymt"]
+  },
+  {
+    "id": 4,
+    "name": "Kvinnofridslinjen",
+    "url": "https://kvinnofridslinjen.se/",
+    "number": "020-505050",
+    "description": "För dig som utsätts för hot eller våld i nära relationer och behöver anonym hjälp. Utbildade rådgivare erbjuder stöd dygnet runt.",
+    "category": "vald",
+    "available": "Dygnet runt, alla dagar",
+    "urgent": true,
+    "tags": ["akut", "valdbrott", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 5,
+    "name": "Alkohollinjen",
+    "url": "https://www.1177.se/liv--halsa/beroende-och-missbruk/alkoholmissbruk-och-alkoholberoende/",
+    "number": "020-84 44 48",
+    "description": "För dig som funderar över dina eller någon närståendes alkoholvanor och vill få hjälp att förändra dem. Anonym rådgivning av erfarna rådgivare.",
+    "category": "missbruk",
+    "available": "Se webbplatsen",
+    "tags": ["missbruk", "psykiskhalsa", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 6,
+    "name": "Anonyma Alkoholister (AA)",
+    "url": "https://aa.se/",
+    "number": "08-720 38 42",
+    "description": "Gemenskap för dig som vill sluta dricka. Möten finns över hela landet och online, med anonymt stöd från andra nyktra alkoholister.",
+    "category": "missbruk",
+    "available": "Tider varierar – se aa.se",
+    "tags": ["missbruk", "psykiskhalsa", "stodgrupp", "samtal", "anonymt"]
+  },
+  {
+    "id": 7,
+    "name": "Spelberoendegruppen",
+    "url": "https://spelberoende.se/",
+    "number": "020-81 91 00",
+    "description": "Stöd för dig med spelproblem eller som anhörig. Du får anonym rådgivning, vägledning och hjälp att hitta hållbara strategier framåt.",
+    "category": "missbruk",
+    "available": "Se webbplatsen",
+    "tags": ["missbruk", "psykiskhalsa", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 8,
+    "name": "Äldrelinjen",
+    "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
+    "number": "020-22 22 33",
+    "description": "För äldre eller anhöriga som behöver någon som lyssnar vid oro, ensamhet eller livsfrågor. Anonymt, medmänskligt stöd genom erfarna volontärer.",
+    "category": "aldre",
+    "available": "Se aktuella tider på Mind",
+    "tags": ["psykiskhalsa", "sorgtrauma", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 9,
+    "name": "Mansjouren",
+    "url": "https://mansjouren.se/",
+    "number": "020-50 00 00",
+    "description": "Stöd för män som upplever psykisk ohälsa, våld, hot eller livskriser. Anonym rådgivning erbjuds av erfarna stödpersoner alla dagar.",
+    "category": "vald",
+    "available": "Mån-fre 12–14 & 18–20",
+    "urgent": true,
+    "tags": ["psykiskhalsa", "valdbrott", "killarman", "samtal", "anonymt"]
+  },
+  {
+    "id": 10,
+    "name": "Anhöriglinjen",
+    "url": "https://anhorigasriksforbund.se/anhoriglinjen/",
+    "number": "0200-239 500",
+    "description": "Nationell stödtelefon för anhöriga som behöver råd, avlastning eller någon att prata med. Erfarna rådgivare erbjuder anonymt och tryggt stöd.",
+    "category": "anhoriga",
+    "available": "Se aktuella telefontider <a href=\"https://anhorigasriksforbund.se/\" target=\"_blank\" rel=\"noopener noreferrer\">här</a>",
+    "tags": ["psykiskhalsa", "anhorig", "sorgtrauma", "samtal", "anonymt"]
+  },
+  {
+    "id": 11,
+    "name": "SPES – För efterlevande",
+    "url": "https://spes.se/stodlinjer/",
+    "number": "020-18 18 00",
+    "description": "För dig som förlorat någon i suicid och behöver samtala med andra efterlevande. Empatiskt, anonymt stöd kvällstid alla dagar.",
+    "category": "anhoriga",
+    "available": "Alla dagar 19–22",
+    "tags": ["suicid", "sorgtrauma", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 12,
+    "name": "Föräldralinjen",
+    "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/",
+    "number": "020-85 20 00",
+    "description": "För föräldrar eller andra viktiga vuxna som känner oro för ett barn eller en ung person. Anonymt stöd och vägledning av volontärer.",
+    "category": "anhoriga",
+    "available": "Se aktuella tider på Mind",
+    "tags": ["barn-unga", "psykiskhalsa", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 13,
+    "name": "Al-Anon Familjegrupper",
+    "url": "https://www.al-anon.se/",
+    "number": "08-643 13 93",
+    "description": "Gemenskap för anhöriga till alkoholister där du får anonymt stöd, erfarenhetsutbyte och vägledning genom lokala och digitala stödgrupper i hela landet.",
+    "category": "anhoriga",
+    "available": "Se möten och kontakt på al-anon.se",
+    "tags": ["missbruk", "anhorig", "stodgrupp", "samtal", "anonymt"]
+  },
+  {
+    "id": 14,
+    "name": "Hjälplinjen",
+    "url": "https://hjalplinjen.se/",
+    "number": "90390",
+    "description": "Nationell stödlinje för vuxna med psykisk ohälsa eller som anhörig. Du får anonymt, professionellt stöd dygnet runt av erfarna rådgivare.",
+    "category": "psykiskhalsa",
+    "available": "Dygnet runt, alla dagar",
+    "urgent": true,
+    "tags": ["akut", "psykiskhalsa", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 15,
+    "name": "Jourhavande medmänniska",
+    "url": "https://www.jourhavande-medmanniska.se/",
+    "number": "08-702 16 80",
+    "description": "För dig som behöver någon som lyssnar under kvällar och nätter. Anonymt, medmänskligt stöd av volontärer via telefon och chatt.",
+    "category": "psykiskhalsa",
+    "available": "Alla nätter 21–06. Chatt vissa kvällar.",
+    "tags": ["psykiskhalsa", "sorgtrauma", "samtal", "chatt", "anonymt"]
+  },
+  {
+    "id": 16,
+    "name": "Brottsofferjouren",
+    "url": "https://www.brottsofferjouren.se/",
+    "number": "116 006",
+    "description": "Stöd för dig som utsatts för brott, är anhörig eller vittne. Du får anonymt samtalsstöd, praktisk vägledning och hjälp att hitta rätt vidare.",
+    "category": "vald",
+    "available": "Se webbplatsen",
+    "urgent": true,
+    "tags": ["valdbrott", "sorgtrauma", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 17,
+    "name": "RFSL Stödmottagning",
+    "url": "https://www.rfsl.se/verksamhet/stod/stodmottagning/",
+    "number": "020-34 13 16",
+    "description": "För hbtqi-personer som utsatts för våld, hot eller kränkningar. Erfarna rådgivare ger anonymt stöd, vägledning och hjälp att hantera situationen tryggt.",
+    "category": "vald",
+    "available": "Se webbplatsen",
+    "tags": ["hbtqi", "valdbrott", "sorgtrauma", "samtal", "anonymt"]
+  },
+  {
+    "id": 18,
+    "name": "Stödlinjen för Män",
+    "url": "https://www.1177.se/liv--halsa/sa-kan-du-ma-battre/vad-du-kan-gora-sjalv/stod-och-hjalp/stod-till-dig-som-ar-valdsutsatt-anhorig-eller-valdsutovare/",
+    "number": "020-80 80 80",
+    "description": "För män som utsatts för hot, våld eller övergrepp i nära relationer. Anonymt, respektfullt stöd genom samtal och chatt med erfarna rådgivare.",
+    "category": "vald",
+    "available": "Se aktuella tider på 1177",
+    "tags": ["valdbrott", "sorgtrauma", "killarman", "samtal", "chatt", "anonymt"]
+  },
+  {
+    "id": 19,
+    "name": "Stödlinjen för transpersoner",
+    "url": "https://www.1177.se/liv--halsa/sa-kan-du-ma-battre/vad-du-kan-gora-sjalv/stod-och-hjalp/stod-till-dig-som-ar-valdsutsatt-anhorig-eller-valdsutovare/",
+    "number": "020-55 00 00",
+    "description": "För transpersoner som utsatts för hot, våld eller övergrepp. Här får du anonymt, tryggt stöd och vägledning av särskilt utbildade rådgivare.",
+    "category": "vald",
+    "available": "Se aktuella tider på 1177",
+    "tags": ["hbtqi", "valdbrott", "sorgtrauma", "samtal", "anonymt"]
+  },
+  {
+    "id": 20,
+    "name": "Killar.se",
+    "url": "https://killar.se/",
+    "number": "0762-65 32 65",
+    "description": "Stödchatt för unga som identifierar sig som killar och behöver prata om mående, relationer, våld eller svåra känslor. Allt är helt anonymt.",
+    "category": "barn-unga",
+    "available": "Se aktuella chatt-tider på killar.se",
+    "tags": ["barn-unga", "psykiskhalsa", "killarman", "chatt", "anonymt"]
+  },
+  {
+    "id": 22,
+    "name": "Refugee Line",
+    "url": "https://mind.se/",
+    "number": "020-150 110",
+    "description": "För dig som flytt krig, konflikt eller katastrof och behöver prata om oro, trauma eller svåra känslor. Anonymt stöd av utbildade volontärer.",
+    "category": "psykiskhalsa",
+    "available": "Sön–tors 18–21",
+    "tags": ["psykiskhalsa", "sorgtrauma", "anhorig", "samtal", "anonymt"]
+  }
+]

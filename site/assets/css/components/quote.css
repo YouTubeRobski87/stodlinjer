@@ -1,0 +1,82 @@
+.quote-block {
+  position: relative;
+  background: var(--card) !important;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin: 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+}
+
+.quote-text {
+  margin: 0;
+  position: relative;
+  display: block;
+  z-index: 1;
+  max-width: 780px;
+  padding: 0 72px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-icon,
+.quote-icon i {
+  position: absolute;
+  font-size: 52px;
+  color: var(--accent) !important;
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.quote-icon-left {
+  top: 22px;
+  left: 44px;
+}
+
+.quote-icon-right {
+  bottom: 22px;
+  right: 44px;
+  transform: rotate(180deg);
+}
+
+.quote-text p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
+  text-align: center;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: 0;
+}
+
+@media (min-width: 640px) {
+  .quote-text p {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .quote-text {
+    padding: 0 48px;
+  }
+  .quote-icon,
+  .quote-icon i {
+    font-size: 46px;
+  }
+}
+
+.quote-author {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+:root[data-theme='dark'] .quote-block {
+  background: var(--card);
+}
