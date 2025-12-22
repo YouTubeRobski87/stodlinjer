@@ -1,4 +1,4 @@
-﻿// const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
@@ -95,4 +95,5 @@ module.exports = function (eleventyConfig) {
     templateFormats: ['njk', 'md', 'html']
   };
 };
+
 
