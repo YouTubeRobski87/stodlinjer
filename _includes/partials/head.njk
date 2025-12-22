@@ -1,0 +1,29 @@
+{% set pageTitle = title or site.name %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="{{ site.author }}" />
+<title>{{ pageTitle }}</title>
+{% if description %}
+  <meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+  <meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ baseUrl }}{{ page.url }}" />
+<meta name="color-scheme" content="{{ site.colorScheme }}" />
+<meta name="theme-color" content="{{ site.themeColor }}" />
+<!-- Prevent theme flash: set theme + color scheme before paint -->
+<script>
+  (function () {
+    var storedTheme = localStorage.getItem('theme-mode') || localStorage.getItem('theme');
+    var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = storedTheme === 'dark' ? 'dark' : prefersDark ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.colorScheme = 'lavender';
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  })();
+</script>
+<script>window.BASE_URL = '{{ baseUrl }}';</script>
+<script src="{{ baseUrl }}/assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ baseUrl }}/assets/css/main.css" />

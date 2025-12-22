@@ -1,0 +1,199 @@
+/* -------- 200 ExtraLight -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-ExtraLight.eot');
+  src: url('../../fonts/soehne/Soehne-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-ExtraLight.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-ExtraLight.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-ExtraLightItalic.eot');
+  src: url('../../fonts/soehne/Soehne-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-ExtraLightItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-ExtraLightItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-ExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 300 Light -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-Light.eot');
+  src: url('../../fonts/soehne/Soehne-Light.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-Light.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-Light.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-LightItalic.eot');
+  src: url('../../fonts/soehne/Soehne-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-LightItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-LightItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 400 Regular -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-Regular.eot');
+  src: url('../../fonts/soehne/Soehne-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-Regular.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-Regular.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-RegularItalic.eot');
+  src: url('../../fonts/soehne/Soehne-RegularItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-RegularItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-RegularItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 500 Medium -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-Medium.eot');
+  src: url('../../fonts/soehne/Soehne-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-Medium.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-Medium.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-MediumItalic.eot');
+  src: url('../../fonts/soehne/Soehne-MediumItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-MediumItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-MediumItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 600 SemiBold -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-SemiBold.eot');
+  src: url('../../fonts/soehne/Soehne-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-SemiBold.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-SemiBold.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-SemiBoldItalic.eot');
+  src: url('../../fonts/soehne/Soehne-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-SemiBoldItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-SemiBoldItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 700 Bold -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-Bold.eot');
+  src: url('../../fonts/soehne/Soehne-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-Bold.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-Bold.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-BoldItalic.eot');
+  src: url('../../fonts/soehne/Soehne-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-BoldItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-BoldItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 800 ExtraBold -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-ExtraBold.eot');
+  src: url('../../fonts/soehne/Soehne-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-ExtraBold.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-ExtraBold.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-ExtraBoldItalic.eot');
+  src: url('../../fonts/soehne/Soehne-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-ExtraBoldItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-ExtraBoldItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* -------- 900 Black -------- */
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-Black.eot');
+  src: url('../../fonts/soehne/Soehne-Black.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-Black.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-Black.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Söhne';
+  src: url('../../fonts/soehne/Soehne-BlackItalic.eot');
+  src: url('../../fonts/soehne/Soehne-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/soehne/Soehne-BlackItalic.woff2') format('woff2'),
+    url('../../fonts/soehne/Soehne-BlackItalic.woff') format('woff'),
+    url('../../fonts/soehne/Soehne-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

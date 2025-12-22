@@ -1,0 +1,51 @@
+<div class="chatbot" data-chatbot>
+  <button
+    type="button"
+    class="chatbot-toggle"
+    data-chatbot-toggle
+    aria-label="Öppna Stödkompassen"
+    aria-expanded="false"
+    aria-controls="chatbot-panel"
+  >
+    <span class="chatbot-toggle__icon" aria-hidden="true"></span>
+    <span class="sr-only">Öppna Stödkompassen</span>
+  </button>
+
+  <section class="chatbot-panel" id="chatbot-panel" data-chatbot-panel aria-live="polite">
+    <header class="chatbot-header">
+      <div class="chatbot-title">
+        <span class="chatbot-avatar" aria-hidden="true"></span>
+        <div>
+          <h3>Stödkompassen</h3>
+          <small class="chatbot-hint">Du behöver inte veta vad du ska säga.</small>
+        </div>
+      </div>
+      <button type="button" class="chatbot-send" data-chatbot-close aria-label="Stäng chatten">
+        ✕
+      </button>
+    </header>
+
+    <div class="chatbot-log" data-chatbot-log>
+      <p class="chatbot-empty" data-chatbot-empty></p>
+    </div>
+
+    <div class="chatbot-input">
+      <form data-chatbot-form>
+        <input
+          type="text"
+          name="chat"
+          placeholder="Ställ en fråga..."
+          autocomplete="off"
+          data-chatbot-input
+        />
+        <button type="submit" class="chatbot-send" data-chatbot-send>
+          Skicka
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script>
+  window.CHATBOT_CONFIG = Object.assign({ baseUrl: '{{ baseUrl }}' }, {{ chatbot | json | safe }});
+</script>

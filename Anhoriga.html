@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="sv-SE" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Robert Claesson" />
+    <title>Stöd för anhöriga | Stödlinjer Sverige</title>
+    <meta
+      name="description"
+      content="Stödlinjer för dig som är anhörig eller närstående. Hitta Anhöriglinjen, SPES, Föräldralinjen, Al-Anon och akuta nummer som 112 och 90101."
+    />
+    <meta
+      name="keywords"
+      content="anhörig, närstående, stödlinjer, Anhöriglinjen, SPES, föräldralinjen, al-anon, självmordslinjen, 90101, 112"
+    />
+    <link rel="canonical" href="https://stodlinjer.se/anhoriga.html" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0f1724" />
+    <script>
+      (function () {
+        var t =
+          localStorage.getItem('theme') ||
+          (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = t;
+        if (t === 'dark') document.documentElement.classList.add('dark');
+      })();
+    </script>
+
+    <!-- Tailwind CSS via CDN (configured in assets/js/tailwind-config.js) -->
+    <script src="assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/johanna-fageras/static/fonts/gt-pressura/index.css"
+    />
+    <link rel="stylesheet" href="./assets/css/fa-solid.css" />
+    <link rel="stylesheet" href="assets/css/fa-regular.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+  </head>
+
+  <body class="min-h-screen flex flex-col page-shell">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md"
+      >Hoppa till innehåll</a
+    >
+    <!-- Header -->
+    <header class="header-shell">
+      <div class="header-inner">
+        <div class="header-brand">
+          <div class="brand-mark" aria-hidden="true"><i class="fas fas-heart"></i></div>
+          <div class="header-text">
+            <p
+              class="text-xs font-semibold uppercase tracking-wide"
+              style="margin: 0; color: var(--accent)"
+            >
+              Stöd för anhöriga
+            </p>
+            <h1>Hjälp när du stöttar</h1>
+            <p>Närstående behöver också stöd och råd.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a href="index.html" class="header-link" aria-label="Till startsidan"
+            ><i class="fas fas-house"></i><span>Startsida</span></a
+          >
+          <a href="kontakt.html" class="header-link" aria-label="Kontakta oss"
+            ><i class="fas fas-envelope-open-text"></i><span>Kontakt</span></a
+          >
+          <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
+            <span id="themeIcon" aria-hidden="true"><i class="fas fas-moon"></i></span>
+            <span id="themeLabel">Mörkt läge</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="flex-1">
+      <!-- Hero Section -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <div class="hero-grid">
+          <div class="surface-card strong-card p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="pill"><i class="fas fas-shield-heart"></i> Akut stöd</span>
+              <span class="stat-chip"><i class="far far-handshake"></i> Dela med den drabbade</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-slate-900 dark:text-white">
+              Ring om läget är akut
+            </h2>
+            <p class="text-lg muted mb-6">
+              Säkra numret till dig själv och dela det med den du stöttar. Samtal är anonyma och
+              gratis.
+            </p>
+            <div class="grid-hotlines">
+              <a
+                href="tel:90101"
+                class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+                aria-label="Ring Mind Självmordslinjen 90101"
+              >
+                <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+                  <i class="fas fas-headset"></i> Mind Självmordslinjen
+                </div>
+                <div
+                  class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number"
+                >
+                  90101
+                </div>
+                <span class="tag">Samtal &amp; chatt</span>
+              </a>
+              <a
+                href="tel:112"
+                class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+                aria-label="Ring SOS Alarm 112"
+              >
+                <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+                  <i class="fas fas-triangle-exclamation"></i> SOS Alarm
+                </div>
+                <div
+                  class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number"
+                >
+                  112
+                </div>
+                <span class="badge-urgent">Akut fara</span>
+              </a>
+              <a
+                href="tel:020505050"
+                class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+                aria-label="Ring Kvinnofridslinjen 020-505050"
+              >
+                <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+                  <i class="fas fas-shield-halved"></i> Kvinnofridslinjen
+                </div>
+                <div
+                  class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number"
+                >
+                  020-505050
+                </div>
+                <span class="tag">Våld &amp; hot</span>
+              </a>
+            </div>
+            <div class="floating-strip mt-5 text-sm">
+              <div>
+                <strong><i class="fas fas-user-lock"></i> Alltid anonymt</strong><br /><span
+                  class="muted"
+                  >Ingen ser ditt nummer och samtalen är kostnadsfria.</span
+                >
+              </div>
+              <div>
+                <strong><i class="fas fas-people-group"></i> Stöd till anhöriga</strong><br /><span
+                  class="muted"
+                  >Flera linjer kan prata direkt med dig som närstående.</span
+                >
+              </div>
+              <div>
+                <strong><i class="fas fas-calendar-check"></i> Öppet alla dagar</strong><br /><span
+                  class="muted"
+                  >Hjälp även kvällar, helger och storhelger.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="surface-card p-6 sm:p-7 flex flex-col gap-4">
+            <div class="pill w-fit"><i class="fas fas-compass"></i> Vad du hittar här</div>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
+              Snabb väg till stöd för anhöriga
+            </h3>
+            <ul class="space-y-3 text-sm sm:text-base muted">
+              <li class="flex gap-3">
+                <i class="fas fas-check text-[var(--accent)]"></i>Linjer som lyssnar på dig som
+                närstående.
+              </li>
+              <li class="flex gap-3">
+                <i class="fas fas-check text-[var(--accent)]"></i>Sök på oro, våld, missbruk eller
+                sorg.
+              </li>
+              <li class="flex gap-3">
+                <i class="fas fas-check text-[var(--accent)]"></i>Klickbara telefonnummer och
+                länkar.
+              </li>
+              <li class="flex gap-3">
+                <i class="fas fas-check text-[var(--accent)]"></i>Tips på var du kan få råd och
+                avlastning.
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="stat-chip"><i class="fas fas-people-arrows"></i> Anhörig</span>
+              <span class="stat-chip"><i class="fas fas-ribbon"></i> Sorg &amp; suicid</span>
+              <span class="stat-chip"><i class="fas fas-child-reaching"></i> Föräldrar</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Text for SEO -->
+      <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-5 sm:pb-7">
+        <div class="surface-card p-6 sm:p-8 mb-3 sm:mb-5">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+            Du som är anhörig behöver också stöd
+          </h2>
+          <p class="muted leading-relaxed mb-3">
+            Att stå bredvid någon som mår dåligt, lever med beroende eller befinner sig i kris tär
+            på orken. Här hittar du stödlinjer som vänder sig direkt till anhöriga.
+          </p>
+          <p class="muted leading-relaxed mb-3">
+            Alla linjer är gratis och anonyma. Om du eller någon i din närhet är i omedelbar fara:
+            ring alltid
+            <strong>112</strong>.
+          </p>
+        </div>
+      </article>
+
+      <!-- Motivational Quote -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-10">
+        <figure class="quote-block" role="figure" aria-label="Uppmuntrande citat">
+          <blockquote id="dailyQuote" class="quote-text">
+            <span class="quote-icon" aria-hidden="true"><i class="fas fas-quote-left"></i></span>
+            <p></p>
+          </blockquote>
+          <figcaption id="quoteAuthor" class="quote-author"></figcaption>
+        </figure>
+      </section>
+
+      <!-- Search & Filters -->
+      <section
+        class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12"
+        aria-labelledby="filter-heading"
+      >
+        <div class="surface-card search-panel p-6 sm:p-7">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-5">
+            <div>
+              <h2
+                id="filter-heading"
+                class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white"
+              >
+                Sök bland stödlinjer
+              </h2>
+              <p class="text-sm muted">
+                Filtrera på område eller sök efter namn, nummer eller beskrivning.
+              </p>
+            </div>
+            <div class="flex gap-3 items-center text-sm muted-soft">
+              <span class="stat-chip">21 linjer</span>
+              <span class="stat-chip">6 kategorier</span>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="search-shell">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                class="text-slate-400"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+              <label for="searchInput" class="sr-only">Sök stödlinjer</label>
+              <input
+                type="search"
+                id="searchInput"
+                placeholder="Sök efter t.ex. anhörig, sorg, våld..."
+                aria-label="Sök bland stödlinjer"
+              />
+            </div>
+
+            <nav
+              aria-label="Kategorier"
+              class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide"
+              id="categories"
+            >
+              <button class="category-btn is-active" data-category="all" aria-pressed="true">
+                <span>Alla</span>
+              </button>
+              <button class="category-btn" data-category="psykiskhalsa" aria-pressed="false">
+                <span><i class="fas fas-brain"></i> Psykisk hälsa</span>
+              </button>
+              <button class="category-btn" data-category="barn-unga" aria-pressed="false">
+                <span><i class="fas fas-children"></i> Barn &amp; unga</span>
+              </button>
+              <button class="category-btn" data-category="vald" aria-pressed="false">
+                <span><i class="fas fas-shield-halved"></i> Våld &amp; utsatthet</span>
+              </button>
+              <button class="category-btn" data-category="missbruk" aria-pressed="false">
+                <span><i class="fas fas-wine-bottle"></i> Missbruk &amp; beroende</span>
+              </button>
+              <button class="category-btn" data-category="anhoriga" aria-pressed="false">
+                <span><i class="fas fas-people-roof"></i> Anhöriga</span>
+              </button>
+              <button class="category-btn" data-category="aldre" aria-pressed="false">
+                <span><i class="fas fas-person-cane"></i> Äldre</span>
+              </button>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Grid -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+        <div class="flex items-center gap-2 mb-3">
+          <div id="resultsInfo" class="text-sm muted" aria-live="polite"></div>
+          <button id="clearTag" type="button" class="tag hidden">Rensa</button>
+        </div>
+        <div id="linesGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+        <p id="noResults" class="hidden muted text-sm mt-4">
+          Inga stödlinjer matchar din sökning. Testa att ändra sökord eller välja en annan kategori.
+        </p>
+      </section>
+
+      <!-- Dedicated section for relatives -->
+      <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+        <div class="surface-card p-6 sm:p-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+            Stöd som vänder sig till anhöriga
+          </h2>
+          <p class="muted text-sm leading-relaxed mb-3">
+            Att vara närstående kan vara tungt, frustrerande och ensamt. Du har rätt till stöd och
+            avlastning.
+          </p>
+          <p class="muted text-sm leading-relaxed mb-4">Några linjer som lyssnar på dig:</p>
+          <ul class="list-none muted text-sm space-y-2">
+            <li class="flex items-start gap-2">
+              <i class="fas fas-check text-[var(--accent)]"></i>
+              <span
+                ><strong>Anhöriglinjen</strong> – råd och stöd när du stöttar någon med sjukdom,
+                funktionsnedsättning eller beroende.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fas-check text-[var(--accent)]"></i>
+              <span
+                ><strong>SPES stödlinje</strong> – prata med andra som förlorat någon i
+                suicid.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fas-check text-[var(--accent)]"></i>
+              <span
+                ><strong>Föräldralinjen</strong> – stöd till dig som är orolig för ett barn eller en
+                ung person.</span
+              >
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fas fas-check text-[var(--accent)]"></i>
+              <span
+                ><strong>Al-Anon Familjegrupper</strong> – gemenskap för anhöriga till alkoholister,
+                med möten även online.</span
+              >
+            </li>
+          </ul>
+          <p class="text-xs muted mt-4">
+            Information om telefontider och kontaktvägar kan förändras. Kontrollera alltid aktuella
+            uppgifter på respektive organisations webbplats.
+          </p>
+        </div>
+      </article>
+
+      <!-- FAQ / Info -->
+      <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-18">
+        <div class="grid gap-6 md:grid-cols-2">
+          <section class="surface-card p-6">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+              När ska jag ringa 90101?
+            </h2>
+            <p class="muted text-sm leading-relaxed">
+              Mind Självmordslinjen på <strong>90101</strong> finns för dig som har allvarliga
+              tankar på att skada dig själv, eller för dig som är orolig för någon annan. Du kan
+              vara anonym och de som svarar är utbildade volontärer.
+            </p>
+          </section>
+
+          <section class="surface-card p-6">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+              När ska jag ringa 112?
+            </h2>
+            <p class="muted text-sm leading-relaxed">
+              Ring <strong>112</strong> vid akuta, livshotande situationer – till exempel om någon
+              inte andas, har tagit en överdos, blivit allvarligt skadad eller om du bedömer att det
+              finns omedelbar fara för liv.
+            </p>
+          </section>
+
+          <section class="surface-card p-6 md:col-span-2">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">
+              Är samtalen anonyma?
+            </h2>
+            <p class="muted text-sm leading-relaxed">
+              De stödlinjer som listas här är i regel anonyma och du behöver inte uppge ditt namn.
+              Läs alltid mer på respektive organisations webbplats om vad som gäller.
+            </p>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-shell">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-block">
+            <div class="footer-heading"><i class="fas fas-life-ring"></i> Om Stödlinjer.se</div>
+            <p>
+              En ideell infosida som samlar svenska stödlinjer på ett ställe. Kontrollera alltid
+              aktuella tider på respektive webbplats.
+            </p>
+            <p class="footer-meta">Senast uppdaterad: manuellt underhåll – tipsa om ändringar!</p>
+          </div>
+          <div class="footer-block">
+            <div class="footer-heading"><i class="fas fas-envelope"></i> Kontakt</div>
+            <p>
+              Maila
+              <a href="mailto:info@stodlinjer.se" class="footer-link"
+                ><i class="fas fas-paper-plane"></i> info@stodlinjer.se</a
+              >
+              med förbättringar.
+            </p>
+            <a
+              href="https://github.com/YouTubeRobski87"
+              target="_blank"
+              style="text-decoration: none"
+              ><p class="footer-meta">Skapad av Robert Claesson.</p></a
+            >
+          </div>
+        </div>
+        <div class="footer-quick">
+          <div class="footer-heading"><i class="fas fas-rocket"></i> Snabba länkar</div>
+          <div class="footer-quick-links">
+            <a class="footer-link" href="#filter-heading"
+              ><i class="fas fas-magnifying-glass"></i> Sök stödlinjer</a
+            >
+            <a class="footer-link" href="index.html"><i class="fas fas-house"></i> Startsida</a>
+            <a class="footer-link" href="tel:112"
+              ><i class="fas fas-triangle-exclamation"></i> Ring 112 vid akut fara</a
+            >
+            <a class="footer-link" href="tel:90101"
+              ><i class="fas fas-phone-volume"></i> Självmordslinjen 90101</a
+            >
+            <a class="footer-link" href="kontakt.html"
+              ><i class="fas fas-envelope-open-text"></i> Kontakta oss</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>

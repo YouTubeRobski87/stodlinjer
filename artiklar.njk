@@ -1,0 +1,105 @@
+---
+title: Artiklar & guider | Stödlinjer Sverige
+description: >-
+  Fördjupade artiklar om stödlinjer, bemötande och tryggt agerande i kris. Filtrera på samlingar och hitta guider som passar din situation.
+permalink: "/artiklar/"
+pageClass: "archive-shell"
+articlesPerPage: 9
+header:
+  icon: "fas fas-newspaper"
+  label: "Artiklar & guider"
+  title: "Fördjupa dig"
+  subtitle: "Samlade råd, steg-för-steg-guider och förklaringar kring stödlinjer."
+  links:
+    - url: "/"
+      icon: "fas fas-house"
+      text: "Startsida"
+      aria: "Till startsidan"
+    - url: "/kontakt/"
+      icon: "fas fas-envelope-open-text"
+      text: "Kontakt"
+      aria: "Kontakta oss"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/article-card.njk" import articleCard %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  {% set totalArticles = collections.articles | length %}
+  {% set initialEnd = totalArticles %}
+  {% if totalArticles > articlesPerPage %}
+    {% set initialEnd = articlesPerPage %}
+  {% endif %}
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="surface-card strong-card p-6 sm:p-8 article-hero">
+      <div class="article-hero-text">
+        <p class="pill w-fit"><i class="fas fas-lightbulb"></i> Kunskap som går att använda</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3">
+          Artiklar och guider om tryggt stöd
+        </h2>
+        <p class="muted text-lg max-w-3xl">
+          Här samlar vi artiklar om hur du pratar med någon som mår dåligt, hur du agerar vid akut
+          kris och hur du hittar rätt stödlinje till rätt person. Filtrera på samlingar för att se
+          ämnen som passar din situation.
+        </p>
+        <div class="hero-chips">
+          <span class="stat-chip"><i class="fas fas-newspaper"></i> {{ totalArticles }} artiklar</span>
+          <span class="stat-chip"><i class="fas fas-list-check"></i> {{ samlingar | length }} samlingar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card p-5 sm:p-6 mt-6">
+      <div class="filter-header">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-[var(--muted)] font-semibold mb-1">
+            Filtrera efter samling
+          </p>
+          <p class="muted text-sm mb-0">Samlingar samlar artiklar på samma tema.</p>
+        </div>
+        <span class="muted text-sm" id="articleCount">
+          Visar 1-{{ initialEnd }} av {{ totalArticles }} artiklar
+        </span>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filtrera artiklar på samling">
+        <button
+          class="category-btn is-active"
+          data-samling-filter="all"
+          aria-pressed="true"
+          type="button"
+        >
+          <span><i class="fas fas-asterisk"></i> Alla samlingar</span>
+        </button>
+        {% for item in samlingar %}
+          {% set count = 0 %}
+          {% for group in collections.samlingar %}
+            {% if group.slug == item.slug %}
+              {% set count = group.items | length %}
+            {% endif %}
+          {% endfor %}
+          <button
+            class="category-btn"
+            data-samling-filter="{{ item.slug }}"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="{{ item.icon }}"></i> {{ item.title }}</span>
+            <span class="filter-count">{{ count }}</span>
+          </button>
+        {% endfor %}
+      </div>
+
+      <div class="article-grid" data-article-grid data-page-size="{{ articlesPerPage }}">
+        {% for post in collections.articles %}
+          {{ articleCard(post) }}
+        {% endfor %}
+      </div>
+      <nav class="pagination" data-pagination aria-label="Artikelsidor"></nav>
+    </div>
+  </section>
+{% endblock %}

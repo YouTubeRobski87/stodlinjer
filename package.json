@@ -1,0 +1,35 @@
+{
+  "name": "stodlinjer",
+  "version": "3.0.0",
+  "description": "En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe — för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve --port=8080",
+    "watch": "eleventy --watch",
+    "clean": "rm -rf site",
+    "start": "npm run serve",
+    "index:content": "node scripts/generate-content-index.js"
+  },
+  "main": "index.js",
+  "keywords": [
+    "support-lines",
+    "mental-health",
+    "crisis-support",
+    "stödlinjer",
+    "psykisk-hälsa"
+  ],
+  "author": {
+    "name": "Robert Claesson",
+    "email": "info@stodlinjer.se",
+    "url": "https://stodlinjer.se",
+    "github": "https://github.com/YouTubeRobski87"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
+  }
+}

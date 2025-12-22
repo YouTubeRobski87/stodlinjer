@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="sv-SE" data-theme="light" data-color-scheme="lavender">
+  <head>
+    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Robert Claesson" />
+<title>Artiklar &amp; guider | Stödlinjer Sverige</title>
+
+  <meta name="description" content="Fördjupade artiklar om stödlinjer, bemötande och tryggt agerande i kris. Filtrera på samlingar och hitta guider som passar din situation." />
+
+
+<link rel="canonical" href="https://stodlinjer.se/artiklar/" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#0f1724" />
+<!-- Prevent theme flash: set theme + color scheme before paint -->
+<script>
+  (function () {
+    var storedTheme = localStorage.getItem('theme-mode') || localStorage.getItem('theme');
+    var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = storedTheme === 'dark' ? 'dark' : prefersDark ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.colorScheme = 'lavender';
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  })();
+</script>
+<script>window.BASE_URL = '';</script>
+<script src="/assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+  </head>
+
+  <body class="min-h-screen flex flex-col page-shell archive-shell">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md"
+      >Hoppa till innehåll</a
+    >
+
+    
+  
+<header class="header-shell">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a class="brand-mark" aria-label="Till startsidan" href="/">
+        <i class="fas fas-newspaper" aria-hidden="true"></i>
+      </a>
+      <div class="header-text">
+        <p
+          class="text-xs font-semibold uppercase tracking-wide"
+          style="margin: 0; color: var(--accent)"
+        >
+          Artiklar &amp; guider
+        </p>
+        <h1>Fördjupa dig</h1>
+        <p>Samlade råd, steg-för-steg-guider och förklaringar kring stödlinjer.</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      
+        
+          <a href="/" class="header-link" aria-label="Till startsidan">
+            <i class="fas fas-house"></i><span>Startsida</span>
+          </a>
+        
+          <a href="/kontakt/" class="header-link" aria-label="Kontakta oss">
+            <i class="fas fas-envelope-open-text"></i><span>Kontakt</span>
+          </a>
+        
+      
+
+      <div class="theme-controls" aria-label="Utseende">
+        <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="false">
+          <span id="themeIcon" aria-hidden="true">
+            <span class="theme-icon sun"><i class="fas fas-sun"></i></span>
+            <span class="theme-icon moon"><i class="fas fas-moon"></i></span>
+          </span>
+          <span id="themeLabel" class="sr-only">Ljust läge</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+    <main id="main" class="flex-1">
+  
+  
+  
+    
+  
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="surface-card strong-card p-6 sm:p-8 article-hero">
+      <div class="article-hero-text">
+        <p class="pill w-fit"><i class="fas fas-lightbulb"></i> Kunskap som går att använda</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3">
+          Artiklar och guider om tryggt stöd
+        </h2>
+        <p class="muted text-lg max-w-3xl">
+          Här samlar vi artiklar om hur du pratar med någon som mår dåligt, hur du agerar vid akut
+          kris och hur du hittar rätt stödlinje till rätt person. Filtrera på samlingar för att se
+          ämnen som passar din situation.
+        </p>
+        <div class="hero-chips">
+          <span class="stat-chip"><i class="fas fas-newspaper"></i> 57 artiklar</span>
+          <span class="stat-chip"><i class="fas fas-list-check"></i> 5 samlingar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card p-5 sm:p-6 mt-6">
+      <div class="filter-header">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-[var(--muted)] font-semibold mb-1">
+            Filtrera efter samling
+          </p>
+          <p class="muted text-sm mb-0">Samlingar samlar artiklar på samma tema.</p>
+        </div>
+        <span class="muted text-sm" id="articleCount">
+          Visar 1-9 av 57 artiklar
+        </span>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filtrera artiklar på samling">
+        <button
+          class="category-btn is-active"
+          data-samling-filter="all"
+          aria-pressed="true"
+          type="button"
+        >
+          <span><i class="fas fas-asterisk"></i> Alla samlingar</span>
+        </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+              
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="handlingsguider"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-bolt"></i> Handlingsguider</span>
+            <span class="filter-count">14</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="samtalsstod"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-comments-question"></i> Samtalsstöd</span>
+            <span class="filter-count">9</span>
+          </button>
+        
+          
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="fakta-myter"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-circle-question"></i> Fakta &amp; myter</span>
+            <span class="filter-count">7</span>
+          </button>
+        
+          
+          
+            
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="faq"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-message-question"></i> Frågor &amp; svar</span>
+            <span class="filter-count">11</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+              
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="fordjupning"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-books"></i> Fördjupningar</span>
+            <span class="filter-count">16</span>
+          </button>
+        
+      </div>
+
+      <div class="article-grid" data-article-grid data-page-size="9">
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">2 december 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/stop-tekniken-sa-anvander-du-den-i-akuta-kanslostormar/">STOP-tekniken — så använder du den i akuta känslostormar</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">STOP-tekniken hjälper dig att hantera akuta känslostormar genom att skapa en paus mellan impuls och handling. Med fyra enkla steg kan du lugna kroppen, klargöra tankarna och välja en mer medveten och hjälpsam respons.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/stop-tekniken-sa-anvander-du-den-i-akuta-kanslostormar/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">1 december 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/den-lilla-somnverktygsladan-praktiska-knep-som-hjalper-vid-stressnatter/">Den lilla sömnverktygslådan — praktiska knep som hjälper vid stressnätter</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En praktisk, evidensbaserad verktygslåda för stressnätter. Artikeln guidar dig genom lugnande andning, muskelavslappning, stimuluskontroll, nedvarvningsrutiner och tekniker som stoppar orostankar — allt för att hjälpa kroppen hitta tillbaka till sömnens rytm.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/den-lilla-somnverktygsladan-praktiska-knep-som-hjalper-vid-stressnatter/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">1 december 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/hur-du-forbereder-dig-infor-svara-samtal-checklista-och-mall/">Hur du förbereder dig inför svåra samtal — checklista och mall</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En praktisk guide som hjälper dig förbereda svåra samtal med större lugn och tydlighet. Genom tydliga steg, reflektionsfrågor och en konkret mall får du stöd att klargöra ditt syfte, hantera känslor och skapa konstruktiva dialoger.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/hur-du-forbereder-dig-infor-svara-samtal-checklista-och-mall/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">30 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-tankarna-rusar-6-kognitiva-tekniker-som-stoppar-spiralen/">När tankarna rusar - 6 kognitiva tekniker som stoppar spiralen</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En guide för dig som fastnar i negativa tankespiraler. Genom sex evidensbaserade tekniker visar artikeln hur du kan bryta grubblandet med grundning, omstrukturering, defusion, mindfulness, beteendeaktivering och schemalagd orostid — och återfå mental kontroll.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-tankarna-rusar-6-kognitiva-tekniker-som-stoppar-spiralen/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">30 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/trygghetsplan-vid-oro-eller-kris-mall-och-steg-for-steg/">Trygghetsplan vid oro eller kris — mall och steg för steg</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En praktisk och evidensbaserad guide som hjälper dig skapa en personlig trygghetsplan för svåra stunder. Artikeln går steg för steg genom varningssignaler, hanteringsstrategier, stödkontakter och sätt att göra omgivningen säkrare — så att du står rustad vid kris.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/trygghetsplan-vid-oro-eller-kris-mall-och-steg-for-steg/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">29 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-du-behover-avsluta-en-osund-relation-en-praktisk-vag-genom-processen/">När du behöver avsluta en osund relation — en praktisk väg genom processen</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Att lämna en osund relation är en komplex och ofta farlig process. Artikeln visar hur du bedömer risk, gör en säkerhetsplan, bygger stöd runt dig och genomför uppbrottet på tryggast möjliga sätt. Den betonar också återhämtning, gränssättning och självmedkänsla som centrala steg mot ett friare och tryggare liv.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-du-behover-avsluta-en-osund-relation-en-praktisk-vag-genom-processen/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">29 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-nagon-far-ett-panikpaslag-framfor-dig-konkreta-steg-som-lugnar/">När någon får ett panikpåslag framför dig — konkreta steg som lugnar</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En panikattack kan se dramatisk ut, men din lugna närvaro gör stor skillnad. Artikeln visar hur du skapar trygghet, kommunicerar enkelt, modellerar långsam andning och guidar jordningstekniker. Den betonar vad du ska undvika, när du bör ringa 112 och hur du stöttar personen efteråt.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-nagon-far-ett-panikpaslag-framfor-dig-konkreta-steg-som-lugnar/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">28 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-nagon-skickar-ett-oroande-meddelande-hur-du-svarar/">När någon skickar ett oroande meddelande — hur du svarar</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">När någon skickar ett oroande meddelande kan din respons bli en livlina. Artikeln visar hur du med snabb kontakt, empatiskt lyssnande och modet att fråga direkt kan minska risk och skapa trygghet. Den guidar också i nästa steg, akutbedömning och hur du tar hand om dig själv efteråt.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-nagon-skickar-ett-oroande-meddelande-hur-du-svarar/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">27 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-ett-barn-eller-en-ung-person-berattar-nagot-svart/">Vad säger jag när ett barn eller en ung person berättar något svårt?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">När barn eller unga delar något svårt är vuxnas första reaktion avgörande. Artikeln visar hur lugn närvaro, aktivt lyssnande och tydlig validering skapar trygghet. Den betonar att tro på barnet, undvika press och ge stöd utan löften man inte kan hålla – samt att agera varsamt och professionellt vid oro för säkerhet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-ett-barn-eller-en-ung-person-berattar-nagot-svart/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">26 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-nagon-dricker-for-mycket-och-blir-defensiv/">Vad säger jag när någon dricker för mycket och blir defensiv?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">När alkohol väcker defensivitet är empati viktigare än argument. Artikeln beskriver varför förnekelse och skam triggas, hur jag-budskap och motiverande samtal minskar motstånd, och ger konkreta formuleringar som öppnar för dialog utan att pressa eller förvärra situationen.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-nagon-dricker-for-mycket-och-blir-defensiv/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">25 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-till-mig-sjalv-nar-skammen-over-att-ma-daligt-kommer/">Vad säger jag till mig själv när skammen över att må dåligt kommer?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Skam vid psykisk ohälsa är vanlig och förstärks av internaliserade samhällsnormer. Artikeln förklarar skammens psykologiska mekanismer och visar hur självmedkänsla, kognitiv omstrukturering och compassionfokuserade strategier kan mildra självkritik och skapa ett vänligare, tryggare inre bemötande.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-till-mig-sjalv-nar-skammen-over-att-ma-daligt-kommer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">24 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-jag-maste-avsluta-ett-svart-samtal/">Vad säger jag när jag måste avsluta ett svårt samtal?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Ett omtänksamt avslut är avgörande i svåra samtal. Artikeln visar hur förberedelser, tydliga ramar, sammanfattningar och en konkret plan framåt skapar trygghet. Den betonar värme, validering och varsam hänvisning till professionellt stöd – samtidigt som du skyddar dina egna gränser.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-jag-maste-avsluta-ett-svart-samtal/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">23 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-jag-vill-satta-granser-pa-ett-tryggt-satt/">Vad säger jag när jag vill sätta gränser på ett tryggt sätt?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Att sätta gränser är en central del av psykisk hälsa och bygger på tydlig, respektfull kommunikation. Artikeln visar hur tekniker som jag-budskap, DESC-modellen och icke-våldsam kommunikation hjälper dig uttrycka behov utan skuld, konflikter eller aggressivitet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-jag-vill-satta-granser-pa-ett-tryggt-satt/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">22 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-jag-misstanker-att-nagon-har-sjalvmordstankar/">Vad säger jag när jag misstänker att någon har självmordstankar?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Att misstänka självmordstankar hos någon kan kännas skrämmande, men att våga fråga direkt är en av de mest skyddande insatser du kan göra. Artikeln beskriver varningstecken, hjälpsamma sätt att prata, konkreta steg för att öka säkerheten och vikten av professionellt stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-jag-misstanker-att-nagon-har-sjalvmordstankar/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">22 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-nagon-berattar-att-de-mar-valdigt-daligt/">Vad säger jag när någon berättar att de mår väldigt dåligt?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">När någon öppnar sig om psykiskt lidande krävs främst närvaro, lyhördhet och validering snarare än råd. Artikeln förklarar varför stödjande bemötande är avgörande, vilka fallgropar som bör undvikas och när professionell hjälp behöver kopplas in.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-nagon-berattar-att-de-mar-valdigt-daligt/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">21 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/bortom-ytan-tecken-pa-att-nagon-kampar-synliga-subtila-och-neurobiologiska-signaler/">Bortom ytan - Tecken på att någon kämpar (Synliga, Subtila och Neurobiologiska Signaler)</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln beskriver hur psykisk ohälsa visar sig genom synliga, subtila och neurobiologiska signaler. Den förklarar förändringar i beteende, känslor och nervsystemets respons – och hur tidiga tecken kan uppmärksammas med empati snarare än dömande.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/bortom-ytan-tecken-pa-att-nagon-kampar-synliga-subtila-och-neurobiologiska-signaler/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">20 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/varfor-det-kanns-som-att-du-ar-en-borda-och-hur-du-vet-att-du-inte-ar-det/">Varför det känns som att du är en börda – och hur du vet att du inte är det</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln förklarar varför känslan av att vara en börda uppstår vid psykisk ohälsa och kris. Den visar hur kognitiva snedvridningar skapar denna falska självbild och hur empati, sårbarhet och stödjande relationer bryter dess grepp.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/varfor-det-kanns-som-att-du-ar-en-borda-och-hur-du-vet-att-du-inte-ar-det/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">19 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/vad-hander-efter-att-jag-lagt-pa/">Vad händer efter att jag lagt på?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar vad som händer efter ett stödlinjesamtal. Den beskriver din fulla kontroll, varför ingen kan ringa tillbaka, hur anonymiteten skyddas och att du alltid kan höra av dig igen när du behöver stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/vad-hander-efter-att-jag-lagt-pa/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">19 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/nar-ansvar-blir-for-mycket-att-satta-granser-utan-att-overge/">När ansvar blir för mycket - Att sätta gränser utan att överge</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln beskriver hur överansvar, medberoende och emotionell utmattning uppstår när gränser saknas i relationer. Den visar hur man sätter tydliga, empatiska gränser som skyddar den egna hälsan utan att överge den man vill stödja.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/nar-ansvar-blir-for-mycket-att-satta-granser-utan-att-overge/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">19 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-till-nagon-som-ar-utsatt-for-vald-i-nara-relation/">Vad säger jag till någon som är utsatt för våld i nära relation?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Att stödja någon som utsätts för våld handlar om att lyssna, tro på deras berättelse och aldrig pressa dem att lämna. Artikeln förklarar våldets komplexitet, hur du bemöter med trygghet och empati, vad du bör undvika och hur du kan hjälpa utan att ta över.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-till-nagon-som-ar-utsatt-for-vald-i-nara-relation/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">18 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/ser-stodlinjen-mitt-nummer/">Ser stödlinjen mitt nummer?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar hur stödlinjer skyddar din anonymitet. Den beskriver varför ditt nummer inte visas, hur samtalen hanteras tryggt och hur anonymitet gör det lättare att prata öppet om hur du mår.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/ser-stodlinjen-mitt-nummer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">18 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/ensamhetens-psykologi-varfor-det-gor-sa-ont-och-dess-funktion-som-varningssignal/">Ensamhetens psykologi - Varför det gör så ont och dess funktion som varningssignal</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln beskriver varför ensamhet känns som smärta, hur hjärnan tolkar social brist som ett hot och varför detta leder till hypervigilans och negativa tolkningsmönster. Den visar hur förståelse och anknytning bryter cykeln.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/ensamhetens-psykologi-varfor-det-gor-sa-ont-och-dess-funktion-som-varningssignal/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">17 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/myt-att-prata-om-sjalvmord-gor-det-varre/">Myten ”Att prata om självmord gör det värre” – Sanningen som Räddar Liv</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad text som avlivar myten att samtal om självmord är farliga. Artikeln förklarar varför raka frågor räddar liv, hur suicidprocessen faktiskt ser ut och hur du kan öppna ett tryggt, stödjande samtal.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/myt-att-prata-om-sjalvmord-gor-det-varre/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">17 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/varfor-skam-ar-en-central-del-av-beroende-och-hur-man-bryter-den/">Varför skam är en central del av beroende – och hur man bryter den</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln beskriver hur skam driver och vidmakthåller beroende genom isolering, självförakt och stressaktivering. Den förklarar skillnaden mellan skam och skuld och visar hur empati, sårbarhet och självmedkänsla kan bryta den destruktiva cykeln.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/varfor-skam-ar-en-central-del-av-beroende-och-hur-man-bryter-den/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">16 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/kan-jag-ringa-fast-jag-inte-vet-vad-jag-ska-saga/">Kan jag ringa fast jag inte vet vad jag ska säga?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att du kan ringa en stödlinje även när orden saknas. Den beskriver volontärernas lyssnande roll, anonymitetens trygghet och hur samtalet kan hjälpa dig sortera känslor och minska ångest.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/kan-jag-ringa-fast-jag-inte-vet-vad-jag-ska-saga/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">16 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/kraften-i-andetaget-5-evidensbaserade-andningsovningar-mot-stress-och-panik/">Kraften i Andetaget - 5 Evidensbaserade Andningsövningar mot Stress och Panik</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln presenterar fem evidensbaserade andningsövningar som snabbt reglerar nervsystemet vid stress och panik. Den förklarar hur kontrollerad andning aktiverar vagusnerven, lugnar kroppen och skapar ett stabiliserande ankare vid akuta känslotillstånd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/kraften-i-andetaget-5-evidensbaserade-andningsovningar-mot-stress-och-panik/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">15 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/kan-jag-ringa-for-nagon-annans-skull/">Kan jag ringa för någon annans skull?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att du kan ringa en stödlinje även som anhörig. Den beskriver vilka linjer som erbjuder stöd, varför din oro är giltig och hur samtalet kan hjälpa både dig och den närstående.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/kan-jag-ringa-for-nagon-annans-skull/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">15 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/nar-livet-blir-for-mycket-krisfysiologi-kroppens-reaktion-pa-kronisk-stress/">När livet blir för mycket - Krisfysiologi – kroppens reaktion på kronisk stress</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln förklarar hur kronisk stress överbelastar HPA-axeln, nervsystemet och immunförsvaret. Den visar hur långvarigt kortisolpåslag omformar hjärnan, skapar inflammation och leder till utmattning – samt varför kroppen till slut inte orkar reglera sig själv.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/nar-livet-blir-for-mycket-krisfysiologi-kroppens-reaktion-pa-kronisk-stress/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">14 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/vad-hander-om-jag-borjar-grata-under-samtalet/">Vad händer om jag börjar gråta under samtalet?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att det är helt naturligt att gråta under ett stödlinjesamtal. Den beskriver hur utbildad personal bemöter starka känslor, varför gråt är en hälsosam copingstrategi och att du alltid har full kontroll.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/vad-hander-om-jag-borjar-grata-under-samtalet/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">14 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/ensamhetens-fysiologi-hur-hjarnan-reagerar-pa-brist-pa-social-anknytning/">Ensamhetens Fysiologi - Hur hjärnan reagerar på brist på social anknytning</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln beskriver ensamhet som en biologisk stressor som aktiverar hjärnans hot- och stressystem. Den förklarar hur långvarig social isolering påverkar kortisol, sömn, immunförsvar och belöningssystemet, och varför ensamhet ökar psykisk sårbarhet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/ensamhetens-fysiologi-hur-hjarnan-reagerar-pa-brist-pa-social-anknytning/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">13 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/kan-jag-ringa-anonymt-aven-om-jag-pratar-om-brott/">Kan jag ringa anonymt även om jag pratar om brott?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att du kan ringa stödlinjer anonymt även när du pratar om brott. Den beskriver nummer­skydd, tystnadsplikt och hur anonymiteten gör det tryggt att söka stöd i känsliga situationer.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/kan-jag-ringa-anonymt-aven-om-jag-pratar-om-brott/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">13 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/varfor-natten-ar-jobbigast-neurobiologin-bakom-morkrets-forstarkning-av-kanslor/">Varför natten är jobbigast - Neurobiologin bakom mörkrets förstärkning av känslor</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Natten förstärker känslor genom låg kognitiv kapacitet, höjd amygdalaaktivitet och social isolering. Artikeln förklarar hur dygnsrytm, hormoner och minskad distraktion gör att oro, ensamhet och ångest ofta känns starkare efter mörkrets inbrott.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/varfor-natten-ar-jobbigast-neurobiologin-bakom-morkrets-forstarkning-av-kanslor/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">12 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/kan-jag-ringa-om-jag-bara-ar-lite-orolig/">Kan jag ringa om jag bara är ”lite” orolig?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar varför du kan ringa en stödlinje även vid ”liten” oro. Den beskriver stödlinjers lågtröskeluppdrag, hur tidig kontakt förebygger lidande och varför ventilering och samtal är en viktig copingstrategi.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/kan-jag-ringa-om-jag-bara-ar-lite-orolig/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">12 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/det-traumatiserade-nervsystemet-en-guide-till-fight-flight-freeze-och-fawn/">Det traumatiserade nervsystemet - En guide till Fight, Flight, Freeze och Fawn</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Kroppens överlevnadssystem kan fastna i kamp-, flykt-, frys- eller fawn-respons efter trauma. Denna guide förklarar varje respons, hur de aktiveras i nervsystemet och varför de kan dominera långt efter att faran är över.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/det-traumatiserade-nervsystemet-en-guide-till-fight-flight-freeze-och-fawn/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="samtalsstod">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/samtalsstod/"
+          aria-label="Visa fler artiklar i samlingen Samtalsstöd"
+        >
+          <i class="fas fas-comments-question"></i>
+          <span>Samtalsstöd</span>
+        </a>
+      
+      <span class="article-date">12 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/samtalsstod/vad-sager-jag-nar-nagon-blir-arg-eller-drar-sig-undan/">Vad säger jag när någon blir arg eller drar sig undan?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Ilska och tillbakadragande är ofta skydd mot djupare smärta, inte avståndstaganden från dig. Artikeln förklarar varför dessa reaktioner uppstår och hur du kan bemöta dem med lugn, validering och uthållig närvaro – utan att pressa eller ta det personligt.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/samtalsstod/vad-sager-jag-nar-nagon-blir-arg-eller-drar-sig-undan/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">11 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/kostar-det-nagot-att-ringa/">Kostar det något att ringa?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar kostnader kring stödlinjesamtal. Den klargör att samtalen är gratis, beskriver den eventuella öppningsavgiften från operatörer och betonar att ekonomin aldrig ska vara ett hinder för att söka stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/kostar-det-nagot-att-ringa/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">11 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/trygghet-anknytning-och-hjarnans-resiliens-varfor-relationer-ar-en-biologisk-nodvandighet/">Trygghet, Anknytning och Hjärnans Resiliens - Varför relationer är en biologisk nödvändighet</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln förklarar hur anknytning, trygghet och sociala relationer biologiskt reglerar stressystemet och bygger hjärnans resiliens. Den visar varför relationer fungerar som en skyddsfaktor och hur nya trygga band kan reparera tidigare sårbarhet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/trygghet-anknytning-och-hjarnans-resiliens-varfor-relationer-ar-en-biologisk-nodvandighet/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">10 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/vad-hander-om-jag-inte-vagar-prata/">Vad händer om jag inte vågar prata? (tystnadsrätten i samtal)</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att tystnad i stödlinjesamtal är helt okej. Den beskriver tystnadsrätten, hur volontärer arbetar lugnt och icke-dömande, och varför även ordlös kontakt kan bryta isolering och skapa trygghet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/vad-hander-om-jag-inte-vagar-prata/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">10 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-angesten-slar-till-praktiska-grounding-tekniker-som-forankrar-dig-i-nuet/">När ångesten slår till - Praktiska &quot;grounding&quot;-tekniker som förankrar dig i nuet</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln beskriver effektiva grounding-tekniker som hjälper vid akut ångest, panik och overklighetskänslor. Den förklarar hur sensoriska, fysiska och kognitiva metoder lugnar nervsystemet och återför dig till nuet på ett tryggt, konkret sätt.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-angesten-slar-till-praktiska-grounding-tekniker-som-forankrar-dig-i-nuet/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">9 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/myt-man-maste-vara-tillrackligt-dalig-for-att-ringa-en-stodlinje/">Myten ”Man måste vara ‘tillräckligt dålig’ för att ringa en stödlinje.”</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att man måste må ”tillräckligt dåligt” för att ringa en stödlinje. Den förklarar stödlinjers lågtröskeluppdrag, varför tidig kontakt förebygger lidande och hur anonymt stöd minskar isolering och stärker välmåendet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/myt-man-maste-vara-tillrackligt-dalig-for-att-ringa-en-stodlinje/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">9 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/handbok-for-svara-samtal-konsten-att-forbereda-sig-for-kansliga-amnen/">Handbok för svåra samtal - Konsten att förbereda sig för känsliga ämnen</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln ger en praktisk, forskningsbaserad guide till hur du förbereder dig inför svåra samtal om beroende, våld eller psykisk ohälsa. Den förklarar hur mål, gränser, formuleringar och mental förberedelse skapar tryggare och mer konstruktiva dialoger.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/handbok-for-svara-samtal-konsten-att-forbereda-sig-for-kansliga-amnen/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">8 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/myt-det-ar-meningslost-att-hjalpa-nagon-som-inte-vill-ha-hjalp/">Myten ”Det är meningslöst att hjälpa någon som inte ‘vill bli hjälpt’.”</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att det är meningslöst att hjälpa någon som ”inte vill bli hjälpt”. Den förklarar ambivalens, MI-principer och varför uthålligt, icke-dömande stöd kan stärka den inre motivation som leder till förändring.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/myt-det-ar-meningslost-att-hjalpa-nagon-som-inte-vill-ha-hjalp/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">8 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/empatins-anatomi-sa-fungerar-formagan-att-kanna-med-andra/">Empatins anatomi - Så fungerar förmågan att känna med andra och varför den tystnar vid utmattning</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Empati bygger på både känsla och förståelse, men vid långvarig stress och utmattning tystnar dessa system. Artikeln förklarar hur hjärnan reglerar empati, varför den sviktar vid utmattning och hur man återfår balans.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/empatins-anatomi-sa-fungerar-formagan-att-kanna-med-andra/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">7 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/myt-att-soka-hjalp-ar-ett-tecken-pa-svaghet/">Myten ”Att söka hjälp är ett tecken på svaghet.” – Sanningen om Aktiv Styrka</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att hjälpsökande är ett tecken på svaghet. Den visar hur resiliens, evidensbaserad behandling och social kontakt utgör verklig styrka, och varför att söka stöd är ett aktivt, rationellt steg mot återhämtning.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/myt-att-soka-hjalp-ar-ett-tecken-pa-svaghet/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">7 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/fran-risk-till-beroende-att-forsta-stegen-i-problematiskt-substansbruk/">Från risk till beroende - Att förstå stegen i problematiskt substansbruk</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Den här artikeln förklarar hur riskbruk gradvis kan utvecklas till skadligt bruk och beroende. Den beskriver de medicinska definitionerna, hur hjärnan påverkas och varför tidig upptäckt samt professionellt stöd är avgörande.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/fran-risk-till-beroende-att-forsta-stegen-i-problematiskt-substansbruk/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">6 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/myt-vald-sker-bara-i-vissa-relationer/">Myten ”Våld sker bara i vissa typer av relationer.” – Sanningen om Våldets Verkliga Omfång</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att våld bara förekommer i vissa relationer. Den visar att våld drabbar alla grupper, förklarar våldets breda uttryck och uppmuntrar utsatta att söka stöd utan skam eller tvekan.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/myt-vald-sker-bara-i-vissa-relationer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">6 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/vad-ar-beroende-hjarnans-beloningssystem-och-vagen-till-kontrollforlust/">Vad är Beroende? Hjärnans Belöningssystem och Vägen till Kontrollförlust</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Beroende uppstår när hjärnans belöningssystem kapas och dopaminet omprogrammeras. Artikeln förklarar hur tvångsmässigt beteende utvecklas, varför kontrollförlust sker och vilka evidensbaserade vägar som leder mot återhämtning, balans och egenmakt.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/vad-ar-beroende-hjarnans-beloningssystem-och-vagen-till-kontrollforlust/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">5 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/myt-barn-forstar-inte-sant-har/">Myten ”Barn förstår inte sånt här.” – Sanningen om Barns Känslighet</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad text som avlivar myten att barn inte förstår svåra händelser. Artikeln förklarar barns känslighet, varför tystnad skadar, och hur vuxna tryggt kan prata, stödja och hjälpa barn vidare till professionell hjälp.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/myt-barn-forstar-inte-sant-har/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">5 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/varfor-lamnar-man-inte-bara-psykologin-bakom-att-stanna/">Varför lämnar man inte bara? Psykologin bakom att stanna</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En fördjupande text om varför personer i våldsamma relationer inte ”bara lämnar”. Artikeln förklarar våldets cykel, nedbruten autonomi, psykologiska band, isolering och praktiska hinder – och visar hur stöd och egenmakt gör frigörelse möjlig.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/varfor-lamnar-man-inte-bara-psykologin-bakom-att-stanna/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">4 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/valdets-cykel-hur-kontroll-och-hopp-skapar-normalisering/">Våldets Cykel - Hur Kontroll och Hopp Skapar Normalisering</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En förklarande genomgång av våldets cykel – hur kontroll, rädsla och hopp skapar en psykologisk fälla som normaliserar övergrepp. Artikeln visar hur cykeln fungerar, varför den är så svår att bryta och vilka steg som återtar kontrollen.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/valdets-cykel-hur-kontroll-och-hopp-skapar-normalisering/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">4 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/hur-hjalper-jag-nagon-nar-orden-kanns-svara/">Hur gör jag när jag vill hjälpa någon som mår dåligt men inte vet vad jag ska säga?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad guide om hur du stöttar någon som mår dåligt. Artikeln förklarar hur du vågar fråga om svåra ämnen, lyssnar icke-dömande, använder MI-principer och erbjuder konkret, trygg och praktisk hjälp i stunden.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/hur-hjalper-jag-nagon-nar-orden-kanns-svara/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">3 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/varfor-tystnaden-skadar-de-psykologiska-barriarerna-mot-att-be-om-hjalp/">Varför Tystnaden Skadar - De Psykologiska Barriärerna mot Att Be om Hjälp</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En djupgående text om varför det kan kännas svårare att be om hjälp än att bära bördan ensam. Artikeln förklarar de psykologiska, kulturella och sociala mekanismer som blockerar hjälpsökande – och visar hur man strategiskt kan bryta dem.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/varfor-tystnaden-skadar-de-psykologiska-barriarerna-mot-att-be-om-hjalp/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">3 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-jag-misstanker-att-nagon-utsatts-for-vald/">Hur gör jag när jag misstänker att någon är utsatt för våld?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad guide om hur du bemöter någon du misstänker utsätts för våld. Artikeln förklarar våldets olika uttryck, hur du öppnar ett tryggt samtal, stärker personens autonomi och erbjuder praktiskt, långsiktigt och säkert stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-jag-misstanker-att-nagon-utsatts-for-vald/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fakta-myter/stress-vs-angest-skillnader-och-likheter-i-kropp-och-sinne/">Stress vs. Ångest – Skillnader och Likheter i Kropp och Sinne</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar skillnader och likheter mellan stress och ångest. Den beskriver orsaker, fysiologiska reaktioner, gemensamma symtom och evidensbaserade sätt att hantera båda tillstånden genom struktur, reglering, KBT och socialt stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fakta-myter/stress-vs-angest-skillnader-och-likheter-i-kropp-och-sinne/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/faq/ar-stodlinjerna-professionella-eller-volontarer/">Är stödlinjerna professionella eller volontärer?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar vilka som bemannar stödlinjer. Den beskriver skillnaden mellan professionella och volontärer, hur kompetensen varierar mellan linjer och varför du alltid får ett tryggt, anonymt och respektfullt samtal oavsett vem som svarar.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/faq/ar-stodlinjerna-professionella-eller-volontarer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">1 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/krisreaktioner-vad-hander-i-din-kropp-och-hur-du-atertar-kontrollen/">Krisreaktioner - Vad händer i din kropp och hur du kan återta kontrollen</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En psykisk kris är en naturlig reaktion på överväldigande händelser. Artikeln förklarar nervsystemets försvarsreaktioner, krisens faser och praktiska sätt att återfå kontroll genom kroppslig reglering, socialt stöd och professionell hjälp.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/krisreaktioner-vad-hander-i-din-kropp-och-hur-du-atertar-kontrollen/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">1 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/handlingsguider/nar-ensamheten-far-dagarna-att-flyta-ihop/">Hur gör jag när jag är ensam och dagarna flyter ihop?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En praktisk och forskningsbaserad guide för när ensamheten gör dagarna formlösa. Den förklarar hur du lugnar kroppens stressystem, bygger upp struktur och återupprättar trygg social kontakt för att få tillbaka kontroll och stabilitet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/handlingsguider/nar-ensamheten-far-dagarna-att-flyta-ihop/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+      </div>
+      <nav class="pagination" data-pagination aria-label="Artikelsidor"></nav>
+    </div>
+  </section>
+</main>
+
+    <footer class="footer-shell">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <div class="footer-heading"><i class="fas fas-life-ring"></i> Om Stödlinjer.se</div>
+        <p>
+          En ideell infosida som samlar svenska stödlinjer på ett ställe. Kontrollera alltid aktuella
+          tider på respektive webbplats.
+        </p>
+        <p class="footer-meta">Senast uppdaterad: manuellt underhåll – tipsa om ändringar!</p>
+      </div>
+      <div class="footer-block">
+        <div class="footer-heading"><i class="fas fas-envelope"></i> Kontakt</div>
+        <p>
+          Maila
+          <a href="mailto:info@stodlinjer.se" class="footer-link"
+            ><i class="fas fas-paper-plane"></i> info@stodlinjer.se</a
+          >
+          med förbättringar.
+        </p>
+        <a href="https://github.com/YouTubeRobski87" target="_blank" style="text-decoration: none"
+          ><p class="footer-meta">Upphovsrätt © 2025 | Robert Claesson</p></a
+        >
+      </div>
+    </div>
+    <div class="footer-quick">
+      <div class="footer-quick-links">
+        <a class="footer-link" href="#filter-heading"
+          ><i class="fas fas-magnifying-glass"></i> Sök stödlinjer</a
+        >
+        <a class="footer-link" href="tel:112"
+          ><i class="fas fas-triangle-exclamation"></i> Ring 112 vid akut fara</a
+        >
+        <a class="footer-link" href="tel:90101"
+          ><i class="fas fas-phone-volume"></i> Självmordslinjen 90101</a
+        >
+        <a class="footer-link" href="/kontakt/"
+          ><i class="fas fas-envelope-open-text"></i> Kontakta oss</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="chatbot" data-chatbot>
+  <button
+    type="button"
+    class="chatbot-toggle"
+    data-chatbot-toggle
+    aria-label="Öppna Stödkompassen"
+    aria-expanded="false"
+    aria-controls="chatbot-panel"
+  >
+    <span class="chatbot-toggle__icon" aria-hidden="true"></span>
+    <span class="sr-only">Öppna Stödkompassen</span>
+  </button>
+
+  <section class="chatbot-panel" id="chatbot-panel" data-chatbot-panel aria-live="polite">
+    <header class="chatbot-header">
+      <div class="chatbot-title">
+        <span class="chatbot-avatar" aria-hidden="true"></span>
+        <div>
+          <h3>Stödkompassen</h3>
+          <small class="chatbot-hint">Du behöver inte veta vad du ska säga.</small>
+        </div>
+      </div>
+      <button type="button" class="chatbot-send" data-chatbot-close aria-label="Stäng chatten">
+        ✕
+      </button>
+    </header>
+
+    <div class="chatbot-log" data-chatbot-log>
+      <p class="chatbot-empty" data-chatbot-empty></p>
+    </div>
+
+    <div class="chatbot-input">
+      <form data-chatbot-form>
+        <input
+          type="text"
+          name="chat"
+          placeholder="Ställ en fråga..."
+          autocomplete="off"
+          data-chatbot-input
+        />
+        <button type="submit" class="chatbot-send" data-chatbot-send>
+          Skicka
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script>
+  window.CHATBOT_CONFIG = Object.assign({ baseUrl: '' }, {"apiUrl":"/.netlify/functions/chat","greetings":["Hej!👋 Hur är det med dig? ✨","Hej!👋 Vad har du på hjärtat idag? 💜","Hej!👋 Hur mår du just nu? 🌈","Hej!👋 Finns det något du vill prata om? 🌸","Hej!👋 Jag finns här om du vill prata 🌷","Hej!👋 Hur kan jag hjälpa dig idag? 💐","Hej!👋 Berätta gärna vad som känns viktigt just nu 🌿","Hej!👋 Vad fick dig att kika in här just nu? 🦋","Hej!👋 Fint att du är här. Vill du berätta lite om hur du har det? 🦄","Hej!👋 Du får skriva precis så mycket eller lite du vill 🐳","Hej!👋 Vi kan ta det i din takt 🍓","Hej!👋 Är det något som känns extra jobbigt idag? 🍒","Hej!👋 Vill du berätta om hur din dag varit? 🧸","Hej!👋 Jag lyssnar – vad känns mest just nu? 💕","Hej!👋 Det kan vara svårt att ta kontakt, bra att du gjorde det 🎀","Hej!👋 Är du orolig för dig själv eller någon annan? 🌼","Hej!👋 Vill du ha hjälp att hitta rätt stöd, eller bara skriva av dig? 🌹","Hej!👋 Om du vill kan vi börja med en kort beskrivning av hur du mår 🌺","Hej!👋 Du behöver inte ha allt formulerat – vi kan reda ut det tillsammans 🌻","Hej!👋 Vad skulle kännas skönt att få ur sig först? 🪴","Hej!👋 Hur har det känts den senaste tiden? 🩷","Hej!👋 Är det något särskilt som tynger dig just nu? 🐼","Hej!👋 Du är inte ensam här 🌤️","Hej!👋 Vi tar ett steg i taget, okej? 🌴","Hej!👋 Finns det något du skulle vilja ha stöd med just idag? 🌱"],"externalSources":[{"title":"1177 Vårdguiden","url":"https://1177.se","type":"link","contactTypes":["telefon","webb"],"phone":"1177","hoursLabel":"Dygnet runt","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon","webb"]}]},{"title":"Folkhälsomyndigheten","url":"https://folkhalsomyndigheten.se","type":"link","contactTypes":["telefon","webb"],"phone":"010-205 20 00","hoursLabel":"Vardagar kl. 08:00–16:30 (Växel)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"08:00","close":"16:30","channels":["telefon","webb"]}]},{"title":"Socialstyrelsen","url":"https://www.socialstyrelsen.se","type":"link","contactTypes":["telefon","webb","e-post"],"phone":"075-247 30 00","hoursLabel":"Vardagar kl. 08:00–17:00 (Växel)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"08:00","close":"17:00","channels":["telefon","webb","e-post"]}]},{"title":"Mind (Riksföreningen för psykisk hälsa)","url":"https://mind.se","type":"link","contactTypes":["webb"],"hours":"Se webbplatsen för kontaktvägar och öppettider."},{"title":"Självmordslinjen (Mind)","url":"https://mind.se/sjalvmordslinjen/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"90 101","hoursLabel":"Dygnet runt, årets alla dagar","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon","chatt"]}]},{"title":"Äldrelinjen (Mind)","url":"https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/","type":"link","contactTypes":["telefon"],"phone":"020-22 22 33","hoursLabel":"Telefon: Mån–fre 08:00–19:00, lör–sön 10:00–16:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"08:00","close":"19:00","channels":["telefon"]},{"days":["sat","sun"],"open":"10:00","close":"16:00","channels":["telefon"]}]},{"title":"Föräldralinjen (Mind)","url":"https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/","type":"link","contactTypes":["telefon"],"phone":"020-85 20 00","hoursLabel":"Telefon: Mån–tors 10:00–15:00 (helgfria vardagar), extra öppet tors 19:00–21:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu"],"open":"10:00","close":"15:00","channels":["telefon"]},{"days":["thu"],"open":"19:00","close":"21:00","channels":["telefon"]}]},{"title":"Livslinjen (Mind)","url":"https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/livslinjen/","type":"link","contactTypes":["chatt","webb"],"phone":"","hoursLabel":"Chatt: Sön–tors 17:00–24:00","timezone":"Europe/Stockholm","openingHours":[{"days":["sun","mon","tue","wed","thu"],"open":"17:00","close":"24:00","channels":["chatt"]}]},{"title":"Killar.se","url":"https://killar.se/","type":"link","contactTypes":["chatt","telefon","webb","e-post"],"phone":"076-265 32 65","hoursLabel":"Chatt: sön–tors 19:00–21:00. Samtalsmottagning: kontakt via mail/telefon, tid efter överenskommelse.","timezone":"Europe/Stockholm","openingHours":[{"days":["sun","mon","tue","wed","thu"],"open":"19:00","close":"21:00","channels":["chatt"]}]},{"title":"Al-Anon Familjegrupper i Sverige","url":"https://www.al-anon.se/","type":"link","contactTypes":["telefon","webb","e-post"],"phone":"070-610 96 61","hoursLabel":"Telefon: måndagar kl. 19:00–21:00 (övrig tid ibland svar eller telefonsvarare)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon"],"open":"19:00","close":"21:00","channels":["telefon"]}]},{"title":"Anhöriglinjen (Anhörigas Riksförbund)","url":"https://anhorigasriksforbund.se/anhoriglinjen/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"0200-239 500","hoursLabel":"Telefon: Mån–tis, tors–fre 10:00–15:00, ons & sön 18:00–21:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","thu","fri"],"open":"10:00","close":"15:00","channels":["telefon"]},{"days":["wed","sun"],"open":"18:00","close":"21:00","channels":["telefon"]}]},{"title":"Mansjouren","url":"https://www.mansjouren.se","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"08-30 30 20","hoursLabel":"Telefon: sön–fre 12:00–14:00 & 18:00–20:00, lör 12:00–14:00","timezone":"Europe/Stockholm","openingHours":[{"days":["sun","mon","tue","wed","thu","fri"],"open":"12:00","close":"14:00","channels":["telefon"]},{"days":["sun","mon","tue","wed","thu","fri"],"open":"18:00","close":"20:00","channels":["telefon"]},{"days":["sat"],"open":"12:00","close":"14:00","channels":["telefon"]}]},{"title":"Spelberoendes Riksförbund","url":"https://spelberoende.se/","type":"link","contactTypes":["telefon","webb","e-post"],"phone":"072-503 48 08","hoursLabel":"Telefon Sthlm: mån–tors 09:00–17:00, fre 09:00–15:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu"],"open":"09:00","close":"17:00","channels":["telefon","webb","e-post"]},{"days":["fri"],"open":"09:00","close":"15:00","channels":["telefon","webb","e-post"]}]},{"title":"Anonyma Narkomaner (NA)","url":"https://www.nasverige.org/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"0771-13 80 00","hoursLabel":"Telefon: vardagar 18:00–21:00, helger 17:00–21:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"18:00","close":"21:00","channels":["telefon"]},{"days":["sat","sun"],"open":"17:00","close":"21:00","channels":["telefon"]}]},{"title":"Anonyma Alkoholister (AA)","url":"https://aa.se/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"08-720 38 42","hoursLabel":"Telefon: alla dagar 11:00–20:00 (även helgdagar)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"11:00","close":"20:00","channels":["telefon","e-post"]}]},{"title":"Bris","url":"https://www.bris.se","type":"link","contactTypes":["telefon","sms","chatt","mejl","webb"],"phone":"116 111","hoursLabel":"Dygnet runt, varje dag, året om (telefon, sms, chatt och mejl för barn och unga upp till 18 år)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon","sms","chatt","mejl"]}]},{"title":"Brottsofferjouren","url":"https://www.brottsofferjouren.se/","type":"link","contactTypes":["telefon","chatt","e-post","webb"],"phone":"116 006","hoursLabel":"Telefon: Mån–tis 09:00–19:00, ons–fre 09:00–17:00, helg 09:00–12:00 & 13:00–16:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue"],"open":"09:00","close":"19:00","channels":["telefon","chatt","e-post"]},{"days":["wed","thu","fri"],"open":"09:00","close":"17:00","channels":["telefon","chatt","e-post"]},{"days":["sat","sun"],"open":"09:00","close":"12:00","channels":["telefon","chatt","e-post"]},{"days":["sat","sun"],"open":"13:00","close":"16:00","channels":["telefon","chatt","e-post"]}]},{"title":"Droghjälpen","url":"https://droghjalpen.se/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"020-91 91 91","hoursLabel":"Telefon: mån & tors 09:00–16:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","thu"],"open":"09:00","close":"16:00","channels":["telefon"]}]},{"title":"Giftinformationscentralen","url":"https://giftinformation.se","type":"link","contactTypes":["telefon","webb"],"phone":"010-456 6700","hoursLabel":"Dygnet runt, året runt (vid akut förgiftning ring 112 och begär Giftinformation; i mindre brådskande fall 010-456 6700)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon","webb"]}]},{"title":"Hjälplinjen","url":"https://hjalplinjen.se","type":"link","contactTypes":["telefon","webb"],"phone":"90390","hoursLabel":"Dygnet runt, året runt","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon","webb"]}]},{"title":"Jourhavande Kompis","url":"https://www.rkuf.se/fa-stod/jourhavande-kompis","type":"link","contactTypes":["chatt","webb"],"phone":"","hoursLabel":"Chatt: mån–fre 18:00–21:00, lör–sön 14:00–17:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"18:00","close":"21:00","channels":["chatt"]},{"days":["sat","sun"],"open":"14:00","close":"17:00","channels":["chatt"]}]},{"title":"Jourhavande Medmänniska","url":"https://www.jourhavande-medmanniska.se/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"08-702 16 80","hoursLabel":"Telefon: alla nätter 21:00–06:00 (året runt). Chatt: lör–tis 21:00–24:00.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"21:00","close":"24:00","channels":["telefon"]},{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"06:00","channels":["telefon"]},{"days":["sat","sun","mon","tue"],"open":"21:00","close":"24:00","channels":["chatt"]}]},{"title":"Kollegahjälpen","url":"https://kollegahjalpen.se/","type":"link","contactTypes":["telefon","webb"],"phone":"020-59 60 00","hoursLabel":"Dygnet runt (numret går till SOS Alarm som förmedlar kontakt med kollegahjälpare)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon"]}]},{"title":"Kvinnofridslinjen","url":"https://kvinnofridslinjen.se","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"116 016","hoursLabel":"Telefon: dygnet runt, årets alla dagar. Chatt: mån & tors 15:00–21:00, sön 11:00–17:00.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["telefon"]},{"days":["mon","thu"],"open":"15:00","close":"21:00","channels":["chatt"]},{"days":["sun"],"open":"11:00","close":"17:00","channels":["chatt"]}]},{"title":"Kyrkans SOS","url":"https://kyrkanssos.se/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"0771-800 650","hoursLabel":"Telefon: vardagar 13:00–21:00, helger/helgdagar 16:00–21:00. Chatt: tis 13:00–16:00, tors 18:00–21:00. Digitala brev: dygnet runt.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"13:00","close":"21:00","channels":["telefon"]},{"days":["sat","sun"],"open":"16:00","close":"21:00","channels":["telefon"]},{"days":["tue"],"open":"13:00","close":"16:00","channels":["chatt"]},{"days":["thu"],"open":"18:00","close":"21:00","channels":["chatt"]},{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"24:00","channels":["webb"]}]},{"title":"Roks (Riksorganisationen för kvinnojourer och tjejjourer i Sverige)","url":"https://www.roks.se/","type":"link","contactTypes":["webb"],"hours":"Se webbplatsen för kontaktvägar och öppettider."},{"title":"Spelberoendes Riksförbund","url":"https://spelberoende.se/","type":"link","contactTypes":["telefon","webb","e-post"],"phone":"072-503 48 08","hoursLabel":"Telefontider Stockholm: mån–tors 09:00–17:00, fre 09:00–15:00 (bemannat kansli)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu"],"open":"09:00","close":"17:00","channels":["telefon","webb","e-post"]},{"days":["fri"],"open":"09:00","close":"15:00","channels":["telefon","webb","e-post"]}]},{"title":"Stödlinjen för Spelare och Anhöriga","url":"https://stodlinjen.se/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"020-81 91 00","hoursLabel":"Helgfria vardagar: mån 09:00–19:00, tis–ons 09:00–17:00, tors 11:00–19:00, fre 09:00–15:00 (telefon). Chatten har något kortare öppettider.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon"],"open":"09:00","close":"19:00","channels":["telefon"]},{"days":["tue","wed"],"open":"09:00","close":"17:00","channels":["telefon"]},{"days":["thu"],"open":"11:00","close":"19:00","channels":["telefon"]},{"days":["fri"],"open":"09:00","close":"15:00","channels":["telefon"]},{"days":["mon"],"open":"09:00","close":"18:45","channels":["chatt"]},{"days":["tue","wed"],"open":"09:00","close":"16:45","channels":["chatt"]},{"days":["thu"],"open":"11:00","close":"18:45","channels":["chatt"]},{"days":["fri"],"open":"09:00","close":"14:45","channels":["chatt"]}]},{"title":"Röda Korset (Svenska Röda Korset)","url":"https://www.rodakorset.se/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"0771-19 95 00","hoursLabel":"Infoservice: vardagar 10:00–12:00 och 13:00–16:00 (kortare öppettider sommartid)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"10:00","close":"12:00","channels":["telefon","e-post"]},{"days":["mon","tue","wed","thu","fri"],"open":"13:00","close":"16:00","channels":["telefon","e-post"]}]},{"title":"Stiftelsen Tryggare Sverige","url":"https://tryggaresverige.org/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"08-29 20 00","hoursLabel":"Växel: kontorstid (inga exakta öppettider angivna)","timezone":"Europe/Stockholm","openingHours":[]},{"title":"Ångestförbundet","url":"https://www.angest.se","type":"link","contactTypes":["telefon","webb"],"phone":"031-13 70 91","hoursLabel":"Telefon: vardagar 13:00–15:00 (ÅSS Göteborg jourtelefon för personer med ångest och anhöriga)","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"13:00","close":"15:00","channels":["telefon"]}]},{"title":"Alkoholhjälpen","url":"https://www.alkoholhjalpen.se","type":"link","contactTypes":["telefon","webb"],"phone":"020-84 44 48","hoursLabel":"Helgfria vardagar: mån–tors 11:00–19:00, fre 11:00–16:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu"],"open":"11:00","close":"19:00","channels":["telefon"]},{"days":["fri"],"open":"11:00","close":"16:00","channels":["telefon"]}]},{"title":"Barnombudsmannen","url":"https://www.barnombudsmannen.se/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"08-692 29 50","hoursLabel":"Växel & telefon för dig under 18: mån & ons 13:00–15:00, tis–fre 10:00–12:00","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","wed"],"open":"13:00","close":"15:00","channels":["telefon"]},{"days":["tue","thu","fri"],"open":"10:00","close":"12:00","channels":["telefon"]}]},{"title":"PrevenTell","url":"https://www.karolinska.se/preventell/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"020-66 77 88","hoursLabel":"Telefon: vardagar 12:00–15:00. Chatt: mån, ons & tors 15:00–16:00. Telefonsvarare dygnet runt – återuppringning nästkommande vardag.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"12:00","close":"15:00","channels":["telefon"]},{"days":["mon","wed","thu"],"open":"15:00","close":"16:00","channels":["chatt"]}]},{"title":"Riksförbundet för Suicidprevention och Efterlevandestöd (SPES)","url":"https://spes.se/","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"020-18 18 00","hoursLabel":"Stödlinje: alla dagar 19:00–22:00. Stödchatt: ons & sön 19:00–21:00 (första söndagen i månaden till 22:00).","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"19:00","close":"22:00","channels":["telefon"]},{"days":["wed","sun"],"open":"19:00","close":"21:00","channels":["chatt"]}]},{"title":"Unizon","url":"https://www.unizonjourer.se/","type":"link","contactTypes":["webb"],"hours":"Se webbplatsen för kontaktvägar och öppettider."},{"title":"Frisk & Fri – Ätstörningslinjen","url":"https://www.friskfri.se/fa-stod/telefonlinjer/","type":"link","contactTypes":["telefon","webb"],"phone":"020-20 80 18","hoursLabel":"Mån 19:00–20:00, tis & ons 13:00–14:00 och 19:00–20:00, tors 19:00–20:00, sön 19:00–20:00 (ojämna veckor). Extra telefontid på engelska fre 12:15–13:15 (ojämna veckor). Röda dagar stängt.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["tue"],"open":"13:00","close":"14:00","channels":["telefon"]},{"days":["tue"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["wed"],"open":"13:00","close":"14:00","channels":["telefon"]},{"days":["wed"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["thu"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["fri"],"open":"12:15","close":"13:15","channels":["telefon"]},{"days":["sun"],"open":"19:00","close":"20:00","channels":["telefon"]}]},{"title":"Frisk & Fri – Närståendelinjen","url":"https://www.friskfri.se/fa-stod/narstaendelinjen/","type":"link","contactTypes":["telefon","webb"],"phone":"0200-125 085","hoursLabel":"Mån 19:00–20:00, tis 19:00–20:00, ons 16:00–17:00 & 19:00–20:00, tors 09:00–11:00 & 19:00–20:00, fre 16:00–17:00. Röda dagar vanligtvis stängt.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["tue"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["wed"],"open":"16:00","close":"17:00","channels":["telefon"]},{"days":["wed"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["thu"],"open":"09:00","close":"11:00","channels":["telefon"]},{"days":["thu"],"open":"19:00","close":"20:00","channels":["telefon"]},{"days":["fri"],"open":"16:00","close":"17:00","channels":["telefon"]}]},{"title":"Tjejzonen – stödchatt för unga tjejer (10–25 år)","url":"https://tjejzonen.se/hitta-hjalp/allmanna-chatten/","type":"link","contactTypes":["chatt","webb"],"phone":"","hoursLabel":"Allmänna chatten: alla dagar (mån–sön) 20:00–22:00.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"20:00","close":"22:00","channels":["chatt"]}]},{"title":"SHEDO – Självskadechatten","url":"https://www.shedo.se/chatt","type":"link","contactTypes":["chatt","e-post","webb"],"phone":"","hoursLabel":"Självskadechatten: mån, tis, ons & sön 20:00–22:00.","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","sun"],"open":"20:00","close":"22:00","channels":["chatt"]}]},{"title":"RFSL Stödmottagning","url":"https://www.rfsl.se/verksamhet/stod/stodmottagning/","type":"link","contactTypes":["telefon","e-post","webb"],"phone":"020-34 13 16","hoursLabel":"Telefon: ring och lämna meddelande för uppringning. Helt anonym telefontid tors 09:00–12:00 (direkt till kurator).","timezone":"Europe/Stockholm","openingHours":[{"days":["thu"],"open":"09:00","close":"12:00","channels":["telefon"]}]},{"title":"Somaya stödjour","url":"https://www.somaya.se/fa-hjalp/var-stodlinje","type":"link","contactTypes":["telefon","chatt","e-post","webb"],"phone":"020-81 82 83","hoursLabel":"Stödlinje: vardagar 09:00–16:00. Chatt: öppen onsdag & torsdag (se hemsidan för aktuella tider).","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri"],"open":"09:00","close":"16:00","channels":["telefon"]}]},{"title":"Jourhavande präst","url":"https://www.svenskakyrkan.se/jourhavandeprast","type":"link","contactTypes":["telefon","chatt","webb"],"phone":"112 (be om Jourhavande präst)","hoursLabel":"Telefon via 112: alla dagar 21:00–06:00. Chatt: alla dagar 20:00–24:00. Digitalt brev: dygnet runt (svar inom 24 timmar).","timezone":"Europe/Stockholm","openingHours":[{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"21:00","close":"24:00","channels":["telefon"]},{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"00:00","close":"06:00","channels":["telefon"]},{"days":["mon","tue","wed","thu","fri","sat","sun"],"open":"20:00","close":"24:00","channels":["chatt"]}]}]});
+</script>
+
+
+    <script type="module" src="/assets/js/app.js"></script>
+    <script type="module" src="/assets/js/chatbot.js"></script>
+  </body>
+</html>
