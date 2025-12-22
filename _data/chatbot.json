@@ -1,5 +1,5 @@
 {
-  "apiUrl": "/.netlify/functions/chat",
+  "apiUrl": "/api/chat",
   "greetings": [
     "Hej!👋 Hur är det med dig? ✨",
     "Hej!👋 Vad har du på hjärtat idag? 💜",

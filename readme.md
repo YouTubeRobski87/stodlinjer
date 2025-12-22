@@ -1,43 +1,43 @@
-# 🆘 Stödlinjer.se
+﻿# ðŸ†˜ StÃ¶dlinjer.se
 
-En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe — för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.
+En ideell informationssida som samlar svenska stÃ¶dlinjer och hjÃ¤lplinjer pÃ¥ ett stÃ¤lle â€” fÃ¶r dig som behÃ¶ver hjÃ¤lp, eller fÃ¶r dig som vill hjÃ¤lpa nÃ¥gon annan.
 
-🌐 **Webbplats:** [stodlinjer.se](https://stodlinjer.netlify.app)
-
----
-
-## 💡 Om projektet
-
-Ibland känns livet övermäktigt. Det kan handla om ångest, depression, ensamhet, våld, missbruk eller oro för någon annan. Stödlinjer.se samlar Sveriges viktigaste stödlinjer på ett ställe — så att du snabbt kan hitta rätt nummer att ringa eller chatt att skriva till. Alla stödlinjer som listas är seriösa aktörer som erbjuder anonymt, kostnadsfritt stöd.
-
-Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `src/_data/`.
+ðŸŒ **Webbplats:** [stodlinjer.se](https://stodlinjer.se)
 
 ---
 
-## ✨ Funktioner
+## ðŸ’¡ Om projektet
 
-- 🔍 **Sökbar lista** med 21+ svenska stödlinjer
-- 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, äldre
-- #️⃣ **Taggfiltrering** för detaljerad sökning
-- 🤖 **Stödchatten (AI)** som svarar på svenska och använder innehållet på sajten + externa källor
-- 🔗 **Klickbara källor** i chatbotten (artiklar, stödlinjer, externa länkar)
-- 🌓 **Ljust/mörkt tema** med automatisk systempreferens
-- 🔗 **URL-baserad sökning** (`?q=sökterm`) för delning och schema.org SearchAction
-- 📱 **Responsiv design** för mobil, surfplatta och desktop
-- ♿ **Tillgänglighetsanpassad** — skip links, ARIA-attribut, semantisk HTML
-- 💬 **Motiverande citat** som slumpas vid varje sidladdning
+Ibland kÃ¤nns livet Ã¶vermÃ¤ktigt. Det kan handla om Ã¥ngest, depression, ensamhet, vÃ¥ld, missbruk eller oro fÃ¶r nÃ¥gon annan. StÃ¶dlinjer.se samlar Sveriges viktigaste stÃ¶dlinjer pÃ¥ ett stÃ¤lle â€” sÃ¥ att du snabbt kan hitta rÃ¤tt nummer att ringa eller chatt att skriva till. Alla stÃ¶dlinjer som listas Ã¤r seriÃ¶sa aktÃ¶rer som erbjuder anonymt, kostnadsfritt stÃ¶d.
+
+Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `_data/`.
 
 ---
 
-## 📦 Installation & scripts
+## âœ¨ Funktioner
 
-Kräver Node 18+.
+- ðŸ” **SÃ¶kbar lista** med 21+ svenska stÃ¶dlinjer
+- ðŸ·ï¸ **Kategorifiltrering** â€” psykisk hÃ¤lsa, barn & unga, vÃ¥ld, missbruk, Ã¤ldre
+- #ï¸âƒ£ **Taggfiltrering** fÃ¶r detaljerad sÃ¶kning
+- ðŸ¤– **StÃ¶dchatten (AI)** som svarar pÃ¥ svenska och anvÃ¤nder innehÃ¥llet pÃ¥ sajten + externa kÃ¤llor
+- ðŸ”— **Klickbara kÃ¤llor** i chatbotten (artiklar, stÃ¶dlinjer, externa lÃ¤nkar)
+- ðŸŒ“ **Ljust/mÃ¶rkt tema** med automatisk systempreferens
+- ðŸ”— **URL-baserad sÃ¶kning** (`?q=sÃ¶kterm`) fÃ¶r delning och schema.org SearchAction
+- ðŸ“± **Responsiv design** fÃ¶r mobil, surfplatta och desktop
+- â™¿ **TillgÃ¤nglighetsanpassad** â€” skip links, ARIA-attribut, semantisk HTML
+- ðŸ’¬ **Motiverande citat** som slumpas vid varje sidladdning
+
+---
+
+## ðŸ“¦ Installation & scripts
+
+KrÃ¤ver Node 18+.
 
 ```bash
 npm install
 ```
 
-Lokalt utvecklingsläge med live-reload:
+Lokalt utvecklingslÃ¤ge med live-reload:
 
 ```bash
 npm run serve
@@ -49,52 +49,52 @@ Bygg statisk sajt (output till `site/`):
 npm run build
 ```
 
-Generera innehållsindexet som används av stödchatten (laddar artiklar + JSON-data till `.chatdata/content-index.json`):
+Generera innehÃ¥llsindexet som anvÃ¤nds av stÃ¶dchatten (laddar artiklar + JSON-data till `.chatdata/content-index.json`):
 
 ```bash
 npm run index:content
 ```
 
-Kör gärna `npm run index:content && npm run build` innan deploy om innehållet har ändrats.
+KÃ¶r gÃ¤rna `npm run index:content && npm run build` innan deploy om innehÃ¥llet har Ã¤ndrats.
 
 ---
 
-## 📁 Projektstruktur (Eleventy)
+## ðŸ“ Projektstruktur (Eleventy)
 
 ```
-src/
-├── index.njk               # Startsida (sök + grid)
-├── kontakt.njk             # Kontaktformulär
-├── _data/
-│   ├── support-lines.json  # Alla stödlinjer
-│   ├── chatbot.json        # Konfiguration för stödchatten (API-url, externa källor)
-│   └── quotes.json         # Motiverande citat
-├── _includes/
-│   ├── layouts/base.njk
-│   └── partials/           # Header, footer, sektioner m.m.
-└── assets/
-    ├── css/                # base.css, main.css (+ komponent-partials)
-    ├── js/                 # app.js, tailwind-config.js
-    └── fonts/              # Ikon- och typsnitts-filer
+./
+â”œâ”€â”€ index.njk               # Startsida (sÃ¶k + grid)
+â”œâ”€â”€ kontakt.njk             # KontaktformulÃ¤r
+â”œâ”€â”€ _data/
+â”‚   â”œâ”€â”€ support-lines.json  # Alla stÃ¶dlinjer
+â”‚   â”œâ”€â”€ chatbot.json        # Konfiguration fÃ¶r stÃ¶dchatten (API-url, externa kÃ¤llor)
+â”‚   â””â”€â”€ quotes.json         # Motiverande citat
+â”œâ”€â”€ _includes/
+â”‚   â”œâ”€â”€ layouts/base.njk
+â”‚   â””â”€â”€ partials/           # Header, footer, sektioner m.m.
+â””â”€â”€ assets/
+    â”œâ”€â”€ css/                # base.css, main.css (+ komponent-partials)
+    â”œâ”€â”€ js/                 # app.js, tailwind-config.js
+    â””â”€â”€ fonts/              # Ikon- och typsnitts-filer
 ```
 
-Chatbotens innehållsindex skrivs till `.chatdata/content-index.json` (genereras, inte manuellt redigerad).
+Chatbotens innehÃ¥llsindex skrivs till `.chatdata/content-index.json` (genereras, inte manuellt redigerad).
 
-Output: `site/` (Eleventy skriver färdiga HTML-filer och kopierar assets).
+Output: `site/` (Eleventy skriver fÃ¤rdiga HTML-filer och kopierar assets).
 
 ---
 
-## ➕ Lägg till eller ändra stödlinjer
+## âž• LÃ¤gg till eller Ã¤ndra stÃ¶dlinjer
 
-All data finns i `src/_data/support-lines.json`. Varje stödlinje följer detta format:
+All data finns i `_data/support-lines.json`. Varje stÃ¶dlinje fÃ¶ljer detta format:
 
 ```json
 {
   "id": 1,
-  "name": "Namn på stödlinjen",
+  "name": "Namn pÃ¥ stÃ¶dlinjen",
   "url": "https://exempel.se/",
   "number": "020-12 34 56",
-  "description": "Kort beskrivning av vem linjen hjälper.",
+  "description": "Kort beskrivning av vem linjen hjÃ¤lper.",
   "category": "psykiskhalsa",
   "available": "Dygnet runt, alla dagar",
   "urgent": true,
@@ -102,44 +102,44 @@ All data finns i `src/_data/support-lines.json`. Varje stödlinje följer detta 
 }
 ```
 
-### Tillgängliga kategorier
+### TillgÃ¤ngliga kategorier
 
-| Kategori               | Värde          |
+| Kategori               | VÃ¤rde          |
 | ---------------------- | -------------- |
-| 🧠 Psykisk hälsa       | `psykiskhalsa` |
-| 👶 Barn & unga         | `barn-unga`    |
-| 🛡️ Våld & utsatthet    | `vald`         |
-| 🍷 Missbruk & beroende | `missbruk`     |
-| 🧓 Äldre               | `aldre`        |
+| ðŸ§  Psykisk hÃ¤lsa       | `psykiskhalsa` |
+| ðŸ‘¶ Barn & unga         | `barn-unga`    |
+| ðŸ›¡ï¸ VÃ¥ld & utsatthet    | `vald`         |
+| ðŸ· Missbruk & beroende | `missbruk`     |
+| ðŸ§“ Ã„ldre               | `aldre`        |
 
-### Tillgängliga taggar
+### TillgÃ¤ngliga taggar
 
 `akut`, `psykiskhalsa`, `suicid`, `samtal`, `chatt`, `anonymt`, `valdbrott`, `sorgtrauma`, `anhorig`, `missbruk`, `barn-unga`, `killarman`, `hbtqi`, `stodgrupp`
 
-### Lägg till citat
+### LÃ¤gg till citat
 
-`src/_data/quotes.json` innehåller citatobjekt:
+`_data/quotes.json` innehÃ¥ller citatobjekt:
 
 ```json
 {
   "text": "Det kommer en dag till.",
-  "author": "Okänd"
+  "author": "OkÃ¤nd"
 }
 ```
 
 ---
 
-## 🤖 Stödchatten
+## ðŸ¤– StÃ¶dchatten
 
-- Ligger som komponent i `src/_includes/partials/chatbot.njk` och aktiveras av `src/assets/js/chatbot.js`.
-- Backend via Netlify Function `/.netlify/functions/chat` (fil: `netlify/functions/chat.js`).
-- Använder ett genererat innehållsindex + `src/_data/chatbot.json` för externa källor (1177, Mind m.fl.).
-- Kräver miljövariabeln `OPENAI_API_KEY` för AI-svar. Utan nyckel visar chatten fallbackförslag från innehållsindexet.
-- Källor i chatten (artiklar, stödlinjer, externa länkar) är klickbara.
+- Ligger som komponent i `_includes/partials/chatbot.njk` och aktiveras av `assets/js/chatbot.js`.
+- Backend via Vercel Function `/api/chat` (fil: `api/chat.js`).
+- AnvÃ¤nder ett genererat innehÃ¥llsindex + `_data/chatbot.json` fÃ¶r externa kÃ¤llor (1177, Mind m.fl.).
+- KrÃ¤ver miljÃ¶variabeln `OPENAI_API_KEY` fÃ¶r AI-svar. Utan nyckel visar chatten fallbackfÃ¶rslag frÃ¥n innehÃ¥llsindexet.
+- KÃ¤llor i chatten (artiklar, stÃ¶dlinjer, externa lÃ¤nkar) Ã¤r klickbara.
 
 ### Uppdatera chatbotens index
 
-Kör efter innehållsändringar (nya artiklar eller uppdaterade JSON-data):
+KÃ¶r efter innehÃ¥llsÃ¤ndringar (nya artiklar eller uppdaterade JSON-data):
 
 ```bash
 npm run index:content
@@ -149,41 +149,43 @@ Den genererar `.chatdata/content-index.json` som laddas av frontenden.
 
 ### Konfiguration
 
-- Redigera `src/_data/chatbot.json` för att uppdatera externa resurser som chatten kan föreslå.
-- Miljövariabler (lägg i `.env` eller i Netlify/GitHub Secrets):
-  - `OPENAI_API_KEY` — krävs för att anropa OpenAI i Netlify-funktionen.
+- Redigera `_data/chatbot.json` fÃ¶r att uppdatera externa resurser som chatten kan fÃ¶reslÃ¥.
+- MiljÃ¶variabler (lÃ¤gg i `.env` eller i Vercel Environment Variables):
+  - `OPENAI_API_KEY` â€” krÃ¤vs fÃ¶r att anropa OpenAI i Vercel-funktionen.
 
 ---
 
-## 🎨 Design
+## ðŸŽ¨ Design
 
-Webbplatsen använder ett mjukt lavendel-/grått färgschema (light/dark/calm) med fokus på tillgänglighet och läsbarhet:
+Webbplatsen anvÃ¤nder ett mjukt lavendel-/grÃ¥tt fÃ¤rgschema (light/dark/calm) med fokus pÃ¥ tillgÃ¤nglighet och lÃ¤sbarhet:
 
-- **Ljust tema:** Ljust lavendel/kräm med mjuka kontraster
-- **Mörkt tema:** Dämpat mörkgrått med ljusa accenter
-- **Accentfärg:** Lavendel/steel (`--accent: #8a8ec4`) och variationer per tema
-- **Typografi:** Söhne (sans-serif) med optimerade vikter och radavstånd
-
----
-
-## 🚀 Publicering
-
-Static build till `site/` (Netlify-konfig i `netlify.toml`). Kör `npm run index:content && npm run build` inför deploy så att chatbotens index är uppdaterat.
+- **Ljust tema:** Ljust lavendel/krÃ¤m med mjuka kontraster
+- **MÃ¶rkt tema:** DÃ¤mpat mÃ¶rkgrÃ¥tt med ljusa accenter
+- **AccentfÃ¤rg:** Lavendel/steel (`--accent: #8a8ec4`) och variationer per tema
+- **Typografi:** SÃ¶hne (sans-serif) med optimerade vikter och radavstÃ¥nd
 
 ---
 
-## 📧 Kontakt
+## ðŸš€ Publicering
 
-- 🌐 **Webb:** [stodlinjer.se](https://stodlinjer.netlify.app)
-- 📬 **E-post:** [info@stodlinjer.se](mailto:info@stodlinjer.se)
-- 👤 **Skapad av:** [Robert Claesson](https://github.com/YouTubeRobski87)
+Static build till `site/` (Vercel-konfig i `vercel.json`). KÃ¶r `npm run index:content && npm run build` infÃ¶r deploy sÃ¥ att chatbotens index Ã¤r uppdaterat.
 
 ---
 
-## 📄 Licens
+## ðŸ“§ Kontakt
 
-Fritt att använda och anpassa för ideella ändamål. 💚
+- ðŸŒ **Webb:** [stodlinjer.se](https://stodlinjer.se)
+- ðŸ“¬ **E-post:** [info@stodlinjer.se](mailto:info@stodlinjer.se)
+- ðŸ‘¤ **Skapad av:** [Robert Claesson](https://github.com/YouTubeRobski87)
 
 ---
 
-> _"Du är inte ensam. Hjälp finns."_
+## ðŸ“„ Licens
+
+Fritt att anvÃ¤nda och anpassa fÃ¶r ideella Ã¤ndamÃ¥l. ðŸ’š
+
+---
+
+> _"Du Ã¤r inte ensam. HjÃ¤lp finns."_
+
+

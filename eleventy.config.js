@@ -1,11 +1,17 @@
+﻿const fs = require('fs');
+const path = require('path');
+
 const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
-const samlingarData = require('./src/_data/samlingar.json');
+const samlingarDataPath = fs.existsSync(path.join(__dirname, '_data', 'samlingar.json'))
+  ? './_data/samlingar.json'
+  : './src/_data/samlingar.json';
+const samlingarData = require(samlingarDataPath);
 const { generateContentIndex } = require('./scripts/generate-content-index');
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
-  eleventyConfig.addPassthroughCopy('src/assets');
-  eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
+  eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy({ '_data': 'data' });
   eleventyConfig.addPassthroughCopy({ '.chatdata': 'chatdata' });
 
   eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
@@ -79,11 +85,14 @@ module.exports = function (eleventyConfig) {
   return {
     pathPrefix,
     dir: {
-      input: 'src',
-      output: 'site'
+      input: '.',
+      output: 'site',
+      includes: '_includes',
+      data: '_data'
     },
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
     templateFormats: ['njk', 'md', 'html']
   };
 };
+

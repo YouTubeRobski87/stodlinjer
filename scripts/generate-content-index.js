@@ -5,8 +5,8 @@ const matter = require('gray-matter');
 const MarkdownIt = require('markdown-it');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const DATA_DIR = path.join(ROOT_DIR, 'src', '_data');
-const ARTICLES_DIR = path.join(ROOT_DIR, 'src', 'artiklar');
+const DATA_DIR = path.join(ROOT_DIR, '_data');
+const ARTICLES_DIR = path.join(ROOT_DIR, 'artiklar');
 const OUTPUT_DIR = path.join(ROOT_DIR, '.chatdata');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'content-index.json');
 
