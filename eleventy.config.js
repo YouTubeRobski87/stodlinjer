@@ -1,5 +1,6 @@
 ﻿const fs = require('fs');
 const path = require('path');
+const MarkdownIt = require('markdown-it');
 
 const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
 const hasSrc = fs.existsSync(path.join(__dirname, 'src'));
@@ -11,6 +12,7 @@ const samlingarDataPath = fs.existsSync(path.join(__dirname, '_data', 'samlingar
   : './src/_data/samlingar.json';
 const samlingarData = require(samlingarDataPath);
 const { generateContentIndex } = require('./scripts/generate-content-index');
+const md = new MarkdownIt({ html: true, linkify: true, typographer: false });
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
@@ -38,6 +40,16 @@ module.exports = function (eleventyConfig) {
     const date = typeof value === 'string' ? new Date(value) : value;
     if (Number.isNaN(date.getTime())) return '';
     return date.toISOString().split('T')[0];
+  });
+
+  eleventyConfig.addFilter('markdownify', (value) => {
+    if (!value) return '';
+    return md.render(value.toString());
+  });
+
+  eleventyConfig.addFilter('markdownifyInline', (value) => {
+    if (!value) return '';
+    return md.renderInline(value.toString());
   });
 
   eleventyConfig.addFilter('readingTime', (content) => {
