@@ -2,6 +2,10 @@
 const path = require('path');
 
 const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
+const hasSrc = fs.existsSync(path.join(__dirname, 'src'));
+const inputDir = hasSrc ? 'src' : '.';
+const assetsDir = hasSrc ? 'src/assets' : 'assets';
+const dataDir = hasSrc ? 'src/_data' : '_data';
 const samlingarDataPath = fs.existsSync(path.join(__dirname, '_data', 'samlingar.json'))
   ? './_data/samlingar.json'
   : './src/_data/samlingar.json';
@@ -10,8 +14,8 @@ const { generateContentIndex } = require('./scripts/generate-content-index');
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
-  eleventyConfig.addPassthroughCopy('assets');
-  eleventyConfig.addPassthroughCopy({ '_data': 'data' });
+  eleventyConfig.addPassthroughCopy(assetsDir);
+  eleventyConfig.addPassthroughCopy({ [dataDir]: 'data' });
   eleventyConfig.addPassthroughCopy({ '.chatdata': 'chatdata' });
 
   eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
@@ -27,6 +31,13 @@ module.exports = function (eleventyConfig) {
     } catch (err) {
       return date.toISOString().split('T')[0];
     }
+  });
+
+  eleventyConfig.addFilter('isoDate', (value) => {
+    if (!value) return '';
+    const date = typeof value === 'string' ? new Date(value) : value;
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toISOString().split('T')[0];
   });
 
   eleventyConfig.addFilter('readingTime', (content) => {
@@ -85,7 +96,7 @@ module.exports = function (eleventyConfig) {
   return {
     pathPrefix,
     dir: {
-      input: '.',
+      input: inputDir,
       output: 'site',
       includes: '_includes',
       data: '_data'
