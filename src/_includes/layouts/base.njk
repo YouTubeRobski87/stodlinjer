@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" data-theme="light" data-color-scheme="lavender">
+  <head>
+    {% include "partials/head.njk" %}
+  </head>
+
+  <body class="min-h-screen flex flex-col page-shell {{ pageClass | default('') }}">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md"
+      >Hoppa till innehåll</a
+    >
+
+    {% block header %}{% endblock %}
+
+    <main id="main" class="flex-1">{% block content %}{% endblock %}</main>
+
+    {% include "partials/footer.njk" %}
+
+    {% include "partials/chatbot.njk" %}
+
+    <script type="module" src="{{ baseUrl }}/assets/js/app.js"></script>
+    <script type="module" src="{{ baseUrl }}/assets/js/chatbot.js"></script>
+    <script src="{{ baseUrl }}/assets/js/weather-widget.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+{% from "partials/icon.njk" import icon %}
+{% macro articleCard(post) %}
+  {% set samlingInfo = (post.data.samling | getSamling) or { title: post.data.samling, icon: 'folder' } %}
+  {% set readingTime = post.data.readingTime %}
+  {% if not readingTime and post.templateContent %}
+    {% set readingTime = post.templateContent | readingTime ~ ' min' %}
+  {% endif %}
+  <article
+    class="article-card"
+    data-samling-item="{{ post.data.samling }}"
+    data-title="{{ post.data.title | escape }}"
+    data-description="{{ (post.data.description or '') | striptags | escape }}"
+  >
+    <div class="article-card-top">
+      {% if post.data.samling %}
+        <a
+          class="samling-chip"
+          href="{{ baseUrl }}/samlingar/{{ post.data.samling }}/"
+          aria-label="Visa fler artiklar i samlingen {{ samlingInfo.title }}"
+        >
+          {{ icon(samlingInfo.icon or 'folder') }}
+          <span>{{ samlingInfo.title }}</span>
+        </a>
+      {% endif %}
+      <span class="article-date">{{ post.date | formatDate }}</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="{{ baseUrl }}{{ post.url }}">{{ post.data.title }}</a>
+    </h3>
+
+    {% if post.data.description %}
+      <p class="article-card-excerpt">{{ post.data.description }}</p>
+    {% endif %}
+
+    <div class="article-card-footer">
+      {% if readingTime %}
+        <span class="article-reading-time">
+          {{ icon('hourglass') }}
+          {{ readingTime }}
+        </span>
+      {% endif %}
+      <a class="read-more" href="{{ baseUrl }}{{ post.url }}">
+        <span>Fortsätt läs</span>
+        {{ icon('arrow-right') }}
+      </a>
+    </div>
+  </article>
+{% endmacro %}

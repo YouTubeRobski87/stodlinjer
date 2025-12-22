@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../mittpsyke-main"
+		},
+		{
+			"path": "../../stodlinjer backup med netlify/stodlinjer-main/scripts"
+		},
+		{
+			"path": "../../stodlinjer backup med netlify/stodlinjer-main/site"
+		},
+		{
+			"path": "../../stodlinjer backup med netlify/stodlinjer-main/src"
+		},
+		{
+			"path": "../../stodlinjer backup med netlify/stodlinjer-main/netlify"
+		}
+	],
+	"settings": {}
+}

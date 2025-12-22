@@ -1,0 +1,140 @@
+---
+title: Artiklar & guider | Stödlinjer Sverige
+description: >-
+  Fördjupade artiklar om stödlinjer, bemötande och tryggt agerande i kris. Filtrera på samlingar och hitta guider som passar din situation.
+permalink: "/artiklar/"
+pageClass: "archive-shell"
+articlesPerPage: 9
+header:
+  icon: "newsletter"
+  label: "Artiklar & guider"
+  title: "Fördjupa dig"
+  subtitle: "Samlade råd, steg-för-steg-guider och förklaringar kring stödlinjer."
+  links:
+    - url: "/"
+      icon: "home"
+      text: "Startsida"
+      aria: "Till startsidan"
+    - url: "/kontakt/"
+      icon: "envelope-letter"
+      text: "Kontakt"
+      aria: "Kontakta oss"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/icon.njk" import icon %}
+{% from "partials/article-card.njk" import articleCard %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  {% set totalArticles = collections.articles | length %}
+  {% set initialEnd = totalArticles %}
+  {% if totalArticles > articlesPerPage %}
+    {% set initialEnd = articlesPerPage %}
+  {% endif %}
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="surface-card strong-card p-6 sm:p-8 article-hero">
+      <div class="article-hero-text">
+        <p class="pill w-fit">{{ icon('lightbulb-on') }} För dig som vill veta mer</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">
+          Läsning för dig som söker hjälp
+        </h2>
+        <p class="muted text-lg max-w-3xl">
+          Vi har samlat kunskap för dig som söker svar – om dina rättigheter, hur du hanterar svåra situationer och hur du kan finnas där för någon som har det tungt. Välj en samling för att börja.
+        </p>
+        <div class="hero-chips">
+          <span class="stat-chip">{{ icon('newspaper') }} {{ totalArticles }} artiklar</span>
+          <span class="stat-chip">{{ icon('list-check') }} {{ samlingar | length }} samlingar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card search-panel p-5 sm:p-6 mt-6">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+            Sök bland artiklar
+          </h2>
+          <p class="text-sm muted mb-0">
+            Sök i titlar och beskrivningar eller filtrera på samling.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 sm:gap-3 items-center text-sm muted-soft">
+          <span class="stat-chip">{{ icon('newspaper') }} {{ totalArticles }} artiklar</span>
+          <span class="stat-chip">{{ icon('list-check') }} {{ samlingar | length }} samlingar</span>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="search-shell">
+          {{ icon('search', 'line', 'text-slate-400') }}
+          <label for="articleSearchInput" class="sr-only">Sök bland artiklar</label>
+          <input
+            type="search"
+            id="articleSearchInput"
+            placeholder="Sök artiklar, t.ex. kris, bemötande, våld..."
+            aria-label="Sök bland artiklar och guider"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <p class="text-xs uppercase tracking-wide text-[var(--muted)] font-extrabold mb-0">
+            Filtrera efter samling
+          </p>
+          <div class="filter-row" role="group" aria-label="Filtrera artiklar på samling">
+            <button
+              class="category-btn is-active"
+              data-samling-filter="all"
+              aria-pressed="true"
+              type="button"
+            >
+              <span>{{ icon('grid-3x3') }} Alla samlingar</span>
+            </button>
+            {% for item in samlingar %}
+              {% set count = 0 %}
+              {% for group in collections.samlingar %}
+                {% if group.slug == item.slug %}
+                  {% set count = group.items | length %}
+                {% endif %}
+              {% endfor %}
+              <button
+                class="category-btn"
+                data-samling-filter="{{ item.slug }}"
+                aria-pressed="false"
+                type="button"
+              >
+                <span>{{ icon(item.icon) }} {{ item.title }}</span>
+                <span class="filter-count">{{ count }}</span>
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card p-5 sm:p-6 mt-6">
+      <div class="filter-header">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-[var(--muted)] font-extrabold mb-1">
+            Artiklar &amp; guider
+          </p>
+          <p class="muted text-sm mb-0">Resultat baserat på sökning och vald samling.</p>
+        </div>
+        <span class="muted text-sm" id="articleCount">
+          Visar 1-{{ initialEnd }} av {{ totalArticles }} artiklar
+        </span>
+      </div>
+
+      <div class="article-grid" data-article-grid data-page-size="{{ articlesPerPage }}">
+        {% for post in collections.articles %}
+          {{ articleCard(post) }}
+        {% endfor %}
+      </div>
+      <nav class="pagination" data-pagination aria-label="Artikelsidor"></nav>
+    </div>
+  </section>
+{% endblock %}

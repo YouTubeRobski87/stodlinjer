@@ -1,0 +1,88 @@
+@layer components {
+  .quote-block {
+    position: relative;
+    background: var(--card) !important;
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 0;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .quote-text {
+    margin: 0;
+    position: relative;
+    display: block;
+    z-index: 1;
+    max-width: 780px;
+    padding: 0 72px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .quote-icon,
+  .quote-icon i {
+    position: absolute;
+    font-size: 52px;
+    color: var(--accent) !important;
+    opacity: 1;
+    line-height: 1;
+  }
+
+  .quote-icon-left {
+    top: 22px;
+    left: 44px;
+  }
+
+  .quote-icon-right {
+    bottom: 22px;
+    right: 44px;
+    transform: rotate(180deg);
+  }
+
+  /* Icon swap handled by .icon-duo in stodlinjer-line.css */
+
+  .quote-text p {
+    font-size: 1.35rem;
+    font-weight: 450;
+    font-style: normal;
+    font-family: 'Recursive', system-ui, sans-serif;
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' -8, 'CRSV' 1;
+    text-align: center;
+    line-height: 1.35;
+    color: var(--text);
+    margin: 0;
+  }
+
+  @media (min-width: 640px) {
+    .quote-text p {
+      font-size: 1.48rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .quote-text {
+      padding: 0 48px;
+    }
+    .quote-icon,
+    .quote-icon i {
+      font-size: 46px;
+    }
+  }
+
+  .quote-author {
+    display: block;
+    margin-top: 16px;
+    font-size: 0.98rem;
+    font-weight: 500;
+    font-family: 'Recursive', system-ui, sans-serif;
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 1;
+    color: var(--text);
+    text-align: center;
+  }
+
+  :root[data-theme='dark'] .quote-block {
+    background: var(--card);
+  }
+}

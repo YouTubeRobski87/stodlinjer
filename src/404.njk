@@ -1,0 +1,136 @@
+---
+title: "Sidan hittades inte"
+description: "404-sida för Stödlinjer Sverige"
+permalink: "/404.html"
+eleventyExcludeFromCollections: true
+pageClass: "solid-bg-shell"
+header:
+  icon: "compass"
+  label: "Hitta rätt"
+  title: "404 – sidan finns inte"
+  subtitle: "Länken du följde verkar inte fungera. Vi guidar dig tillbaka till rätt stöd."
+  links:
+    - url: "/"
+      icon: "home"
+      text: "Startsida"
+      aria: "Till startsidan"
+    - url: "/artiklar/"
+      icon: "newsletter"
+      text: "Artiklar"
+      aria: "Till artiklar och guider"
+    - url: "/kontakt/"
+      icon: "envelope-letter"
+      text: "Kontakt"
+      aria: "Kontakta oss"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/icon.njk" import icon %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <div class="surface-card strong-card overflow-hidden">
+      <div class="grid gap-8 md:grid-cols-[1.2fr_1fr]">
+        <div class="p-7 sm:p-9">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="pill">{{ icon('compass') }} Felsteg</span>
+            <span class="stat-chip">{{ icon('warning-circle') }} 404</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">
+            Hoppsan, vi hittar inte sidan
+          </h1>
+          <p class="text-lg muted mb-6">
+            Länken kan vara gammal eller felstavad. Använd genvägarna nedan för att snabbt hitta rätt stödlinje.
+          </p>
+
+          <div class="grid gap-3 sm:gap-4">
+            <a
+              class="inline-flex items-center justify-between gap-3 px-4 py-3 rounded-lg bg-[var(--accent)] text-white font-semibold shadow-lg hover:shadow-xl transition"
+              href="{{ baseUrl }}/"
+            >
+              <span class="inline-flex items-center gap-2">{{ icon('arrow-left') }} Till startsidan</span>
+              {{ icon('compass') }}
+            </a>
+            <a
+              class="inline-flex items-center justify-between gap-3 px-4 py-3 rounded-lg bg-[var(--card)] text-[var(--text)] font-semibold border border-[var(--border)] hover:border-[var(--accent)] transition"
+              href="{{ baseUrl }}/artiklar/"
+            >
+              <span class="inline-flex items-center gap-2">{{ icon('newsletter') }} Utforska guider och artiklar</span>
+              {{ icon('book-open') }}
+            </a>
+            <a
+              class="inline-flex items-center justify-between gap-3 px-4 py-3 rounded-lg bg-[var(--card)] text-[var(--text)] font-semibold border border-[var(--border)] hover:border-[var(--accent)] transition"
+              href="{{ baseUrl }}/kontakt/"
+            >
+              <span class="inline-flex items-center gap-2">{{ icon('envelope-letter') }} Kontakta oss</span>
+              {{ icon('chat-bubble-dots') }}
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-b from-[var(--accent-soft)] to-[var(--card)] p-7 sm:p-9 flex flex-col gap-5 border-t md:border-t-0 md:border-l border-[var(--border)]">
+          <div class="pill w-fit">{{ icon('life-ring') }} Snabbhjälp</div>
+          <p class="text-base muted">
+            Spara de viktigaste numren eller dela dem med någon som behöver stöd direkt.
+          </p>
+
+          <div class="grid grid-cols-1 gap-3">
+            <a
+              href="tel:90101"
+              class="surface-card p-4 rounded-lg flex justify-between items-center hover:shadow-glow transition"
+              aria-label="Ring Självmordslinjen 90101"
+            >
+              <div>
+                <p class="text-sm font-semibold text-[var(--accent)] flex items-center gap-2">
+                  {{ icon('headset-1') }} Självmordslinjen
+                </p>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white phone-number">90101</p>
+              </div>
+              <span class="badge-urgent">Öppet dygnet runt</span>
+            </a>
+
+            <a
+              href="tel:112"
+              class="surface-card p-4 rounded-lg flex justify-between items-center hover:shadow-glow transition"
+              aria-label="Ring SOS Alarm 112"
+            >
+              <div>
+                <p class="text-sm font-semibold text-[var(--accent)] flex items-center gap-2">
+                  {{ icon('sos') }} SOS Alarm
+                </p>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white phone-number">112</p>
+              </div>
+              <span class="badge-urgent">Vid akut fara</span>
+            </a>
+
+            <a
+              href="tel:020505050"
+              class="surface-card p-4 rounded-lg flex justify-between items-center hover:shadow-glow transition"
+              aria-label="Ring Kvinnofridslinjen 020-505050"
+            >
+              <div>
+                <p class="text-sm font-semibold text-[var(--accent)] flex items-center gap-2">
+                  {{ icon('cross-shield-2') }} Kvinnofridslinjen
+                </p>
+                <p class="text-2xl font-extrabold text-slate-900 dark:text-white phone-number">020-505050</p>
+              </div>
+              <span class="tag">Våld &amp; hot</span>
+            </a>
+          </div>
+
+          <p class="text-sm muted mb-0">
+            Behöver du hjälp att hitta rätt stödlinje?
+            <a class="inline-link font-semibold" href="{{ baseUrl }}/">Börja på startsidan</a>
+            eller
+            <a class="inline-link font-semibold" href="{{ baseUrl }}/kontakt/">hör av dig</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% from "partials/icon.njk" import icon %}
+{% set h = header or {} %}
+<header class="header-shell">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a class="brand-mark" aria-label="Till startsidan" href="{{ baseUrl }}/">
+        {{ icon(h.icon) }}
+      </a>
+      <div class="header-text">
+        <p
+          class="text-xs header-p uppercase tracking-wide"
+          style="margin: 0; color: var(--accent)"
+        >
+          {{ h.label }}
+        </p>
+        <h1>{{ h.title }}</h1>
+        <p>{{ h.subtitle }}</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      {% if h.links %}
+        {% for link in h.links %}
+          <a href="{{ baseUrl }}{{ link.url }}" class="header-link" aria-label="{{ link.aria }}">
+            {{ icon(link.icon) }}<span>{{ link.text }}</span>
+          </a>
+        {% endfor %}
+      {% endif %}
+
+      <div class="theme-controls" aria-label="Utseende">
+        <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="false">
+          <span id="themeIcon" aria-hidden="true">
+            <span class="theme-icon sun">
+              <svg class="sts theme-icon-svg" aria-hidden="true" focusable="false">
+                <use href="{{ baseUrl }}/assets/symbols/st-solid.svg#symbol-sun"></use>
+              </svg>
+            </span>
+            <span class="theme-icon moon">
+              <svg class="sts theme-icon-svg" aria-hidden="true" focusable="false">
+                <use href="{{ baseUrl }}/assets/symbols/st-solid.svg#symbol-moon"></use>
+              </svg>
+            </span>
+          </span>
+          <span id="themeLabel" class="sr-only">Ljust läge</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

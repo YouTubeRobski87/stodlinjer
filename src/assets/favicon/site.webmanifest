@@ -1,0 +1,23 @@
+{
+  "name": "Stödlinjer",
+  "short_name": "Stödlinjer",
+  "description": "Svenska stödlinjer och krisstöd",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/assets/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#0f1724",
+  "background_color": "#0f1724",
+  "display": "standalone"
+}

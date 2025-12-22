@@ -1,0 +1,97 @@
+---
+title: >-
+  Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt | Jourhavande Präst, BRIS, Självmordslinjen
+description: >-
+  Stödlinjer samlar alla svenska hjälplinjer på ett ställe. Ring 90101 för akut kris, BRIS 116 111 för unga, Kvinnofridslinjen 020-505050 för våldsutsatta. Gratis, anonymt, dygnet runt.
+keywords: >-
+  stödlinjer, hjälplinjer, självmordslinjen, BRIS, jourhavande präst, kvinnofridslinjen, mental hälsa, kris, depression, ångest, ensamhet, våld, akut hjälp, anhörig, närstående
+permalink: "/"
+pageClass: "solid-bg-shell"
+header:
+  icon: "life-ring"
+  label: "Hitta rätt stöd"
+  title: "Stödlinjer Sverige"
+  subtitle: "Svenska stödlinjer och krisresurser"
+  links:
+    - url: "/artiklar/"
+      icon: "newsletter"
+      text: "Artiklar"
+      aria: "Till artiklar och guider"
+    - url: "/kontakt/"
+      icon: "envelope-letter"
+      text: "Kontakt"
+      aria: "Kontakta oss"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/sections/hero-hotlines.njk" import heroWithHotlines %}
+{% from "partials/sections/intro.njk" import introSection %}
+{% from "partials/sections/search-filters.njk" import searchFiltersSection %}
+{% from "partials/sections/results-grid.njk" import resultsGridSection %}
+{% from "partials/sections/dedicated-list.njk" import dedicatedListSection %}
+{% from "partials/sections/faq.njk" import faqSection %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  {% set heroConfig = {
+    left: {
+      pill: { icon: "heart-shield", text: "Akut stöd" },
+      stat: { icon: "phone-voice", text: "Dygnet runt" },
+      title: "Vid akut kris – ring nu och få stöd direkt",
+      description: "De här numren svarar dygnet runt och du kan vara helt anonym. Spara dem i telefonen – eller dela med någon som behöver stöd.",
+      highlights: [
+        { icon: "shield", title: "Alltid anonymt", text: "Ditt nummer visas inte och samtalet kostar ingenting." },
+        { icon: "share", title: "Dela tryggt", text: "Kopiera numret och skicka det till någon som behöver stöd." },
+        { icon: "calendar-check", title: "Öppet alla dagar", text: "Stödet finns där för dig, även helger och storhelger." }
+      ]
+    },
+    right: {
+      pill: { icon: "lightbulb-idea", text: "Vad du hittar här" },
+      title: "Snabb väg till rätt stödlinje",
+      items: [
+        "Filtrera snabbt fram rätt stödlinje efter behov och situation.",
+        "Sök på namn, känsla, område eller telefonnummer.",
+        "Se öppettider, länkar och klickbara \"ring nu\"-knappar.",
+        "Alla stödlinjer är kostnadsfria, anonyma och lättillgängliga.",
+        "Taggar hjälper dig hitta rätt stöd på sekunder.",
+        "Ingen spårning – endast anonym och minimal statistik."
+      ]
+    }
+  } %}
+  {{ heroWithHotlines(heroConfig) }}
+
+  {% set introParagraphs = [
+    "Ibland kan livet kännas övermäktigt. Det kan handla om ångest, depression, ensamhet, våld, missbruk eller oro för någon du bryr dig om. Då kan det vara en lättnad att prata med någon som lyssnar utan att döma.",
+    "På Stödlinjer.se samlar vi Sveriges viktigaste stödlinjer på ett och samma ställe – så att du snabbt hittar rätt nummer att ringa eller chatt att skriva till. Alla stödlinjer här är seriösa aktörer som erbjuder anonymt och tryggt stöd.
+",
+    { text: "<strong>Akut fara?</strong> Ring alltid <span class=\"font-extrabold\">112</span>.", class: "text-sm muted" }
+  ] %}
+  {{ introSection("Hitta den stödlinje som passar dig bäst", introParagraphs) }}
+
+  {% include "partials/sections/mood-strip.njk" %}
+
+  {{ searchFiltersSection("Sök efter t.ex. BRIS, ångest, våld, anhörig...", ["44 linjer", "7 kategorier"]) }}
+
+  {{ resultsGridSection() }}
+
+  {% set dedicatedData = {
+    title: "För dig som är anhörig eller närstående",
+    paragraphs: [
+      "Att stå bredvid någon som mår dåligt, har ett beroende, är sjuk eller har tagit sitt liv kan vara minst lika tungt som att vara drabbad själv. Du får känna dig trött, arg, maktlös eller uppgiven – och du har rätt till stöd."
+    ],
+    listIntro: "Här är några stödlinjer som vänder sig särskilt till dig som är anhörig eller närstående:",
+    items: [
+      "<strong>Anhöriglinjen</strong> – för dig som stöttar någon som är sjuk, har en funktionsnedsättning, ett beroende eller andra svårigheter.",
+      "<strong>SPES stödlinje</strong> – för dig som har förlorat någon i suicid och vill prata med någon som gått igenom liknande.",
+      "<strong>Föräldralinjen</strong> – för dig som är förälder eller annan viktig vuxen och känner oro för ett barn eller en ung person.",
+      "<strong>Al-Anon Familjegrupper</strong> – en gemenskap för anhöriga till personer med alkoholproblem, med möten både lokalt och digitalt."
+    ],
+    footer: "Observera att telefontider och kontaktvägar kan ändras. Kontrollera alltid aktuella uppgifter på respektive organisations webbplats."
+  } %}
+  {{ dedicatedListSection(dedicatedData) }}
+
+  {{ faqSection(true) }}
+{% endblock %}

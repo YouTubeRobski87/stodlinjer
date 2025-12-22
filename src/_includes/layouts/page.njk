@@ -1,0 +1,168 @@
+{% extends "layouts/base.njk" %}
+{% from "partials/icon.njk" import icon %}
+
+{# Ensure legal pages get a consistent page shell class for styling #}
+{% set pageClass = (pageClass or '') ~ ' solid-bg-shell legal-page-shell' %}
+
+{% block header %}
+  {% set headerData = header or {
+    icon: "fas fa-scale-balanced",
+    label: "Policy",
+    title: title or "Policy",
+    subtitle: description or "Läs mer om våra villkor, integritet och juridik.",
+    links: [
+      { url: "/", icon: "fas fa-house", text: "Startsida", aria: "Till startsidan" },
+      { url: "/artiklar/", icon: "fas fa-newspaper", text: "Artiklar", aria: "Till artiklar och guider" },
+      { url: "/kontakt/", icon: "fas fa-envelope-open-text", text: "Kontakt", aria: "Kontakta oss" }
+    ]
+  } %}
+  {% set header = headerData %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  {% set legalTypes = {
+    PrivacyPolicy: { icon: "fas fa-shield-heart", label: "Integritetspolicy" },
+    TermsOfService: { icon: "fas fa-file-contract", label: "Användarvillkor" },
+    CookiePolicy: { icon: "fas fa-cookie-bite", label: "Cookiepolicy" },
+    Disclaimer: { icon: "fas fa-circle-exclamation", label: "Ansvarsfriskrivning" }
+  } %}
+  {% set docMeta = legalTypes[schemaType] or { icon: "fas fa-file-lines", label: "Policy" } %}
+  {% set showToc = toc is not sameas(false) and toc != 'false' %}
+  {% set pageStatus = status | default('') | lower %}
+  {% set heroHeading = heroTitle or title %}
+  {% set heroIntro = heroLead or description %}
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <article class="surface-card strong-card post-shell legal-shell">
+      <header class="legal-header">
+        <div class="p-6 sm:p-9">
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4">
+            <span class="pill">{{ icon(docMeta.icon) }} {{ docMeta.label }}</span>
+            {% if version %}
+              <span class="stat-chip">{{ icon('fa-code-branch') }} Version {{ version }}</span>
+            {% endif %}
+            {% if pageStatus and pageStatus != 'active' %}
+              <span class="stat-chip">
+                {{ icon('fa-circle-notch') }} Status: {{ status }}
+              </span>
+            {% endif %}
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">
+            {{ heroHeading }}
+          </h1>
+          {% if heroIntro %}
+            <p class="text-lg muted mb-4 max-w-3xl">{{ heroIntro }}</p>
+          {% endif %}
+
+          <div class="flex flex-wrap gap-3 text-sm muted legal-meta-row">
+            {% if effectiveDate %}
+              <span class="stat-chip">
+                {{ icon('fa-calendar-check') }} Gäller från {{ effectiveDate | formatDate }}
+              </span>
+            {% endif %}
+            {% if lastUpdated %}
+              <span class="stat-chip">
+                {{ icon('fa-clock') }} Senast uppdaterad {{ lastUpdated | formatDate }}
+              </span>
+            {% endif %}
+            <a class="inline-link font-semibold" href="{{ baseUrl }}/kontakt/">
+              {{ icon('fa-message') }} Frågor eller rättelser? Kontakta oss
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="post-body">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12">
+          {% if showToc %}
+            <aside class="lg:col-span-4 xl:col-span-3 legal-sidebar">
+              <div class="surface-card strong-card p-4 sm:p-5 legal-toc-card">
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="pill">{{ icon('fa-list-ul') }} Innehåll</span>
+                </div>
+                <nav data-auto-toc class="space-y-2 text-sm muted legal-toc">
+                  <p class="text-sm muted mb-0">Rubriker visas här automatiskt.</p>
+                </nav>
+              </div>
+            </aside>
+          {% endif %}
+
+          <div class="{% if showToc %}lg:col-span-8 xl:col-span-9{% else %}lg:col-span-12{% endif %}">
+            {% if pageStatus and pageStatus != 'active' %}
+              <div class="mb-6 p-4 rounded-lg" style="background: var(--accent-soft); border: 1px solid var(--border);">
+                <p class="font-semibold mb-1">{{ icon('fa-circle-info') }} Status: {{ status }}</p>
+                <p class="muted mb-0">Detta dokument är markerat som {{ status | lower }}. Innehållet kan ändras.</p>
+              </div>
+            {% endif %}
+
+            <div class="post-content legal-content">
+              {{ content | safe }}
+            </div>
+
+            {% if lastUpdated or version %}
+              <div class="mt-8 pt-4 border-t" style="border-color: var(--border);">
+                <p class="text-sm muted mb-1">
+                  {{ icon('fa-shield-check') }}
+                  Senast uppdaterad
+                  {% if lastUpdated %}{{ lastUpdated | formatDate }}{% else %}uppgift saknas{% endif %}
+                  {% if version %}&nbsp;| Version {{ version }}{% endif %}
+                </p>
+                <p class="text-sm muted mb-0">Behöver du ändringar eller ser du fel? <a class="inline-link font-semibold" href="{{ baseUrl }}/kontakt/">Meddela oss</a>.</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  {% if showToc %}
+    <script>
+      (() => {
+        const tocContainer = document.querySelector('[data-auto-toc]');
+        if (!tocContainer) return;
+        const headings = Array.from(document.querySelectorAll('.legal-content h2, .legal-content h3'));
+        if (!headings.length) {
+          tocContainer.innerHTML =
+            '<p class="text-sm muted mb-0">Lägg till underrubriker (##) för att visa en innehållsförteckning.</p>';
+          return;
+        }
+
+        const slugCounts = {};
+        const slugify = (text) => {
+          const base = text
+            .toLowerCase()
+            .trim()
+            .replace(/[^a-z0-9\u00c0-\u024f\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
+          const count = (slugCounts[base] || 0) + 1;
+          slugCounts[base] = count;
+          return count > 1 ? `${base}-${count}` : base;
+        };
+
+        const list = document.createElement('ol');
+        list.className = 'space-y-2 pl-4 list-decimal';
+
+        headings.forEach((heading) => {
+          const text = heading.textContent.trim();
+          const id = heading.id || slugify(text);
+          heading.id = id;
+
+          const item = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = `#${id}`;
+          link.textContent = text;
+          link.className = 'inline-link font-semibold';
+          item.appendChild(link);
+          list.appendChild(item);
+        });
+
+        tocContainer.innerHTML = '';
+        tocContainer.appendChild(list);
+      })();
+    </script>
+  {% endif %}
+{% endblock %}

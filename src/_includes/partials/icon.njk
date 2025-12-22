@@ -1,0 +1,84 @@
+{#
+  Icon macro - renders SVG icons from symbol sprites
+  
+  Usage:
+    {% from "partials/icon.njk" import icon %}
+    {{ icon("search") }}                      - Line icon with hover swap
+    {{ icon("search", "solid") }}             - Solid icon only
+    {{ icon("fa-search") }}                   - FA prefix auto-stripped
+    {{ icon("search", "line", "my-class") }}  - With custom class
+  
+  Aliases are defined inline below. For the canonical list, see /src/_data/icons.json
+#}
+{% macro icon(nameOrClass, style="line", className="") %}
+  {% set tokens = nameOrClass and nameOrClass.split(' ') or [] %}
+  {% set raw = (tokens | length) > 0 and tokens[(tokens | length) - 1] or nameOrClass %}
+  {% set cleaned = (raw or '') | replace('fa-', '') %}
+  
+  {% set aliases = {
+    "calendar-day": "calendar",
+    "calendar-days": "calendar-month",
+    "check": "check-mark-bold",
+    "children": "child",
+    "circle-exclamation": "warning-circle",
+    "circle-info": "information-circle",
+    "circle-question": "question-circle",
+    "clock": "clock",
+    "code": "hashtag",
+    "code-branch": "fork-right",
+    "comment-dots": "chat-bubble-dots",
+    "comments": "chat-bubble",
+    "comments-question": "chat-bubble-question",
+    "cookie-bite": "cookie",
+    "envelope-circle-check": "envelope-check",
+    "envelope-open-text": "envelope-letter",
+    "file-contract": "contract-sign",
+    "file-lines": "file-text",
+    "grid": "grid-3x3",
+    "headset": "headset-1",
+    "heart": "heart-1",
+    "hjalp": "sos",
+    "life-ring": "life-ring-2",
+    "life-ring-1": "life-ring-2",
+    "life-ring-2": "life-ring-2",
+    "list-check": "list-check",
+    "list-ul": "list-unordered",
+    "location-dot": "location-pin",
+    "lock": "lock-locked",
+    "magnifying-glass": "search",
+    "message": "chat-bubble",
+    "message-question": "chat-bubble-question",
+    "paper-plane": "paper-plane",
+    "people-roof": "family",
+    "person-cane": "old-person-cane",
+    "phone-volume": "phone-voice",
+    "quote-left": "quotation",
+    "rotate-right": "triangle-split-right",
+    "scale-balanced": "scale",
+    "share-nodes": "share",
+    "shield-check": "check-shield",
+    "shield-halved": "cross-shield-1",
+    "shield-heart": "heart-shield",
+    "stod": "handshake",
+    "triangle-exclamation": "warning-triangle",
+    "user-shield": "user-shield",
+    "wine-bottle": "wine-glass-1"
+  } %}
+  
+  {% set symbol = aliases[cleaned] if aliases[cleaned] else cleaned %}
+  
+  {% if style == "solid" %}
+    <svg class="sts{% if className %} {{ className }}{% endif %}" aria-hidden="true" focusable="false">
+      <use href="{{ baseUrl }}/assets/symbols/st-solid.svg#symbol-{{ symbol }}"></use>
+    </svg>
+  {% else %}
+    <span class="icon-duo{% if className %} {{ className }}{% endif %}">
+      <svg class="stl icon-line" aria-hidden="true" focusable="false">
+        <use href="{{ baseUrl }}/assets/symbols/st-line.svg#symbol-{{ symbol }}"></use>
+      </svg>
+      <svg class="sts icon-solid" aria-hidden="true" focusable="false">
+        <use href="{{ baseUrl }}/assets/symbols/st-solid.svg#symbol-{{ symbol }}"></use>
+      </svg>
+    </span>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,256 @@
+{# Schema.org JSON-LD structured data #}
+{% set pageSchemaType = schemaType or page.schemaType %}
+
+{# Organization schema - included on all pages #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}",
+  "description": "Samlad information om stödlinjer och hjälpresurser i Sverige för psykisk ohälsa, kriser och svåra livssituationer.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Sweden"
+  },
+  "inLanguage": "sv-SE"
+}
+</script>
+
+{# BreadcrumbList schema - for all pages except homepage #}
+{% if page.url != "/" %}
+{%- set samlingInfo = (samling | getSamling) if samling else null %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hem",
+      "item": "{{ site.url }}/"
+    }
+    {#- Articles archive page: Hem > Artiklar #}
+    {%- if page.url == "/artiklar/" %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Artiklar"
+    }
+    {%- endif %}
+    {#- Contact page: Hem > Kontakt #}
+    {%- if page.url == "/kontakt/" %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Kontakt"
+    }
+    {%- endif %}
+    {#- Collection/samling page: Hem > Artiklar > [Collection name] #}
+    {%- if samling.slug and samling.items %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Artiklar",
+      "item": "{{ site.url }}/artiklar/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ samling.title | escape }}"
+    }
+    {%- endif %}
+    {#- Individual article: Hem > Artiklar > [Collection] > [Article title] #}
+    {%- if (layout == "post.njk" or layout == "layouts/post.njk") and samling %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Artiklar",
+      "item": "{{ site.url }}/artiklar/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ samlingInfo.title | escape }}",
+      "item": "{{ site.url }}/samlingar/{{ samling }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "{{ title | escape }}"
+    }
+    {%- endif %}
+    {#- Generic page (e.g., policy) fallback: Hem > [Page title] #}
+    {%- if pageSchemaType and not samling and page.url not in ["/artiklar/","/kontakt/"] and not (layout == "post.njk" or layout == "layouts/post.njk") %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ title | escape }}"
+    }
+    {%- endif %}
+  ]
+}
+</script>
+{% endif %}
+
+{# Article schema - for regular posts (non-FAQ) #}
+{% if (layout == "post.njk" or layout == "layouts/post.njk") and samling != "faq" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title | escape }}",
+  "description": "{{ description | escape }}",
+  "datePublished": "{{ date | isoDate }}",
+  "dateModified": "{{ date | isoDate }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "inLanguage": "sv-SE"
+  {%- if samling %},
+  "articleSection": "{{ samling }}"
+  {%- endif %}
+}
+</script>
+{% endif %}
+
+{# FAQPage schema - for individual FAQ articles #}
+{% if (layout == "post.njk" or layout == "layouts/post.njk") and samling == "faq" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{{ title | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ description | escape }}"
+      }
+    }
+  ]
+}
+</script>
+{% endif %}
+
+{# FAQPage schema - for FAQ collection page with all questions #}
+{% if samling.slug == "faq" and samling.items %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in samling.items %}
+    {
+      "@type": "Question",
+      "name": "{{ item.data.title | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.data.description | escape }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{# Generic WebPage / Legal schema (e.g., PrivacyPolicy, TermsOfService) #}
+{% if pageSchemaType and not (layout == "post.njk" or layout == "layouts/post.njk") %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ pageSchemaType }}",
+  "name": "{{ title | default(site.name) | escape }}",
+  {% if description %}"description": "{{ description | escape }}",{% endif %}
+  "url": "{{ site.url }}{{ page.url }}",
+  "inLanguage": "{{ site.lang }}",
+  {% if effectiveDate %}"datePublished": "{{ effectiveDate | isoDate }}",{% endif %}
+  {% if lastUpdated %}"dateModified": "{{ lastUpdated | isoDate }}",{% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+{% endif %}
+
+{# WebSite schema with SearchAction - for homepage #}
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.name }}",
+  "url": "{{ site.url }}",
+  "description": "Samlad information om stödlinjer och hjälpresurser i Sverige för psykisk ohälsa, kriser och svåra livssituationer.",
+  "inLanguage": "sv-SE",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{% endif %}
+
+{# Support lines as Organizations with ContactPoints - for homepage #}
+{% if page.url == "/" and supportData %}
+{%- set activeSupportLines = supportData | rejectattr('active', 'equalto', false) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Svenska stödlinjer",
+  "description": "Lista över stödlinjer och hjälpresurser i Sverige för psykisk ohälsa, kriser och svåra livssituationer.",
+  "numberOfItems": {{ activeSupportLines | length }},
+  "itemListElement": [
+    {%- for line in activeSupportLines %}
+    {%- set resourceUrl = line.resource and line.resource.url %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "Organization",
+        "name": "{{ line.title | escape }}",
+        "description": "{{ line.description | striptags | escape }}",
+        {%- if resourceUrl %}
+        "url": "{{ resourceUrl }}",
+        {%- endif %}
+        "areaServed": {
+          "@type": "Country",
+          "name": "Sweden"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          {%- if line.phone %}
+          "telephone": "{{ line.phone }}",
+          {%- endif %}
+          "contactType": "customer support",
+          "areaServed": "SE",
+          "availableLanguage": "Swedish"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}

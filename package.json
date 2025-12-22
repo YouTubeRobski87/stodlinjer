@@ -3,9 +3,13 @@
   "version": "3.0.0",
   "description": "En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe — för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve --port=8080",
-    "watch": "eleventy --watch",
+    "build": "npm run build:css && eleventy",
+    "build:css": "tailwindcss -c tailwind.config.js -i ./src/assets/css/tailwind.css -o ./src/assets/css/tailwind-built.css --postcss --minify",
+    "serve": "npm-run-all --parallel watch:css serve:eleventy",
+    "serve:eleventy": "eleventy --serve --port=8080",
+    "watch": "npm-run-all --parallel watch:css watch:eleventy",
+    "watch:css": "tailwindcss -c tailwind.config.js -i ./src/assets/css/tailwind.css -o ./src/assets/css/tailwind-built.css --postcss --watch",
+    "watch:eleventy": "eleventy --watch",
     "clean": "rm -rf site",
     "start": "npm run serve",
     "index:content": "node scripts/generate-content-index.js"
@@ -21,7 +25,7 @@
   "author": {
     "name": "Robert Claesson",
     "email": "info@stodlinjer.se",
-    "url": "https://stodlinjer.se",
+    "url": "https://stodlinjer.jfageras.se",
     "github": "https://github.com/YouTubeRobski87"
   },
   "license": "MIT",
@@ -31,5 +35,14 @@
     "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1",
+    "postcss-url": "^10.1.3",
+    "tailwindcss": "^3.4.19"
   }
 }

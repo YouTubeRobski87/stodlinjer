@@ -1,0 +1,48 @@
+@layer components {
+  .surface-card {
+    background: var(--card);
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .strong-card {
+    background: var(--card);
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow-strong);
+  }
+
+  body.solid-bg-shell {
+    --card: var(--card-solid);
+    --card-strong: var(--card-solid-strong);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  /* Fill icons in hero left list/strip when hovered/focused */
+  .floating-strip strong:hover .fa,
+  .floating-strip strong:hover .fas,
+  .floating-strip strong:hover .stl,
+  .floating-strip strong:focus-visible .fa,
+  .floating-strip strong:focus-visible .fas,
+  .floating-strip strong:focus-visible .stl,
+  .hero-grid ul li:hover .fa,
+  .hero-grid ul li:hover .fas,
+  .hero-grid ul li:hover .stl,
+  .hero-grid ul li:focus-within .fa,
+  .hero-grid ul li:focus-within .fas,
+  .hero-grid ul li:focus-within .stl {
+    font-family: 'Stodlinjer Solid' !important;
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import './base.css';
+@import './fonts.css';
+@import './themes.css';
+@import './components.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Recursive Variable Font - Tailwind Integration
+   
+   Extends Tailwind's font utilities to include font-variation-settings
+   for the Recursive variable font axes.
+   ========================================================================== */
+
+@layer base {
+  /* Default body text style for all elements using font-sans */
+  .font-sans {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 1;
+  }
+
+  /* Monospace style for code elements */
+  .font-mono {
+    font-variation-settings: 'MONO' 1, 'CASL' 0, 'slnt' 0, 'CRSV' 0;
+  }
+
+  /* Heading text sizes should use heading font-variation-settings */
+  .text-xl,
+  .text-2xl,
+  .text-3xl,
+  .text-4xl,
+  .text-5xl,
+  .text-6xl {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 0;
+  }
+}
+
+@layer utilities {
+  /* ==========================================================================
+     Recursive Axis Utilities
+     
+     These utilities allow fine-grained control over Recursive's variable
+     font axes directly in HTML via Tailwind classes.
+     ========================================================================== */
+
+  /* MONO axis: 0 = proportional (sans), 1 = monospace */
+  .recursive-sans {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 1;
+  }
+
+  .recursive-mono {
+    font-variation-settings: 'MONO' 1, 'CASL' 0, 'slnt' 0, 'CRSV' 0;
+  }
+
+  /* CASL axis: 0 = linear, 1 = casual */
+  .recursive-linear {
+    font-variation-settings: 'MONO' 0, 'CASL' 0, 'slnt' 0, 'CRSV' 0;
+  }
+
+  .recursive-casual {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 1;
+  }
+
+  /* Heading style: casual but with standard letterforms */
+  .recursive-heading {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 0;
+  }
+
+  /* Slanted/italic styles */
+  .recursive-slant {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' -15, 'CRSV' 1;
+  }
+
+  .recursive-slant-subtle {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' -8, 'CRSV' 1;
+  }
+
+  /* Phone numbers: clear, tabular, standard letterforms */
+  .recursive-phone {
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 0;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "layout": "layouts/page.njk",
+  "tags": ["sida"],
+  "permalink": "/sidor/{{ page.fileSlug }}/",
+  "pageClass": "solid-bg-shell legal-page-shell",
+  "header": {
+    "icon": "scale",
+    "label": "Policy & villkor",
+    "title": "Policy, villkor och rättigheter",
+    "subtitle": "Information om integritet, cookies, användarvillkor och ansvarsfriskrivning.",
+    "links": [
+      {
+        "url": "/",
+        "icon": "home",
+        "text": "Startsida",
+        "aria": "Till startsidan"
+      },
+      {
+        "url": "/artiklar/",
+        "icon": "newsletter",
+        "text": "Artiklar",
+        "aria": "Till artiklar och guider"
+      },
+      {
+        "url": "/kontakt/",
+        "icon": "envelope-letter",
+        "text": "Kontakt",
+        "aria": "Kontakta oss"
+      }
+    ]
+  }
+}

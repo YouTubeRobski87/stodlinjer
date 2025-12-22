@@ -1,0 +1,146 @@
+@layer components {
+  .support-card {
+    background: var(--card);
+    border: none;
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .support-card:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Icon swap handled by .icon-duo in stodlinjer-line.css */
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    background: var(--pill);
+    border: none;
+    color: var(--accent);
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .grid-hotlines {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+  }
+
+  .floating-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 14px;
+    border-radius: 8px;
+    background: var(--card);
+    border: none;
+    color: var(--text);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .floating-strip > div {
+    transition: color 0.15s ease;
+  }
+
+  .floating-strip > div:hover {
+    color: var(--accent);
+  }
+
+  :root[data-theme='dark'] .floating-strip {
+    color: var(--text);
+  }
+
+  .card-number {
+    font-size: 1.3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: var(--pill);
+    border: none;
+    color: var(--accent);
+    font-weight: 800;
+    text-decoration: none;
+    font-family: 'Recursive', system-ui, sans-serif;
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 0;
+    transition: color 0.15s ease;
+  }
+
+  .card-number span.card-phone-number {
+    font-family: 'Recursive', system-ui, monospace;
+    font-variation-settings: 'MONO' 1, 'CASL' 1, 'slnt' 0, 'CRSV' -1 !important;
+    font-weight: 750 !important;
+    letter-spacing: -0.75px !important;
+    margin-left: 0.2em;
+  }
+
+  .card-number svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .card-number:hover {
+    color: var(--accent-2);
+  }
+
+  /* Icon swap handled by .icon-duo in stodlinjer-line.css */
+
+  h3 a.card-title-link {
+    line-height: 1.2 !important;
+  }
+  .card-title-link {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .card-title-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .card-meta i {
+    color: var(--accent);
+  }
+
+  .phone-number {
+    font-family: 'Recursive', system-ui, sans-serif;
+    font-variation-settings: 'MONO' 0, 'CASL' 1, 'slnt' 0, 'CRSV' 0;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+  }
+}

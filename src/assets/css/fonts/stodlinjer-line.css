@@ -1,0 +1,330 @@
+/* Stödlinjer Line icons via SVG symbols */
+/* Config: /src/_data/icons.json */
+
+:root {
+  --symbol-color-primary: currentColor;
+  --symbol-color-secondary: currentColor;
+}
+
+.stl {
+  display: inline-block;
+  color: var(--symbol-color-primary);
+  height: 1.25em;
+  width: 1.25em;
+  line-height: 1;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.stl use {
+  fill: var(--symbol-color-secondary);
+  stroke: var(--symbol-color-secondary);
+  stroke-width: 2px !important;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-miterlimit: 10;
+}
+
+/* Ensure nested shapes inside the referenced symbol pick up the width */
+.stl *,
+.stl use * {
+  stroke-width: 2px !important;
+}
+
+/* Keep icons small in specific widgets */
+.quote-icon .stl,
+.quote-icon .sts {
+  height: 1em;
+  width: 1em;
+}
+
+.weather-widget .stl,
+.weather-widget .sts {
+  height: 1em;
+  width: 1em;
+}
+
+/* ==========================================================================
+   Dual Icon Swap System
+   
+   The .icon-duo wrapper contains both line and solid versions of an icon.
+   By default, the line icon is visible. On interaction, the solid icon shows.
+   
+   Two ways to enable the swap:
+   1. Add [data-icon-swap] attribute to any interactive parent element
+   2. Use the legacy component-specific selectors below (for backwards compat)
+   ========================================================================== */
+
+.icon-duo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  vertical-align: middle;
+  position: relative;
+}
+
+.icon-duo .icon-line,
+.icon-duo .icon-solid {
+  transition: opacity 0.15s ease;
+}
+
+.icon-duo .icon-solid {
+  position: absolute;
+  opacity: 0;
+}
+
+.icon-duo .icon-line {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Data Attribute Swap (Recommended)
+   
+   Add data-icon-swap to any element that should swap icons on interaction:
+   <a href="..." data-icon-swap>{{ icon("search") }} Search</a>
+   <button data-icon-swap>{{ icon("phone") }} Call</button>
+   ========================================================================== */
+
+[data-icon-swap]:hover .icon-duo .icon-line,
+[data-icon-swap]:focus-visible .icon-duo .icon-line,
+[data-icon-swap]:focus-within .icon-duo .icon-line,
+[data-icon-swap].is-active .icon-duo .icon-line,
+[data-icon-swap].active .icon-duo .icon-line,
+[data-icon-swap][aria-current='page'] .icon-duo .icon-line,
+[data-icon-swap][aria-pressed='true'] .icon-duo .icon-line {
+  opacity: 0;
+}
+
+[data-icon-swap]:hover .icon-duo .icon-solid,
+[data-icon-swap]:focus-visible .icon-duo .icon-solid,
+[data-icon-swap]:focus-within .icon-duo .icon-solid,
+[data-icon-swap].is-active .icon-duo .icon-solid,
+[data-icon-swap].active .icon-duo .icon-solid,
+[data-icon-swap][aria-current='page'] .icon-duo .icon-solid,
+[data-icon-swap][aria-pressed='true'] .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Legacy Component Selectors (Backwards Compatibility)
+   
+   These selectors maintain the existing behavior for components that don't
+   yet use [data-icon-swap]. Can be gradually removed as components migrate.
+   ========================================================================== */
+
+/* Generic interactive elements */
+a:hover .icon-duo .icon-line,
+a:focus-visible .icon-duo .icon-line,
+button:hover .icon-duo .icon-line,
+button:focus-visible .icon-duo .icon-line,
+.is-active .icon-duo .icon-line,
+.active .icon-duo .icon-line,
+[aria-current='page'] .icon-duo .icon-line {
+  opacity: 0;
+}
+
+a:hover .icon-duo .icon-solid,
+a:focus-visible .icon-duo .icon-solid,
+button:hover .icon-duo .icon-solid,
+button:focus-visible .icon-duo .icon-solid,
+.is-active .icon-duo .icon-solid,
+.active .icon-duo .icon-solid,
+[aria-current='page'] .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Header */
+.header-link:hover .icon-duo .icon-line,
+.header-link:focus-visible .icon-duo .icon-line,
+.header-link.is-active .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.header-link:hover .icon-duo .icon-solid,
+.header-link:focus-visible .icon-duo .icon-solid,
+.header-link.is-active .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Footer */
+.footer-link:hover .icon-duo .icon-line,
+.footer-link:focus-visible .icon-duo .icon-line,
+.footer-heading:hover .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.footer-link:hover .icon-duo .icon-solid,
+.footer-link:focus-visible .icon-duo .icon-solid,
+.footer-heading:hover .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Cards */
+.card-title:hover .icon-duo .icon-line,
+.card-title:focus-within .icon-duo .icon-line,
+.card-number:hover .icon-duo .icon-line,
+.card-number:focus-visible .icon-duo .icon-line,
+.support-card:hover .card-icon .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.card-title:hover .icon-duo .icon-solid,
+.card-title:focus-within .icon-duo .icon-solid,
+.card-number:hover .icon-duo .icon-solid,
+.card-number:focus-visible .icon-duo .icon-solid,
+.support-card:hover .card-icon .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Category buttons */
+.category-btn:hover .icon-duo .icon-line,
+.category-btn:focus-visible .icon-duo .icon-line,
+.category-btn.is-active .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.category-btn:hover .icon-duo .icon-solid,
+.category-btn:focus-visible .icon-duo .icon-solid,
+.category-btn.is-active .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Article cards */
+.samling-chip:hover .icon-duo .icon-line,
+.samling-chip:focus-visible .icon-duo .icon-line,
+.article-card:hover .article-reading-time .icon-duo .icon-line,
+.read-more:hover .icon-duo .icon-line,
+.read-more:focus-visible .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.samling-chip:hover .icon-duo .icon-solid,
+.samling-chip:focus-visible .icon-duo .icon-solid,
+.article-card:hover .article-reading-time .icon-duo .icon-solid,
+.read-more:hover .icon-duo .icon-solid,
+.read-more:focus-visible .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Pagination */
+.pagination-link:hover .icon-duo .icon-line,
+.pagination-link:focus-visible .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.pagination-link:hover .icon-duo .icon-solid,
+.pagination-link:focus-visible .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* UI primitives */
+.pill:hover .icon-duo .icon-line,
+.pill:focus-within .icon-duo .icon-line,
+.stat-chip:hover .icon-duo .icon-line,
+.stat-chip:focus-within .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.pill:hover .icon-duo .icon-solid,
+.pill:focus-within .icon-duo .icon-solid,
+.stat-chip:hover .icon-duo .icon-solid,
+.stat-chip:focus-within .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Quote block */
+.quote-block:hover .icon-duo .icon-line,
+.quote-block:focus-within .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.quote-block:hover .icon-duo .icon-solid,
+.quote-block:focus-within .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* List items */
+li:hover > .icon-duo .icon-line {
+  opacity: 0;
+}
+
+li:hover > .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Contact rows */
+.contact-row:hover .card-icon .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.contact-row:hover .card-icon .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Floating strip items */
+.floating-strip > div:hover .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.floating-strip > div:hover .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Post meta and references */
+.post-meta span:hover .icon-duo .icon-line,
+.post-meta-link:hover .icon-duo .icon-line,
+.post-references p:hover .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.post-meta span:hover .icon-duo .icon-solid,
+.post-meta-link:hover .icon-duo .icon-solid,
+.post-references p:hover .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* Legal page footer */
+.legal-shell .border-t p:hover .icon-duo .icon-line {
+  opacity: 0;
+}
+
+.legal-shell .border-t p:hover .icon-duo .icon-solid {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Stroke Helpers
+   ========================================================================== */
+
+.stroke-1 use {
+  stroke-width: 1px;
+}
+
+.stroke-2 use {
+  stroke-width: 2px;
+}
+
+.stroke-3 use {
+  stroke-width: 3px;
+}
+
+.stroke-4 use {
+  stroke-width: 4px;
+}
+
+.stroke-round use {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Override for specific widgets */
+.quote-icon .stl,
+.quote-icon .sts,
+.theme-toggle .stl,
+.theme-toggle .sts,
+.weather-widget .stl,
+.weather-widget .sts {
+  height: 1.25em !important;
+  width: 1.25em !important;
+}

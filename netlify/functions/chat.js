@@ -48,7 +48,7 @@ Använd evidensbaserad information när det är relevant, men leverera det som h
 
 Om någon uttrycker suicidtankar eller tankar på självskada:
 
-1. Stanna kvar. Panika inte. Avvisa inte.
+1. Stanna kvar. Få inte panik. Avvisa inte.
 2. Bekräfta att de delade detta med dig: "Tack för att du berättar det för mig."
 3. Fråga rakt men varmt: "Har du tankar på att ta ditt liv just nu?" eller "Har du gjort dig själv illa?"
 4. Lyssna på svaret innan du föreslår nästa steg.

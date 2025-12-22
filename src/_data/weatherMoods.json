@@ -1,0 +1,508 @@
+{
+  "iconBasePath": "/assets/icons/meteoicons/",
+  "moods": {
+    "clear": {
+      "codes": [1],
+      "iconDay": "clear-day.svg",
+      "iconNight": "clear-night.svg",
+      "label": "klart",
+      "phrases": [
+        "Solen lyser – ta med dig lite av värmen inåt.",
+        "En klar dag. Du behöver inte vara det.",
+        "Solsken ute. Låt det få värma, om så bara lite.",
+        "Himlen är vid och öppen. Andas.",
+        "Klart väder – en dag i taget räcker.",
+        "Solen gör sitt jobb. Du gör ditt, i din egen takt.",
+        "Ljuset är starkt idag. Det är okej att vila ögonen ändå.",
+        "En solig dag. Även små steg räknas.",
+        "Klarblå himmel – men alla känslor får plats ändå.",
+        "Solen skiner för alla. Även för dig."
+      ]
+    },
+    "nearly_clear": {
+      "codes": [2],
+      "iconDay": "clear-day.svg",
+      "iconNight": "clear-night.svg",
+      "label": "nästan klart",
+      "phrases": [
+        "Nästan klart ute. Du behöver inte ha allt på klart heller.",
+        "Mest sol idag. Ta det som en liten gåva.",
+        "Himlen är ljus – låt dig värmas om du kan.",
+        "Några moln, men solen vinner. Precis som du kan.",
+        "En nästan klar dag. Bra nog är gott nog.",
+        "Solen dominerar himlen. Du får ta dagen som den kommer.",
+        "Ljust och fint ute. Påminn dig om något bra idag.",
+        "Nästan molnfritt – en dag att bara andas.",
+        "Himlen är öppen. Det finns plats för dig också.",
+        "Mest solsken. Du förtjänar lite värme."
+      ]
+    },
+    "partly_cloudy": {
+      "codes": [3],
+      "iconDay": "partly-cloudy-day.svg",
+      "iconNight": "partly-cloudy-night.svg",
+      "label": "halvklart",
+      "phrases": [
+        "Sol och moln turas om. Livet får vara blandat.",
+        "Halvklart – precis som det mesta i livet.",
+        "Solen kikar fram mellan molnen. Håll ut.",
+        "Lite av varje på himlen. Du behöver inte välja heller.",
+        "Moln och sol delar på dagen. Det finns rum för båda.",
+        "Halvklart väder. Ibland räcker det gott.",
+        "Solen finns där, även om molnen skymmer ibland.",
+        "En dag med både och. Det är okej.",
+        "Himlen visar att kontraster kan samsas.",
+        "Sol bakom molnen – den är fortfarande där."
+      ]
+    },
+    "mostly_cloudy": {
+      "codes": [4],
+      "iconDay": "partly-cloudy-day.svg",
+      "iconNight": "partly-cloudy-night.svg",
+      "label": "molnigt",
+      "phrases": [
+        "Molnen dominerar, men solen ger inte upp.",
+        "Grått med glimtar av ljus. Precis som vissa dagar.",
+        "Mest moln idag. En bra dag att vara snäll mot dig själv.",
+        "Solen kämpar sig fram ibland. Du också.",
+        "Molnigt ute – låt dig vila utan dåligt samvete.",
+        "Himlen är täckt, men ljuset finns där bakom.",
+        "En stillsam dag under molnen. Det är okej att ta det lugnt.",
+        "Molnen hänger lågt. Du behöver inte nå högt idag.",
+        "Grått väder kan vara skönt. Inga krav på solsken.",
+        "Mest moln, lite sol. Dagar får vara så."
+      ]
+    },
+    "cloudy": {
+      "codes": [5],
+      "iconDay": "overcast-day.svg",
+      "iconNight": "overcast-night.svg",
+      "label": "molnigt",
+      "phrases": [
+        "Molnigt och lugnt. En dag utan krav.",
+        "Grått ute – perfekt för att ta det varsamt.",
+        "Molnen vilar på himlen. Du får också vila.",
+        "En stilla, grå dag. Ibland är det precis vad man behöver.",
+        "Himlen är mjuk och grå. Ta hand om dig.",
+        "Molnigt väder, men du är inte ensam.",
+        "Grått och stilla – en dag för inre värme.",
+        "Molnen skyddar från skarpt ljus. Vila ögonen.",
+        "En grå dag kan också vara en bra dag.",
+        "Himlen är dämpad. Du får vara det också."
+      ]
+    },
+    "overcast": {
+      "codes": [6],
+      "iconDay": "overcast.svg",
+      "iconNight": "overcast.svg",
+      "label": "mulet",
+      "phrases": [
+        "Mulet och stilla. Världen tar en paus.",
+        "Himlen vilar under ett täcke. Du får göra det också.",
+        "Grått och tryggt. Stanna inne om du vill.",
+        "Mulet väder – perfekt för lugna stunder.",
+        "Hela himlen vilar. Ingen brådska idag.",
+        "Ett grått lock över världen. Mysa om du kan.",
+        "Mulet ute. En påminnelse om att sakta ner.",
+        "Dagen är dämpad och stilla. Det får du också vara.",
+        "Himlen håller låg profil. Du behöver inte prestera heller.",
+        "Mulet och mjukt. Ta vara på stillheten."
+      ]
+    },
+    "fog": {
+      "codes": [7],
+      "iconDay": "fog-day.svg",
+      "iconNight": "fog-night.svg",
+      "label": "dimmigt",
+      "phrases": [
+        "Dimman suddar ut kanterna. Fokusera på det nära.",
+        "Världen är insvept i bomull. Ta det försiktigt.",
+        "I dimman behöver du inte se långt fram.",
+        "Sikten är kort – ett steg i taget räcker.",
+        "Dimman gör allt mjukare. Var mjuk mot dig själv.",
+        "Världen vilar i dis. Du får också ta en paus.",
+        "Dimmigt och stilla. Ibland är det skönt att inte se allt.",
+        "Dimman döljer horisonten. Du behöver inte ha koll på allt.",
+        "I dimma går man sakta. Det är helt rätt.",
+        "Världen är otydlig idag. Det är okej att inte veta."
+      ]
+    },
+    "light_rain_showers": {
+      "codes": [8],
+      "iconDay": "partly-cloudy-day-drizzle.svg",
+      "iconNight": "partly-cloudy-night-drizzle.svg",
+      "label": "lätta regnskurar",
+      "phrases": [
+        "Lätta droppar faller. Låt dem sköta sig.",
+        "Lite skurar – en påminnelse om att ta det lugnt.",
+        "Regnet kommer och går. Precis som det svåra.",
+        "Några droppar mot rutan. En stund att bara lyssna.",
+        "Lätta skurar ute. Du är trygg där inne.",
+        "Det stänker lite. En dag att stanna i värmen.",
+        "Regnet är milt idag. Var mild mot dig också.",
+        "Korta skurar passerar. Det gör stunder också.",
+        "Lätt regn – himlen andas ut lite.",
+        "Några droppar, inget att oroa sig för."
+      ]
+    },
+    "moderate_rain_showers": {
+      "codes": [9],
+      "iconDay": "partly-cloudy-day-rain.svg",
+      "iconNight": "partly-cloudy-night-rain.svg",
+      "label": "regnskurar",
+      "phrases": [
+        "Regnskurar drar förbi. De stannar inte länge.",
+        "Regnet trummar mjukt. Låt det vara en melodi.",
+        "Skurar kommer och går. Du är på rätt plats inomhus.",
+        "Regnet tar hand om världen ute. Ta hand om dig inne.",
+        "Skurar just nu – de går över.",
+        "Regnet faller stadigt. En bra dag för varma drycker.",
+        "Låt regnet göra sitt. Du gör ditt.",
+        "Skurarna passerar. Så gör det mesta.",
+        "Regn mot rutan – en stund att bara vara.",
+        "Det regnar, men du är i säkerhet."
+      ]
+    },
+    "heavy_rain_showers": {
+      "codes": [10],
+      "iconDay": "rain.svg",
+      "iconNight": "rain.svg",
+      "label": "kraftiga regnskurar",
+      "phrases": [
+        "Kraftigt regn ute. Stanna inne och andas.",
+        "Det öser ner – en dag att ta skydd och vila.",
+        "Regnet slår hårt. Du behöver inte vara stark idag.",
+        "Himlen släpper loss. Du får hålla inne.",
+        "Mycket regn, men det går över. Det gör det alltid.",
+        "Vattnet forsar. Ta det lugnt där inne.",
+        "Kraftiga skurar – perfekt ursäkt att bara vara.",
+        "Regnet tar i. Du kan ta det försiktigt.",
+        "Det öser ner ute. Inget att ge sig ut i.",
+        "Vädret kräver inget av dig. Vila."
+      ]
+    },
+    "thunder_showers": {
+      "codes": [11],
+      "iconDay": "thunderstorms-day-rain.svg",
+      "iconNight": "thunderstorms-night-rain.svg",
+      "label": "åskskurar",
+      "phrases": [
+        "Åska och regn. Stormar går över – alltid.",
+        "Det blixtrar och mullrar. Du är trygg inomhus.",
+        "Åskan rensar luften. Ibland behöver saker få rasa.",
+        "Stormen gör sitt. Du behöver bara vänta ut den.",
+        "Blixtar på himlen – naturen visar sin kraft.",
+        "Åskväder ute. En bra stund att dra sig undan.",
+        "Det mullrar i fjärran. Det är okej att känna sig liten.",
+        "Stormen passerar. Det gör tunga stunder också.",
+        "Åskan är stark, men tillfällig. Precis som det svåra.",
+        "Ovädret drar förbi. Håll ut."
+      ]
+    },
+    "light_sleet_showers": {
+      "codes": [12],
+      "iconDay": "partly-cloudy-day-sleet.svg",
+      "iconNight": "partly-cloudy-night-sleet.svg",
+      "label": "lätt snöblandat regn",
+      "phrases": [
+        "Lite slask ute. Vädret behöver inte bestämma sig.",
+        "Varken regn eller snö riktigt. Vissa dagar är så.",
+        "Lätt snöblandat – en dag att hålla sig varm.",
+        "Det blandas i luften. Du behöver inte sortera allt.",
+        "Slaskigt väder. Stanna inne om du kan.",
+        "Lite av varje faller. Det är okej att vara osäker.",
+        "Blandat väder ute. Bra dag för något varmt att dricka.",
+        "Snö och regn möts. Ibland är allt lite rörigt.",
+        "Lätt slask – vädret gör sitt, du gör ditt.",
+        "Det droppar och flingas. Ta hand om dig."
+      ]
+    },
+    "moderate_sleet_showers": {
+      "codes": [13],
+      "iconDay": "sleet.svg",
+      "iconNight": "sleet.svg",
+      "label": "snöblandade regnskurar",
+      "phrases": [
+        "Slask och skurar. Stanna inne om du har möjlighet.",
+        "Snö och regn om vartannat. Inget väder att ge sig ut i.",
+        "Blandat och blött ute. Perfekt dag för inomhusro.",
+        "Vädret kan inte bestämma sig. Du behöver inte heller.",
+        "Slaskigt och grått – ta det extra lugnt.",
+        "Snöblandat regn faller. Du får stanna i värmen.",
+        "Röriga skurar ute. Låt det vara rörigt.",
+        "Det är blött och kallt. Ta hand om dig inne.",
+        "Slask mot rutan. En dag att ta det varsamt.",
+        "Vädret blandar och ger. Du kan vila."
+      ]
+    },
+    "heavy_sleet_showers": {
+      "codes": [14],
+      "iconDay": "sleet.svg",
+      "iconNight": "sleet.svg",
+      "label": "kraftigt snöblandat regn",
+      "phrases": [
+        "Kraftigt slask ute. Undvik att gå ut om du kan.",
+        "Vädret tar i med både snö och regn. Ta det lugnt.",
+        "Tungt slask – en dag att stanna inne.",
+        "Det vräker ner blandat. Du behöver inte ut.",
+        "Kraftigt och blött. Vädret kräver inget av dig.",
+        "Mycket slask ute. Ta hand om dig där inne.",
+        "Snö och regn piskar. Du är trygg inomhus.",
+        "Vädret är på dåligt humör. Du kan vara på ditt eget.",
+        "Tungt slask faller. Vila utan dåligt samvete.",
+        "Det stormar av blandat väder. Vänta ut det."
+      ]
+    },
+    "light_snow_showers": {
+      "codes": [15],
+      "iconDay": "partly-cloudy-day-snow.svg",
+      "iconNight": "partly-cloudy-night-snow.svg",
+      "label": "lätta snöbyar",
+      "phrases": [
+        "Lätta snöflingor dansar. Ta en stund att titta.",
+        "Det snöar försiktigt. Världen blir lite tystare.",
+        "Snön faller mjukt. Låt dig vila också.",
+        "Lätta snöbyar ute. Vinter i sin mildaste form.",
+        "Snöflingor dalar ner. Det finns skönhet i det stilla.",
+        "Lite snö i luften. En stund att bara andas.",
+        "Vintern viskar med lätta flingor. Lyssna om du orkar.",
+        "Lätt snö faller. Världen blir lite mjukare.",
+        "Snöbyar passerar. Låt dem göra sitt.",
+        "Det pudras lite vitt ute. Ta vara på lugnet."
+      ]
+    },
+    "moderate_snow_showers": {
+      "codes": [16],
+      "iconDay": "snow.svg",
+      "iconNight": "snow.svg",
+      "label": "snöbyar",
+      "phrases": [
+        "Snön faller stadigt. En dag att ta det lugnt.",
+        "Snöbyar ute – världen kläs i vitt.",
+        "Det snöar på riktigt nu. Låt dig vila inne.",
+        "Snön lägger sig. Låt dig också landa.",
+        "Vita flingor fyller luften. En stund för stillhet.",
+        "Snöbyar klär om världen. Du får vara som du är.",
+        "Det snöar och snöar. Ingen brådska idag.",
+        "Vinter syns i luften. Ta det varmt.",
+        "Snön faller stadigt – perfekt väder att stanna inne.",
+        "Vita byar utanför. Värm dig inifrån."
+      ]
+    },
+    "heavy_snow_showers": {
+      "codes": [17],
+      "iconDay": "snow.svg",
+      "iconNight": "snow.svg",
+      "label": "kraftiga snöbyar",
+      "phrases": [
+        "Kraftigt snöfall. Stanna inne och ta hand om dig.",
+        "Snön vräker ner. En dag att bara vara.",
+        "Vinter på allvar – låt världen vila under snön.",
+        "Det yrar tätt. Du behöver inte ut.",
+        "Snön faller tungt. Vila utan skuld.",
+        "Kraftiga snöbyar ute. Perfekt dag att stanna inne.",
+        "Världen försvinner i vitt. Du får dra dig tillbaka.",
+        "Det snöar ymnigt. Vänta ut det i värmen.",
+        "Snön tar över. Du kan ta det lugnt.",
+        "Vit mur utanför fönstret. Stanna inne, ta hand om dig."
+      ]
+    },
+    "light_rain": {
+      "codes": [18],
+      "iconDay": "drizzle.svg",
+      "iconNight": "drizzle.svg",
+      "label": "duggregn",
+      "phrases": [
+        "Lätt duggregn faller. Världen blir lite mjukare.",
+        "Det duggar stilla. En dag att ta det försiktigt.",
+        "Fint regn mot rutan. Låt det vara en stunds sällskap.",
+        "Duggregn ute. Lugnt väder för lugna tankar.",
+        "Lätta droppar. Ingenting som kräver något av dig.",
+        "Det regnar milt. Var mild mot dig själv också.",
+        "Stilla dugg. En dag utan brådska.",
+        "Regnet viskar ute. Du behöver inte svara.",
+        "Lätt fukt i luften. Stanna inne om du vill.",
+        "Duggregn faller tyst. Låt tystnaden vara skön."
+      ]
+    },
+    "moderate_rain": {
+      "codes": [19],
+      "iconDay": "rain.svg",
+      "iconNight": "rain.svg",
+      "label": "regn",
+      "phrases": [
+        "Det regnar. Himlen släpper taget ibland.",
+        "Regn mot rutan – en stund att bara vara inne.",
+        "Stadigt regn ute. Du är på rätt plats inomhus.",
+        "Det regnar, men du är trygg.",
+        "Regnet faller jämnt. Låt det sköta sig.",
+        "Grått och vått. En dag att ta det stilla.",
+        "Regn ute – bra väder för värme inne.",
+        "Det regnar som det ska. Du gör det du kan.",
+        "Regndroppar rinner nerför rutan. Låt tankarna vandra.",
+        "Regn och lugn. Ta vara på inomhusstunden."
+      ]
+    },
+    "heavy_rain": {
+      "codes": [20],
+      "iconDay": "rain.svg",
+      "iconNight": "rain.svg",
+      "label": "kraftigt regn",
+      "phrases": [
+        "Kraftigt regn faller. Du behöver inte ut i det.",
+        "Det öser ner. Stanna inne och ta hand om dig.",
+        "Regnet slår hårt – en dag att ta skydd.",
+        "Himlen tömmer sig. Du kan bara vila.",
+        "Mycket regn ute. Vädret kräver inget av dig.",
+        "Det regnar tungt. Låt dig stanna inne.",
+        "Kraftiga droppar mot rutan. Du är trygg där du är.",
+        "Vattnet forsar från himlen. Vila utan dåligt samvete.",
+        "Det störtregnar. Perfekt dag att bara vara.",
+        "Regnet tar i. Du behöver inte göra det."
+      ]
+    },
+    "thunder": {
+      "codes": [21],
+      "iconDay": "thunderstorms-day.svg",
+      "iconNight": "thunderstorms-night.svg",
+      "label": "åska",
+      "phrases": [
+        "Åska utan regn. Naturen visar vad den går för.",
+        "Det mullrar där ute. Du är trygg inne.",
+        "Åskan rullar i fjärran. Den passerar.",
+        "Blixtar lyser upp himlen. Ta en stund att bara titta.",
+        "Åska i luften – kraftfullt, men tillfälligt.",
+        "Det dundrar ute. Du får vara stilla.",
+        "Åskan gör sitt. Du behöver inte göra något.",
+        "Mullret hörs. Stormar går alltid över.",
+        "Åska utan regn – himlen andas ut.",
+        "Det blixtrar till ibland. Du är på rätt plats."
+      ]
+    },
+    "light_sleet": {
+      "codes": [22],
+      "iconDay": "sleet.svg",
+      "iconNight": "sleet.svg",
+      "label": "lätt snöblandat regn",
+      "phrases": [
+        "Lätt slask ute. Håll dig varm.",
+        "Snö och regn blandas försiktigt. Stanna inne om du kan.",
+        "Lite snöblandat faller. En dag att ta det lugnt.",
+        "Vädret är osäkert. Det får du också vara.",
+        "Lätt slask – varken vinter eller höst riktigt.",
+        "Det droppar och flingas lätt. Ta hand om dig.",
+        "Blandat väder ute. Bra dag att värma sig inifrån.",
+        "Lite av varje faller från himlen. Vila om du behöver.",
+        "Lätt snöblandat regn. Ingen dag att stressa.",
+        "Det slaskar försiktigt. Du kan ta det försiktigt också."
+      ]
+    },
+    "moderate_sleet": {
+      "codes": [23],
+      "iconDay": "sleet.svg",
+      "iconNight": "sleet.svg",
+      "label": "snöblandat regn",
+      "phrases": [
+        "Slask ute. En dag att stanna inne.",
+        "Snöblandat regn faller. Perfekt väder för te och lugn.",
+        "Vädret blandar och ger. Du behöver inte välja.",
+        "Blött och kallt därute. Värm dig inifrån.",
+        "Slask mot rutan. Låt det vara bakgrundsljud.",
+        "Varken snö eller regn riktigt. Sådana dagar finns.",
+        "Det slaskar stadigt. Du är bra där du är.",
+        "Grått och vått ute. Ta det lugnt inne.",
+        "Snö och regn möts. En dag för inomhusvärme.",
+        "Slaskigt väder. Inga förväntningar idag."
+      ]
+    },
+    "heavy_sleet": {
+      "codes": [24],
+      "iconDay": "sleet.svg",
+      "iconNight": "sleet.svg",
+      "label": "kraftigt snöblandat regn",
+      "phrases": [
+        "Kraftigt slask ute. Stanna inne om du kan.",
+        "Det vräker ner blandat. Ta hand om dig inne.",
+        "Tungt snöblandat regn. Ingen dag att ge sig ut.",
+        "Vädret tar i ordentligt. Du behöver inte göra det.",
+        "Slasket faller tungt. Vila utan skuld.",
+        "Mycket blött och kallt. Håll dig inomhus.",
+        "Kraftigt slask mot rutan. Du är trygg där inne.",
+        "Vädret kämpar med sig självt. Du kan ta det lugnt.",
+        "Tungt och blött ute. Perfekt dag att bara vara.",
+        "Det piskar slask. Stanna inne och värm dig."
+      ]
+    },
+    "light_snow": {
+      "codes": [25],
+      "iconDay": "partly-cloudy-day-snow.svg",
+      "iconNight": "partly-cloudy-night-snow.svg",
+      "label": "lätt snöfall",
+      "phrases": [
+        "Lätt snö faller tyst. Världen blir stillare.",
+        "Snöflingor dalar ner. Ta en stund att bara vara.",
+        "Det snöar försiktigt. Vintern smyger sig på.",
+        "Lätt snöfall ute. En mjuk dag.",
+        "Snön lägger sig sakta. Låt dig också landa.",
+        "Lätta flingor i luften. Det finns skönhet i det stilla.",
+        "Det pudras vitt ute. Ta vara på lugnet.",
+        "Snön viskar. Lyssna om du orkar.",
+        "Lätt snö klär världen. Du får vara som du är.",
+        "Flingor dansar utanför fönstret. En stund för stillhet."
+      ]
+    },
+    "moderate_snow": {
+      "codes": [26],
+      "iconDay": "snow.svg",
+      "iconNight": "snow.svg",
+      "label": "snöfall",
+      "phrases": [
+        "Snön faller jämnt. En dag för lugn och ro.",
+        "Det snöar stadigt ute. Världen saktar ner.",
+        "Snöfall täcker allt. Låt dig också vila.",
+        "Vitt lägger sig över staden. Ta det stilla.",
+        "Snön faller och faller. Ingen brådska idag.",
+        "Stadigt snöfall. Värm dig inifrån.",
+        "Världen kläs i vitt. Du får stanna inne.",
+        "Det snöar fint. En dag att ta hand om dig.",
+        "Snön lägger ett täcke över allt. Vila under ditt.",
+        "Vintervitt ute. Låt stillheten få plats."
+      ]
+    },
+    "heavy_snow": {
+      "codes": [27],
+      "iconDay": "snow.svg",
+      "iconNight": "snow.svg",
+      "label": "kraftigt snöfall",
+      "phrases": [
+        "Kraftigt snöfall ute. Stanna inne och ta det lugnt.",
+        "Snön vräker ner. En dag att bara vara inne.",
+        "Det yrar tätt utanför. Du behöver inte ut.",
+        "Vinter på riktigt. Vila utan dåligt samvete.",
+        "Snön faller tungt. Världen stannar upp.",
+        "Kraftiga snömassor ute. Ta hand om dig inne.",
+        "Det snöar ymnigt. Låt världen vila i vitt.",
+        "Snöstorm ute. Du är trygg där inne.",
+        "Allt försvinner i snö. Stanna inne, värm dig.",
+        "Snön tar över allt. Du kan ta det lugnt."
+      ]
+    }
+  },
+  "fallback": {
+    "iconDay": "overcast-day.svg",
+    "iconNight": "overcast-night.svg",
+    "label": "växlande",
+    "phrases": [
+      "Vädret gör sitt. Du gör ditt.",
+      "Oavsett väder – du förtjänar en bra dag.",
+      "Vad det än är för väder ute, ta hand om dig.",
+      "Vädret spelar ingen roll just nu. Du gör det.",
+      "Himlen får vara som den vill. Ta hand om dig.",
+      "Vilket väder det än är – du är värd omtanke.",
+      "Vädret är vädret. Du är viktigare.",
+      "Ute är ute. Inne finns du, och det räcker.",
+      "Vädret kunde inte hämtas, men du är här.",
+      "Okänt väder, men du vet vad du behöver."
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "handlingsguider",
+    "title": "Handlingsguider",
+    "summary": "Konkreta steg-för-steg-guider som hjälper dig agera tryggt i svåra situationer.",
+    "description": "Praktiska och evidensbaserade guider som visar hur du hanterar svåra situationer steg för steg. Här får du tydliga, handlingsinriktade råd som hjälper dig skapa trygghet, fatta beslut och stötta både dig själv och andra på ett säkert sätt.",
+    "icon": "lighthouse"
+  },
+  {
+    "slug": "samtalsstod",
+    "title": "Samtalsstöd",
+    "summary": "Trygga råd om hur du pratar med någon som mår dåligt eller befinner sig i kris.",
+    "description": "Evidensbaserade samtalsverktyg som hjälper dig hitta rätt ord i svåra situationer. Här får du konkreta exempel, tryggt bemötande, vanliga fallgropar att undvika och stöd i hur du kan lyssna, validera och kommunicera på ett respektfullt sätt.",
+    "icon": "chat-bubble-heart"
+  },
+  {
+    "slug": "fakta-myter",
+    "title": "Fakta & myter",
+    "summary": "Korta, evidensbaserade artiklar som förklarar vanliga myter och ger klar, pålitlig kunskap.",
+    "description": "Lättillgängliga och vetenskapligt grundade texter som reder ut vanliga missuppfattningar om psykisk hälsa, våld, missbruk och stöd. Här får du tydliga fakta, trygga förklaringar och hjälp att förstå vad forskningen faktiskt säger.",
+    "icon": "question"
+  },
+  {
+    "slug": "faq",
+    "title": "Frågor & svar",
+    "summary": "Korta, tydliga svar på vanliga frågor om stöd, psykisk hälsa och viktiga situationer.",
+    "description": "Snabbtillgängliga och lättförståeliga svar på vanliga frågor om psykisk hälsa, stödlinjer och svåra livssituationer. Här får du klara förklaringar, praktiska råd och trygg vägledning när du undrar över något viktigt.",
+    "icon": "chat-bubble-question"
+  },
+  {
+    "slug": "fordjupning",
+    "title": "Fördjupningar",
+    "summary": "Längre, tematiska artiklar som förklarar komplexa ämnen med tydlighet, forskning och sammanhang.",
+    "description": "Fördjupande och evidensbaserade texter som utforskar viktiga teman inom psykisk hälsa, våld, beroende och anhörigstöd. Här får du sammanhang, bakgrund och förståelse genom längre artiklar som går bortom det grundläggande och ger en bredare kunskapsbild.",
+    "icon": "telescope"
+  },
+  {
+    "slug": "rattigheter-skydd",
+    "title": "Rättigheter & skydd",
+    "summary": "Tydlig vägledning om dina rättigheter, vilket skydd som finns och hur samhällets stöd fungerar i praktiken.",
+    "description": "Evidensbaserad och begriplig information om lagar, rättigheter och skydd när det gäller psykisk ohälsa, våld, beroende och utsatthet. Här får du stöd i att förstå vad du har rätt till, hur olika verksamheter fungerar och vilka vägar som finns för att få tryggt och säkert stöd.",
+    "icon": "scale"
+  }
+]

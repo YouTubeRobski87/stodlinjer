@@ -1,0 +1,26 @@
+{
+  "layout": "layouts/post.njk",
+  "tags": ["artikel"],
+  "permalink": "/{{ page.filePathStem }}/",
+  "pageClass": "article-shell",
+  "header": {
+    "icon": "book-open",
+    "label": "Kunskap & artiklar",
+    "title": "Fördjupning om stöd",
+    "subtitle": "Fördjupade guider och råd kopplade till svenska stödlinjer.",
+    "links": [
+      {
+        "url": "/",
+        "icon": "home",
+        "text": "Startsida",
+        "aria": "Till startsidan"
+      },
+      {
+        "url": "/artiklar/",
+        "icon": "newsletter",
+        "text": "Artiklar",
+        "aria": "Till artiklar och guider"
+      }
+    ]
+  }
+}
