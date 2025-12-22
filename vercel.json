@@ -1,5 +1,11 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run index:content && npm run build",
-  "outputDirectory": "site"
+  "outputDirectory": "site",
+  "functions": {
+    "api/chat.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
 }

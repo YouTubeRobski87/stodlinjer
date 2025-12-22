@@ -5,8 +5,8 @@ const matter = require('gray-matter');
 const MarkdownIt = require('markdown-it');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-const DATA_DIR = path.join(ROOT_DIR, '_data');
-const ARTICLES_DIR = path.join(ROOT_DIR, 'artiklar');
+const DATA_DIR = path.join(ROOT_DIR, 'src', '_data');
+const ARTICLES_DIR = path.join(ROOT_DIR, 'src', 'artiklar');
 const OUTPUT_DIR = path.join(ROOT_DIR, '.chatdata');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'content-index.json');
 
@@ -62,30 +62,33 @@ function normalizeTags(tags) {
   return unique.length ? unique : undefined;
 }
 
-function mapSupportLines(data) {
+function mapSupportData(data) {
   if (!Array.isArray(data)) return [];
-  return data.map((item, index) => {
-    const title = item.name || `Supportline ${item.id ?? index + 1}`;
-    const fallbackId = item.id ?? (slugify(title) || index + 1);
-    const parts = [];
-    if (item.description) parts.push(item.description);
-    if (item.available) parts.push(`Tillgänglighet: ${item.available}`);
-    if (item.number) parts.push(`Telefon: ${item.number}`);
-    if (item.url) parts.push(`Mer info: ${item.url}`);
+  return data
+    .filter((item) => item && item.active !== false)
+    .map((item, index) => {
+      const title = item.title || item.name || `Supportline ${item.id ?? index + 1}`;
+      const fallbackId = item.id ?? (slugify(title) || index + 1);
+      const availabilityLabel = item.availability?.label;
+      const parts = [];
+      if (item.description) parts.push(item.description);
+      if (availabilityLabel) parts.push(`Tillgänglighet: ${availabilityLabel}`);
+      if (item.phone) parts.push(`Telefon: ${item.phone}`);
+      if (item.resource?.url) parts.push(`Mer info: ${item.resource.url}`);
 
-    return {
-      id: `supportline-${fallbackId}`,
-      title,
-      type: 'supportline',
-      samling: null,
-      content: parts.join('\n'),
-      tags: normalizeTags([
-        'supportline',
-        item.category,
-        ...(Array.isArray(item.tags) ? item.tags : [])
-      ])
-    };
-  });
+      return {
+        id: `supportline-${fallbackId}`,
+        title,
+        type: 'supportline',
+        samling: null,
+        content: parts.join('\n'),
+        tags: normalizeTags([
+          'supportline',
+          item.category,
+          ...(Array.isArray(item.tags) ? item.tags : [])
+        ])
+      };
+    });
 }
 
 function mapQuotes(data) {
@@ -155,7 +158,8 @@ function mapGenericDataset(name, data) {
 }
 
 function mapJsonDataset(name, data) {
-  if (name === 'support-lines') return mapSupportLines(data);
+  if (name === 'supportData') return mapSupportData(data);
+  if (name === 'support-lines') return [];
   if (name === 'quotes') return mapQuotes(data);
   if (name === 'samlingar') return mapSamlingar(data);
   return mapGenericDataset(name, data);
@@ -176,6 +180,15 @@ async function readJsonData() {
   return entries;
 }
 
+/**
+ * Strip date prefix from filename to match Eleventy's URL generation.
+ * Eleventy removes YYYY-MM-DD- prefixes from filenames when generating URLs.
+ * e.g., "2025-11-12-my-article" becomes "my-article"
+ */
+function stripDatePrefix(filename) {
+  return filename.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+}
+
 async function readArticles() {
   const files = await fg('**/*.md', { cwd: ARTICLES_DIR });
   const entries = [];
@@ -184,7 +197,15 @@ async function readArticles() {
     const filePath = path.join(ARTICLES_DIR, file);
     const raw = await fs.readFile(filePath, 'utf8');
     const parsed = matter(raw);
-    const relativeId = file.replace(/\.md$/, '').split(path.sep).join('/');
+    
+    // Build the URL path matching Eleventy's output structure:
+    // - Add /artiklar/ prefix
+    // - Strip date prefix from filename
+    // e.g., "samtalsstod/2025-11-12-my-article.md" -> "artiklar/samtalsstod/my-article"
+    const parts = file.replace(/\.md$/, '').split(path.sep);
+    const lastPart = parts[parts.length - 1];
+    parts[parts.length - 1] = stripDatePrefix(lastPart);
+    const relativeId = 'artiklar/' + parts.join('/');
 
     const textBody = markdownToText(parsed.content || '');
     const description = parsed.data.description ? parsed.data.description.trim() : '';
