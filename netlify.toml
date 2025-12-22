@@ -1,6 +1,0 @@
-[functions]
-  directory = "netlify/functions"
-
-[build]
-  publish = "site"
-  command = "npm run build"
