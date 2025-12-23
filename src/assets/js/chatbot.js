@@ -82,19 +82,28 @@ async function loadSupportSources() {
 function normalizeBotText(text) {
   const lines = text.split('\n');
   const outputLines = [];
+  let pendingItems = [];
   let lastWasBlank = false;
 
+  const flushItems = () => {
+    if (!pendingItems.length) return;
+    outputLines.push(pendingItems.join(' '));
+    pendingItems = [];
+    lastWasBlank = false;
+  };
+
   lines.forEach((line) => {
-    const strippedLine = line.replace(/\s*[📌\u2022].*$/u, '').trimEnd();
-    const withoutLinks = strippedLine
+    const withoutLinks = line
       .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi, '$1')
       .replace(/\bhttps?:\/\/[^\s)]+/gi, '')
       .replace(/\bwww\.[^\s)]+/gi, '')
       .replace(/\b[^\s]+\.(se|com|net|org|nu|info|io|ai)(\/[^\s]*)?/gi, '')
+      .replace(/[📌•\u2022]/g, '')
       .replace(/\s{2,}/g, ' ')
       .trim();
     const trimmed = withoutLinks.trim();
     if (!trimmed) {
+      flushItems();
       if (!lastWasBlank) {
         outputLines.push('');
         lastWasBlank = true;
@@ -106,14 +115,19 @@ function normalizeBotText(text) {
       /^([*-\u2013\u2014]|\u2022|\uD83D\uDCCC|\d+[.)\]])\s*(.*)$/
     );
     if (listMatch) {
+      if (listMatch[2]) {
+        pendingItems.push(listMatch[2]);
+      }
       lastWasBlank = false;
       return;
     }
 
+    flushItems();
     outputLines.push(withoutLinks);
     lastWasBlank = false;
   });
 
+  flushItems();
   while (outputLines.length && outputLines[0] === '') outputLines.shift();
   while (outputLines.length && outputLines[outputLines.length - 1] === '') outputLines.pop();
   return outputLines.join('\n');
