@@ -297,4 +297,10 @@
     width: min(100%, 94vw);
     height: min(80vh, 520px);
   }
+  
+  /* Visa bara första stycket i AI-svar */
+.chat-message.ai p:not(:first-of-type) {
+  display: none !important;
+}
+
 }
