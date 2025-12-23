@@ -82,36 +82,33 @@ async function loadSupportSources() {
 function normalizeBotText(text) {
   const lines = text.split('\n');
   const outputLines = [];
-  let buffer = [];
-
-  const flush = () => {
-    if (buffer.length) {
-      outputLines.push(buffer.join(' '));
-      buffer = [];
-    }
-  };
+  let lastWasBlank = false;
 
   lines.forEach((line) => {
-    const trimmed = line.trim();
+    const strippedLine = line.replace(/\s*[📌\u2022].*$/u, '').trimEnd();
+    const trimmed = strippedLine.trim();
     if (!trimmed) {
-      flush();
-      outputLines.push('');
+      if (!lastWasBlank) {
+        outputLines.push('');
+        lastWasBlank = true;
+      }
       return;
     }
 
     const listMatch = trimmed.match(
-      /^([*-\u2013\u2014]|\u2022|\uD83D\uDCCC|\d+[.)\]])\s+(.*)$/
+      /^([*-\u2013\u2014]|\u2022|\uD83D\uDCCC|\d+[.)\]])\s*(.*)$/
     );
     if (listMatch) {
-      buffer.push(listMatch[2]);
+      lastWasBlank = false;
       return;
     }
 
-    flush();
-    outputLines.push(line);
+    outputLines.push(strippedLine);
+    lastWasBlank = false;
   });
 
-  flush();
+  while (outputLines.length && outputLines[0] === '') outputLines.shift();
+  while (outputLines.length && outputLines[outputLines.length - 1] === '') outputLines.pop();
   return outputLines.join('\n');
 }
 
