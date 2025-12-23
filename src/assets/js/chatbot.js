@@ -85,11 +85,24 @@ function renderMessage(logEl, { role, content, sources = [] }) {
 
   const bubble = document.createElement('div');
   bubble.className = `chatbot-message ${role}`;
-  const lines = (content || '').split('\n');
-  lines.forEach((line, idx) => {
-    bubble.appendChild(document.createTextNode(line));
-    if (idx < lines.length - 1) bubble.appendChild(document.createElement('br'));
-  });
+  const text = content == null ? '' : String(content);
+  const paragraphs = text
+    .split(/\n{2,}/)
+    .filter((paragraph) => paragraph.trim().length > 0);
+
+  if (!paragraphs.length) {
+    bubble.textContent = '';
+  } else {
+    paragraphs.forEach((paragraph) => {
+      const p = document.createElement('p');
+      const lines = paragraph.split('\n');
+      lines.forEach((line, idx) => {
+        p.appendChild(document.createTextNode(line));
+        if (idx < lines.length - 1) p.appendChild(document.createElement('br'));
+      });
+      bubble.appendChild(p);
+    });
+  }
 
   if (sources.length) {
     const wrap = document.createElement('div');

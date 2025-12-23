@@ -297,4 +297,25 @@
     width: min(100%, 94vw);
     height: min(80vh, 520px);
   }
+
+/* Dölj automatiska listor/länkar som AI lägger efter sitt svar */
+.chat-message.ai ul,
+.chat-message.ai ol,
+.chat-message.ai li {
+  display: none;
+
+/* Ta bort automatiska rekommendationslistor och länkar efter AI-svar */
+.chat-message.ai ul,
+.chat-message.ai li,
+.chat-message.ai a {
+  display: none !important;
+
+/* Visa bara första stycket i AI-svar */
+.chat-message.ai p:not(:first-of-type) {
+  display: none !important;
 }
+
+}
+
+
+

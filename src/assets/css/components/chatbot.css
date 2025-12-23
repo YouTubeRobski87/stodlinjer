@@ -195,6 +195,18 @@
     border-bottom-left-radius: 2px;
   }
 
+  .chatbot-message p {
+    margin: 0;
+  }
+
+  .chatbot-message p + p {
+    margin-top: 0.5rem;
+  }
+
+  .chatbot-message.bot p:not(:first-of-type) {
+    display: none !important;
+  }
+
   .chatbot-message .meta {
     display: block;
     color: var(--muted);
