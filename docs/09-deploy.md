@@ -348,7 +348,7 @@ Om du har en egen domän (t.ex. `stodlinjer.se`):
 A     @    75.2.60.5
 
 # För www-subdomänen (www.stodlinjer.se)
-CNAME www  stodlinjer.netlify.app
+CNAME www  cdfd325587aa5b13.vercel-dns-017.com.
 ```
 
 > 💡 **Tips:** Netlify DNS (gratis) hanterar allt detta automatiskt om du låter Netlify hantera din domäns DNS.
