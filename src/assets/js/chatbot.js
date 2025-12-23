@@ -86,7 +86,14 @@ function normalizeBotText(text) {
 
   lines.forEach((line) => {
     const strippedLine = line.replace(/\s*[📌\u2022].*$/u, '').trimEnd();
-    const trimmed = strippedLine.trim();
+    const withoutLinks = strippedLine
+      .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi, '$1')
+      .replace(/\bhttps?:\/\/[^\s)]+/gi, '')
+      .replace(/\bwww\.[^\s)]+/gi, '')
+      .replace(/\b[^\s]+\.(se|com|net|org|nu|info|io|ai)(\/[^\s]*)?/gi, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+    const trimmed = withoutLinks.trim();
     if (!trimmed) {
       if (!lastWasBlank) {
         outputLines.push('');
@@ -103,7 +110,7 @@ function normalizeBotText(text) {
       return;
     }
 
-    outputLines.push(strippedLine);
+    outputLines.push(withoutLinks);
     lastWasBlank = false;
   });
 
