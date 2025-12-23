@@ -10,7 +10,7 @@ status: active
 toc: true
 noindex: false
 schemaType: PrivacyPolicy
-canonical: https://stodlinjer.jfageras.se/sidor/integritetspolicy/
+canonical: https://stodlinjer.se/sidor/integritetspolicy/
 heroTitle: Integritetspolicy
 heroLead: Så behandlar vi personuppgifter, cookies och anonymitet på Stödlinjer.
 ---

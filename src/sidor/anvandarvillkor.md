@@ -10,7 +10,7 @@ status: active
 toc: true
 noindex: false
 schemaType: WebPage
-canonical: https://stodlinjer.jfageras.se/sidor/anvandarvillkor/
+canonical: https://stodlinjer.se/sidor/anvandarvillkor/
 heroTitle: Användarvillkor
 heroLead: Villkor som gäller när du använder Stödlinjer.
 ---

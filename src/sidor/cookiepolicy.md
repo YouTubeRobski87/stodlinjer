@@ -10,7 +10,7 @@ status: active
 toc: true
 noindex: false
 schemaType: WebPage
-canonical: https://stodlinjer.jfageras.se/sidor/cookiepolicy/
+canonical: https://stodlinjer.se/sidor/cookiepolicy/
 heroTitle: Cookiepolicy
 heroLead: Hur vi använder cookies och liknande tekniker på Stödlinjer.
 ---
