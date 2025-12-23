@@ -222,7 +222,7 @@
   }
 
   .chatbot-message.bot .chatbot-sources {
-    display: none;
+    display: none !important;
   }
 
   .chatbot-source {

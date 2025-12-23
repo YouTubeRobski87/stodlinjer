@@ -99,7 +99,9 @@ function normalizeBotText(text) {
       return;
     }
 
-    const listMatch = trimmed.match(/^([*-]|\u2022|\d+[.)\]])\s+(.*)$/);
+    const listMatch = trimmed.match(
+      /^([*-\u2013\u2014]|\u2022|\uD83D\uDCCC|\d+[.)\]])\s+(.*)$/
+    );
     if (listMatch) {
       buffer.push(listMatch[2]);
       return;
