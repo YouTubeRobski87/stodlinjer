@@ -19,6 +19,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(assetsDir);
   eleventyConfig.addPassthroughCopy({ [dataDir]: 'data' });
   eleventyConfig.addPassthroughCopy({ '.chatdata': 'chatdata' });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@vercel/speed-insights/dist/index.mjs': 'assets/vendor/speed-insights.js'
+  });
 
   eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
 

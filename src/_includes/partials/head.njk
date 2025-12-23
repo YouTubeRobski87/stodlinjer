@@ -60,6 +60,13 @@
   })();
 </script>
 <script>window.BASE_URL = '{{ baseUrl }}';</script>
+<script type="importmap">
+  {
+    "imports": {
+      "@vercel/speed-insights": "{{ baseUrl }}/assets/vendor/speed-insights.js"
+    }
+  }
+</script>
 <link rel="stylesheet" href="{{ baseUrl }}/assets/css/tailwind-built.css" />
 
 {# Structured data #}

@@ -1,7 +1,10 @@
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
 // ==========================================================================
 // Base URL (set by template, defaults to '' for local dev)
 // ==========================================================================
 const BASE_URL = window.BASE_URL || '';
+injectSpeedInsights();
 
 // ==========================================================================
 // Icon System
