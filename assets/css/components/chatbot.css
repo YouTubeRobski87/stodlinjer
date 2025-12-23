@@ -297,6 +297,7 @@
     width: min(100%, 94vw);
     height: min(80vh, 520px);
   }
+<<<<<<< HEAD
 
 /* Dölj automatiska listor/länkar som AI lägger efter sitt svar */
 .chat-message.ai ul,
@@ -313,6 +314,14 @@
 /* Visa bara första stycket i AI-svar */
 .chat-message.ai p:not(:first-of-type) {
   display: none !important;
+=======
+  
+  /* Visa bara första stycket i AI-svar */
+.chat-message.ai p:not(:first-of-type) {
+  display: none !important;
+}
+
+>>>>>>> 83fed54402dc12863d92bdfebb593ce0d427cd0e
 }
 
 }
