@@ -221,6 +221,10 @@
     gap: 0.35rem;
   }
 
+  .chatbot-message.bot .chatbot-sources {
+    display: none;
+  }
+
   .chatbot-source {
     display: inline-flex;
     align-items: center;

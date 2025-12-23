@@ -79,13 +79,48 @@ async function loadSupportSources() {
   }
 }
 
+function normalizeBotText(text) {
+  const lines = text.split('\n');
+  const outputLines = [];
+  let buffer = [];
+
+  const flush = () => {
+    if (buffer.length) {
+      outputLines.push(buffer.join(' '));
+      buffer = [];
+    }
+  };
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      flush();
+      outputLines.push('');
+      return;
+    }
+
+    const listMatch = trimmed.match(/^([*-]|\u2022|\d+[.)\]])\s+(.*)$/);
+    if (listMatch) {
+      buffer.push(listMatch[2]);
+      return;
+    }
+
+    flush();
+    outputLines.push(line);
+  });
+
+  flush();
+  return outputLines.join('\n');
+}
+
 function renderMessage(logEl, { role, content, sources = [] }) {
   const row = document.createElement('div');
   row.className = `chatbot-message-row ${role}`;
 
   const bubble = document.createElement('div');
   bubble.className = `chatbot-message ${role}`;
-  const text = content == null ? '' : String(content);
+  const rawText = content == null ? '' : String(content);
+  const text = role === 'bot' ? normalizeBotText(rawText) : rawText;
   const paragraphs = text
     .split(/\n{2,}/)
     .filter((paragraph) => paragraph.trim().length > 0);

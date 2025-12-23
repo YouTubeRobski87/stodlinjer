@@ -1,30 +1,6 @@
 {
   "apiUrl": "/.netlify/functions/chat",
   "greetings": [
-    "Hej!👋 Hur är det med dig? ✨",
-    "Hej!👋 Vad har du på hjärtat idag? 💜",
-    "Hej!👋 Hur mår du just nu? 🌈",
-    "Hej!👋 Finns det något du vill prata om? 🌸",
-    "Hej!👋 Jag finns här om du vill prata 🌷",
-    "Hej!👋 Hur kan jag hjälpa dig idag? 💐",
-    "Hej!👋 Berätta gärna vad som känns viktigt just nu 🌿",
-    "Hej!👋 Vad fick dig att kika in här just nu? 🦋",
-    "Hej!👋 Fint att du är här. Vill du berätta lite om hur du har det? 🦄",
-    "Hej!👋 Du får skriva precis så mycket eller lite du vill 🐳",
-    "Hej!👋 Vi kan ta det i din takt 🍓",
-    "Hej!👋 Är det något som känns extra jobbigt idag? 🍒",
-    "Hej!👋 Vill du berätta om hur din dag varit? 🧸",
-    "Hej!👋 Jag lyssnar – vad känns mest just nu? 💕",
-    "Hej!👋 Det kan vara svårt att ta kontakt, bra att du gjorde det 🎀",
-    "Hej!👋 Är du orolig för dig själv eller någon annan? 🌼",
-    "Hej!👋 Vill du ha hjälp att hitta rätt stöd, eller bara skriva av dig? 🌹",
-    "Hej!👋 Om du vill kan vi börja med en kort beskrivning av hur du mår 🌺",
-    "Hej!👋 Du behöver inte ha allt formulerat – vi kan reda ut det tillsammans 🌻",
-    "Hej!👋 Vad skulle kännas skönt att få ur sig först? 🪴",
-    "Hej!👋 Hur har det känts den senaste tiden? 🩷",
-    "Hej!👋 Är det något särskilt som tynger dig just nu? 🐼",
-    "Hej!👋 Du är inte ensam här 🌤️",
-    "Hej!👋 Vi tar ett steg i taget, okej? 🌴",
-    "Hej!👋 Finns det något du skulle vilja ha stöd med just idag? 🌱"
+    "Hej! Det verkar som om du kanske försöker komma igång med något. Om du har något på hjärtat eller behöver vägledning, är jag här för att lyssna och hjälpa till. Vad kan jag göra för dig idag?"
   ]
 }
