@@ -16,8 +16,7 @@ function getApiUrl() {
   // Vercel deployments: *.vercel.app or custom domains on Vercel
   const vercelDomains = [
     'vercel.app',
-    'stodlinjer.jfageras.se',
-    'jfageras.se'
+    'stodlinjer.se'
   ];
 
   const isVercel = vercelDomains.some((domain) => hostname.includes(domain));

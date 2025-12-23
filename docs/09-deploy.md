@@ -159,7 +159,7 @@ En av Netlify's bästa funktioner! Varje pull request får sin egen förhandsvis
 
 1. Du skapar en pull request på GitHub
 2. Netlify bygger automatiskt en preview
-3. Du får en unik URL som `deploy-preview-42--stodlinjer.jfageras.se`
+3. Du får en unik URL som `deploy-preview-42--stodlinjer.netlify.app`
 4. Du kan testa ändringarna utan att påverka produktionssajten
 5. När du mergar PR:en uppdateras produktionen
 
@@ -315,7 +315,7 @@ Men om du vill experimentera är Vercel det enklaste alternativet att testa.
 Varje Netlify-sajt får en gratis subdomän:
 
 ```
-https://stodlinjer.jfageras.se
+https://stodlinjer.netlify.app
 ```
 
 Du kan anpassa namnet under **Site settings** → **Domain management** → **Edit site name**.
@@ -348,7 +348,7 @@ Om du har en egen domän (t.ex. `stodlinjer.se`):
 A     @    75.2.60.5
 
 # För www-subdomänen (www.stodlinjer.se)
-CNAME www  stodlinjer.jfageras.se
+CNAME www  stodlinjer.netlify.app
 ```
 
 > 💡 **Tips:** Netlify DNS (gratis) hanterar allt detta automatiskt om du låter Netlify hantera din domäns DNS.

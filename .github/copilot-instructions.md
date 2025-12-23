@@ -203,3 +203,37 @@ When working on features, ask:
 3. **Is the URL structure correct?** (Eleventy collections use permalink patterns in `artiklar.json`.)
 4. **Are all support lines marked `active: true`?** (Filtering happens frontend + chatbot.)
 5. **Does this work in Swedish?** (Locale, timezone, string length—Swedish is longer than English.)
+
+---
+
+## Build, Deployment & Automation
+
+- **CI/CD:** Vercel auto-deploys on push to `main` using `vercel.json`. No custom Netlify build steps; all build logic is in npm scripts and Eleventy hooks.
+- **Pre-deploy best practice:** Always run `npm run index:content && npm run build && npm run clean` before pushing to production to ensure chatbot index and static output are up to date.
+- **Environment variables:**
+  - `ELEVENTY_PATH_PREFIX` for subdirectory deploys (set in Vercel/Netlify dashboard if needed)
+  - `OPENAI_API_KEY` for chatbot (never commit this key)
+- **No test suite:** There are no automated tests; manual QA is required for content and build output.
+
+---
+
+## Chatbot Error Handling & Moderation
+
+- **Error handling:** The chatbot endpoint (`api/chat.js`) returns a generic error message if the OpenAI API fails or times out. No user PII is logged or stored.
+- **Moderation:** The system prompt enforces crisis protocols (see above). For any message indicating acute risk (suicidal ideation, violence, panic), the bot must:
+  - Respond empathetically and directly
+  - Suggest immediate resources (hotlines, 112) if risk is present
+  - Never attempt to diagnose or provide therapy
+- **Abuse/spam:** There is no explicit abuse filter; moderation relies on the LLM’s system prompt and OpenAI’s built-in moderation.
+- **Language:** Always reply in Swedish unless the user writes in English or requests another language.
+
+---
+
+## Project-Specific Pain Points & Gotchas
+
+- **Data source confusion:** Only edit JSON in `src/_data/` and Markdown in `src/artiklar/`. Never edit `.chatdata/` or `site/` directly—these are generated.
+- **Samling slugs:** Must match exactly between article frontmatter and `samlingar.json` or articles will not appear in collections.
+- **Inactive support lines:** Always filter by `active: true` in both UI and chatbot index. Inactive lines are not shown or cited.
+- **Date handling:** Use ISO date format in filenames and data. All date formatting in UI uses Swedish locale (`sv-SE`).
+- **Icon system:** All icon aliases and paths are in `/data/icons.json`. Never hardcode icon SVGs in templates or JS.
+- **No real-time updates:** All changes require a full rebuild and redeploy to be visible on the site.
