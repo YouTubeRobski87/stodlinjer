@@ -1,83 +1,161 @@
-﻿# ðŸ†˜ StÃ¶dlinjer.se
+# 🆘 Stödlinjer.se
 
-En ideell informationssida som samlar svenska stÃ¶dlinjer och hjÃ¤lplinjer pÃ¥ ett stÃ¤lle â€” fÃ¶r dig som behÃ¶ver hjÃ¤lp, eller fÃ¶r dig som vill hjÃ¤lpa nÃ¥gon annan.
+En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe —  
+för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.
 
-ðŸŒ **Webbplats:** [stodlinjer.se](https://stodlinjer.se)
-
----
-
-## ðŸ’¡ Om projektet
-
-Ibland kÃ¤nns livet Ã¶vermÃ¤ktigt. Det kan handla om Ã¥ngest, depression, ensamhet, vÃ¥ld, missbruk eller oro fÃ¶r nÃ¥gon annan. StÃ¶dlinjer.se samlar Sveriges viktigaste stÃ¶dlinjer pÃ¥ ett stÃ¤lle â€” sÃ¥ att du snabbt kan hitta rÃ¤tt nummer att ringa eller chatt att skriva till. Alla stÃ¶dlinjer som listas Ã¤r seriÃ¶sa aktÃ¶rer som erbjuder anonymt, kostnadsfritt stÃ¶d.
-
-Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `src/_data/`.
-
-ðŸ“š **Dokumentation:** Se `docs/` â†’ [docs/index](docs/00-index.md) fÃ¶r lÃ¤sordning och guider.
+🌐 Webbplats: https://stodlinjer.se
 
 ---
 
-## âœ¨ Funktioner
+## 💡 Om projektet
 
-- ðŸ” **SÃ¶kbar lista** med 21+ svenska stÃ¶dlinjer
-- ðŸ·ï¸ **Kategorifiltrering** â€” psykisk hÃ¤lsa, barn & unga, vÃ¥ld, missbruk, Ã¤ldre
-- #ï¸âƒ£ **Taggfiltrering** fÃ¶r detaljerad sÃ¶kning
-- ðŸ¤– **StÃ¶dchatten (AI)** som svarar pÃ¥ svenska och anvÃ¤nder innehÃ¥llet pÃ¥ sajten + externa kÃ¤llor
-- ðŸ”— **Klickbara kÃ¤llor** i chatbotten (artiklar, stÃ¶dlinjer, externa lÃ¤nkar)
-- ðŸŒ“ **Ljust/mÃ¶rkt tema** med automatisk systempreferens
-- ðŸ”— **URL-baserad sÃ¶kning** (`?q=sÃ¶kterm`) fÃ¶r delning och schema.org SearchAction
-- ðŸ“± **Responsiv design** fÃ¶r mobil, surfplatta och desktop
-- â™¿ **TillgÃ¤nglighetsanpassad** â€” skip links, ARIA-attribut, semantisk HTML
-- ðŸ’¬ **Motiverande citat** som slumpas vid varje sidladdning
+Ibland känns livet övermäktigt. Det kan handla om ångest, depression, ensamhet, våld,
+missbruk eller oro för någon annan. **Stödlinjer.se** samlar Sveriges viktigaste
+stödlinjer på ett ställe — så att du snabbt kan hitta rätt nummer att ringa eller
+chatt att skriva till.
+
+Alla stödlinjer som listas är seriösa aktörer som erbjuder anonymt och kostnadsfritt stöd.
+
+Projektet är ideellt och skapat med fokus på tillgänglighet, tydlighet och trygghet.
 
 ---
 
-## ðŸ“¦ Installation & scripts
+## ✨ Funktioner
 
-KrÃ¤ver Node 18+.
+- 🔍 Sökbar lista med 20+ svenska stödlinjer  
+- 🧠 Kategorier: psykisk hälsa, barn & unga, våld, missbruk, äldre, anhöriga  
+- 🏷️ Taggfiltrering för mer detaljerad sökning  
+- 🤖 Stödchatt (AI) som svarar på svenska och använder innehåll från sajten + externa källor  
+- 🔗 Klickbara källor i chatbotten (artiklar, stödlinjer, externa länkar)  
+- 🌗 Ljust/mörkt tema med automatisk systempreferens  
+- 🔎 URL-baserad sökning (`?q=sökterm`) för delning och SearchAction (schema.org)  
+- 📱 Responsiv design för mobil, surfplatta och desktop  
+- ♿ Tillgänglighetsanpassad (ARIA, semantisk HTML, skip-links)  
+- 💬 Motiverande citat som slumpas vid varje sidladdning  
+
+---
+
+## 🛠️ Teknik
+
+- Eleventy (11ty)  
+- Nunjucks-mallar  
+- Tailwind CSS / PostCSS  
+- JSON-baserad datamodell  
+- Vercel (deploy)  
+- Node.js 18+  
+
+---
+
+## 📦 Installation
+
+Kräver **Node.js 18+**
 
 ```bash
+
+```
 npm install
-```
+Lokalt utvecklingsläge med live-reload:
 
-Lokalt utvecklingslÃ¤ge med live-reload:
-
-```bash
 npm run serve
-```
+Bygg statisk sajt (output till site/):
 
-(`serve` kÃ¶r bÃ¥de Tailwind --watch och Eleventy-servern.)
-
-Bygg statisk sajt (output till `site/`):
-
-```bash
 npm run build
-```
+Bygg endast CSS:
 
-Bygg enbart stilarna (genererar `src/assets/css/tailwind-built.css`):
-
-```bash
 npm run build:css
-```
+Generera innehållsindex för stödchatten:
 
-Generera innehÃ¥llsindexet som anvÃ¤nds av stÃ¶dchatten (laddar artiklar + JSON-data till `.chatdata/content-index.json`):
-
-```bash
 npm run index:content
-```
+Rekommenderat inför deploy:
+npm run index:content && npm run build
 
-KÃ¶r gÃ¤rna `npm run index:content && npm run build` innan deploy om innehÃ¥llet har Ã¤ndrats.
+📁 Projektstruktur (Eleventy)
+src/
+├── index.njk              # Startsida (sök + grid)
+├── kontakt.njk            # Kontakt
+├── _data/
+│   ├── supportData.json   # Alla stödlinjer + chatbot-källor
+│   ├── chatbot.json       # Chatbot-konfiguration
+│   └── quotes.json        # Motiverande citat
+├── _includes/
+│   ├── layouts/base.njk
+│   └── partials/          # Header, footer, komponenter
+└── assets/
+    ├── css/
+    ├── js/
+    └── fonts/
+Output genereras till:
+
+site/
+➕ Lägg till eller ändra stödlinjer
+All data finns i:
+
+src/_data/supportData.json
+Varje stödlinje innehåller bl.a.:
+
+titel
+
+beskrivning
+
+telefon / chatt / webb
+
+kategori
+
+taggar
+
+öppettider
+
+senast verifierad datum
+
+Stödlinjer kan tillfälligt döljas genom att sätta "active": false.
+
+🤖 Stödchatten (AI)
+Frontend: src/_includes/partials/chatbot.njk
+
+JavaScript: src/assets/js/chatbot.js
+
+Backend: Vercel Function /api/chat
+
+Chatten använder:
+
+Genererat innehållsindex
+
+supportData.json
+
+Externa källor (t.ex. 1177, Mind)
+
+Miljövariabel (krävs för AI-svar):
+
+OPENAI_API_KEY
+Utan nyckel visas fallback-förslag från innehållsindexet.
+
+🎨 Design
+Mjukt lavendel-/grått färgschema
+
+Light / Dark / Calm-teman
+
+Accentfärg: lavendel / steel
+
+Fokus på lugn, läsbarhet och kontrast
+
+Sans-serif-typografi med optimerat radavstånd
+
+📬 Kontakt
+🌐 Webb: https://stodlinjer.se
+📧 E-post: info@stodlinjer.se
+👤 Skapad av: Robert Claesson
+
+📄 Licens
+Fritt att använda och anpassa för ideella och icke-kommersiella ändamål. 💚
+
+Du är inte ensam. Hjälp finns.
+
 
 ---
 
-## ðŸ“ Projektstruktur (Eleventy)
-
-```
-src/
-â”œâ”€â”€ index.njk               # Startsida (sÃ¶k + grid)
-â”œâ”€â”€ kontakt.njk             # KontaktformulÃ¤r
-â”œâ”€â”€ _data/
-â”‚   â”œâ”€â”€ supportData.json     # Alla stÃ¶dlinjer + chatbot-kÃ¤llor
-â”‚   â”œâ”€â”€ chatbot.json        # Konfiguration fÃ¶r stÃ¶dchatten (API-url, externa kÃ¤llor)
+När du klistrat in och committat:  
+– om något ändå skulle se konstigt ut, skicka en skärmdump så pekar jag exakt var.  
+Det här är nu en stabil README som inte ska bråka igen.â”‚   â”œâ”€â”€ chatbot.json        # Konfiguration fÃ¶r stÃ¶dchatten (API-url, externa kÃ¤llor)
 â”‚   â””â”€â”€ quotes.json         # Motiverande citat
 â”œâ”€â”€ _includes/
 â”‚   â”œâ”€â”€ layouts/base.njk
