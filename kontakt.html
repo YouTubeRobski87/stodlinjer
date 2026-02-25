@@ -100,7 +100,7 @@
               utöver ditt meddelande.
             </p>
 
-            <form class="contact-form" action="https://formspree.io/f/mnnezdjq" method="POST">
+            <form class="contact-form" data-contact-form>
 
              <div class="form-grid">
                 <div class="form-field">
@@ -117,10 +117,6 @@
                 <div class="form-field">
                   <label for="contactEmail"
                     >E-post <span class="required-dot" aria-hidden="true">*</span></label
-                <input type="hidden" name="_replyto" value="">
-                <input type="hidden" name="_subject" value="Nytt meddelande från Stödlinjer.se">
-                <input type="hidden" name="_replyto" value="">
-                <input type="hidden" name="_next" value="https://stodlinjer.se/tack.html">
 
                   <input
                     type="email"
@@ -133,7 +129,7 @@
                 </div>
                 <div class="form-field">
                   <label for="contactTopic">Ämne</label>
-                  <select id="contactTopic" name="topic">
+                  <select id="contactTopic" name="reason">
                     <option value="update">Rätta eller uppdatera en stödlinje</option>
                     <option value="new-line">Lägga till en ny stödlinje</option>
                     <option value="technical">Tekniskt problem</option>
@@ -143,15 +139,29 @@
                 </div>
                 <div class="form-field">
                   <label for="contactChannel">Hur vill du bli kontaktad?</label>
-                  <select id="contactChannel" name="preferred_channel">
+                  <select id="contactChannel" name="contactMethod">
                     <option value="email">E-post</option>
                     <option value="phone">Telefon (ange nummer i meddelandet)</option>
-                    <option value="no-response">Jag behöver inget svar</option>
+                    <option value="no-response">Jag beh�ver inget svar</option>
                   </select>
+                </div>
+                <div
+                  class="form-field form-full"
+                  aria-hidden="true"
+                  style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"
+                >
+                  <label for="contactCompany">Company</label>
+                  <input
+                    type="text"
+                    id="contactCompany"
+                    name="company"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
                 </div>
                 <div class="form-field form-full">
                   <label for="contactMessage"
-                    >Meddelande <span class="required-dot" aria-hidden="true">*</span></label4
+                    >Meddelande <span class="required-dot" aria-hidden="true">*</span></label
                   >
                   <textarea
                     id="contactMessage"
@@ -176,10 +186,7 @@
               <button type="submit" class="form-submit">
                 <i class="fas fas-paper-plane"></i> Skicka meddelande
               </button>
-              <p class="form-disclaimer">
-                Formuläret kan kopplas till t.ex. Formspree – byt ut <code>https://formspree.io/f/mnnezdjq</code> i
-                <code>action</code> när du väljer tjänst.
-              </p>
+              <p class="form-note form-full" data-contact-status role="status" aria-live="polite"></p>
             </form>
           </div>
 
@@ -323,3 +330,7 @@
     <script type="module" src="assets/js/app.js"></script>
   </body>
 </html>
+
+
+
+

@@ -45,7 +45,7 @@ header:
               Berätta gärna kort vad du behöver hjälp med. Vi återkommer så snart som möjligt och sparar inget mer än själva meddelandet medan vi behandlar din fråga.
             </p>
 
-            <form class="contact-form" action="https://formspree.io/f/mnnezdjq" method="POST">
+            <form class="contact-form" data-contact-form>
               <div class="form-grid">
                 <div class="form-field">
                   <label for="contactName">Namn</label>
@@ -75,7 +75,7 @@ header:
                 </div>
                 <div class="form-field">
                   <label for="contactChannel">Hur vill du bli kontaktad?</label>
-                  <select id="contactChannel" name="preferred_contact_method">
+                  <select id="contactChannel" name="contactMethod">
                     <option value="choose_contact_method" disabled selected hidden> -- Välj ett alternativ -- </option>
                     <option value="email">E-post</option>
                     <option value="phone">Telefon</option>
@@ -84,7 +84,7 @@ header:
                 </div>
                 <div class="form-field form-full">
                   <label for="contactTopic">Anledning till kontakt</label>
-                  <select id="contactTopic" name="contact_reason">
+                  <select id="contactTopic" name="reason">
                     <option value="choose_contact_reason" disabled selected hidden> -- Välj ett ämne -- </option>
                     <option value="support-guidance">Jag behöver hjälp att hitta rätt stöd</option>
                     <option value="concerns-for-someone">Jag är orolig för någon annan</option>
@@ -96,6 +96,20 @@ header:
                     <option value="technical-issue">Tekniskt problem på sidan</option>
                     <option value="other">Annat / Övrigt</option>
                   </select>
+                </div>
+                <div
+                  class="form-field form-full"
+                  aria-hidden="true"
+                  style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden;"
+                >
+                  <label for="contactCompany">Company</label>
+                  <input
+                    type="text"
+                    id="contactCompany"
+                    name="company"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
                 </div>
                 <div class="form-field form-full">
                   <label for="contactMessage"
@@ -118,6 +132,7 @@ header:
                     {{ icon('paper-plane') }} Skicka meddelande
                   </button>
                 </div>
+                <p class="form-note form-full" data-contact-status role="status" aria-live="polite"></p>
               </div>
             </form>
           </div>

@@ -634,6 +634,68 @@ function initUrlSearch() {
 }
 
 // ==========================================================================
+// Contact form
+// ==========================================================================
+
+function initContactForm() {
+  const form = document.querySelector('.contact-form[data-contact-form]');
+  if (!form) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  const statusEl = form.querySelector('[data-contact-status]');
+  if (!submitButton || !statusEl) return;
+
+  const defaultButtonHtml = submitButton.innerHTML;
+  const setStatus = (text, isError = false) => {
+    statusEl.textContent = text;
+    statusEl.style.color = isError ? '#b91c1c' : '#0f766e';
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) return;
+
+    const formData = new FormData(form);
+    const payload = {
+      name: (formData.get('name') || '').toString().trim(),
+      email: (formData.get('email') || '').toString().trim(),
+      phone: (formData.get('phone') || '').toString().trim(),
+      contactMethod: (formData.get('contactMethod') || '').toString().trim(),
+      reason: (formData.get('reason') || '').toString().trim(),
+      message: (formData.get('message') || '').toString().trim(),
+      company: (formData.get('company') || '').toString().trim()
+    };
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Skickar…';
+    setStatus('');
+
+    try {
+      const response = await fetch(`${BASE_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const responseData = await response.json().catch(() => null);
+
+      if (!response.ok || !responseData?.success) {
+        throw new Error(responseData?.error || 'Contact form request failed');
+      }
+
+      form.reset();
+      setStatus('Tack. Vi har tagit emot ditt meddelande.');
+    } catch (error) {
+      console.error('Contact form submit error:', error);
+      setStatus('Det gick inte att skicka just nu. Försök igen snart.', true);
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = defaultButtonHtml;
+    }
+  });
+}
+
+// ==========================================================================
 // Initialization
 // ==========================================================================
 
@@ -644,6 +706,7 @@ async function init() {
   initThemeControls();
   initQuote();
   initArticleFilters();
+  initContactForm();
 
   const hasListings = document.getElementById('linesGrid');
   if (hasListings) {
