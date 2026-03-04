@@ -1,4 +1,4 @@
-﻿const BASE_URL = window.BASE_URL || '';
+const BASE_URL = window.BASE_URL || '';
 const CHATBOT_CONFIG = window.CHATBOT_CONFIG || { apiUrl: '', externalSources: [] };
 const configuredSources = Array.isArray(CHATBOT_CONFIG.externalSources)
   ? CHATBOT_CONFIG.externalSources.slice()
