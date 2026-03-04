@@ -1,0 +1,35 @@
+[[redirects]]
+from = "https://www.stodlinjer.se/*"
+to = "https://stodlinjer.se/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://stodlinjer.se/"
+to = "https://mittpsyke.se/stodlinjer"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://stodlinjer.se/kontakt"
+to = "https://mittpsyke.se/kontakt"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://stodlinjer.se/artiklar/*"
+to = "https://mittpsyke.se/artiklar/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://stodlinjer.se/samlingar/*"
+to = "https://mittpsyke.se/samlingar/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://stodlinjer.se/*"
+to = "https://mittpsyke.se/stodlinjer?from=stodlinjer&path=:splat"
+status = 301
+force = true
