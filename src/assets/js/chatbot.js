@@ -1,4 +1,4 @@
-const BASE_URL = window.BASE_URL || '';
+﻿const BASE_URL = window.BASE_URL || '';
 const CHATBOT_CONFIG = window.CHATBOT_CONFIG || { apiUrl: '', externalSources: [] };
 const configuredSources = Array.isArray(CHATBOT_CONFIG.externalSources)
   ? CHATBOT_CONFIG.externalSources.slice()
@@ -37,8 +37,12 @@ const chatbotState = {
 };
 
 function getRandomGreeting() {
-  const greetings = CHATBOT_CONFIG.greetings || ['Hej. Hur är det med dig?'];
-  return greetings[Math.floor(Math.random() * greetings.length)];
+  const greetings = CHATBOT_CONFIG.greetings || ['Hej, hur är det med dig?'];
+  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const safeGreeting = String(greeting || '').trim();
+  if (!safeGreeting) return 'Hej, hur är det med dig?';
+  if (/^ej\b/i.test(safeGreeting)) return safeGreeting.replace(/^ej\b/i, 'Hej');
+  return safeGreeting;
 }
 
 const CHATBOT_COPY = {
@@ -394,3 +398,4 @@ function initChatbot() {
 
 loadSupportSources();
 document.addEventListener('DOMContentLoaded', initChatbot);
+
