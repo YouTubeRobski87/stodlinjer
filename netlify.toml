@@ -6,7 +6,7 @@ force = true
 
 [[redirects]]
 from = "https://stodlinjer.se/"
-to = "https://mittpsyke.se/stodlinjer"
+to = "https://mittpsyke.se/guider"
 status = 301
 force = true
 
@@ -18,18 +18,18 @@ force = true
 
 [[redirects]]
 from = "https://stodlinjer.se/artiklar/*"
-to = "https://mittpsyke.se/artiklar/:splat"
+to = "https://mittpsyke.se/guider/:splat"
 status = 301
 force = true
 
 [[redirects]]
 from = "https://stodlinjer.se/samlingar/*"
-to = "https://mittpsyke.se/samlingar/:splat"
+to = "https://mittpsyke.se/guider/:splat"
 status = 301
 force = true
 
 [[redirects]]
 from = "https://stodlinjer.se/*"
-to = "https://mittpsyke.se/stodlinjer?from=stodlinjer&path=:splat"
+to = "https://mittpsyke.se/guider"
 status = 301
 force = true
