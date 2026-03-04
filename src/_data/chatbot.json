@@ -1,6 +1,6 @@
 {
   "apiUrl": "/.netlify/functions/chat",
   "greetings": [
-    "Hej! Det verkar som om du kanske försöker komma igång med något. Om du har något på hjärtat eller behöver vägledning, är jag här för att lyssna och hjälpa till. Vad kan jag göra för dig idag?"
+    "Hej, det verkar som om du kanske försöker komma igång med något. Om du har något på hjärtat eller behöver vägledning, är jag här för att lyssna och hjälpa till. Vad kan jag göra för dig idag?"
   ]
 }
