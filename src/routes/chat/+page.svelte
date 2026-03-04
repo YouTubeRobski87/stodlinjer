@@ -8,10 +8,10 @@
 </script>
 
 <svelte:head>
-  <title>Chat - MittPsyke</title>
+  <title>Chat – MittPsyke</title>
 </svelte:head>
 
 <main style="padding:16px">
-  <p>Skickar dig till chatten...</p>
-  <p><a href="/chat/angest">Oppna chatten</a></p>
+  <p>Skickar dig till chatten…</p>
+  <p><a href="/chat/angest">Öppna chatten</a></p>
 </main>
