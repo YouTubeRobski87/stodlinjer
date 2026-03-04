@@ -41,8 +41,13 @@ function getRandomGreeting() {
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
   const safeGreeting = String(greeting || '').trim();
   if (!safeGreeting) return 'Hej, hur är det med dig?';
-  if (/^ej\b/i.test(safeGreeting)) return safeGreeting.replace(/^ej\b/i, 'Hej');
-  return safeGreeting;
+  if (/^hej\b/i.test(safeGreeting)) {
+    return safeGreeting.replace(/^hej\b[!,.]?\s*/i, 'Hej, ');
+  }
+  if (/^ej\b/i.test(safeGreeting)) {
+    return safeGreeting.replace(/^ej\b[!,.]?\s*/i, 'Hej, ');
+  }
+  return `Hej, ${safeGreeting.charAt(0).toLowerCase()}${safeGreeting.slice(1)}`;
 }
 
 const CHATBOT_COPY = {
