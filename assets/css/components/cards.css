@@ -62,6 +62,34 @@
   color: var(--text);
 }
 
+.mp-ai-callout {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.mp-ai-callout__title {
+  font-weight: 650;
+  margin-bottom: 6px;
+}
+
+.mp-ai-callout__text {
+  margin: 0 0 8px 0;
+  opacity: 0.9;
+}
+
+.mp-ai-callout__link {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mp-ai-callout__link:hover {
+  text-decoration: underline;
+}
+
 .card-number {
   font-size: 1.25rem;
   display: inline-flex;
