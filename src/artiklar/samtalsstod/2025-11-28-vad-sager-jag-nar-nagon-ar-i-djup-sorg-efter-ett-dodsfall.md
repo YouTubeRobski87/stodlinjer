@@ -1,6 +1,6 @@
 ---
-title: Vad säger jag när någon är i djup sorg efter ett dödsfall?
-description: Att möta någon i djup sorg efter ett dödsfall kan kännas svårt, men med empati, närvaro och aktivt lyssnande kan du göra stor skillnad. Artikeln visar hur du samtalar tryggt, validerar känslor och undviker vanliga fallgropar.
+title: Vad säger man till någon i sorg efter ett dödsfall?
+description: Råd för hur du stöttar någon i djup sorg efter ett dödsfall. Få konkreta saker du kan säga, vad du bör undvika och hur du kan vara ett tryggt stöd.
 date: 2025-11-28
 samling: samtalsstod
 readingTime: 5 min

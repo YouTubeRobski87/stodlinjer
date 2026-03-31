@@ -1,6 +1,6 @@
 ---
-title: Vad säger jag när jag vill sätta gränser på ett tryggt sätt?
-description: Att sätta gränser är en central del av psykisk hälsa och bygger på tydlig, respektfull kommunikation. Artikeln visar hur tekniker som jag-budskap, DESC-modellen och icke-våldsam kommunikation hjälper dig uttrycka behov utan skuld, konflikter eller aggressivitet.
+title: Hur sätter man gränser på ett tryggt sätt?
+description: Lär dig sätta gränser tydligt och respektfullt utan att trappa upp konflikt. Konkreta formuleringar och råd för svåra samtal i relationer, familj och vardag.
 date: 2025-11-23
 samling: samtalsstod
 readingTime: 6-7 min

@@ -1,6 +1,6 @@
 ---
-title: Krisreaktioner - Vad händer i din kropp och hur du kan återta kontrollen
-description: En psykisk kris är en naturlig reaktion på överväldigande händelser. Artikeln förklarar nervsystemets försvarsreaktioner, krisens faser och praktiska sätt att återfå kontroll genom kroppslig reglering, socialt stöd och professionell hjälp.
+title: Krisreaktioner: vad händer i kroppen och hur får du tillbaka kontrollen?
+description: En guide till vanliga krisreaktioner som panik, overklighetskänslor och frysrespons. Förstå vad som händer i kroppen och hur du kan lugna dig och söka stöd.
 date: 2025-11-01
 samling: fordjupning
 readingTime: 6-7 min
