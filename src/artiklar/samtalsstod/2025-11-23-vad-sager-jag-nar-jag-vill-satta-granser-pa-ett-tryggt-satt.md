@@ -1,6 +1,6 @@
 ---
-title: Hur sätter man gränser på ett tryggt sätt?
-description: Lär dig sätta gränser tydligt och respektfullt utan att trappa upp konflikt. Konkreta formuleringar och råd för svåra samtal i relationer, familj och vardag.
+title: "Hur sätter man gränser på ett tryggt sätt?"
+description: "Lär dig sätta gränser tydligt och respektfullt utan att trappa upp konflikt. Konkreta formuleringar och råd för svåra samtal i relationer, familj och vardag."
 date: 2025-11-23
 samling: samtalsstod
 readingTime: 6-7 min

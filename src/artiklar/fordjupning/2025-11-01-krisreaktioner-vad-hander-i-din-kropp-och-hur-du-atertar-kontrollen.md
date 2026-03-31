@@ -1,6 +1,6 @@
 ---
-title: Krisreaktioner: vad händer i kroppen och hur får du tillbaka kontrollen?
-description: En guide till vanliga krisreaktioner som panik, overklighetskänslor och frysrespons. Förstå vad som händer i kroppen och hur du kan lugna dig och söka stöd.
+title: "Krisreaktioner: vad händer i kroppen och hur får du tillbaka kontrollen?"
+description: "En guide till vanliga krisreaktioner som panik, overklighetskänslor och frysrespons. Förstå vad som händer i kroppen och hur du kan lugna dig och söka stöd."
 date: 2025-11-01
 samling: fordjupning
 readingTime: 6-7 min

@@ -1,6 +1,6 @@
 ---
-title: Kan jag ringa anonymt om brott, hot eller våld?
-description: Här får du veta hur anonymitet, nummerskydd och sekretess fungerar när du kontaktar en stödlinje om brott, hot eller våld.
+title: "Kan jag ringa anonymt om brott, hot eller våld?"
+description: "Här får du veta hur anonymitet, nummerskydd och sekretess fungerar när du kontaktar en stödlinje om brott, hot eller våld."
 date: 2025-11-13
 samling: faq
 readingTime: 1 min

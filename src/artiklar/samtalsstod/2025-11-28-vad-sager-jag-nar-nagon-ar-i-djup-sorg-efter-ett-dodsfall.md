@@ -1,6 +1,6 @@
 ---
-title: Vad säger man till någon i sorg efter ett dödsfall?
-description: Råd för hur du stöttar någon i djup sorg efter ett dödsfall. Få konkreta saker du kan säga, vad du bör undvika och hur du kan vara ett tryggt stöd.
+title: "Vad säger man till någon i sorg efter ett dödsfall?"
+description: "Råd för hur du stöttar någon i djup sorg efter ett dödsfall. Få konkreta saker du kan säga, vad du bör undvika och hur du kan vara ett tryggt stöd."
 date: 2025-11-28
 samling: samtalsstod
 readingTime: 5 min
