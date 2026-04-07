@@ -193,6 +193,8 @@ function renderLines() {
       'barn-unga': '<i class="fas fas-children"></i>',
       vald: '<i class="fas fas-shield-halved"></i>',
       missbruk: '<i class="fas fas-wine-bottle"></i>',
+      ekonomi: '<i class="fas fas-coins"></i>',
+      'sorg-forlust': '<i class="fas fas-heart"></i>',
       anhöriga: '<i class="fas fas-people-roof"></i>',
       aldre: '<i class="fas fas-person-cane"></i>'
     };

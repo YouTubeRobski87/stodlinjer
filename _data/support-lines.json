@@ -15,10 +15,10 @@
     "name": "Jourhavande präst",
     "url": "https://www.svenskakyrkan.se/jourhavandeprast",
     "number": "112",
-    "description": "För dig som behöver samtala om existentiella frågor, oro, sorg eller ensamhet. Här får du anonymt stöd nattetid via 112.",
-    "category": "psykiskhalsa",
-    "available": "Kl 21–06 via 112. Chatt vissa tider",
-    "tags": ["psykiskhalsa", "sorgtrauma", "samtal", "anonymt"]
+    "description": "Akut samtals- och krisstöd för dig som vill prata om sorg, ensamhet, ångest, självmordstankar eller något annat svårt. Du är anonym och prästen har absolut tystnadsplikt.",
+    "category": "sorg-forlust",
+    "available": "Telefon via 112 alla dagar 21–06. Chatt alla kvällar 20–24. Digitalt brev dygnet runt",
+    "tags": ["psykiskhalsa", "sorgtrauma", "sorgforlust", "samtal", "chatt", "anonymt"]
   },
   {
     "id": 3,
@@ -104,13 +104,13 @@
   },
   {
     "id": 11,
-    "name": "SPES – För efterlevande",
+    "name": "SPES stödlinje för efterlevande",
     "url": "https://spes.se/stodlinjer/",
     "number": "020-18 18 00",
-    "description": "För dig som förlorat någon i suicid och behöver samtala med andra efterlevande. Empatiskt, anonymt stöd kvällstid alla dagar.",
-    "category": "anhoriga",
-    "available": "Alla dagar 19–22",
-    "tags": ["suicid", "sorgtrauma", "anhorig", "samtal", "anonymt"]
+    "description": "För dig som mist någon i suicid och behöver prata med andra efterlevande. De som svarar har egen erfarenhet, samtalet är kostnadsfritt och du är anonym när du ringer.",
+    "category": "sorg-forlust",
+    "available": "Alla dagar 19.00–22.00",
+    "tags": ["suicid", "sorgtrauma", "sorgforlust", "anhorig", "samtal", "anonymt"]
   },
   {
     "id": 12,
@@ -148,10 +148,10 @@
     "name": "Jourhavande medmänniska",
     "url": "https://www.jourhavande-medmanniska.se/",
     "number": "08-702 16 80",
-    "description": "För dig som behöver någon som lyssnar under kvällar och nätter. Anonymt, medmänskligt stöd av volontärer via telefon och chatt.",
-    "category": "psykiskhalsa",
-    "available": "Alla nätter 21–06. Chatt vissa kvällar.",
-    "tags": ["psykiskhalsa", "sorgtrauma", "samtal", "chatt", "anonymt"]
+    "description": "För dig som behöver någon som lyssnar under kvällar och nätter. Här får du anonymt, medmänskligt stöd via telefon och chatt.",
+    "category": "sorg-forlust",
+    "available": "Telefon alla nätter 21–06. Chatt lör–tis 21–24",
+    "tags": ["psykiskhalsa", "sorgtrauma", "sorgforlust", "samtal", "chatt", "anonymt"]
   },
   {
     "id": 16,
@@ -205,6 +205,16 @@
     "tags": ["barn-unga", "psykiskhalsa", "killarman", "chatt", "anonymt"]
   },
   {
+    "id": 21,
+    "name": "Frisk & Fri – Ätstörningslinjen",
+    "url": "https://www.friskfri.se/fa-stod/telefonlinjer/",
+    "number": "020-20 80 18",
+    "description": "För dig som är drabbad av en ätstörning och vill prata med någon med egen erfarenhet av att ha varit sjuk och blivit frisk. Samtalet är anonymt och gratis utöver telefonoperatörens öppningsavgift.",
+    "category": "psykiskhalsa",
+    "available": "Mån 19–20, tis 13–14 och 19–20, ons 13–14 och 19–20, tors 19–20, sön 19–20. Engelska fre 12.15–13.15, arabiska sön 20–21 ojämna veckor",
+    "tags": ["psykiskhalsa", "atstorningar", "samtal", "anonymt"]
+  },
+  {
     "id": 22,
     "name": "Refugee Line",
     "url": "https://mind.se/",
@@ -213,5 +223,34 @@
     "category": "psykiskhalsa",
     "available": "Sön–tors 18–21",
     "tags": ["psykiskhalsa", "sorgtrauma", "anhorig", "samtal", "anonymt"]
+  },
+  {
+    "id": 23,
+    "name": "Kronofogdens kundservice",
+    "url": "https://kronofogden.se/kontakta-oss/telefon--och-oppettider",
+    "number": "0771-73 73 00",
+    "description": "För dig som har skulder, betalningskrav eller frågor om ärenden hos Kronofogden. Kundservice kan förklara processen, svara på frågor och hänvisa vidare till rätt stöd.",
+    "category": "ekonomi",
+    "available": "Mån–fre 09.00–15.00",
+    "tags": ["ekonomi", "skulder", "skuldsanering", "radgivning"]
+  },
+  {
+    "id": 24,
+    "name": "Kommunal budget- och skuldrådgivning",
+    "url": "https://www.konsumentverket.se/ekonomi/kommunal-budget-och-skuldradgivning/",
+    "description": "Kommunens budget- och skuldrådgivare hjälper dig att planera din ekonomi, hantera skulder och söka skuldsanering. Hjälpen är kostnadsfri och rådgivaren har tystnadsplikt.",
+    "category": "ekonomi",
+    "available": "Sök din kommun via Konsumentverket. Öppettider varierar",
+    "tags": ["ekonomi", "skulder", "skuldsanering", "budget"]
+  },
+  {
+    "id": 25,
+    "name": "Konsumentverkets vägledning",
+    "url": "https://www.konsumentverket.se/kontakta-oss/kontakta-konsumentverkets-vagledare/",
+    "number": "0771-525 525",
+    "description": "För dig som behöver vägledning om köp, avtal, reklamation, ångerrätt eller vill bli hänvisad vidare till kommunal konsumentvägledning eller budget- och skuldrådgivning.",
+    "category": "ekonomi",
+    "available": "Helgfria vardagar 09–12",
+    "tags": ["ekonomi", "konsumentratt", "budget", "radgivning"]
   }
 ]
