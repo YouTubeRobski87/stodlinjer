@@ -18,6 +18,7 @@ pnpm-debug.log*
 
 # Build output / cache
 site/
+_site/
 .cache/
 src/assets/css/tailwind-built.css
 

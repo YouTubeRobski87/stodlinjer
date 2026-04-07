@@ -7,18 +7,30 @@ const hasSrc = fs.existsSync(path.join(__dirname, 'src'));
 const inputDir = hasSrc ? 'src' : '.';
 const assetsDir = hasSrc ? 'src/assets' : 'assets';
 const dataDir = hasSrc ? 'src/_data' : '_data';
+const rootDataDir = path.join(__dirname, 'data');
 const samlingarDataPath = fs.existsSync(path.join(__dirname, '_data', 'samlingar.json'))
   ? './_data/samlingar.json'
   : './src/_data/samlingar.json';
 const samlingarData = require(samlingarDataPath);
 const { generateContentIndex } = require('./scripts/generate-content-index');
 const md = new MarkdownIt({ html: true, linkify: true, typographer: false });
+const extraDataPassthroughFiles = fs.existsSync(dataDir)
+  ? fs
+      .readdirSync(dataDir)
+      .filter(
+        (name) => name.endsWith('.json') && !fs.existsSync(path.join(rootDataDir, name))
+      )
+  : [];
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy(assetsDir);
-  eleventyConfig.addPassthroughCopy({ [dataDir]: 'data' });
+  eleventyConfig.addPassthroughCopy('data');
+  extraDataPassthroughFiles.forEach((name) => {
+    eleventyConfig.addPassthroughCopy({ [path.join(dataDir, name)]: `data/${name}` });
+  });
   eleventyConfig.addPassthroughCopy({ '.chatdata': 'chatdata' });
+  eleventyConfig.addPassthroughCopy({ '.nojekyll': '.nojekyll' });
   eleventyConfig.addPassthroughCopy({
     'node_modules/@vercel/speed-insights/dist/index.mjs': 'assets/vendor/speed-insights.js'
   });
@@ -112,7 +124,7 @@ module.exports = function (eleventyConfig) {
     pathPrefix,
     dir: {
       input: inputDir,
-      output: 'site',
+      output: '_site',
       includes: '_includes',
       data: '_data'
     },

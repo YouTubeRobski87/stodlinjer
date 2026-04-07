@@ -10,7 +10,7 @@
     "watch": "npm-run-all --parallel watch:css watch:eleventy",
     "watch:css": "tailwindcss -c tailwind.config.js -i ./src/assets/css/tailwind.css -o ./src/assets/css/tailwind-built.css --postcss --watch",
     "watch:eleventy": "eleventy --watch",
-    "clean": "rm -rf site",
+    "clean": "node -e \"require('fs').rmSync('_site', { recursive: true, force: true })\"",
     "start": "npm run serve",
     "index:content": "node scripts/generate-content-index.js"
   },
