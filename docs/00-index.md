@@ -16,7 +16,7 @@ Men mer om det senare! Först ska vi gå igenom grunderna.
 
 ## Innehåll 📖
 
-Dokumentationen är uppdelad i tio separata guider, plus en bonus för PC/Windows. Jag rekommenderar starkt att du läser dem i ordning första gången du går igenom materialet — varje guide bygger på kunskaper från de tidigare. Därefter fungerar de utmärkt som uppslagsverk när du behöver fräscha upp minnet om något specifikt.
+Dokumentationen är uppdelad i elva separata guider, plus en bonus för PC/Windows. Jag rekommenderar starkt att du läser dem i ordning första gången du går igenom materialet — varje guide bygger på kunskaper från de tidigare. Därefter fungerar de utmärkt som uppslagsverk när du behöver fräscha upp minnet om något specifikt.
 
 | #   | Guide                                                       | Beskrivning                                                   |
 | --- | ----------------------------------------------------------- | ------------------------------------------------------------- |
@@ -29,7 +29,8 @@ Dokumentationen är uppdelad i tio separata guider, plus en bonus för PC/Window
 | 7   | [Kom igång](07-kom-igang.md)                                | 🚀 Steg-för-steg: från att klona repot till en körande sajt   |
 | 8   | [Netlify & backend](08-netlify-backend.md)                  | ☁️ Serverless functions, miljövariabler och API-nycklar       |
 | 9   | [Produktionssättning](09-deploy.md)                         | 🌐 Så publicerar du sajten live för hela världen              |
-| 10  | [Bonus: PC/Windows-checklista](10-pc-checklista.md)         | 🖥️ Verktyg och tips om du jobbar på Windows                   |
+| 10  | [Vercel Speed Insights](11-speed-insights.md)               | 📊 Prestandaövervakning och Real User Monitoring              |
+| 11  | [Bonus: PC/Windows-checklista](10-pc-checklista.md)         | 🖥️ Verktyg och tips om du jobbar på Windows                   |
 
 ## Snabbstart ⚡
 
