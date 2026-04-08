@@ -37,7 +37,7 @@
     "contactTypes": ["telefon", "chatt", "webb"],
     "phone": "112",
     "description": "För dig som behöver samtala om existentiella frågor, oro, sorg eller ensamhet. Här får du anonymt stöd nattetid via 112.",
-    "category": "psykisk-halsa",
+    "category": "sorg-forlust",
     "urgent": false,
     "tags": ["anonymt", "psykiskhalsa", "samtal", "sorg", "trauma"],
     "availability": {
@@ -303,7 +303,7 @@
     "contactTypes": ["telefon", "chatt", "webb"],
     "phone": "08-702 16 80",
     "description": "För dig som behöver någon som lyssnar under kvällar och nätter. Anonymt, medmänskligt stöd av volontärer via telefon och chatt.",
-    "category": "psykisk-halsa",
+    "category": "sorg-forlust",
     "urgent": false,
     "tags": ["anonymt", "chatt", "psykiskhalsa", "samtal", "sorg"],
     "availability": {
@@ -513,7 +513,7 @@
     "contactTypes": ["telefon", "chatt", "webb"],
     "phone": "020-18 18 00",
     "description": "För dig som förlorat någon i suicid och behöver samtala med andra efterlevande. Empatiskt, anonymt stöd kvällstid alla dagar.",
-    "category": "anhoriga",
+    "category": "sorg-forlust",
     "urgent": false,
     "tags": ["anhorig", "anonymt", "samtal", "sorg", "suicid", "trauma"],
     "availability": {
@@ -1493,6 +1493,83 @@
       "label": "Se webbplatsen",
       "timezone": "Europe/Stockholm",
       "openingHours": []
+    },
+    "lastVerified": "2025-12-10",
+    "active": true
+  },
+  {
+    "id": 45,
+    "title": "Kronofogdens kundservice",
+    "resource": {
+      "url": "https://www.kronofogden.se/",
+      "type": "link"
+    },
+    "contactTypes": ["telefon", "webb"],
+    "phone": "0771-73 73 00",
+    "description": "För dig med frågor om skulder, utmätning eller betalningsanmärkningar. Kronofogden ger information och vägledning i ekonomiska svårigheter.",
+    "category": "ekonomi",
+    "urgent": false,
+    "tags": ["ekonomi", "skuld", "vägledning"],
+    "availability": {
+      "label": "Tel: mån-fre 08–18",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "08:00",
+          "close": "18:00",
+          "channels": ["telefon"]
+        }
+      ]
+    },
+    "lastVerified": "2025-12-10",
+    "active": true
+  },
+  {
+    "id": 46,
+    "title": "Kommunal budget- och skuldrådgivning",
+    "resource": {
+      "url": "https://www.hallakonsument.se/ekonomi-och-budget/budget-och-skuld/",
+      "type": "link"
+    },
+    "contactTypes": ["telefon", "webb"],
+    "phone": "",
+    "description": "Kostnadsfri rådgivning från din kommun om privatekonomi, skuldsanering och budgetering. Kontakta din kommuns budget- och skuldrådgivare.",
+    "category": "ekonomi",
+    "urgent": false,
+    "tags": ["ekonomi", "skuld", "budget", "vägledning"],
+    "availability": {
+      "label": "Se din kommuns webbplats",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2025-12-10",
+    "active": true
+  },
+  {
+    "id": 47,
+    "title": "Konsumentverkets vägledning",
+    "resource": {
+      "url": "https://www.hallakonsument.se/",
+      "type": "link"
+    },
+    "contactTypes": ["telefon", "chatt", "webb"],
+    "phone": "0771-42 33 00",
+    "description": "Gratis rådgivning om konsumenträtt, ekonomi och budget via Hallå konsument – Konsumentverkets upplysningstjänst.",
+    "category": "ekonomi",
+    "urgent": false,
+    "tags": ["ekonomi", "budget", "konsument", "vägledning"],
+    "availability": {
+      "label": "Tel: mån-fre 09–12",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "open": "09:00",
+          "close": "12:00",
+          "channels": ["telefon"]
+        }
+      ]
     },
     "lastVerified": "2025-12-10",
     "active": true
