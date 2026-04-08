@@ -55,7 +55,6 @@
     font-weight: 500;
     font-size: 14px;
     transition: color 0.15s ease, background-color 0.15s ease;
-    white-space: nowrap;
     line-height: 1;
   }
 
