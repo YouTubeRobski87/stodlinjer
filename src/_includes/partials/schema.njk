@@ -20,6 +20,7 @@
 {# BreadcrumbList schema - for all pages except homepage #}
 {% if page.url != "/" %}
 {%- set samlingInfo = (samling | getSamling) if samling else null %}
+{%- set samlingName = (samlingInfo.title if samlingInfo and samlingInfo.title) or samling or "Kategori" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,7 +37,8 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Artiklar"
+      "name": "Artiklar",
+      "item": "{{ site.url }}/artiklar/"
     }
     {%- endif %}
     {#- Contact page: Hem > Kontakt #}
@@ -44,7 +46,8 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Kontakt"
+      "name": "Kontakt",
+      "item": "{{ site.url }}/kontakt/"
     }
     {%- endif %}
     {#- Collection/samling page: Hem > Artiklar > [Collection name] #}
@@ -58,7 +61,8 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "{{ samling.title | escape }}"
+      "name": "{{ samling.title | default(samling.slug) | default('Kategori') | escape }}",
+      "item": "{{ site.url }}/samlingar/{{ samling.slug }}/"
     }
     {%- endif %}
     {#- Individual article: Hem > Artiklar > [Collection] > [Article title] #}
@@ -72,13 +76,14 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "{{ samlingInfo.title | escape }}",
+      "name": "{{ samlingName | escape }}",
       "item": "{{ site.url }}/samlingar/{{ samling }}/"
     },
     {
       "@type": "ListItem",
       "position": 4,
-      "name": "{{ title | escape }}"
+      "name": "{{ title | default('Artikel') | escape }}",
+      "item": "{{ site.url }}{{ page.url }}"
     }
     {%- endif %}
     {#- Generic page (e.g., policy) fallback: Hem > [Page title] #}
@@ -86,7 +91,8 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "{{ title | escape }}"
+      "name": "{{ title | default('Sida') | escape }}",
+      "item": "{{ site.url }}{{ page.url }}"
     }
     {%- endif %}
   ]
