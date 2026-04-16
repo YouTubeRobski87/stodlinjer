@@ -20,7 +20,11 @@
     <div class="header-actions">
       {% if h.links %}
         {% for link in h.links %}
-          <a href="{{ baseUrl }}{{ link.url }}" class="header-link" aria-label="{{ link.aria }}">
+          {% set href = link.url or '' %}
+          {% if 'mailto:' not in href and 'http://' not in href and 'https://' not in href and 'tel:' not in href and '#' not in href %}
+            {% set href = baseUrl + href %}
+          {% endif %}
+          <a href="{{ href }}" class="header-link" aria-label="{{ link.aria }}">
             {{ icon(link.icon) }}<span>{{ link.text }}</span>
           </a>
         {% endfor %}
