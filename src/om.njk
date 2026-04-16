@@ -1,0 +1,61 @@
+---
+title: Om | Stödlinjer Sverige
+description: Kort om varför Stödlinjer.se finns, vem som driver sidan och hur du kontaktar oss.
+keywords: om, stodlinjer, stödlinjer, robert claesson, kontakt, support@stodlinjer.se
+permalink: "/om/"
+pageClass: "solid-bg-shell"
+header:
+  icon: "life-ring"
+  label: "Om"
+  title: "Om Stödlinjer.se"
+  subtitle: "Kort om varför sidan finns och vem som driver den."
+  links:
+    - url: "/"
+      icon: "home"
+      text: "Startsida"
+      aria: "Till startsidan"
+    - url: "/artiklar/"
+      icon: "newsletter"
+      text: "Artiklar"
+      aria: "Till artiklar och guider"
+    - url: "/kontakt/"
+      icon: "envelope-letter"
+      text: "Kontakt"
+      aria: "Till kontaktsidan"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/icon.njk" import icon %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <article class="surface-card strong-card p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="pill">{{ icon('life-ring') }} Om sidan</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-slate-900 dark:text-white">
+        Om Stödlinjer.se
+      </h2>
+      <div class="space-y-4 text-base sm:text-lg muted">
+        <p>
+          Stödlinjer.se finns för att göra det enklare att snabbt hitta rätt stödlinje i
+          Sverige. När något känns svårt ska det gå fort att hitta relevanta nummer,
+          öppettider och länkar vidare.
+        </p>
+        <p>
+          Sidan drivs av Robert Claesson som ett fristående initiativ. Målet är att samla
+          information tydligt, sakligt och så uppdaterat som möjligt.
+        </p>
+        <p>
+          Om du ser något som behöver rättas eller vill komma i kontakt går det bra att
+          mejla
+          <a href="mailto:support@stodlinjer.se" class="inline-link">support@stodlinjer.se</a>.
+        </p>
+      </div>
+    </article>
+  </section>
+{% endblock %}
