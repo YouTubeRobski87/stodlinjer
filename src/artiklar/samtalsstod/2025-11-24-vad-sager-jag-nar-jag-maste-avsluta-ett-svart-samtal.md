@@ -88,3 +88,9 @@ Inom professionella sammanhang betonas vikten av självomhändertagande för att
 ## Sammanfattning
 
 Att avsluta ett svårt samtal väl kräver förberedelse, närvaro och omsorg. De centrala komponenterna är att förbereda personen genom att ge förvarning om att samtalet närmar sig sitt slut, att sammanfatta och bekräfta det som framkommit, att skapa en plan framåt med konkreta steg och resurser, att hänvisa till professionellt stöd när det behövs, och att ta avsked på ett varmt och respektfullt sätt. Genom att avsluta samtal med omsorg ger du personen de bästa förutsättningarna att bära med sig något värdefullt från er interaktion och förbereder dem för att hantera tiden som kommer.
+
+## Relaterad läsning
+
+- [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)
+- [Vad säger jag när jag vill sätta gränser på ett tryggt sätt?](/artiklar/samtalsstod/vad-sager-jag-nar-jag-vill-satta-granser-pa-ett-tryggt-satt/)
+- [Hur säger man nej på ett snällt sätt?](/artiklar/samtalsstod/hur-sager-man-nej-pa-ett-snallt-satt/)

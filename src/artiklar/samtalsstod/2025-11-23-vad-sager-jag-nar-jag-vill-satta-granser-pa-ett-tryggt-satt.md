@@ -78,3 +78,9 @@ Om någon reagerar på din gräns som om du har skadat dem, kan det aktivera vad
 ## Sammanfattning
 
 Att sätta gränser på ett tryggt sätt handlar om att kommunicera dina behov tydligt och respektfullt, utan att gå till ytterligheter av passivitet eller aggressivitet. Genom att använda etablerade kommunikationsverktyg som jag-budskap, DESC-modellen, trasig skiva-tekniken och icke-våldsam kommunikation kan du uttrycka dina gränser på ett sätt som ökar chansen att de respekteras samtidigt som relationen bevaras. Kom ihåg att gränssättning är en färdighet som kräver övning, och att de obehagskänslor som kan uppstå ofta är inlärda reaktioner snarare än tecken på att du gör något fel.
+
+## Relaterad läsning
+
+- [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)
+- [Hur säger man nej på ett snällt sätt?](/artiklar/samtalsstod/hur-sager-man-nej-pa-ett-snallt-satt/)
+- [Vad gör man när någon inte respekterar ens gränser?](/artiklar/samtalsstod/vad-gor-man-nar-nagon-inte-respekterar-ens-granser/)

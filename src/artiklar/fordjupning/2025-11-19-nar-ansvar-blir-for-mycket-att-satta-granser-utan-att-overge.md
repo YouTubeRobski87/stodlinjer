@@ -67,3 +67,9 @@ Du sätter gränsen mot det **destruktiva beteendet** (skriket), men du upprätt
 I vissa situationer, särskilt när det rör sig om pågående misshandel, våld eller kronisk kris, är den yttersta gränsen att **fysiskt dra sig undan**. **Sekundär Traumatisering** (även kallat _Compassion Fatigue_) är ett verkligt tillstånd där den stödjande personen absorberar den närståendes trauma. Symtom kan inkludera PTSD-liknande symtom, vilket betonar att gränssättning i dessa fall inte är en egoistisk handling, utan en nödvändig överlevnadsåtgärd som krävs för att kunna fortsätta existera och eventuellt kunna hjälpa i framtiden (Figley, 1995).
 
 Att skydda din inre hälsa genom gränssättning är det mest kärleksfulla du kan göra, både för dig själv och för den person du stöder.
+
+## Relaterad läsning
+
+- [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)
+- [Vad säger jag när jag vill sätta gränser på ett tryggt sätt?](/artiklar/samtalsstod/vad-sager-jag-nar-jag-vill-satta-granser-pa-ett-tryggt-satt/)
+- [Vad gör man när någon inte respekterar ens gränser?](/artiklar/samtalsstod/vad-gor-man-nar-nagon-inte-respekterar-ens-granser/)
