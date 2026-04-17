@@ -70,6 +70,16 @@ Detta gör att du både visar omtanke och håller din gräns.
 
 En tydlig gräns kan kännas ovant i början. Men ovant är inte samma sak som fel.
 
+## Börja smått och bygg trygghet
+
+Om gränssättning känns svårt kan du börja i låg risk:
+
+- svara senare i stället för direkt
+- säg nej till en liten sak först
+- öva en mening du kan utantill
+
+Varje liten gräns du håller gör nästa lättare.
+
 ## Om någon reagerar starkt
 
 Du kan inte styra någon annans reaktion. Du kan styra hur tydligt och respektfullt du kommunicerar.
