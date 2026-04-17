@@ -112,3 +112,9 @@ Om du inte är redo för individuell terapi kan stödgrupper med andra som har l
 Återhämtning från en destruktiv relation är en process, inte en destination. Det kommer att finnas bakslag och svåra dagar, men varje dag fri från övergrepp är ytterligare en pusselbit av dig själv som du får tillbaka (Love is Respect, 2022). Med tiden kommer du att återupptäcka vem du är, vad du vill, och vad du förtjänar.
 
 Kom ihåg att det du har upplevt inte definierar vem du är. Du förtjänar relationer byggda på ömsesidig respekt, tillit och omsorg. Att lämna var modigt — att läka är nästa steg på resan.
+
+## Relaterad läsning
+
+- [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)
+- [Vad gör man när någon inte respekterar ens gränser?](/artiklar/samtalsstod/vad-gor-man-nar-nagon-inte-respekterar-ens-granser/)
+- [Hur säger man nej på ett snällt sätt?](/artiklar/samtalsstod/hur-sager-man-nej-pa-ett-snallt-satt/)

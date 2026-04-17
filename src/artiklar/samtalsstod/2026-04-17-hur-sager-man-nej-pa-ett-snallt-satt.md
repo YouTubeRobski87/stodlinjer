@@ -74,6 +74,8 @@ Skuld kan komma även när du gör rätt för dig. Prova att påminna dig:
 - "Jag får sätta gränser utan att vara elak."
 - "Besvikelse hos andra är inte samma sak som att jag gjort fel."
 
+Om skuldkänslan ändå sitter kvar kan du fördjupa dig i [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/).
+
 ## Interna länkar
 
 - [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)

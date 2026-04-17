@@ -60,6 +60,7 @@ Samma budskap, lugn ton, samma handling varje gång.
 - stanna kvar i otrygga lägen för att "inte vara besvärlig"
 
 En gräns behöver konsekvens för att bli begriplig.
+Om du märker att skuld får dig att backa från gränsen kan [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/) ge ett bra nästa steg.
 
 ## Om det gäller en nära relation
 

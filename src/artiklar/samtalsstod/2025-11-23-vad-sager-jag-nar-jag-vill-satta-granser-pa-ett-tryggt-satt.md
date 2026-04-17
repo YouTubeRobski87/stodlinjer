@@ -36,6 +36,7 @@ Forskning inom interpersonell kommunikation har identifierat att assertiv kommun
 En av de vanligaste anledningarna till att människor undviker att sätta gränser är rädslan för att göra andra besvikna eller känna skuld efteråt. Psykologisk forskning gör en viktig distinktion mellan skuld och skam som är relevant att förstå i detta sammanhang. Skuld är kopplad till en specifik handling vi gjort eller inte gjort, och innebär ofta en vilja att reparera och göra annorlunda nästa gång. Skam däremot handlar om en global känsla gentemot självet, där personen inte tänker att hen gjorde något dåligt, utan att hen är dålig (Lewis, 1971; Tangney & Dearing, 2004).
 
 Personer som växer upp i familjesystem där deras identitet definieras av hur väl de möter andras behov kan uppleva att varje handling av självprioritering känns som ett svek (Lukin, 2025). Detta mönster kan göra gränssättning extra svårt, då det aktiverar djupt rotade känslor av skuld och skam. Att förstå att dessa känslor ofta är inlärda reaktioner snarare än tecken på att man gör något fel är ett första steg mot att kunna sätta gränser utan att översvämmas av obehag.
+Om du vill ha en mer konkret steg-för-steg-guide med fokus på just skuld, läs [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/).
 
 ## Kommunikationsverktyg för trygg gränssättning
 
