@@ -11,7 +11,7 @@ references:
   - Speed, B. C., Goldstein, B. L., & Goldfried, M. R. (2018). Assertiveness training - A forgotten evidence-based treatment. *Clinical Psychology - Science and Practice*, 25(1), e12216. https://doi.org/10.1111/cpsp.12216
 ---
 
-Om du blir spänd i kroppen när du säger nej är det inte konstigt. Många som är omtänksamma bär en inre regel: "Jag ska inte göra någon besviken." Då kan gränser kännas som skuld, även när de är rimliga. Att sätta gränser utan dåligt samvete handlar inte om att bli hård. Det handlar om att vara tydlig med vad du orkar och behöver.
+Om du blir spänd i kroppen när du säger nej är det inte konstigt. Många bär en tyst regel: "Jag får inte göra någon besviken." Då kan även rimliga gränser kännas som skuld. Att sätta gränser utan dåligt samvete handlar om tydlighet, inte hårdhet.
 
 ## Varför skulden kommer när du sätter gränser
 
