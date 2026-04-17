@@ -86,6 +86,17 @@ Om gränsbrotten innehåller hot, kontroll, kränkningar eller rädsla ska du pr
 
 Sök stöd tidigt via personer du litar på eller professionella stödlinjer. Vid akut fara: ring 112.
 
+## Dokumentera om mönstret fortsätter
+
+Om du gång på gång blir överkörd kan det hjälpa att skriva ner:
+
+- vad som hände
+- vad du sa
+- hur personen svarade
+- vilken konsekvens du satte
+
+Det gör mönstret tydligare och kan vara stöd om du behöver hjälp utifrån.
+
 ## Interna länkar för fortsatt stöd
 
 - [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)

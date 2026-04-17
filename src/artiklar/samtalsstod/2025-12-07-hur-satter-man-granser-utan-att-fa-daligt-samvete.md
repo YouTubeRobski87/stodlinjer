@@ -77,6 +77,7 @@ Om gränssättning känns svårt kan du börja i låg risk:
 - svara senare i stället för direkt
 - säg nej till en liten sak först
 - öva en mening du kan utantill
+- påminn dig: besvikelse hos andra betyder inte att du gjort fel
 
 Varje liten gräns du håller gör nästa lättare.
 

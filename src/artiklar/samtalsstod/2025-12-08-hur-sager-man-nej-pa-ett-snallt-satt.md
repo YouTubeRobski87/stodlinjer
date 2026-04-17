@@ -79,6 +79,16 @@ Skuld kommer ofta för att du bryter en vana, inte för att du gjort något fel.
 
 Skulden brukar minska när du upprepar samma tydliga beteende flera gånger.
 
+## När du behöver svara snabbt
+
+I stunden kan det hjälpa att ha en standardsats klar:
+
+- "Tack för att du frågar, men nej."
+- "Jag kan inte nu."
+- "Det passar inte för mig."
+
+Det räcker. Du kan alltid återkomma senare om du vill utveckla.
+
 ## Interna länkar för fortsatt stöd
 
 - [Hur sätter man gränser utan att få dåligt samvete?](/artiklar/samtalsstod/hur-satter-man-granser-utan-att-fa-daligt-samvete/)
