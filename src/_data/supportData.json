@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Självmordslinjen",
     "resource": {
-      "url": "https://mind.se/sjalvmordslinjen/",
+    "url": "https://mind.se/",
       "type": "link"
     },
     "contactTypes": ["telefon", "chatt", "webb"],
