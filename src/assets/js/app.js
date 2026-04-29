@@ -329,6 +329,33 @@ function renderLines() {
       }
     `;
 
+    if (telHref) {
+      article.dataset.telHref = `tel:${telHref}`;
+      article.setAttribute('role', 'link');
+      article.setAttribute('tabindex', '0');
+      article.setAttribute('aria-label', `Ring ${line.title} på ${phone}`);
+
+      const openDialer = () => {
+        window.location.href = article.dataset.telHref;
+      };
+
+      const isInteractiveTarget = (target) =>
+        target instanceof Element &&
+        Boolean(target.closest('a, button, input, select, textarea, summary, details'));
+
+      article.addEventListener('click', (event) => {
+        if (isInteractiveTarget(event.target)) return;
+        openDialer();
+      });
+
+      article.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        if (isInteractiveTarget(event.target)) return;
+        event.preventDefault();
+        openDialer();
+      });
+    }
+
     grid.appendChild(article);
   });
 }
