@@ -82,11 +82,41 @@
   }
 
   .soro-blog-section {
-    margin-top: 3rem;
+    max-width: 760px;
+    margin: 3rem auto 0;
+    padding: 1.25rem;
+    border: 1px solid rgba(165, 180, 252, 0.18);
+    border-radius: 1.25rem;
+    background: rgba(15, 23, 42, 0.35);
+  }
+
+  .soro-blog-section__header {
+    margin-bottom: 1rem;
+  }
+
+  .soro-blog-section__eyebrow {
+    margin: 0 0 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #a5b4fc;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
   .soro-blog-section h2 {
-    margin-bottom: 1rem;
+    margin: 0 0 0.35rem;
+    font-size: 1.35rem;
+  }
+
+  .soro-blog-section__header p {
+    margin: 0;
+    color: rgba(226, 232, 240, 0.78);
+  }
+
+  .soro-blog-section__embed {
+    max-height: 430px;
+    overflow: auto;
+    border-radius: 1rem;
   }
 
   @media (min-width: 640px) {
