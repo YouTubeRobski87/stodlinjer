@@ -143,20 +143,27 @@ function hideLoadingState() {
 // Data Loading
 // ==========================================================================
 
-async function loadSupportLines() {
-  showLoadingState();
+function readEmbeddedSupportLines() {
+  const dataEl = document.getElementById('supportLinesData');
+  if (!dataEl) return [];
 
   try {
-    const res = await fetch(`${BASE_URL}/data/supportData.json`, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`Kunde inte ladda data (${res.status})`);
-    const data = await res.json();
-    state.lines = Array.isArray(data) ? data.filter((line) => line.active !== false) : [];
-    hideLoadingState();
-    renderLines();
+    const data = JSON.parse(dataEl.textContent || '[]');
+    return Array.isArray(data) ? data : [];
   } catch (err) {
-    console.error('Fel vid laddning av supportData.json:', err);
-    hideLoadingState();
+    console.error('Fel vid läsning av inbäddad stödlinjedata:', err);
+    return [];
+  }
+}
 
+function loadSupportLines() {
+  showLoadingState();
+
+  const data = readEmbeddedSupportLines();
+  state.lines = data.filter((line) => line && line.active !== false);
+  hideLoadingState();
+
+  if (!state.lines.length) {
     const info = document.getElementById('resultsInfo');
     const grid = document.getElementById('linesGrid');
     const noResults = document.getElementById('noResults');
@@ -178,7 +185,10 @@ async function loadSupportLines() {
       `;
     }
     if (noResults) noResults.classList.add('hidden');
+    return;
   }
+
+  renderLines();
 }
 
 // ==========================================================================

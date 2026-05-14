@@ -72,20 +72,26 @@ function normalizeSupportLine(line) {
   };
 }
 
-async function loadSupportSources() {
+function readEmbeddedSupportLines() {
+  const dataEl = document.getElementById('supportLinesData');
+  if (!dataEl) return [];
+
   try {
-    const res = await fetch(`${BASE_URL}/data/supportData.json`, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`Kunde inte ladda data (${res.status})`);
-    const data = await res.json();
-    if (!Array.isArray(data)) return;
-    const supportSources = data
-      .filter((line) => line && line.active !== false)
-      .map(normalizeSupportLine)
-      .filter((source) => source && (source.title || source.url || source.phone));
-    chatbotState.sources = [...supportSources, ...configuredSources];
+    const data = JSON.parse(dataEl.textContent || '[]');
+    return Array.isArray(data) ? data : [];
   } catch (err) {
-    console.warn('Kunde inte ladda supportData.json för chatbotten:', err);
+    console.warn('Kunde inte läsa inbäddad stödlinjedata för chatbotten:', err);
+    return [];
   }
+}
+
+function loadSupportSources() {
+  const supportSources = readEmbeddedSupportLines()
+    .filter((line) => line && line.active !== false)
+    .map(normalizeSupportLine)
+    .filter((source) => source && (source.title || source.url || source.phone));
+
+  chatbotState.sources = [...supportSources, ...configuredSources];
 }
 
 function normalizeBotText(text) {
