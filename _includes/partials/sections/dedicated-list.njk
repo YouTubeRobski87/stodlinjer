@@ -1,0 +1,26 @@
+{% macro dedicatedListSection(data) %}
+  <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+    <div class="surface-card p-6 sm:p-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
+        {{ data.title }}
+      </h2>
+      {% for paragraph in data.paragraphs %}
+        <p class="muted text-sm leading-relaxed mb-3">{{ paragraph }}</p>
+      {% endfor %}
+      {% if data.listIntro %}
+        <p class="muted text-sm leading-relaxed mb-4">{{ data.listIntro }}</p>
+      {% endif %}
+      <ul class="list-none muted text-sm space-y-2">
+        {% for item in data.items %}
+          <li class="flex items-start gap-2">
+            <i class="fas fas-check text-[var(--accent)]"></i>
+            <span>{{ item | safe }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+      {% if data.footer %}
+        <p class="text-xs muted mt-4">{{ data.footer }}</p>
+      {% endif %}
+    </div>
+  </article>
+{% endmacro %}

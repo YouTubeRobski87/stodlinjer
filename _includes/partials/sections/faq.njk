@@ -1,0 +1,28 @@
+{% macro faqSection(highlight112) %}
+  <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-18">
+    <div class="grid gap-6 md:grid-cols-2">
+      <section class="surface-card p-6">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">När ska jag ringa 90101?</h2>
+        <p class="muted text-sm leading-relaxed">
+          Mind Självmordslinjen på <strong>90101</strong> finns för dig som har allvarliga tankar på att skada dig själv, eller för dig som är orolig för någon annan. Du kan vara helt anonym, och de som svarar är utbildade volontärer som lyssnar utan att döma.
+
+        </p>
+      </section>
+
+      <section class="surface-card p-6"{% if highlight112 %} style="border: 3px solid var(--alert)"{% endif %}>
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">När ska jag ringa 112?</h2>
+        <p class="muted text-sm leading-relaxed">
+          Ring <strong>112</strong> vid akuta, livshotande situationer – till exempel om någon inte andas, har tagit en överdos, är allvarligt skadad eller om du upplever att det finns omedelbar fara för liv.
+
+        </p>
+      </section>
+
+      <section class="surface-card p-6 md:col-span-2">
+        <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Är samtalen anonyma?</h2>
+        <p class="muted text-sm leading-relaxed">
+          De stödlinjer som listas här är i de flesta fall anonyma, och du behöver inte uppge ditt namn. Läs alltid på respektive organisations webbplats för att se vad som gäller för just deras stöd.
+        </p>
+      </section>
+    </div>
+  </article>
+{% endmacro %}

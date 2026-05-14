@@ -1,0 +1,35 @@
+{% from "partials/icon.njk" import icon %}
+{# Mood Strip - Väder + Citat sida vid sida #}
+{# Desktop: 1/3 väder, 2/3 citat | Mobil: stackade #}
+
+<section class="mood-strip max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+  <div class="mood-strip__grid">
+
+    {# Väder-widget (vänster, 1/3) #}
+    <div class="weather-widget" data-weather-widget>
+      <div class="weather-widget__inner weather-widget__inner--loading">
+        <span class="weather-widget__loader">Hämtar vädret...</span>
+      </div>
+    </div>
+
+    {# Citat-widget (höger, 2/3) #}
+    <figure class="quote-block" role="figure" aria-label="Uppmuntrande citat">
+      <span class="quote-icon quote-icon-left" aria-hidden="true">
+        {{ icon('fa-quote-left') }}
+      </span>
+      <blockquote id="dailyQuote" class="quote-text">
+        <p></p>
+      </blockquote>
+      <figcaption id="quoteAuthor" class="quote-author"></figcaption>
+      <span class="quote-icon quote-icon-right" aria-hidden="true">
+        {{ icon('fa-quote-left') }}
+      </span>
+    </figure>
+
+  </div>
+</section>
+
+{# Gör weatherMoods tillgänglig för JavaScript #}
+<script>
+  window.weatherMoods = {{ weatherMoods | json | safe }};
+</script>

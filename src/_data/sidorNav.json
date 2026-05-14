@@ -1,0 +1,26 @@
+[
+  {
+    "url": "/sidor/integritetspolicy/",
+    "icon": "incognito",
+    "text": "Integritetspolicy",
+    "status": "Uppdaterad"
+  },
+  {
+    "url": "/sidor/cookiepolicy/",
+    "icon": "cookie",
+    "text": "Cookiepolicy",
+    "status": "Uppdaterad"
+  },
+  {
+    "url": "/sidor/anvandarvillkor/",
+    "icon": "contract-sign",
+    "text": "Användarvillkor",
+    "status": "Uppdaterad"
+  },
+  {
+    "url": "/sidor/ansvarsfriskrivning/",
+    "icon": "warning-circle",
+    "text": "Ansvarsfriskrivning",
+    "status": "Uppdaterad"
+  }
+]

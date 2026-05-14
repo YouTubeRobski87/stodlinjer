@@ -1,0 +1,18 @@
+{% macro introSection(title, paragraphs) %}
+  <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-5 sm:pb-7">
+    <div class="surface-card p-6 sm:p-8 mb-3 sm:mb-5">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
+        {{ title }}
+      </h2>
+      {% for paragraph in paragraphs %}
+        {% if paragraph is string %}
+          <p class="muted leading-relaxed mb-3">{{ paragraph | safe }}</p>
+        {% else %}
+          <p class="{{ paragraph.class | default('muted leading-relaxed mb-3') }}">
+            {{ paragraph.text | safe }}
+          </p>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+{% endmacro %}

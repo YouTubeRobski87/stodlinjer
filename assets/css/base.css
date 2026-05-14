@@ -1,0 +1,341 @@
+:root {
+  /* Light theme */
+  --bg: #f8f7fc;
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(248, 247, 252, 0.98) 0%,
+    rgba(243, 242, 249, 0.97) 45%,
+    rgba(236, 234, 246, 0.95) 100%
+  );
+  --card: #fbfafe;
+  --card-strong: #f5f3fb;
+  --border: #dcd8ec;
+  --text: #2f2e3a;
+  --muted: #5a5966;
+  --muted-soft: #737283;
+  --pill: #edeaf7;
+  --pill-text: #2f2e3a;
+  --accent: #8a8ec4;
+  --accent-2: #6b6fa6;
+  --accent-3: #b7b9e0;
+  --accent-4: #60649f;
+  --accent-rgb: 138, 142, 196;
+  --accent-soft: rgba(138, 142, 196, 0.14);
+  --focus-ring: rgba(138, 142, 196, 0.2);
+  --focus-ring-soft: rgba(138, 142, 196, 0.15);
+  --category-bg: rgba(47, 46, 58, 0.04);
+  --category-bg-hover: rgba(47, 46, 58, 0.07);
+  --on-accent: #ffffff;
+  --alert: rgba(215, 70, 123, 0.95);
+  --on-alert: #ffffff;
+  --bg-alt: #f2f0fa;
+  --card-alt: #f7f5fc;
+  --card-alt-strong: #f1eef9;
+  --bg-solid: #f2f0fa;
+  --card-solid: #fbfafe;
+  --card-solid-strong: #f5f3fb;
+  --card-contact: #f5f3fb;
+  --shadow-soft: 0 12px 30px rgba(47, 46, 58, 0.08);
+  --shadow: 0 6px 14px rgba(47, 46, 58, 0.06);
+  --shadow-strong: 0 10px 22px rgba(47, 46, 58, 0.1);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  /* Dark theme */
+  --bg: #1a1a21;
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(26, 26, 33, 0.97) 0%,
+    rgba(22, 22, 28, 0.98) 60%,
+    rgba(18, 18, 23, 1) 100%
+  );
+  --card: #21212a;
+  --card-strong: #272730;
+  --border: #393946;
+  --text: #e4e3ed;
+  --muted: #a6a5b4;
+  --muted-soft: #c2c1ce;
+  --pill: #2a2a35;
+  --pill-text: #e4e3ed;
+  --accent: #9a9ed4;
+  --accent-2: #adafe0;
+  --accent-3: #484a68;
+  --accent-4: #bcbee6;
+  --accent-rgb: 154, 158, 212;
+  --accent-soft: rgba(255, 255, 255, 0.08);
+  --focus-ring: rgba(154, 158, 212, 0.22);
+  --focus-ring-soft: rgba(154, 158, 212, 0.18);
+  --category-bg: rgba(255, 255, 255, 0.04);
+  --category-bg-hover: rgba(255, 255, 255, 0.08);
+  --on-accent: #18181e;
+  --bg-alt: #1e1e27;
+  --card-alt: #24232e;
+  --card-alt-strong: #292835;
+  --bg-solid: #1e1e27;
+  --card-solid: #222129;
+  --card-solid-strong: #27262f;
+  --card-contact: #262530;
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.32);
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.26);
+  --shadow-strong: 0 10px 22px rgba(0, 0, 0, 0.32);
+  color-scheme: dark;
+}
+
+:root[data-theme='calm'] {
+  /* Seafoam Drift theme */
+  --bg: #f3f7f6;
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(243, 247, 246, 0.98) 0%,
+    rgba(229, 239, 235, 0.96) 45%,
+    rgba(220, 233, 228, 0.94) 100%
+  );
+  --card: #e7f0ed;
+  --card-strong: #d7e6e0;
+  --border: #c4d7d1;
+  --text: #243330;
+  --muted: #4f5f59;
+  --muted-soft: #6b7a74;
+  --pill: #d8e7e1;
+  --pill-text: #243330;
+  --accent: #6fa39a;
+  --accent-2: #8bbeb5;
+  --accent-3: #a7c9c2;
+  --accent-rgb: 111, 163, 154;
+  --accent-soft: rgba(111, 163, 154, 0.16);
+  --focus-ring: rgba(111, 163, 154, 0.18);
+  --focus-ring-soft: rgba(111, 163, 154, 0.15);
+  --category-bg: rgba(36, 51, 48, 0.05);
+  --category-bg-hover: rgba(36, 51, 48, 0.08);
+  --on-accent: #0f1d1a;
+  --bg-alt: #e5efec;
+  --card-alt: #ecf5f1;
+  --card-alt-strong: #e0ece8;
+  --bg-solid: #e5efec;
+  --card-solid: #edf5f1;
+  --card-solid-strong: #dfe8e3;
+  --card-contact: #dce8e3;
+  --shadow-soft: 0 12px 30px rgba(36, 51, 48, 0.12);
+  --shadow: 0 6px 14px rgba(36, 51, 48, 0.1);
+  --shadow-strong: 0 10px 22px rgba(36, 51, 48, 0.14);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Söhne', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background: var(--bg);
+  background-image: var(--bg-pattern);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+}
+
+/* Solid background variant for home/contact */
+body.solid-bg-shell {
+  background: var(--bg-solid);
+  background-image: none;
+}
+
+:root.theme-transition,
+:root.theme-transition * {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease, fill 180ms ease, stroke 180ms ease, outline-color 180ms ease;
+}
+
+:root[data-theme='dark'] body.solid-bg-shell,
+:root[data-theme='calm'] body.solid-bg-shell {
+  background: var(--bg-solid);
+  background-image: none;
+}
+
+/* ==========================================================================
+   Typography Scale & Rhythm for Söhne
+   ========================================================================== */
+
+.page-shell h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-shell h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-shell h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  color: var(--text);
+  margin: 0;
+}
+
+.page-shell h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Large display headings (hero sections) */
+.page-shell .text-3xl {
+  font-size: 1.875rem !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+}
+
+.page-shell .text-4xl {
+  font-size: 2.25rem !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.1 !important;
+}
+
+@media (min-width: 640px) {
+  .page-shell .sm\:text-4xl {
+    font-size: 2.25rem !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.1 !important;
+  }
+}
+
+/* Body text */
+.page-shell p,
+.page-shell li {
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+}
+
+.page-shell .muted {
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
+}
+
+.page-shell .text-lg {
+  font-size: 1.0625rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.005em !important;
+}
+
+.page-shell .text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.page-shell .text-xs {
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.015em !important;
+  font-weight: 800;
+}
+
+/* Strong/bold text */
+.page-shell strong,
+.page-shell b {
+  font-weight: 700;
+}
+
+/* Medium weight for UI elements (Söhne supports full weight range) */
+.page-shell .font-semibold {
+  font-weight: 600 !important;
+}
+
+.page-shell .font-bold {
+  font-weight: 700 !important;
+}
+
+.page-shell .font-extrabold {
+  font-weight: 800 !important;
+}
+
+/* Normalize Tailwind text utility when theme switches */
+.page-shell .text-slate-900 {
+  color: var(--text) !important;
+}
+
+/* ==========================================================================
+   Phone Numbers - Critical Information Styling
+
+   Phone numbers use tabular figures (monospaced numerals) and increased
+   letter-spacing for maximum scanability. This is critical for users in
+   distress who need to quickly read and dial numbers.
+   ========================================================================== */
+
+.phone-number {
+  font-family: 'Söhne', system-ui, sans-serif;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   Focus States - Accessibility
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sm\:pb-7 {
+    padding-bottom: 1rem !important;
+  }
+}

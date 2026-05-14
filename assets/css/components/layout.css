@@ -1,0 +1,30 @@
+.surface-card {
+  background: var(--card);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.strong-card {
+  background: var(--card);
+  border: none;
+  border-radius: 8px;
+  box-shadow: var(--shadow-strong);
+}
+
+body.solid-bg-shell {
+  --card: var(--card-solid);
+  --card-strong: var(--card-solid-strong);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

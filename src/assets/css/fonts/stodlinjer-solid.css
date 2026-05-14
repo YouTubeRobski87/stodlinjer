@@ -1,0 +1,75 @@
+/* Stödlinjer Solid icons via SVG symbols */
+/* Config: /src/_data/icons.json */
+
+:root {
+  --symbol-color-primary: currentColor;
+  --symbol-color-secondary: currentColor;
+}
+
+.sts {
+  display: inline-block;
+  color: var(--symbol-color-primary);
+  height: 1.25em;
+  width: 1.25em;
+  line-height: 1;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.sts use {
+  fill: var(--symbol-color-secondary);
+  stroke: var(--symbol-color-secondary);
+  stroke-width: 1.25px;
+}
+
+.sts *,
+.sts use * {
+  stroke-width: 1.25px !important;
+}
+
+/* Keep icons small in specific widgets */
+.quote-icon .stl,
+.quote-icon .sts {
+  height: 1em;
+  width: 1em;
+}
+
+.weather-widget .stl,
+.weather-widget .sts {
+  height: 1em;
+  width: 1em;
+}
+
+/* Optional stroke helpers (for the few solid icons that carry strokes) */
+.stroke-1 use {
+  stroke-width: 1px;
+}
+
+.stroke-2 use {
+  stroke-width: 2px;
+}
+
+.stroke-3 use {
+  stroke-width: 3px;
+}
+
+.stroke-4 use {
+  stroke-width: 4px;
+}
+
+.stroke-round use {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle .stl,
+.theme-toggle .sts {
+  height: 1.75em !important;
+  width: 1.75em !important;
+  color: var(--text) !important;
+}
+
+[data-theme='dark'] .theme-toggle .stl,
+.theme-toggle .sts {
+  color: var(--text) !important;
+}

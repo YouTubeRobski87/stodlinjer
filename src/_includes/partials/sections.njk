@@ -1,0 +1,36 @@
+{# Aggregator file to import per-section partial macros #}
+{% from "partials/sections/hero-hotlines.njk" import heroWithHotlines as _heroWithHotlines %}
+{% from "partials/sections/intro.njk" import introSection as _introSection %}
+{% from "partials/sections/quote.njk" import quoteSection as _quoteSection %}
+{% from "partials/sections/search-filters.njk" import searchFiltersSection as _searchFiltersSection %}
+{% from "partials/sections/results-grid.njk" import resultsGridSection as _resultsGridSection %}
+{% from "partials/sections/dedicated-list.njk" import dedicatedListSection as _dedicatedListSection %}
+{% from "partials/sections/faq.njk" import faqSection as _faqSection %}
+
+{% macro heroWithHotlines(config) %}
+  {{ _heroWithHotlines(config) }}
+{% endmacro %}
+
+{% macro introSection(title, paragraphs) %}
+  {{ _introSection(title, paragraphs) }}
+{% endmacro %}
+
+{% macro quoteSection() %}
+  {{ _quoteSection() }}
+{% endmacro %}
+
+{% macro searchFiltersSection(placeholder, stats) %}
+  {{ _searchFiltersSection(placeholder, stats) }}
+{% endmacro %}
+
+{% macro resultsGridSection() %}
+  {{ _resultsGridSection() }}
+{% endmacro %}
+
+{% macro dedicatedListSection(data) %}
+  {{ _dedicatedListSection(data) }}
+{% endmacro %}
+
+{% macro faqSection(highlight112) %}
+  {{ _faqSection(highlight112) }}
+{% endmacro %}

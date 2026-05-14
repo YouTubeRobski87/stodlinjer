@@ -1,0 +1,12 @@
+{% macro resultsGridSection() %}
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+    <div class="flex items-center gap-2 mb-3">
+      <div id="resultsInfo" class="text-sm muted" aria-live="polite"></div>
+      <button id="clearTag" type="button" class="tag hidden">Rensa</button>
+    </div>
+    <div id="linesGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+    <p id="noResults" class="hidden muted text-sm mt-4">
+      Inga stödlinjer matchar din sökning. Testa att ändra sökord eller välja en annan kategori.
+    </p>
+  </section>
+{% endmacro %}

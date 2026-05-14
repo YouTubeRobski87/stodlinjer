@@ -1,0 +1,39 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.chatdata/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+*.log
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Build output / cache
+site/
+_site/
+.cache/
+src/assets/css/tailwind-built.css
+
+# Package manager files
+package-lock.json
+
+# Local Netlify folder
+.netlify/
+deno.lock
+
+# Vercel
+vercel.json
+
+# Misc
+CLAUDE.md
+PROJECT-SPEC.md
+ICON-SYSTEM.md
+.claude/

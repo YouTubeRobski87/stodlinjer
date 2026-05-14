@@ -1,0 +1,15 @@
+{# Weather Widget - Poetiskt väder för Stödlinjer #}
+{# Matchar layouten för quote-section #}
+
+<section class="weather-section max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-10">
+  <div class="weather-widget" data-weather-widget>
+    <div class="weather-widget__inner weather-widget__inner--loading">
+      <span class="weather-widget__loader">Hämtar vädret...</span>
+    </div>
+  </div>
+</section>
+
+{# Gör weatherMoods tillgänglig för JavaScript #}
+<script>
+  window.weatherMoods = {{ weatherMoods | json | safe }};
+</script>

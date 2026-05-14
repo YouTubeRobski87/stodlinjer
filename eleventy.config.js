@@ -1,0 +1,135 @@
+const fs = require('fs');
+const path = require('path');
+const MarkdownIt = require('markdown-it');
+
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
+const hasSrc = fs.existsSync(path.join(__dirname, 'src'));
+const inputDir = hasSrc ? 'src' : '.';
+const assetsDir = hasSrc ? 'src/assets' : 'assets';
+const dataDir = hasSrc ? 'src/_data' : '_data';
+const rootDataDir = path.join(__dirname, 'data');
+const samlingarDataPath = fs.existsSync(path.join(__dirname, '_data', 'samlingar.json'))
+  ? './_data/samlingar.json'
+  : './src/_data/samlingar.json';
+const samlingarData = require(samlingarDataPath);
+const { generateContentIndex } = require('./scripts/generate-content-index');
+const md = new MarkdownIt({ html: true, linkify: true, typographer: false });
+const extraDataPassthroughFiles = fs.existsSync(dataDir)
+  ? fs
+      .readdirSync(dataDir)
+      .filter(
+        (name) => name.endsWith('.json') && !fs.existsSync(path.join(rootDataDir, name))
+      )
+  : [];
+
+module.exports = function (eleventyConfig) {
+  // Copy static assets
+  eleventyConfig.addPassthroughCopy(assetsDir);
+  eleventyConfig.addPassthroughCopy('data');
+  extraDataPassthroughFiles.forEach((name) => {
+    eleventyConfig.addPassthroughCopy({ [path.join(dataDir, name)]: `data/${name}` });
+  });
+  eleventyConfig.addPassthroughCopy({ '.chatdata': 'chatdata' });
+  eleventyConfig.addPassthroughCopy({ '.nojekyll': '.nojekyll' });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@vercel/speed-insights/dist/index.mjs': 'assets/vendor/speed-insights.js'
+  });
+
+  eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
+
+  // Make baseUrl available in templates
+  eleventyConfig.addGlobalData('baseUrl', pathPrefix === '/' ? '' : pathPrefix);
+
+  eleventyConfig.addFilter('formatDate', (value) => {
+    if (!value) return '';
+    const date = typeof value === 'string' ? new Date(value) : value;
+    try {
+      return new Intl.DateTimeFormat('sv-SE', { dateStyle: 'long' }).format(date);
+    } catch (err) {
+      return date.toISOString().split('T')[0];
+    }
+  });
+
+  eleventyConfig.addFilter('isoDate', (value) => {
+    if (!value) return '';
+    const date = typeof value === 'string' ? new Date(value) : value;
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toISOString().split('T')[0];
+  });
+
+  eleventyConfig.addFilter('markdownify', (value) => {
+    if (!value) return '';
+    return md.render(value.toString());
+  });
+
+  eleventyConfig.addFilter('markdownifyInline', (value) => {
+    if (!value) return '';
+    return md.renderInline(value.toString());
+  });
+
+  eleventyConfig.addFilter('readingTime', (content) => {
+    if (!content) return 1;
+    const words = content.toString().trim().split(/\s+/).length;
+    return Math.max(1, Math.round(words / 200));
+  });
+
+  eleventyConfig.addFilter('getSamling', (slug) =>
+    samlingarData.find((item) => item.slug === slug)
+  );
+
+  eleventyConfig.addCollection('articles', (collectionApi) =>
+    collectionApi
+      .getFilteredByTag('artikel')
+      .filter((item) => !item.data.draft)
+      .sort((a, b) => b.date - a.date)
+  );
+
+  eleventyConfig.addCollection('samlingar', (collectionApi) => {
+    const metaBySlug = samlingarData.reduce((acc, item) => {
+      acc[item.slug] = item;
+      return acc;
+    }, {});
+
+    const grouped = new Map();
+
+    collectionApi.getFilteredByTag('artikel').forEach((post) => {
+      if (post.data.draft) return;
+      const slug = post.data.samling;
+      if (!slug) return;
+
+      if (!grouped.has(slug)) {
+        grouped.set(slug, {
+          slug,
+          items: [],
+          ...(metaBySlug[slug] || { title: slug, summary: '' })
+        });
+      }
+
+      grouped.get(slug).items.push(post);
+    });
+
+    return Array.from(grouped.values())
+      .map((entry) => ({
+        ...entry,
+        items: entry.items.sort((a, b) => b.date - a.date)
+      }))
+      .sort((a, b) => a.title.localeCompare(b.title, 'sv'));
+  });
+
+  eleventyConfig.on('eleventy.before', async () => {
+    await generateContentIndex();
+  });
+
+  return {
+    pathPrefix,
+    dir: {
+      input: inputDir,
+      output: '_site',
+      includes: '_includes',
+      data: '_data'
+    },
+    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'njk',
+    templateFormats: ['njk', 'md', 'html']
+  };
+};
