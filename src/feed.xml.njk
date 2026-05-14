@@ -7,10 +7,10 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>{{ site.name }} – Artiklar</title>
-    <link>{{ site.url }}{{ baseUrl }}/artiklar/</link>
+    <link>{{ site.url }}/artiklar/</link>
     <description>Senaste artiklarna från {{ site.name }}</description>
     <language>{{ site.lang }}</language>
-    <atom:link href="{{ site.url }}{{ baseUrl }}/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
     <lastBuildDate>
       {%- set latest = collections.articles | first -%}
       {%- if latest and latest.date -%}{{ latest.date.toUTCString() }}{%- endif -%}
@@ -20,8 +20,8 @@ layout: null
       {%- if post.data.draft != true and post.data.noindex != true -%}
       <item>
         <title>{{ post.data.title }}</title>
-        <link>{{ site.url }}{{ baseUrl }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ baseUrl }}{{ post.url }}</guid>
+        <link>{{ site.url }}{{ post.url | replace('//', '/') }}</link>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url | replace('//', '/') }}</guid>
         <pubDate>{{ post.date.toUTCString() }}</pubDate>
         {%- if post.data.description -%}
           <description><![CDATA[{{ post.data.description }}]]></description>

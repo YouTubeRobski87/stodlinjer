@@ -98,7 +98,7 @@ module.exports = async function handler(req, res) {
 
   if (!resendApiKey || !fromEmail || !toEmail) {
     console.error('Missing RESEND_API_KEY, CONTACT_FROM_EMAIL or CONTACT_TO_EMAIL');
-    return res.status(500).json({ success: false, error: 'Server configuration error.' });
+    return res.status(503).json({ success: false, error: 'Kontaktformuläret saknar serverkonfiguration. Maila support@stodlinjer.se istället.' });
   }
 
   const userAgent = readHeader(req, 'user-agent') || 'unknown';
@@ -133,7 +133,7 @@ module.exports = async function handler(req, res) {
       body: JSON.stringify({
         from: fromEmail,
         to: [toEmail],
-        subject: 'Kontakt från Stodlinjer.se',
+        subject: 'Kontakt från Stödlinjer.se',
         reply_to: email,
         text: emailBody
       })

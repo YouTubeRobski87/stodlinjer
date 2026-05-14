@@ -1063,7 +1063,7 @@
     "id": 32,
     "title": "Somaya stödjour",
     "resource": {
-      "url": "https://www.somaya.se/fa-hjalp/var-stodlinje",
+      "url": "https://www.somaya.se/",
       "type": "link"
     },
     "contactTypes": ["telefon", "chatt", "e-post", "webb"],
@@ -1529,7 +1529,7 @@
     "id": 46,
     "title": "Kommunal budget- och skuldrådgivning",
     "resource": {
-      "url": "https://www.hallakonsument.se/ekonomi-och-budget/budget-och-skuld/",
+      "url": "https://www.hallakonsument.se/",
       "type": "link"
     },
     "contactTypes": ["telefon", "webb"],

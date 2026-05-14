@@ -86,6 +86,7 @@ const state = {
   currentCategory: 'all',
   currentTag: 'all',
   searchQuery: '',
+  hasFiltered: false,
   isLoading: true
 };
 
@@ -231,7 +232,7 @@ function renderLines() {
 
   if (!filtered.length) {
     resultsInfo.textContent = '';
-    noResults.classList.remove('hidden');
+    noResults.classList.toggle('hidden', !state.hasFiltered);
     return;
   }
 
@@ -254,6 +255,8 @@ function renderLines() {
       missbruk: renderIcon('wine-glass-2'),
       anhoriga: renderIcon('group'),
       aldre: renderIcon('old-person-walker'),
+      'sorg-forlust': renderIcon('candle'),
+      ekonomi: renderIcon('coins'),
       ovrigt: renderIcon('asterisk')
     };
     return map[category] || renderIcon('life-ring-2');
@@ -373,22 +376,26 @@ function initFilters() {
     searchInput.addEventListener('input', (e) => {
       state.searchQuery = e.target.value || '';
       state.currentTag = 'all';
+      state.hasFiltered = true;
       renderLines();
     });
   }
+
+  const updateCategoryButtonState = (activeCategory) => {
+    categoryButtons.forEach((btn) => {
+      const isActive = (btn.dataset.category || 'all') === activeCategory;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+  };
 
   categoryButtons.forEach((button) => {
     button.addEventListener('click', () => {
       state.currentCategory = button.dataset.category || 'all';
       state.currentTag = 'all';
+      state.hasFiltered = true;
 
-      categoryButtons.forEach((btn) => {
-        btn.classList.remove('is-active');
-        btn.setAttribute('aria-pressed', 'false');
-      });
-
-      button.classList.add('is-active');
-      button.setAttribute('aria-pressed', 'true');
+      updateCategoryButtonState(state.currentCategory);
 
       renderLines();
     });
@@ -401,28 +408,24 @@ function initFilters() {
     e.preventDefault();
     state.currentTag = btn.dataset.tag || 'all';
     state.currentCategory = 'all';
+    state.hasFiltered = true;
     if (searchInput) {
       searchInput.value = '';
       state.searchQuery = '';
     }
-    categoryButtons.forEach((btn) => {
-      btn.classList.remove('is-active');
-      btn.setAttribute('aria-pressed', 'false');
-    });
+    updateCategoryButtonState('all');
     renderLines();
   });
 
   if (clearTagBtn) {
     clearTagBtn.addEventListener('click', () => {
       state.currentTag = 'all';
+      state.hasFiltered = false;
       if (searchInput) {
         searchInput.value = '';
         state.searchQuery = '';
       }
-      categoryButtons.forEach((btn) => {
-        btn.classList.remove('is-active');
-        btn.setAttribute('aria-pressed', 'false');
-      });
+      updateCategoryButtonState('all');
       renderLines();
     });
   }
@@ -656,6 +659,7 @@ function initUrlSearch() {
     if (searchInput) {
       searchInput.value = searchQuery;
       state.searchQuery = searchQuery;
+      state.hasFiltered = true;
     }
   }
 }
@@ -714,7 +718,7 @@ function initContactForm() {
       setStatus('Tack. Vi har tagit emot ditt meddelande.');
     } catch (error) {
       console.error('Contact form submit error:', error);
-      setStatus('Det gick inte att skicka just nu. Försök igen snart.', true);
+      setStatus('Det gick inte att skicka just nu. Maila support@stodlinjer.se istället.', true);
     } finally {
       submitButton.disabled = false;
       submitButton.innerHTML = defaultButtonHtml;
