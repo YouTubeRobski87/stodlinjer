@@ -152,6 +152,28 @@
 </script>
 {% endif %}
 
+{# FAQPage schema - for pages with explicit FAQ items #}
+{% if faqItems and faqItems.length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in faqItems %}
+    {
+      "@type": "Question",
+      "name": "{{ item.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ item.answer | escape }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}
+</script>
+{% endif %}
+
 {# FAQPage schema - for FAQ collection page with all questions #}
 {% if samling.slug == "faq" and samling.items %}
 <script type="application/ld+json">

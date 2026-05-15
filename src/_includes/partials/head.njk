@@ -1,4 +1,5 @@
-{% set pageTitle = title or site.name %}
+{% set pageTitle = seoTitle or title or site.name %}
+{% set canonicalUrl = canonical or site.url ~ baseUrl ~ page.url %}
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="author" content="{{ site.author }}" />
@@ -9,7 +10,7 @@
 {% if keywords %}
   <meta name="keywords" content="{{ keywords }}" />
 {% endif %}
-<link rel="canonical" href="{{ site.url }}{{ baseUrl }}{{ page.url }}" />
+<link rel="canonical" href="{{ canonicalUrl }}" />
 <meta name="color-scheme" content="{{ site.colorScheme }}" />
 <meta name="theme-color" content="{{ site.themeColor }}" />
 {% if noindex %}
@@ -38,7 +39,7 @@
   <meta property="og:description" content="{{ description }}" />
 {% endif %}
 <meta property="og:type" content="{{ ogType }}" />
-<meta property="og:url" content="{{ site.url }}{{ baseUrl }}{{ page.url }}" />
+<meta property="og:url" content="{{ canonicalUrl }}" />
 <meta property="og:site_name" content="{{ site.name }}" />
 <meta property="og:image" content="{{ ogImage }}" />
 <meta property="og:locale" content="{{ ogLocale }}" />
