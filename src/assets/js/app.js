@@ -1,4 +1,5 @@
 import { injectSpeedInsights } from '@vercel/speed-insights';
+import { createAnalyticsTracker } from './analytics.js';
 
 // ==========================================================================
 // Base URL (set by template, defaults to '' for local dev)
@@ -91,6 +92,7 @@ const state = {
 };
 
 let themeTransitionTimer;
+let analyticsTracker = createAnalyticsTracker();
 
 // ==========================================================================
 // Loading State
@@ -154,6 +156,15 @@ function readEmbeddedSupportLines() {
     console.error('Fel vid läsning av inbäddad stödlinjedata:', err);
     return [];
   }
+}
+
+function escapeAttribute(value = '') {
+  return value
+    .toString()
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 function loadSupportLines() {
@@ -289,6 +300,8 @@ function renderLines() {
     const telHref = phone ? phone.replace(/[^+\d]/g, '') : '';
     const resourceUrl = line.resource?.url;
     const availabilityLabel = line.availability?.label;
+    const supportLineAttr = escapeAttribute(line.title);
+    const phoneAttr = escapeAttribute(phone);
 
     article.innerHTML = `
       ${urgentBadge}
@@ -299,7 +312,7 @@ function renderLines() {
             <h3 class="text-lg font-extrabold mb-1" itemprop="name">
               ${
                 resourceUrl
-                  ? `<a href="${resourceUrl}" target="_blank" rel="noopener noreferrer" class="card-title-link">${line.title}</a>`
+                  ? `<a href="${resourceUrl}" target="_blank" rel="noopener noreferrer" class="card-title-link" data-support-line="${supportLineAttr}">${line.title}</a>`
                   : line.title
               }
             </h3>
@@ -318,6 +331,8 @@ function renderLines() {
         phone
           ? `<a href="tel:${telHref}"
              class="card-number"
+             data-support-line="${supportLineAttr}"
+             data-phone-number="${phoneAttr}"
              itemprop="telephone" aria-label="Ring ${line.title} på ${phone}">
             ${renderIcon('phone')}
             <span class="card-phone-number">${phone}</span>
@@ -349,6 +364,10 @@ function renderLines() {
       article.setAttribute('aria-label', `Ring ${line.title} på ${phone}`);
 
       const openDialer = () => {
+        analyticsTracker.trackSupportCall({
+          supportLine: line.title,
+          phoneNumber: phone
+        });
         window.location.href = article.dataset.telHref;
       };
 
@@ -744,6 +763,11 @@ async function init() {
   // Load icon config first (needed for renderIcon)
   await loadIconConfig();
   
+  analyticsTracker = createAnalyticsTracker({
+    supportLines: readEmbeddedSupportLines().filter((line) => line && line.active !== false)
+  });
+  analyticsTracker.bind();
+
   initThemeControls();
   initQuote();
   initArticleFilters();
