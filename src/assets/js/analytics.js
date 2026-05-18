@@ -5,14 +5,38 @@ function getPagePath() {
   return `${window.location.pathname || ''}${window.location.search || ''}`;
 }
 
+function isAnalyticsDebugEnabled() {
+  if (typeof window === 'undefined' || !window.location?.search) return false;
+
+  try {
+    return new URLSearchParams(window.location.search).get('analytics_debug') === '1';
+  } catch {
+    return false;
+  }
+}
+
+function logAnalyticsDebug(eventName, payload) {
+  if (!isAnalyticsDebugEnabled() || typeof console === 'undefined' || typeof console.log !== 'function') {
+    return;
+  }
+
+  console.log(`[Analytics debug] ${eventName}`, payload);
+}
+
 function sendGaEvent(eventName, params = {}) {
+  const payload = {
+    ...params,
+    page_path: params.page_path || getPagePath()
+  };
+
+  logAnalyticsDebug(eventName, payload);
+
   if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
     return false;
   }
 
   window.gtag('event', eventName, {
-    ...params,
-    page_path: params.page_path || getPagePath(),
+    ...payload,
     transport_type: 'beacon'
   });
 
