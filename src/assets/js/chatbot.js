@@ -331,10 +331,39 @@ function initChatbot() {
   const input = root.querySelector('[data-chatbot-input]');
   const sendBtn = root.querySelector('[data-chatbot-send]');
   const emptyState = root.querySelector('[data-chatbot-empty]');
+  const footer = document.querySelector('.footer-shell');
+  let footerOffsetFrame = null;
+
+  const updateFooterOffset = () => {
+    footerOffsetFrame = null;
+
+    if (!footer) {
+      root.style.setProperty('--chatbot-footer-offset', '0px');
+      return;
+    }
+
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const footerTop = footer.getBoundingClientRect().top;
+    const footerGap = window.matchMedia('(max-width: 640px)').matches ? 16 : 24;
+    const offset = Math.max(0, viewportHeight - footerTop + footerGap);
+    root.style.setProperty('--chatbot-footer-offset', `${Math.ceil(offset)}px`);
+  };
+
+  const scheduleFooterOffsetUpdate = () => {
+    if (footerOffsetFrame) return;
+    footerOffsetFrame = window.requestAnimationFrame(updateFooterOffset);
+  };
 
   const setToggleVisibility = () => {
     toggle.classList.toggle('is-hidden', chatbotState.isOpen);
   };
+
+  scheduleFooterOffsetUpdate();
+  window.addEventListener('scroll', scheduleFooterOffsetUpdate, { passive: true });
+  window.addEventListener('resize', scheduleFooterOffsetUpdate);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', scheduleFooterOffsetUpdate);
+  }
 
   renderMessage(log, { role: 'bot', content: getRandomGreeting() });
   if (emptyState) emptyState.remove();
@@ -344,6 +373,7 @@ function initChatbot() {
     panel.classList.toggle('is-open', chatbotState.isOpen);
     toggle.setAttribute('aria-expanded', chatbotState.isOpen ? 'true' : 'false');
     setToggleVisibility();
+    scheduleFooterOffsetUpdate();
     if (chatbotState.isOpen) {
       input.focus();
       fetchContentIndex();
@@ -355,6 +385,7 @@ function initChatbot() {
     panel.classList.remove('is-open');
     toggle.setAttribute('aria-expanded', 'false');
     setToggleVisibility();
+    scheduleFooterOffsetUpdate();
   });
 
   form.addEventListener('submit', async (e) => {
