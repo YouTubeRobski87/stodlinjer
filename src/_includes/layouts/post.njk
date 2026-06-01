@@ -1,5 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% from "partials/icon.njk" import icon %}
+{% from "partials/article-card.njk" import articleCard %}
 
 {% block header %}
   {% include "partials/header.njk" %}
@@ -11,6 +12,13 @@
   {% if not estimatedReadingTime and content %}
     {% set estimatedReadingTime = content | readingTime ~ ' min' %}
   {% endif %}
+
+  {% set relatedPosts = [] %}
+  {% for post in collections.articles %}
+    {% if post.data.samling == samling and post.url != page.url and relatedPosts.length < 6 %}
+      {% set relatedPosts = relatedPosts.concat([post]) %}
+    {% endif %}
+  {% endfor %}
 
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 article-shell">
     <article class="surface-card strong-card post-shell">
@@ -62,5 +70,30 @@
         {% endif %}
       </div>
     </article>
+
+    {% if relatedPosts.length > 0 %}
+      <section class="post-related" aria-labelledby="related-heading">
+        <div class="post-related-header">
+          <p class="post-related-eyebrow">
+            {{ icon(samlingInfo.icon) }}
+            <span>{{ samlingInfo.title }}</span>
+          </p>
+          <h2 id="related-heading" class="post-related-title">Relaterade artiklar</h2>
+        </div>
+        <div class="article-grid">
+          {% for post in relatedPosts %}
+            {{ articleCard(post) }}
+          {% endfor %}
+        </div>
+        {% if samling %}
+          <div class="post-related-footer">
+            <a href="{{ baseUrl }}/samlingar/{{ samling }}/" class="read-more">
+              <span>Visa alla i {{ samlingInfo.title }}</span>
+              {{ icon('arrow-right') }}
+            </a>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
   </section>
 {% endblock %}
