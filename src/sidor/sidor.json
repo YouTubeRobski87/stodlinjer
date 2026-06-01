@@ -1,7 +1,5 @@
 {
   "layout": "layouts/page.njk",
-<div id="soro-blog"></div>
-<script src="https://app.trysoro.com/api/embed/fb871494-d227-42ff-bc24-381526897df1?theme=dark" defer></script>
   "tags": ["sida"],
   "permalink": "/sidor/{{ page.fileSlug }}/",
   "pageClass": "solid-bg-shell legal-page-shell",

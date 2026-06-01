@@ -14,7 +14,7 @@
 // Stödlinjers egen Soro-token. Den är inte hemlig (syns publikt i embed-koden
 // på sajten), så vi hårdkodar den som standard för att bygget alltid ska
 // fungera. Kan överskridas med miljövariabeln SORO_STODLINJER_TOKEN.
-const SORO_TOKEN = process.env.SORO_STODLINJER_TOKEN || '8ddf4490-ef9e-45aa-998d-adfb8114dd7f';
+const SORO_TOKEN = process.env.SORO_STODLINJER_TOKEN || 'fb871494-d227-42ff-bc24-381526897df1';
 
 // Vilken samling Soro-artiklarna grupperas under. Måste vara en giltig slug
 // från src/_data/samlingar.json (annars syns de inte i samlingsfiltret).
