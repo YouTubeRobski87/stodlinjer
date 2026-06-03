@@ -1,3 +1,12 @@
+---
+title: Är Samtalen anonyma när jag söker stöd?
+description: En artikel som förklarar att stödlinjer skyddar ungas integritet. Dina föräldrar får inte reda på att du ringt, och volontärer kontaktar inte vårdnadshavare. Din anonymitet gäller oavsett ålder.
+date: 2026-06-04
+samling: faq
+readingTime: 2-3 min
+
+ 
+
 Det är ofta en av de första frågorna som dyker upp när man  överväger att ringa eller skriva till en stödlinje: är samtalen anonyma? Om du mår dåligt, är rädd, skäms eller bara inte orkar förklara allt om dig själv, kan just den frågan avgöra om du tar kontakt eller inte. 
 
 Det är också en rimlig fråga. När man söker stöd vill man veta vem som får veta vad, om ens namn behöver lämnas och om det som sägs kan föras vidare. För många är anonymitet inte en detalj. Det är själva förutsättningen för att våga börja.
