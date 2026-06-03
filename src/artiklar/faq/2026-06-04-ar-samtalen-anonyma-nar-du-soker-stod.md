@@ -4,7 +4,7 @@ description: En artikel som förklarar att stödlinjer skyddar ungas integritet.
 date: 2026-06-04
 samling: faq
 readingTime: 2-3 min
-
+---
  
 
 Det är ofta en av de första frågorna som dyker upp när man  överväger att ringa eller skriva till en stödlinje: är samtalen anonyma? Om du mår dåligt, är rädd, skäms eller bara inte orkar förklara allt om dig själv, kan just den frågan avgöra om du tar kontakt eller inte. 
