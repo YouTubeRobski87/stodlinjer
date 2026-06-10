@@ -265,6 +265,7 @@ function filterLines() {
         line.description,
         line.phone,
         line.category,
+        line.resource?.url,
         line.availability?.label,
         ...(Array.isArray(line.tags) ? line.tags : []),
         ...(Array.isArray(line.searchAliases) ? line.searchAliases : [])
