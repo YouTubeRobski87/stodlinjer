@@ -13,7 +13,11 @@
         >
           {{ h.label }}
         </p>
-        <h1>{{ h.title }}</h1>
+        {% if page.url == "/" %}
+          <h1 class="header-heading">{{ h.title }}</h1>
+        {% else %}
+          <p class="header-heading">{{ h.title }}</p>
+        {% endif %}
         <p>{{ h.subtitle }}</p>
       </div>
     </div>

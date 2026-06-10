@@ -4,7 +4,7 @@ description: Information om hur Stödlinjer använder cookies och liknande tekni
 layout: layouts/page.njk
 permalink: '/sidor/cookiepolicy/'
 effectiveDate: 2025-12-13
-lastUpdated: 2024-13-13
+lastUpdated: 2026-06-10
 version: 1.0.0
 status: active
 toc: true
@@ -25,7 +25,7 @@ Det finns också tekniker som liknar cookies, exempelvis lokal lagring (localSto
 
 ## Vilka cookies använder Stödlinjer?
 
-Stödlinjer har utformats med ett minimalistiskt förhållningssätt till cookies. Vi använder inga annonsnätverk, inga sociala mediaknappar som spårar dig och inga traditionella analysverktyg som Google Analytics. Nedan beskrivs de cookies och liknande tekniker som kan förekomma på sajten.
+Stödlinjer har utformats med ett minimalistiskt förhållningssätt till cookies. Vi använder inga annonsnätverk och inga sociala mediaknappar som spårar dig. Sajten använder GA4 (Google Analytics 4) för övergripande statistik. Nedan beskrivs de cookies och liknande tekniker som kan förekomma på sajten.
 
 ### Nödvändiga cookies och lokal lagring
 
@@ -33,17 +33,21 @@ För att sajten ska fungera korrekt använder vi ett fåtal tekniska lösningar 
 
 Chatboten kan tillfälligt lagra konversationshistorik under din session för att kunna ge sammanhängande svar. Denna information raderas när du stänger webbläsaren eller lämnar sajten och sparas inte permanent.
 
-### Cookies från Netlify
+### Cookies från Render och driftplattformen
 
-Stödlinjer hostas på Netlify, som kan sätta tekniska cookies för att hantera säkerhet, lastbalansering och skydd mot missbruk. Dessa cookies är nödvändiga för att sajten ska fungera säkert och tillförlitligt. Netlify kan exempelvis använda cookies för att skilja mellan legitima besökare och automatiserade attacker. Du kan läsa mer om Netlifys cookies i deras dokumentation på netlify.com.
+Stödlinjer körs i produktion på Render, som kan använda tekniska cookies eller liknande tekniker för drift, säkerhet, lastbalansering och skydd mot missbruk. Dessa är nödvändiga för att sajten ska fungera säkert och tillförlitligt. Du kan läsa mer om Renders datahantering i deras dokumentation och integritetspolicy på render.com.
+
+### Analys med GA4
+
+Stödlinjer använder GA4 för att förstå övergripande hur sajten används, till exempel vilka sidor som besöks och om tekniska problem uppstår. Syftet är att förbättra innehåll och funktion, inte att sälja data eller skapa kontaktlistor.
 
 ### Cookies vi inte använder
 
-Det kan vara lika viktigt att veta vad vi inte gör som vad vi gör. Stödlinjer använder inga annonscookies eller spårningspixlar från reklamtjänster. Vi använder inga analysverktyg som skapar detaljerade profiler över ditt beteende. Vi har inga sociala mediaknappar som skickar information till Facebook, Twitter eller liknande plattformar. Vi säljer eller delar inte cookiedata med tredje part för marknadsföringsändamål.
+Det kan vara lika viktigt att veta vad vi inte gör som vad vi gör. Stödlinjer använder inga annonscookies eller spårningspixlar från reklamtjänster. Vi har inga sociala mediaknappar som skickar information till Facebook, Twitter eller liknande plattformar. Vi säljer eller delar inte cookiedata med tredje part för marknadsföringsändamål.
 
 ## Hur länge sparas cookies?
 
-De cookies som förekommer på Stödlinjer har olika livslängd beroende på deras syfte. Sessionscookies raderas automatiskt när du stänger din webbläsare. Dessa används för tillfälliga funktioner som chatbotens konversationshistorik. Permanenta cookies sparas under en längre period, även efter att du stängt webbläsaren. Din temainställning sparas exempelvis tills du aktivt rensar din webbläsardata eller ändrar inställningen. Netlifys tekniska cookies har varierande livslängd beroende på deras specifika funktion.
+De cookies som förekommer på Stödlinjer har olika livslängd beroende på deras syfte. Sessionscookies raderas automatiskt när du stänger din webbläsare. Dessa används för tillfälliga funktioner som chatbotens konversationshistorik. Permanenta cookies sparas under en längre period, även efter att du stängt webbläsaren. Din temainställning sparas exempelvis tills du aktivt rensar din webbläsardata eller ändrar inställningen. Driftplattformens och GA4:s tekniska cookies kan ha varierande livslängd beroende på deras specifika funktion.
 
 ## Ditt samtycke och dina val
 

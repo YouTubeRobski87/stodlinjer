@@ -4,28 +4,10 @@ const configuredSources = Array.isArray(CHATBOT_CONFIG.externalSources)
   ? CHATBOT_CONFIG.externalSources.slice()
   : [];
 
-// Auto-detect API URL based on hosting platform
 function getApiUrl() {
-  // If explicitly configured (and not the default Netlify path), use that
-  if (CHATBOT_CONFIG.apiUrl && CHATBOT_CONFIG.apiUrl !== '/.netlify/functions/chat') {
-    return CHATBOT_CONFIG.apiUrl;
-  }
-
-  const hostname = window.location.hostname;
-
-  // Vercel deployments: *.vercel.app or custom domains on Vercel
-  const vercelDomains = [
-    'vercel.app',
-    'stodlinjer.se'
-  ];
-
-  const isVercel = vercelDomains.some((domain) => hostname.includes(domain));
-  if (isVercel) {
-    return '/api/chat';
-  }
-
-  // Default to Netlify
-  return '/.netlify/functions/chat';
+  const apiEnabled = CHATBOT_CONFIG.apiEnabled === true;
+  const apiUrl = typeof CHATBOT_CONFIG.apiUrl === 'string' ? CHATBOT_CONFIG.apiUrl.trim() : '';
+  return apiEnabled && apiUrl ? apiUrl : null;
 }
 
 const chatbotState = {
@@ -51,8 +33,10 @@ function getRandomGreeting() {
 }
 
 const CHATBOT_COPY = {
+  inactive:
+    'AI-chatten är inte aktiv just nu. Använd gärna sökningen på sidan för att hitta stödlinjer, telefonnummer och artiklar. Vid akut fara, ring 112.',
   unavailable:
-    'Jag saknar AI-anslutning just nu, men här är innehåll jag hittade som matchar din fråga.'
+    'AI-chatten är inte aktiv just nu. Här är innehåll från sidan som kan hjälpa dig vidare.'
 };
 
 function normalizeSupportLine(line) {
@@ -262,7 +246,7 @@ function buildContext(query) {
 function formatFallback(context) {
   if (!context.length) {
     return {
-      text: 'Jag hittade inget direkt i innehållet. Prova gärna med andra ord eller nämn ett tema som “suicid”, “våld” eller “ångest”.',
+      text: CHATBOT_COPY.inactive,
       sources: chatbotState.sources
     };
   }
@@ -287,6 +271,17 @@ function formatFallback(context) {
     text: `${CHATBOT_COPY.unavailable}\n\n${bullets}`,
     sources: [...sourceTags.filter((s) => s.url), ...chatbotState.sources]
   };
+}
+
+function formatInactiveFallback(context) {
+  if (!context.length) {
+    return {
+      text: CHATBOT_COPY.inactive,
+      sources: chatbotState.sources
+    };
+  }
+
+  return formatFallback(context);
 }
 
 async function fetchContentIndex() {
@@ -315,8 +310,16 @@ async function sendToApi(query, context) {
     body: JSON.stringify(payload)
   });
 
-  if (!res.ok) throw new Error(`API svarade ${res.status}`);
-  return res.json();
+  if (!res.ok) return null;
+
+  const text = await res.text();
+  if (!text.trim()) return null;
+
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    return null;
+  }
 }
 
 function initChatbot() {
@@ -403,6 +406,13 @@ function initChatbot() {
 
     try {
       const context = buildContext(value);
+      if (!getApiUrl()) {
+        const fallback = formatInactiveFallback(context);
+        renderMessage(log, { role: 'bot', content: fallback.text, sources: fallback.sources });
+        chatbotState.messages.push({ role: 'assistant', content: fallback.text });
+        return;
+      }
+
       const apiResult = await sendToApi(value, context);
 
       if (apiResult && apiResult.answer) {
@@ -422,11 +432,10 @@ function initChatbot() {
         chatbotState.messages.push({ role: 'assistant', content: fallback.text });
       }
     } catch (err) {
-      console.error('Chatbot API error', err);
       const fallback = formatFallback(buildContext(value));
       renderMessage(log, {
         role: 'bot',
-        content: `${CHATBOT_COPY.unavailable}\n\n${fallback.text}`,
+        content: fallback.text,
         sources: fallback.sources
       });
       chatbotState.messages.push({ role: 'assistant', content: fallback.text });

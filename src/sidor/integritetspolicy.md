@@ -4,7 +4,7 @@ description: Hur vi samlar in, använder och skyddar uppgifter på Stödlinjer.
 layout: layouts/page.njk
 permalink: '/sidor/integritetspolicy/'
 effectiveDate: 2025-12-13
-lastUpdated: 2025-12-13
+lastUpdated: 2026-06-10
 version: 1.0.0
 status: active
 toc: true
@@ -35,11 +35,11 @@ Konversationer i chatboten sparas inte permanent på våra servrar. Varje sessio
 
 När du besöker Stödlinjer samlas viss teknisk information in automatiskt. Detta inkluderar din IP-adress, vilken webbläsare och enhet du använder, vilka sidor du besöker och när du besöker dem. Denna information används för att säkerställa att sajten fungerar korrekt, för att identifiera och åtgärda tekniska problem samt för att förstå hur sajten används i allmänhet.
 
-Stödlinjer använder Netlify som webbhotell. Netlify samlar in serverloggar som en del av sin drift, vilka kan innehålla IP-adresser och tidsstämplar. Dessa loggar används för säkerhetsändamål och för att upptäcka missbruk av tjänsten. Netlify lagrar dessa loggar i enlighet med sina egna integritetspolicyer.
+Stödlinjer körs i produktion på Render. Render hanterar serverdrift och kan samla in tekniska loggar som en del av sin drift, till exempel IP-adresser, tidsstämplar och felinformation. Dessa loggar används för säkerhetsändamål, felsökning och för att upptäcka missbruk av tjänsten. Render lagrar dessa uppgifter enligt sina egna villkor och integritetspolicyer.
 
 ### Uppgifter vi inte samlar in
 
-Vi använder inte traditionella analysverktyg som Google Analytics som skapar detaljerade användarprofiler. Vi säljer aldrig data till tredje part. Vi skapar inga användarkonton och kräver ingen registrering för att använda sajten. Vi samlar inte in uppgifter om din hälsa, ekonomi, etnicitet, religion eller andra särskilt känsliga kategorier av personuppgifter på ett systematiskt sätt.
+Vi använder GA4 (Google Analytics 4) för övergripande statistik om hur sajten används. Vi säljer aldrig data till tredje part. Vi skapar inga användarkonton och kräver ingen registrering för att använda sajten. Vi samlar inte in uppgifter om din hälsa, ekonomi, etnicitet, religion eller andra särskilt känsliga kategorier av personuppgifter på ett systematiskt sätt.
 
 ## Hur använder vi uppgifterna?
 
@@ -53,9 +53,9 @@ Vår behandling av personuppgifter grundar sig på berättigat intresse enligt a
 
 Stödlinjer använder ett fåtal externa tjänster för att fungera. Det är viktigt att du förstår hur dessa tjänster hanterar data.
 
-### Netlify
+### Render
 
-Netlify är den plattform som hostar Stödlinjer och hanterar våra serverless-funktioner, inklusive chatbot-API:et. Netlify samlar in serverloggar och kan använda cookies för sin egen drift. Netlify är ett amerikanskt företag som följer EU-US Data Privacy Framework. Du kan läsa mer om Netlifys datahantering i deras integritetspolicy på netlify.com.
+Render är den plattform som hostar Stödlinjer i produktion och kör sajtens backend, inklusive chatbot-API:et. Render kan samla in serverloggar och använda tekniska cookies eller liknande tekniker för drift, säkerhet och felsökning. Du kan läsa mer om Renders datahantering i deras integritetspolicy på render.com.
 
 ### OpenAI
 
@@ -75,7 +75,7 @@ För att utöva dina rättigheter, kontakta oss via den kontaktinformation som f
 
 ## Säkerhet
 
-Vi vidtar rimliga tekniska och organisatoriska åtgärder för att skydda de uppgifter vi behandlar. Sajten använder HTTPS-kryptering för att skydda data som överförs mellan din webbläsare och våra servrar. Netlify tillhandahåller säkerhetsinfrastruktur inklusive DDoS-skydd och automatiska säkerhetsuppdateringar. Tillgång till administrativa funktioner är begränsad och skyddad med säkra autentiseringsmetoder.
+Vi vidtar rimliga tekniska och organisatoriska åtgärder för att skydda de uppgifter vi behandlar. Sajten använder HTTPS-kryptering för att skydda data som överförs mellan din webbläsare och våra servrar. Render tillhandahåller drift- och säkerhetsinfrastruktur för produktion. Tillgång till administrativa funktioner är begränsad och skyddad med säkra autentiseringsmetoder.
 
 Ingen digital tjänst kan garantera fullständig säkerhet. Om du befinner dig i en situation där du behöver skydda din integritet extra noga, till exempel om du lever i en våldsam relation, rekommenderar vi att du använder privat surfläge i din webbläsare, rensar din webbhistorik efter besöket, eller besöker sajten från en enhet som personen du vill skydda dig från inte har tillgång till.
 

@@ -254,6 +254,13 @@
     background: var(--card);
   }
 
+  .chatbot-privacy-note {
+    margin: 0 0 0.55rem;
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
   .chatbot-input form {
     display: flex;
     align-items: center;
