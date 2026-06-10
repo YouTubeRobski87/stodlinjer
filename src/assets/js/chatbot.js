@@ -23,20 +23,14 @@ function getRandomGreeting() {
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
   const safeGreeting = String(greeting || '').trim();
   if (!safeGreeting) return 'Hej, hur är det med dig?';
-  if (/^hej\b/i.test(safeGreeting)) {
-    return safeGreeting.replace(/^hej\b[!,.]?\s*/i, 'Hej, ');
-  }
-  if (/^ej\b/i.test(safeGreeting)) {
-    return safeGreeting.replace(/^ej\b[!,.]?\s*/i, 'Hej, ');
-  }
-  return `Hej, ${safeGreeting.charAt(0).toLowerCase()}${safeGreeting.slice(1)}`;
+  return safeGreeting;
 }
 
 const CHATBOT_COPY = {
   inactive:
-    'AI-chatten är inte aktiv just nu. Använd gärna sökningen på sidan för att hitta stödlinjer, telefonnummer och artiklar. Vid akut fara, ring 112.',
+    'AI-chatten är inte aktiv just nu. Använd gärna sökningen på sidan för att hitta stödlinjer, telefonnummer och artiklar.',
   unavailable:
-    'AI-chatten är inte aktiv just nu. Här är innehåll från sidan som kan hjälpa dig vidare.'
+    'AI-chatten är inte aktiv just nu. Använd gärna sökningen på sidan för att hitta stödlinjer, telefonnummer och artiklar.'
 };
 
 function normalizeSupportLine(line) {
@@ -111,7 +105,7 @@ function normalizeBotText(text) {
     }
 
     const listMatch = trimmed.match(
-      /^([*-\u2013\u2014]|\u2022|\uD83D\uDCCC|\d+[.)\]])\s*(.*)$/
+      /^(\*|-|\u2013|\u2014|\u2022|\uD83D\uDCCC|\d+[.)\]])\s*(.*)$/
     );
     if (listMatch) {
       if (listMatch[2]) {
@@ -273,15 +267,11 @@ function formatFallback(context) {
   };
 }
 
-function formatInactiveFallback(context) {
-  if (!context.length) {
-    return {
-      text: CHATBOT_COPY.inactive,
-      sources: chatbotState.sources
-    };
-  }
-
-  return formatFallback(context);
+function formatInactiveFallback() {
+  return {
+    text: CHATBOT_COPY.inactive,
+    sources: chatbotState.sources
+  };
 }
 
 async function fetchContentIndex() {
