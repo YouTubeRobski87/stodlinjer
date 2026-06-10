@@ -15,12 +15,12 @@ function selectDir(candidates) {
 }
 
 const DATA_DIR = selectDir([
-  path.join(ROOT_DIR, '_data'),
-  path.join(ROOT_DIR, 'src', '_data')
+  path.join(ROOT_DIR, 'src', '_data'),
+  path.join(ROOT_DIR, '_data')
 ]);
 const ARTICLES_DIR = selectDir([
-  path.join(ROOT_DIR, 'artiklar'),
-  path.join(ROOT_DIR, 'src', 'artiklar')
+  path.join(ROOT_DIR, 'src', 'artiklar'),
+  path.join(ROOT_DIR, 'artiklar')
 ]);
 const OUTPUT_DIR = path.join(ROOT_DIR, '.chatdata');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'content-index.json');
@@ -174,6 +174,7 @@ function mapGenericDataset(name, data) {
 
 function mapJsonDataset(name, data) {
   if (name === 'supportData') return mapSupportData(data);
+  if (name === 'supportData.new') return [];
   if (name === 'support-lines') return [];
   if (name === 'quotes') return mapQuotes(data);
   if (name === 'samlingar') return mapSamlingar(data);

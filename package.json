@@ -12,6 +12,7 @@
     "watch:eleventy": "eleventy --watch",
     "clean": "node -e \"require('fs').rmSync('_site', { recursive: true, force: true })\"",
     "start": "npm run serve",
+    "adapter-node": "node scripts/support-data-adapter.js",
     "index:content": "node scripts/generate-content-index.js"
   },
   "main": "index.js",

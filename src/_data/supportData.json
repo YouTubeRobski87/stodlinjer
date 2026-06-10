@@ -1,1578 +1,3266 @@
-@ -1,1577 +0,0 @@
 [
   {
-    "id": 1,
+    "id": "sjalvmordslinjen",
+    "slug": "sjalvmordslinjen",
     "title": "Självmordslinjen",
     "resource": {
-    "url": "https://mind.se/",
+      "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/chatt/",
       "type": "link"
     },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "90101",
-    "description": "För dig med suicidtankar eller oro för någon annan. Här får du anonymt, professionellt stöd av utbildade volontärer dygnet runt, alla dagar.",
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "90 101",
+    "description": "Stöd för dig som har självmordstankar eller oroar dig för någon annan.",
     "category": "psykisk-halsa",
     "urgent": true,
-    "tags": ["akut", "anonymt", "chatt", "psykiskhalsa", "samtal", "suicid"],
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "mind",
+      "sjalvmordstankar",
+      "akut-psykisk-kris",
+      "oro-for-nagon-annan",
+      "hopploshet",
+      "vuxna",
+      "unga",
+      "anhoriga",
+      "svenska"
+    ],
     "availability": {
-      "label": "Tel: dygnet runt",
+      "label": "Telefon och chatt: dygnet runt",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
           "open": "00:00",
           "close": "24:00",
-          "channels": ["telefon", "chatt"]
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 2,
-    "title": "Jourhavande präst",
-    "resource": {
-      "url": "https://www.svenskakyrkan.se/jourhavandeprast",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "112",
-    "description": "För dig som behöver samtala om existentiella frågor, oro, sorg eller ensamhet. Här får du anonymt stöd nattetid via 112.",
-    "category": "sorg-forlust",
-    "urgent": false,
-    "tags": ["anonymt", "psykiskhalsa", "samtal", "sorg", "trauma"],
-    "availability": {
-      "label": "Tel: mån-sön 21–06",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "21:00",
-          "close": "24:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "06:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "20:00",
-          "close": "24:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 3,
-    "title": "Bris",
-    "resource": {
-      "url": "https://www.bris.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "sms", "chatt", "mejl", "webb"],
-    "phone": "116 111",
-    "description": "För dig under arton som behöver prata om oro, konflikter, mående eller svåra känslor. Anonymt stöd via chatt och telefon.",
-    "category": "barn-unga",
-    "urgent": false,
-    "tags": ["anonymt", "barn-unga", "chatt", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: dygnet runt",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["telefon", "sms", "chatt", "mejl"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 4,
-    "title": "Kvinnofridslinjen",
-    "resource": {
-      "url": "https://kvinnofridslinjen.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "116 016",
-    "description": "För dig som utsätts för hot eller våld i nära relationer och behöver anonym hjälp. Utbildade rådgivare erbjuder stöd dygnet runt.",
-    "category": "vald",
-    "urgent": true,
-    "tags": ["akut", "anhorig", "anonymt", "chatt", "samtal", "vald"],
-    "availability": {
-      "label": "Tel: dygnet runt",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon", "thu"],
-          "open": "15:00",
-          "close": "21:00",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["sun"],
-          "open": "11:00",
-          "close": "17:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 5,
-    "title": "Anonyma Alkoholister (AA)",
-    "resource": {
-      "url": "https://aa.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "08-720 38 42",
-    "description": "Gemenskap för dig som vill sluta dricka. Möten finns över hela landet och online, med anonymt stöd från andra nyktra alkoholister.",
-    "category": "missbruk",
-    "urgent": false,
-    "tags": ["anonymt", "missbruk", "psykiskhalsa", "samtal", "stodgrupp"],
-    "availability": {
-      "label": "Tel: alla dagar 11–20",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "11:00",
-          "close": "20:00",
-          "channels": ["telefon", "e-post"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 6,
+    "id": "aldrelinjen",
+    "slug": "aldrelinjen",
     "title": "Äldrelinjen",
     "resource": {
       "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
       "type": "link"
     },
-    "contactTypes": ["telefon"],
+    "contactTypes": [
+      "telefon"
+    ],
     "phone": "020-22 22 33",
-    "description": "För äldre eller anhöriga som behöver någon som lyssnar vid oro, ensamhet eller livsfrågor. Anonymt, medmänskligt stöd genom erfarna volontärer.",
-    "category": "aldre",
+    "description": "Medmänskligt stöd för äldre som längtar efter någon att prata med.",
+    "category": "psykisk-halsa",
     "urgent": false,
-    "tags": ["aldre", "anhorig", "anonymt", "psykiskhalsa", "samtal", "sorg"],
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "mind",
+      "ensamhet",
+      "oro",
+      "nedstamdhet",
+      "livsfragor",
+      "behov-av-samtal",
+      "aldre",
+      "anhoriga",
+      "svenska"
+    ],
     "availability": {
-      "label": "Tel: mån–fre 8–19, helg 10–16",
+      "label": "Telefon: mån-fre 8-19, lör-sön 10-16",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
           "open": "08:00",
           "close": "19:00",
-          "channels": ["telefon"]
+          "timezone": "Europe/Stockholm"
         },
         {
-          "days": ["sat", "sun"],
+          "days": [
+            "sat",
+            "sun"
+          ],
           "open": "10:00",
           "close": "16:00",
-          "channels": ["telefon"]
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 7,
-    "title": "Anhöriglinjen",
-    "resource": {
-      "url": "https://anhorigasriksforbund.se/anhoriglinjen/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "0200-239 500",
-    "description": "Nationell stödtelefon för anhöriga som behöver råd, avlastning eller någon att prata med. Erfarna rådgivare erbjuder anonymt och tryggt stöd.",
-    "category": "anhoriga",
-    "urgent": false,
-    "tags": ["anhorig", "anonymt", "psykiskhalsa", "samtal", "sorg", "trauma"],
-    "availability": {
-      "label": "Tel: mån-fre 10–15",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "thu", "fri"],
-          "open": "10:00",
-          "close": "15:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["wed", "sun"],
-          "open": "18:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 8,
+    "id": "foraldralinjen",
+    "slug": "foraldralinjen",
     "title": "Föräldralinjen",
     "resource": {
       "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/",
       "type": "link"
     },
-    "contactTypes": ["telefon"],
+    "contactTypes": [
+      "telefon"
+    ],
     "phone": "020-85 20 00",
-    "description": "För föräldrar eller andra viktiga vuxna som känner oro för ett barn eller en ung person. Anonymt stöd och vägledning av volontärer.",
+    "description": "Rådgivande stöd för föräldrar och andra vuxna som oroar sig för ett barn.",
     "category": "anhoriga",
     "urgent": false,
-    "tags": ["anhorig", "anonymt", "barn-unga", "psykiskhalsa", "samtal"],
+    "tags": [
+      "anhoriga",
+      "direct-line",
+      "mind",
+      "oro-for-barn",
+      "foraldraskap",
+      "familjekonflikter",
+      "stod-och-radgivning",
+      "barns-psykiska-halsa",
+      "foraldrar",
+      "viktiga-vuxna",
+      "svenska"
+    ],
     "availability": {
-      "label": "Tel: mån–tors 10–15",
+      "label": "Telefon: mån-tors 10-15 och tors 19-21, helgfria vardagar",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu"],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
           "open": "10:00",
           "close": "15:00",
-          "channels": ["telefon"]
+          "timezone": "Europe/Stockholm"
         },
         {
-          "days": ["thu"],
+          "days": [
+            "thu"
+          ],
           "open": "19:00",
           "close": "21:00",
-          "channels": ["telefon"]
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 9,
-    "title": "Hjälplinjen",
-    "resource": {
-      "url": "https://hjalplinjen.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "90390",
-    "description": "Nationell stödlinje för vuxna med psykisk ohälsa eller som anhörig. Du får anonymt, professionellt stöd dygnet runt av erfarna rådgivare.",
-    "category": "psykisk-halsa",
-    "urgent": true,
-    "tags": ["akut", "anhorig", "anonymt", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: dygnet runt",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["telefon", "webb"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 10,
-    "title": "Jourhavande Medmänniska",
-    "resource": {
-      "url": "https://www.jourhavande-medmanniska.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "08-702 16 80",
-    "description": "För dig som behöver någon som lyssnar under kvällar och nätter. Anonymt, medmänskligt stöd av volontärer via telefon och chatt.",
-    "category": "sorg-forlust",
-    "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "samtal", "sorg"],
-    "availability": {
-      "label": "Tel: mån-sön 21–06",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "21:00",
-          "close": "24:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "06:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["sat", "sun", "mon", "tue"],
-          "open": "21:00",
-          "close": "24:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 11,
-    "title": "Killar.se",
-    "resource": {
-      "url": "https://killar.se/",
-      "type": "link"
-    },
-    "contactTypes": ["chatt", "telefon", "webb", "e-post"],
-    "phone": "076-265 32 65",
-    "description": "Stödchatt för unga som identifierar sig som killar och behöver prata om mående, relationer, våld eller svåra känslor. Allt är helt anonymt.",
-    "category": "barn-unga",
-    "urgent": false,
-    "tags": ["anonymt", "barn-unga", "chatt", "killar-man", "psykiskhalsa"],
-    "availability": {
-      "label": "Chatt: mån–tors/sön 19–21",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["sun", "mon", "tue", "wed", "thu"],
-          "open": "19:00",
-          "close": "21:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 12,
-    "title": "Brottsofferjouren",
-    "resource": {
-      "url": "https://www.brottsofferjouren.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "e-post", "webb"],
-    "phone": "116 006",
-    "description": "Stöd för dig som utsatts för brott, är anhörig eller vittne. Du får anonymt samtalsstöd, praktisk vägledning och hjälp att hitta rätt vidare.",
-    "category": "vald",
-    "urgent": true,
-    "tags": ["anhorig", "anonymt", "samtal", "trauma", "vald"],
-    "availability": {
-      "label": "Tel: mån–sön 9–16",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue"],
-          "open": "09:00",
-          "close": "19:00",
-          "channels": ["telefon", "chatt", "e-post"]
-        },
-        {
-          "days": ["wed", "thu", "fri"],
-          "open": "09:00",
-          "close": "17:00",
-          "channels": ["telefon", "chatt", "e-post"]
-        },
-        {
-          "days": ["sat", "sun"],
-          "open": "09:00",
-          "close": "12:00",
-          "channels": ["telefon", "chatt", "e-post"]
-        },
-        {
-          "days": ["sat", "sun"],
-          "open": "13:00",
-          "close": "16:00",
-          "channels": ["telefon", "chatt", "e-post"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 13,
-    "title": "Al-Anon Familjegrupper",
-    "resource": {
-      "url": "https://www.al-anon.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb", "e-post"],
-    "phone": "070-610 96 61",
-    "description": "Gemenskap för anhöriga till alkoholister där du får anonymt stöd, erfarenhetsutbyte och vägledning genom lokala och digitala stödgrupper i hela landet.",
-    "category": "anhoriga",
-    "urgent": false,
-    "tags": ["anhorig", "anonymt", "missbruk", "samtal", "stodgrupp"],
-    "availability": {
-      "label": "Tel: mån 19–21",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon"],
-          "open": "19:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 14,
-    "title": "Mansjouren",
-    "resource": {
-      "url": "https://mansjouren.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "08-30 30 20",
-    "description": "Stöd för män som upplever psykisk ohälsa, våld, hot eller livskriser. Anonym rådgivning erbjuds av erfarna stödpersoner alla dagar.",
-    "category": "vald",
-    "urgent": true,
-    "tags": ["anonymt", "killar-man", "psykiskhalsa", "samtal", "vald"],
-    "availability": {
-      "label": "Tel: mån-sön 12–14",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["sun", "mon", "tue", "wed", "thu", "fri"],
-          "open": "12:00",
-          "close": "14:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["sun", "mon", "tue", "wed", "thu", "fri"],
-          "open": "18:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["sat"],
-          "open": "12:00",
-          "close": "14:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 15,
-    "title": "RFSL Stödmottagning",
-    "resource": {
-      "url": "https://www.rfsl.se/verksamhet/stod/stodmottagning/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "020-34 13 16",
-    "description": "För hbtqi-personer som utsatts för våld, hot eller kränkningar. Erfarna rådgivare ger anonymt stöd, vägledning och hjälp att hantera situationen tryggt.",
-    "category": "vald",
-    "urgent": false,
-    "tags": ["anonymt", "hbtqi", "samtal", "trauma", "vald"],
-    "availability": {
-      "label": "Tel: tors 9–12",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["thu"],
-          "open": "09:00",
-          "close": "12:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 16,
-    "title": "SPES",
-    "resource": {
-      "url": "https://spes.se/stodlinjer/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "020-18 18 00",
-    "description": "För dig som förlorat någon i suicid och behöver samtala med andra efterlevande. Empatiskt, anonymt stöd kvällstid alla dagar.",
-    "category": "sorg-forlust",
-    "urgent": false,
-    "tags": ["anhorig", "anonymt", "samtal", "sorg", "suicid", "trauma"],
-    "availability": {
-      "label": "Tel: alla dagar 19–22",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "19:00",
-          "close": "22:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["wed", "sun"],
-          "open": "19:00",
-          "close": "21:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 17,
-    "title": "1177 Vårdguiden",
-    "resource": {
-      "url": "https://1177.se",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "1177",
-    "description": "Rådgivning om sjukdom, symtom och vård dygnet runt. Hjälper dig hitta rätt vårdnivå och kontakt med vården i Sverige.",
-    "category": "ovrigt",
-    "urgent": false,
-    "tags": ["akut", "anhorig", "myndighet", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: dygnet runt",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["telefon", "webb"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 18,
-    "title": "Folkhälsomyndigheten",
-    "resource": {
-      "url": "https://folkhalsomyndigheten.se",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "010-205 20 00",
-    "description": "Nationell myndighet som ger information om smittskydd, folkhälsa och levnadsvanor, inklusive psykisk hälsa, riktat till allmänheten i Sverige.",
-    "category": "ovrigt",
-    "urgent": false,
-    "tags": ["myndighet", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–fre 8–16.30",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "08:00",
-          "close": "16:30",
-          "channels": ["telefon", "webb"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 19,
-    "title": "Socialstyrelsen",
-    "resource": {
-      "url": "https://www.socialstyrelsen.se",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb", "e-post"],
-    "phone": "075-247 30 00",
-    "description": "Myndighet som ger vägledning om socialtjänst, vård, omsorg och stöd, inklusive riktlinjer kring psykisk ohälsa och anhörigstöd nationellt.",
-    "category": "ovrigt",
-    "urgent": false,
-    "tags": ["anhorig", "myndighet", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–fre 8–17",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "08:00",
-          "close": "17:00",
-          "channels": ["telefon", "webb", "e-post"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 20,
-    "title": "Spelberoendes Riksförbund",
-    "resource": {
-      "url": "https://spelberoende.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb", "e-post"],
-    "phone": "072-503 48 08",
-    "description": "Stöd för dig med spelberoende eller anhörig. Erbjuder samtal, grupper och information för att förstå, hantera och förändra situationen.",
-    "category": "missbruk",
-    "urgent": false,
-    "tags": ["anonymt", "missbruk", "psykiskhalsa", "samtal", "spelproblem", "stodgrupp"],
-    "availability": {
-      "label": "Tel: mån–fre 9–15",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu"],
-          "open": "09:00",
-          "close": "17:00",
-          "channels": ["telefon", "webb", "e-post"]
-        },
-        {
-          "days": ["fri"],
-          "open": "09:00",
-          "close": "15:00",
-          "channels": ["telefon", "webb", "e-post"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 21,
-    "title": "Anonyma Narkomaner (NA)",
-    "resource": {
-      "url": "https://www.nasverige.org/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "0771-13 80 00",
-    "description": "Gemenskap för personer med narkotikaproblem som vill bli drogfria. Erbjuder stöd, erfarenhetsutbyte och hopp genom möten och telefonstöd.",
-    "category": "missbruk",
-    "urgent": false,
-    "tags": ["anonymt", "missbruk", "psykiskhalsa", "samtal", "stodgrupp"],
-    "availability": {
-      "label": "Tel: mån-sön 17–21",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "18:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["sat", "sun"],
-          "open": "17:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 22,
-    "title": "Droghjälpen",
-    "resource": {
-      "url": "https://droghjalpen.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "020-91 91 91",
-    "description": "Rådgivning för dig som vill förändra eller sluta med droger. Erbjuder anonymt stöd, information och vägledning via telefon och chatt.",
-    "category": "missbruk",
-    "urgent": false,
-    "tags": ["anonymt", "chatt", "missbruk", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån/tors 9–16",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "thu"],
-          "open": "09:00",
-          "close": "16:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 23,
-    "title": "Giftinformationscentralen",
-    "resource": {
-      "url": "https://giftinformation.se",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "010-456 6700",
-    "description": "Ger råd vid förgiftning och misstänkta förgiftningar dygnet runt, för både barn och vuxna, med medicinsk bedömning och hänvisning.",
-    "category": "ovrigt",
-    "urgent": false,
-    "tags": ["akut", "myndighet", "samtal"],
-    "availability": {
-      "label": "Tel: dygnet runt",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["telefon", "webb"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 24,
-    "title": "Kollegahjälpen",
-    "resource": {
-      "url": "https://kollegahjalpen.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "020-59 60 00",
-    "description": "Stöd för medarbetare efter svåra händelser i arbetet. Kollegor med erfarenhet lyssnar, stöttar och hjälper dig bearbeta upplevelsen.",
-    "category": "psykisk-halsa",
-    "urgent": false,
-    "tags": ["anonymt", "psykiskhalsa", "samtal", "trauma"],
-    "availability": {
-      "label": "Tel: dygnet runt",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 25,
-    "title": "Kyrkans SOS",
-    "resource": {
-      "url": "https://kyrkanssos.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "0771-800 650",
-    "description": "Samtalsstöd för dig som känner oro, ensamhet, sorg eller livskris. Ideellt medmänskligt stöd via telefon, chatt och digitalt brev.",
-    "category": "psykisk-halsa",
-    "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "samtal", "sorg", "trauma"],
-    "availability": {
-      "label": "Tel: mån–fre 13–21",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "13:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["sat", "sun"],
-          "open": "16:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["tue"],
-          "open": "13:00",
-          "close": "16:00",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["thu"],
-          "open": "18:00",
-          "close": "21:00",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "00:00",
-          "close": "24:00",
-          "channels": ["webb"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 26,
-    "title": "Stödlinjen för Spelare",
-    "resource": {
-      "url": "https://stodlinjen.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "020-81 91 00",
-    "description": "Stöd för personer med spelproblem och deras anhöriga, med anonym rådgivning, motivation och praktisk vägledning via telefon och chatt.",
-    "category": "missbruk",
-    "urgent": false,
-    "tags": ["anhorig", "anonymt", "chatt", "missbruk", "samtal", "spelproblem"],
-    "availability": {
-      "label": "Tel: mån 9–19, tis–fre 9–17",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon"],
-          "open": "09:00",
-          "close": "19:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["tue", "wed"],
-          "open": "09:00",
-          "close": "17:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["thu"],
-          "open": "11:00",
-          "close": "19:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["fri"],
-          "open": "09:00",
-          "close": "15:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon"],
-          "open": "09:00",
-          "close": "18:45",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["tue", "wed"],
-          "open": "09:00",
-          "close": "16:45",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["thu"],
-          "open": "11:00",
-          "close": "18:45",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["fri"],
-          "open": "09:00",
-          "close": "14:45",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 27,
-    "title": "Röda Korset",
-    "resource": {
-      "url": "https://www.rodakorset.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "0771-19 95 00",
-    "description": "Humanitär organisation som erbjuder stöd vid kriser, katastrofer och vardagsproblem, inklusive samtalsstöd, praktisk hjälp och information nationellt till allmänheten.",
-    "category": "ovrigt",
-    "urgent": false,
-    "tags": ["anhorig", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–fre 10–12/13–16",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "10:00",
-          "close": "12:00",
-          "channels": ["telefon", "e-post"]
-        },
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "13:00",
-          "close": "16:00",
-          "channels": ["telefon", "e-post"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 28,
-    "title": "Ångestförbundet",
-    "resource": {
-      "url": "https://www.angest.se",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "031-13 70 91",
-    "description": "Stöd för dig med ångest eller oro. Jourtelefon erbjuder medmänskligt, anonymt samtal och vägledning för drabbade och anhöriga.",
-    "category": "psykisk-halsa",
-    "urgent": false,
-    "tags": ["angest", "anonymt", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–fre 13–15",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "13:00",
-          "close": "15:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 29,
-    "title": "Alkoholhjälpen",
-    "resource": {
-      "url": "https://www.alkoholhjalpen.se",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "020-84 44 48",
-    "description": "Rådgivning för dig som vill fundera över eller minska din alkoholkonsumtion, med anonymt stöd, information och vägledning online.",
-    "category": "missbruk",
-    "urgent": false,
-    "tags": ["anonymt", "missbruk", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–fre 11–16",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu"],
-          "open": "11:00",
-          "close": "19:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["fri"],
-          "open": "11:00",
-          "close": "16:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 30,
-    "title": "Barnombudsmannen",
-    "resource": {
-      "url": "https://www.barnombudsmannen.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "08-692 29 50",
-    "description": "Myndighet som bevakar barns rättigheter och tar emot frågor från barn och unga om skola, familj, hälsa och inflytande.",
-    "category": "barn-unga",
-    "urgent": false,
-    "tags": ["barn-unga", "myndighet", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: tis-fre 10–12",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "wed"],
-          "open": "13:00",
-          "close": "15:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["tue", "thu", "fri"],
-          "open": "10:00",
-          "close": "12:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 31,
-    "title": "PrevenTell",
-    "resource": {
-      "url": "https://www.karolinska.se/preventell/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "020-66 77 88",
-    "description": "Specialiserad stödlinje för personer med oroande sexuella tankar eller beteenden. Erbjuder anonym rådgivning, riskbedömning och hjälp att söka behandling.",
-    "category": "vald",
-    "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "samtal", "vald"],
-    "availability": {
-      "label": "Tel: mån–fre 12–15",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "12:00",
-          "close": "15:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon", "wed", "thu"],
-          "open": "15:00",
-          "close": "16:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 32,
-    "title": "Somaya stödjour",
-    "resource": {
-      "url": "https://www.somaya.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "e-post", "webb"],
-    "phone": "020-81 82 83",
-    "description": "Stödjour för kvinnor och tjejer som utsatts för våld eller kontroll. Erbjuder anonymt stöd, rådgivning och praktisk vägledning på flera språk.",
-    "category": "vald",
-    "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "samtal", "vald"],
-    "availability": {
-      "label": "Tel: mån–fre 9–16",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "09:00",
-          "close": "16:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 33,
-    "title": "Ätstörningslinjen (Frisk & Fri)",
-    "resource": {
-      "url": "https://www.friskfri.se/fa-stod/telefonlinjer/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "020-20 80 18",
-    "description": "Stödlinje för dig med ätstörningar eller som anhörig. Erfarna volontärer erbjuder anonymt samtalsstöd, information och hopp via telefon.",
-    "category": "psykisk-halsa",
-    "urgent": false,
-    "tags": ["anhorig", "anonymt", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–tors/sön 19–20",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["tue"],
-          "open": "13:00",
-          "close": "14:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["tue"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["wed"],
-          "open": "13:00",
-          "close": "14:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["wed"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["thu"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["fri"],
-          "open": "12:15",
-          "close": "13:15",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["sun"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 34,
-    "title": "Närståendelinjen (Frisk & Fri)",
-    "resource": {
-      "url": "https://www.friskfri.se/fa-stod/narstaendelinjen/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "0200-125 085",
-    "description": "Stödlinje för närstående till personer med ätstörningar. Erbjuder anonymt samtalsstöd, vägledning och möjlighet att dela oro och frågor.",
-    "category": "anhoriga",
-    "urgent": false,
-    "tags": ["anhorig", "anonymt", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Tel: mån–tors/sön 19–20",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["tue"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["wed"],
-          "open": "16:00",
-          "close": "17:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["wed"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["thu"],
-          "open": "09:00",
-          "close": "11:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["thu"],
-          "open": "19:00",
-          "close": "20:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["fri"],
-          "open": "16:00",
-          "close": "17:00",
-          "channels": ["telefon"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 35,
-    "title": "Tryggare Sverige",
-    "resource": {
-      "url": "https://tryggaresverige.org/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "e-post", "webb"],
-    "phone": "08-29 20 00",
-    "description": "Oberoende stiftelse som ger rådgivning, stöd och kunskap om brott, trygghet och brottsförebyggande arbete för privatpersoner och verksamheter.",
-    "category": "vald",
-    "urgent": false,
-    "tags": ["samtal", "vald"],
-    "availability": {
-      "label": "Se webbplatsen",
-      "timezone": "Europe/Stockholm",
-      "openingHours": []
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 36,
-    "title": "Stödlinjen för män",
-    "resource": {
-      "url": "https://stodlinjenforman.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "020-80 80 80",
-    "description": "Nationell stödlinje för killar och män som utsatts för våld eller sexuella övergrepp, samt närstående som behöver råd och stöd.",
-    "category": "vald",
-    "urgent": true,
-    "tags": ["anonymt", "chatt", "killar-man", "psykiskhalsa", "samtal", "vald"],
-    "availability": {
-      "label": "Tel: alla dagar 7–21",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "open": "07:00",
-          "close": "21:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon", "thu"],
-          "open": "15:00",
-          "close": "21:00",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["sun"],
-          "open": "11:00",
-          "close": "17:00",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 37,
-    "title": "Välj att sluta",
-    "resource": {
-      "url": "https://valjattsluta.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "020-555 666",
-    "description": "Nationell stödlinje för dig som vill förändra ett kontrollerande eller våldsamt beteende i nära relationer och få professionell hjälp.",
-    "category": "vald",
-    "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "samtal", "vald"],
-    "availability": {
-      "label": "Tel: mån–fre 8.30–16",
-      "timezone": "Europe/Stockholm",
-      "openingHours": [
-        {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "08:30",
-          "close": "16:00",
-          "channels": ["telefon"]
-        },
-        {
-          "days": ["mon"],
-          "open": "18:00",
-          "close": "21:30",
-          "channels": ["chatt"]
-        }
-      ]
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 38,
+    "id": "livslinjen",
+    "slug": "livslinjen",
     "title": "Livslinjen",
     "resource": {
-      "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/livslinjen/",
+      "url": "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/livslinjen/chatt/",
       "type": "link"
     },
-    "contactTypes": ["chatt", "webb"],
+    "contactTypes": [
+      "chatt"
+    ],
     "phone": "",
-    "description": "Chattstöd för dig som mår psykiskt dåligt eller har tunga tankar. Volontärer lyssnar anonymt och stöttar på kvällstid.",
+    "description": "Anonym chatt för dig mellan 16 och 25 år när livet känns jobbigt.",
     "category": "psykisk-halsa",
     "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "suicid"],
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "mind",
+      "psykiskt-daligt-maende",
+      "tunga-tankar",
+      "ensamhet",
+      "oro",
+      "behov-av-samtal",
+      "unga-16-25",
+      "svenska"
+    ],
     "availability": {
-      "label": "Chatt: mån–tors/sön 17–24",
+      "label": "Chatt: sön-tors 17-24",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["sun", "mon", "tue", "wed", "thu"],
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
           "open": "17:00",
           "close": "24:00",
-          "channels": ["chatt"]
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 39,
-    "title": "Jourhavande Kompis",
+    "id": "bris",
+    "slug": "bris",
+    "title": "BRIS",
     "resource": {
-      "url": "https://www.rkuf.se/fa-stod/jourhavande-kompis",
+      "url": "https://barn.bris.se/",
       "type": "link"
     },
-    "contactTypes": ["chatt", "webb"],
-    "phone": "",
-    "description": "Chattstöd för barn och unga som vill prata om vardag, konflikter, oro eller ensamhet med en anonym volontär.",
+    "contactTypes": [
+      "telefon",
+      "sms",
+      "chatt",
+      "e-post"
+    ],
+    "phone": "116 111",
+    "description": "Dygnet-runt-stöd för barn och unga upp till 18 år.",
     "category": "barn-unga",
     "urgent": false,
-    "tags": ["anonymt", "barn-unga", "chatt", "psykiskhalsa"],
+    "tags": [
+      "barn-unga",
+      "direct-line",
+      "bris",
+      "oro",
+      "angest",
+      "familj",
+      "skola",
+      "vald-och-krankningar",
+      "ensamhet",
+      "barn",
+      "unga-under-18",
+      "svenska"
+    ],
     "availability": {
-      "label": "Chatt: mån–fre 18–21",
+      "label": "Telefon, sms, chatt och mejl: dygnet runt",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "18:00",
-          "close": "21:00",
-          "channels": ["chatt"]
-        },
-        {
-          "days": ["sat", "sun"],
-          "open": "14:00",
-          "close": "17:00",
-          "channels": ["chatt"]
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 40,
+    "id": "jourhavande-medmanniska",
+    "slug": "jourhavande-medmanniska",
+    "title": "Jourhavande Medmänniska",
+    "resource": {
+      "url": "https://www.jourhavande-medmanniska.se/chatt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "08-702 16 80",
+    "description": "Anonymt medmänskligt stöd via telefon på kvällar och nätter.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "jourhavande-medmanniska",
+      "ensamhet",
+      "oro",
+      "sorg",
+      "nedstamdhet",
+      "behov-av-samtal",
+      "vuxna",
+      "unga",
+      "aldre",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: alla nätter 21-06. Chatt: lör-tis 21-24",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "21:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "06:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "jourhavande-kompis",
+    "slug": "jourhavande-kompis",
+    "title": "Jourhavande Kompis",
+    "resource": {
+      "url": "https://www.rkuf.se/fa-stod/jourhavande-kompis/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "chatt"
+    ],
+    "phone": "",
+    "description": "Anonym stödchatt av unga för unga upp till 25 år.",
+    "category": "barn-unga",
+    "urgent": false,
+    "tags": [
+      "barn-unga",
+      "direct-line",
+      "roda-korsets-ungdomsforbund",
+      "oro",
+      "ensamhet",
+      "vardagsproblem",
+      "konflikter",
+      "behov-av-samtal",
+      "barn",
+      "unga-upp-till-25",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Chatt: mån-fre 18-21, lör-sön 14-17. Sommartid: tis-tors 18-21, sön 14-17",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "18:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "open": "14:00",
+          "close": "17:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "open": "18:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Sommartid 15 juni-23 augusti"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "open": "14:00",
+          "close": "17:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Sommartid 15 juni-23 augusti"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "tjejzonen",
+    "slug": "tjejzonen",
     "title": "Tjejzonen",
     "resource": {
       "url": "https://tjejzonen.se/hitta-hjalp/allmanna-chatten/",
       "type": "link"
     },
-    "contactTypes": ["chatt", "webb"],
+    "contactTypes": [
+      "chatt"
+    ],
     "phone": "",
-    "description": "Stödchatt för tjejer och unga kvinnor 10–25 år som vill prata anonymt om mående, relationer, oro eller vardagsproblem.",
+    "description": "Anonym stödchatt för dig som är 10-25 år och identifierar dig som tjej.",
     "category": "barn-unga",
     "urgent": false,
-    "tags": ["anonymt", "barn-unga", "chatt", "psykiskhalsa"],
+    "tags": [
+      "barn-unga",
+      "direct-line",
+      "tjejzonen",
+      "oro",
+      "relationer",
+      "psykiskt-maende",
+      "ensamhet",
+      "vardagsproblem",
+      "tjejer-10-25",
+      "svenska"
+    ],
     "availability": {
-      "label": "Chatt: alla dagar 20–22",
+      "label": "Chatt: alla dagar 20-22",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
           "open": "20:00",
           "close": "22:00",
-          "channels": ["chatt"]
+          "timezone": "Europe/Stockholm",
+          "note": "Kön stänger 21:45"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 41,
-    "title": "SHEDO",
+    "id": "killar-se",
+    "slug": "killar-se",
+    "title": "Killar.se",
     "resource": {
-      "url": "https://www.shedo.se/chatt",
+      "url": "https://killar.se/vara-stod/om-chatten",
       "type": "link"
     },
-    "contactTypes": ["chatt", "e-post", "webb"],
+    "contactTypes": [
+      "chatt"
+    ],
     "phone": "",
-    "description": "Stödchatt för dig med självskadebeteende eller ätstörningar. Ideella volontärer lyssnar anonymt, stöttar och hjälper dig hitta strategier framåt.",
-    "category": "psykisk-halsa",
+    "description": "Anonym stödchatt för killar 10-25 år.",
+    "category": "barn-unga",
     "urgent": false,
-    "tags": ["anonymt", "chatt", "psykiskhalsa", "sjalvskada", "sorg", "suicid"],
+    "tags": [
+      "barn-unga",
+      "direct-line",
+      "man",
+      "psykiskt-maende",
+      "relationer",
+      "sex-och-kropp",
+      "vald-och-krankningar",
+      "identitet",
+      "killar-10-25",
+      "cis-killar",
+      "trans-killar",
+      "svenska"
+    ],
     "availability": {
-      "label": "Chatt: mån–ons/sön 20–22",
+      "label": "Chatt: sön-tors 19-22",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "sun"],
-          "open": "20:00",
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "open": "19:00",
           "close": "22:00",
-          "channels": ["chatt"]
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 42,
-    "title": "Unizon",
+    "id": "kvinnofridslinjen",
+    "slug": "kvinnofridslinjen",
+    "title": "Kvinnofridslinjen",
     "resource": {
-      "url": "https://www.unizonjourer.se/",
+      "url": "https://kvinnofridslinjen.se/",
       "type": "link"
     },
-    "contactTypes": ["webb"],
-    "phone": "",
-    "description": "Riksorganisation för kvinno-, tjej- och ungdomsjourer som erbjuder skydd, stöd och rådgivning vid våld, hot och kontroll i nära relationer.",
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "116 016",
+    "description": "Nationell stödlinje för dig som utsatts för hot, våld eller sexuella övergrepp.",
     "category": "vald",
-    "urgent": false,
-    "tags": ["anhorig", "samtal", "vald"],
+    "urgent": true,
+    "tags": [
+      "vald",
+      "direct-line",
+      "nationellt-centrum-for-kvinnofrid",
+      "hot-och-vald",
+      "vald-i-nara-relation",
+      "sexuella-overgrepp",
+      "oro-for-nagon-annan",
+      "stod-och-rad",
+      "valdsutsatta",
+      "anhoriga",
+      "yrkesverksamma",
+      "unga",
+      "svenska"
+    ],
     "availability": {
-      "label": "Se webbplatsen",
-      "timezone": "Europe/Stockholm",
-      "openingHours": []
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 43,
-    "title": "Roks (kvinno- & tjejjourer)",
-    "resource": {
-      "url": "https://www.roks.se/",
-      "type": "link"
-    },
-    "contactTypes": ["webb"],
-    "phone": "",
-    "description": "Riksorganisation för kvinno- och tjejjourer som samordnar stöd, skyddat boende och rådgivning för våldsutsatta kvinnor, tjejer och närstående.",
-    "category": "vald",
-    "urgent": false,
-    "tags": ["anhorig", "samtal", "vald"],
-    "availability": {
-      "label": "Se webbplatsen",
-      "timezone": "Europe/Stockholm",
-      "openingHours": []
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 44,
-    "title": "Mind",
-    "resource": {
-      "url": "https://mind.se",
-      "type": "link"
-    },
-    "contactTypes": ["webb"],
-    "phone": "",
-    "description": "Ideell förening som arbetar för bättre psykisk hälsa genom stödlinjer, information, opinion och kunskap för drabbade och anhöriga.",
-    "category": "psykisk-halsa",
-    "urgent": false,
-    "tags": ["anonymt", "psykiskhalsa", "samtal"],
-    "availability": {
-      "label": "Se webbplatsen",
-      "timezone": "Europe/Stockholm",
-      "openingHours": []
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 45,
-    "title": "Kronofogdens kundservice",
-    "resource": {
-      "url": "https://www.kronofogden.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "0771-73 73 00",
-    "description": "För dig med frågor om skulder, utmätning eller betalningsanmärkningar. Kronofogden ger information och vägledning i ekonomiska svårigheter.",
-    "category": "ekonomi",
-    "urgent": false,
-    "tags": ["ekonomi", "skuld", "vägledning"],
-    "availability": {
-      "label": "Tel: mån-fre 08–18",
+      "label": "Telefon: dygnet runt. Chatt: mån 15-21, tis 8-13, tors 15-21, fre 9-16, sön 11-17",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
-          "open": "08:00",
-          "close": "18:00",
-          "channels": ["telefon"]
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
   },
   {
-    "id": 46,
-    "title": "Kommunal budget- och skuldrådgivning",
+    "id": "brottsofferjouren",
+    "slug": "brottsofferjouren",
+    "title": "Brottsofferjouren",
     "resource": {
-      "url": "https://www.hallakonsument.se/",
+      "url": "https://www.brottsofferjouren.se/om-oss/kontakt/",
       "type": "link"
     },
-    "contactTypes": ["telefon", "webb"],
-    "phone": "",
-    "description": "Kostnadsfri rådgivning från din kommun om privatekonomi, skuldsanering och budgetering. Kontakta din kommuns budget- och skuldrådgivare.",
-    "category": "ekonomi",
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "chatt"
+    ],
+    "phone": "116 006",
+    "description": "Stöd för dig som utsatts för brott, är vittne eller närstående.",
+    "category": "vald",
     "urgent": false,
-    "tags": ["ekonomi", "skuld", "budget", "vägledning"],
+    "tags": [
+      "vald",
+      "direct-line",
+      "brottsofferjouren-sverige",
+      "utsatt-for-brott",
+      "vittne-till-brott",
+      "anhorig-till-brottsutsatt",
+      "rattsprocessen",
+      "praktisk-vagledning",
+      "brottsutsatta",
+      "vittnen",
+      "anhoriga",
+      "svenska"
+    ],
     "availability": {
-      "label": "Se din kommuns webbplats",
-      "timezone": "Europe/Stockholm",
-      "openingHours": []
-    },
-    "lastVerified": "2025-12-10",
-    "active": true
-  },
-  {
-    "id": 47,
-    "title": "Konsumentverkets vägledning",
-    "resource": {
-      "url": "https://www.hallakonsument.se/",
-      "type": "link"
-    },
-    "contactTypes": ["telefon", "chatt", "webb"],
-    "phone": "0771-42 33 00",
-    "description": "Gratis rådgivning om konsumenträtt, ekonomi och budget via Hallå konsument – Konsumentverkets upplysningstjänst.",
-    "category": "ekonomi",
-    "urgent": false,
-    "tags": ["ekonomi", "budget", "konsument", "vägledning"],
-    "availability": {
-      "label": "Tel: mån-fre 09–12",
+      "label": "Stödlinje: juni-juli vardagar 9-19. Ordinarie 2026: mån-tis 9-19, ons-fre 9-17, helg 9-12 och 13-16",
       "timezone": "Europe/Stockholm",
       "openingHours": [
         {
-          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "days": [
+            "mon",
+            "tue"
+          ],
+          "open": "09:00",
+          "close": "19:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Ordinarie öppettider 2026"
+        },
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "09:00",
+          "close": "17:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Ordinarie öppettider 2026"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
           "open": "09:00",
           "close": "12:00",
-          "channels": ["telefon"]
+          "timezone": "Europe/Stockholm",
+          "note": "Ordinarie öppettider 2026"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "open": "13:00",
+          "close": "16:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Ordinarie öppettider 2026"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "09:00",
+          "close": "19:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Juni och juli: stödlinjen öppen vardagar 9-19, helger stängt"
         }
       ]
     },
-    "lastVerified": "2025-12-10",
-    "active": true
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "spes",
+    "slug": "spes",
+    "title": "SPES",
+    "resource": {
+      "url": "https://spes.se/chatt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "020-18 18 00",
+    "description": "Stöd för dig som mist en närstående i suicid.",
+    "category": "sorg-forlust",
+    "urgent": false,
+    "tags": [
+      "sorg-forlust",
+      "direct-line",
+      "riksforbundet-for-suicidprevention-och-efterlevandestod",
+      "sorg-efter-suicid",
+      "efterlevandestod",
+      "kris",
+      "ensamhet",
+      "behov-av-samtal",
+      "efterlevande",
+      "anhoriga",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: alla dagar 19-22. Chatt: ons och sön 19-21",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "19:00",
+          "close": "22:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Även röda dagar"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "hjalplinjen",
+    "slug": "hjalplinjen",
+    "title": "Hjälplinjen",
+    "resource": {
+      "url": "https://hjalplinjen.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "90390",
+    "description": "Nationell stödlinje för vuxna som behöver professionellt samtalsstöd.",
+    "category": "psykisk-halsa",
+    "urgent": true,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "hjalplinjen",
+      "psykiskt-maende",
+      "kris",
+      "svar-livssituation",
+      "sjalvmordstankar",
+      "oro-for-nagon-annan",
+      "vuxna-over-18",
+      "anhoriga",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: dygnet runt, året om",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "preventell",
+    "slug": "preventell",
+    "title": "PrevenTell",
+    "resource": {
+      "url": "https://www.karolinska.se/preventell/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "020-66 77 88",
+    "description": "Hjälplinje för dig som oroar dig för din eller någon annans sexualitet.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "direct-line",
+      "karolinska-universitetssjukhuset-anova",
+      "oonskad-sexualitet",
+      "sexuella-riskbeteenden",
+      "oro-for-att-skada-andra",
+      "stod-for-narstaende",
+      "yrkesverksam-konsultation",
+      "personer-med-oonskad-sexualitet",
+      "anhoriga",
+      "yrkesverksamma",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: vardagar 12-15. Chatt: mån, ons och tors 15-16",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "12:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "alkoholhjalpen",
+    "slug": "alkoholhjalpen",
+    "title": "Alkoholhjälpen",
+    "resource": {
+      "url": "https://www.alkoholhjalpen.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "020-84 44 48",
+    "description": "Anonymt stöd för dig som funderar över dina egna eller någon annans alkoholvanor.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "direct-line",
+      "beroendecentrum-stockholm",
+      "alkoholvanor",
+      "riskbruk",
+      "beroende",
+      "oro-for-nagon-annan",
+      "forandring-av-alkoholvanor",
+      "vuxna-over-18",
+      "anhoriga",
+      "vardgivare",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: mån-tors 11-19, fre 11-16, helgfria vardagar",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "open": "11:00",
+          "close": "19:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfria vardagar"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "open": "11:00",
+          "close": "16:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfria vardagar"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "stodlinjen",
+    "slug": "stodlinjen",
+    "title": "Stödlinjen",
+    "resource": {
+      "url": "https://stodlinjen.se/chatt",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "020-81 91 00",
+    "description": "Anonym hjälp för dig som är orolig för ditt eget eller någon annans spelande om pengar.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "direct-line",
+      "stockholms-lans-sjukvardsomrade",
+      "spelproblem",
+      "spelberoende",
+      "oro-for-nagon-annans-spelande",
+      "motivation-till-forandring",
+      "radgivning",
+      "spelare",
+      "anhoriga",
+      "vuxna",
+      "svenska",
+      "engelska",
+      "arabiska",
+      "tolk"
+    ],
+    "availability": {
+      "label": "Telefon: mån 9-19, tis-ons 9-17, tors 11-19, fre 9-15. Chatt stänger 15 minuter tidigare",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "09:00",
+          "close": "19:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfri vardag"
+        },
+        {
+          "days": [
+            "tue",
+            "wed"
+          ],
+          "open": "09:00",
+          "close": "17:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfri vardag"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "open": "11:00",
+          "close": "19:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfri vardag. Arabisk rådgivning via telefon 15-19"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "open": "09:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfri vardag"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "spelberoendes-riksforbund",
+    "slug": "spelberoendes-riksforbund",
+    "title": "Spelberoendes Riksförbund",
+    "resource": {
+      "url": "https://spelberoende.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "072-503 48 08",
+    "description": "Självhjälpsmöten, rådgivning och lokalt stöd för spelberoende och anhöriga.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "support-organization",
+      "spelberoendes-riksforbund",
+      "spelberoende",
+      "spelproblem",
+      "anhorigstod",
+      "sjalvhjalpsmoten",
+      "lokalt-stod",
+      "spelare",
+      "anhoriga",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Självhjälpsmöten och lokala kontaktvägar via webbplatsen",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "anhoriglinjen",
+    "slug": "anhoriglinjen",
+    "title": "Anhöriglinjen",
+    "resource": {
+      "url": "https://anhorigasriksforbund.se/anhoriglinjen/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post"
+    ],
+    "phone": "0200-239 500",
+    "description": "Nationell stödtelefon för dig som är anhörig.",
+    "category": "anhoriga",
+    "urgent": false,
+    "tags": [
+      "anhoriga",
+      "direct-line",
+      "anhorigas-riksforbund",
+      "anhorigskap",
+      "vard-och-omsorg",
+      "oro",
+      "avlastning",
+      "juridisk-vagledning",
+      "vuxna",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: mån-tis och tors-fre 10-15, ons och sön 18-21",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "thu",
+            "fri"
+          ],
+          "open": "10:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "wed",
+            "sun"
+          ],
+          "open": "18:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "somaya",
+    "slug": "somaya",
+    "title": "Somaya",
+    "resource": {
+      "url": "https://www.somaya.se/fa-stod",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post"
+    ],
+    "phone": "020-81 82 83",
+    "description": "Flerspråkigt stöd för våldsutsatta kvinnor, tjejer och hbtqi-personer.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "direct-line",
+      "somaya-stodjour",
+      "vald-i-nara-relation",
+      "heder",
+      "kontroll-och-hot",
+      "juridiska-fragor",
+      "praktiskt-stod",
+      "kvinnor",
+      "tjejer",
+      "hbtqi-personer",
+      "personer-med-utlandsk-bakgrund",
+      "anhoriga",
+      "svenska",
+      "flera-sprak"
+    ],
+    "availability": {
+      "label": "Telefon: vardagar 9-16",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "09:00",
+          "close": "16:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "frisk-fri",
+    "slug": "frisk-fri",
+    "title": "Frisk & Fri",
+    "resource": {
+      "url": "https://www.friskfri.se/fa-stod/chatt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt",
+      "webb"
+    ],
+    "phone": "020-20 80 18",
+    "description": "Anonymt stöd via telefon, chatt och stödmejl för drabbade och närstående vid ätstörningar.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "support-organization",
+      "frisk-fri-riksforeningen-mot-atstorningar",
+      "atstorningar",
+      "oro-for-kropp-mat-och-traning",
+      "anhorigstod",
+      "sjalvbild",
+      "behov-av-samtal",
+      "drabbade",
+      "anhoriga",
+      "yrkesverksamma",
+      "svenska",
+      "engelska",
+      "arabiska"
+    ],
+    "availability": {
+      "label": "Telefon, chatt och stödmejl med olika tider för drabbade och närstående",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "open": "13:00",
+          "close": "14:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "open": "13:00",
+          "close": "14:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "open": "12:15",
+          "close": "13:15",
+          "timezone": "Europe/Stockholm",
+          "note": "English support"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "open": "20:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Arabic support, ojämna veckor"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "valj-att-sluta",
+    "slug": "valj-att-sluta",
+    "title": "Välj att sluta",
+    "resource": {
+      "url": "https://valjattsluta.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt",
+      "e-post"
+    ],
+    "phone": "020-555 666",
+    "description": "Nationell anonym stödlinje för dig som vill förändra ett kontrollerande eller våldsamt beteende.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "direct-line",
+      "manscentrum-stockholm",
+      "voldsamt-beteende",
+      "kontrollerande-beteende",
+      "vald-i-nara-relation",
+      "hjalp-vidare-till-behandling",
+      "radgivning-for-yrkesverksamma",
+      "valdsutovare",
+      "valdsutsatta",
+      "anhoriga",
+      "yrkesverksamma",
+      "svenska",
+      "engelska",
+      "tolk"
+    ],
+    "availability": {
+      "label": "Telefon: vardagar 8:30-16. Chatt: måndagar 18-21:30",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "08:30",
+          "close": "16:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Vardagar"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "rfsl-stodmottagning",
+    "slug": "rfsl-stodmottagning",
+    "title": "RFSL Stödmottagning",
+    "resource": {
+      "url": "https://www.rfsl.se/verksamhet/stod/stodmottagning/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post"
+    ],
+    "phone": "020-34 13 16",
+    "description": "Stöd för hbtqi-personer som utsatts för trakasserier, hot eller våld.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "direct-line",
+      "rfsl",
+      "trakasserier",
+      "hot",
+      "krankningar",
+      "stod-for-hbtqi-personer",
+      "hbtqi-personer",
+      "anhoriga",
+      "vanner",
+      "yrkesverksamma",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Telefon: återuppringning via meddelande. Direkt anonym kontakt torsdagar 9-12",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "thu"
+          ],
+          "open": "09:00",
+          "close": "12:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Direkt anonym kontakt med kurator"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "shedo",
+    "slug": "shedo",
+    "title": "SHEDO",
+    "resource": {
+      "url": "https://www.shedo.se/chatt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "chatt",
+      "webb"
+    ],
+    "phone": "",
+    "description": "Stöd via självskadechatt och jourmail för självskadebeteende och ätstörningar.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "shedo",
+      "sjalvskadebeteende",
+      "atstorningar",
+      "anhorigstod",
+      "strategier",
+      "behov-av-samtal",
+      "drabbade",
+      "anhoriga",
+      "yrkesverksamma",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Självskadechatten: mån-tis-ons och sön 20-22",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "sun"
+          ],
+          "open": "20:00",
+          "close": "22:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "roda-korset",
+    "slug": "roda-korset",
+    "title": "Röda Korset",
+    "resource": {
+      "url": "https://www.rodakorset.se/kontakt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "0771-19 95 00",
+    "description": "Röda Korsets nationella kontaktväg för frågor och vägledning.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "organization-contact",
+      "svenska-roda-korset",
+      "fragor-till-roda-korset",
+      "vagledning",
+      "kontakt-med-verksamhet",
+      "krisstod-och-humanitart-stod",
+      "allmanheten",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Infoservice: vardagar 10-12 och 13-15",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "10:00",
+          "close": "12:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "13:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "organization_contact",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "jourhavande-prast",
+    "slug": "jourhavande-prast",
+    "title": "Jourhavande präst",
+    "resource": {
+      "url": "https://www.svenskakyrkan.se/jourhavandeprast",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt",
+      "webb"
+    ],
+    "phone": "112",
+    "description": "Akut samtals- och krisstöd via telefon, chatt och digitalt brev på kvällar och nätter.",
+    "category": "psykisk-halsa",
+    "urgent": true,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "svenska-kyrkan",
+      "akut-kris",
+      "sorg",
+      "ensamhet",
+      "sjalvmordstankar",
+      "existentiella-fragor",
+      "angest",
+      "vuxna",
+      "unga",
+      "aldre",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: alla nätter 21-06. Chatt: alla kvällar 20-24",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "21:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "06:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "anonyma-alkoholister",
+    "slug": "anonyma-alkoholister",
+    "title": "Anonyma Alkoholister",
+    "resource": {
+      "url": "https://www.aa.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "08-720 38 42",
+    "description": "Telejour och mötesgemenskap för dig som vill sluta dricka.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "direct-line",
+      "anonyma-alkoholister-i-sverige",
+      "alkoholism",
+      "alkoholberoende",
+      "nykterhet",
+      "stodgrupp",
+      "hitta-mote",
+      "personer-som-vill-sluta-dricka",
+      "svenska"
+    ],
+    "availability": {
+      "label": "AA Telejour: alla dagar 11-20, även helgdagar",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "11:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Även helgdagar"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "al-anon-familjegrupper",
+    "slug": "al-anon-familjegrupper",
+    "title": "Al-Anon Familjegrupper",
+    "resource": {
+      "url": "https://www.al-anon.se/kontakt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "070-610 96 61",
+    "description": "Stöd och vägledning för anhöriga till personer med alkoholproblem.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "support-organization",
+      "al-anon-familjegrupper-i-sverige",
+      "anhorig-till-alkoholist",
+      "medberoende",
+      "stodgrupp",
+      "hitta-mote",
+      "tolvstegsprogram",
+      "anhoriga",
+      "familj",
+      "vanner",
+      "professionella",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Servicetelefon: måndagar 19-21",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "19:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "mansjouren",
+    "slug": "mansjouren",
+    "title": "Mansjouren",
+    "resource": {
+      "url": "https://www.mansjouren.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "08-30 30 20",
+    "description": "Samtalsstöd för män som behöver prata om livskriser, relationer, ensamhet eller svåra känslor.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "mansjouren-sverige",
+      "livskris",
+      "relationer",
+      "separation",
+      "ensamhet",
+      "angest",
+      "nedstamdhet",
+      "man",
+      "vuxna",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Telefonjour: sön-fre 12-14 och 17-20, lör 12-14",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "12:00",
+          "close": "14:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "17:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "open": "12:00",
+          "close": "14:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "anonyma-narkomaner",
+    "slug": "anonyma-narkomaner",
+    "title": "Anonyma Narkomaner",
+    "resource": {
+      "url": "https://www.nasverige.org/kontakt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "0771-13 80 00",
+    "description": "Hjälptelefon och mötesgemenskap för dig som vill sluta använda droger.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "direct-line",
+      "na-sverige",
+      "drogberoende",
+      "drogfrihet",
+      "hitta-mote",
+      "tolvstegsprogram",
+      "stod-fran-andra-med-erfarenhet",
+      "personer-med-drogproblem",
+      "personer-som-vill-bli-drogfria",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Hjälptelefonen är bemannad alla dagar",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Officiell sida anger bemannad alla dagar men inte exakta klockslag"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "droghjalpen",
+    "slug": "droghjalpen",
+    "title": "Droghjälpen",
+    "resource": {
+      "url": "https://droghjalpen.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb",
+      "e-post"
+    ],
+    "phone": "020-91 91 91",
+    "description": "Anonymt stöd via telefon och nätet för dig som funderar över egna eller någon annans drogvanor.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "direct-line",
+      "beroendecentrum-stockholm",
+      "droganvandning",
+      "beroendeframkallande-lakemedel",
+      "oro-for-nagon-annan",
+      "forandring-av-drogvanor",
+      "sjalvhjalp",
+      "personer-som-anvander-droger",
+      "anhoriga",
+      "vardgivare",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Telefon: helgfria måndagar 9-19 och torsdagar 9-16",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "09:00",
+          "close": "19:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfri måndag"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "open": "09:00",
+          "close": "16:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfri torsdag"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "atstorningslinjen",
+    "slug": "atstorningslinjen",
+    "title": "Ätstörningslinjen",
+    "resource": {
+      "url": "https://www.friskfri.se/fa-stod/telefonlinjer/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon"
+    ],
+    "phone": "020-20 80 18",
+    "description": "Anonym telefonlinje för dig som är drabbad av ätstörningar.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "frisk-fri-riksforeningen-mot-atstorningar",
+      "atstorningar",
+      "oro-for-mat-kropp-och-traning",
+      "sjalvbild",
+      "skam-och-oro",
+      "behov-av-samtal",
+      "drabbade",
+      "personer-med-atstorningsproblematik",
+      "svenska",
+      "engelska",
+      "arabiska"
+    ],
+    "availability": {
+      "label": "Telefon: mån, tis, ons, tors och sön med särskilda språkpass",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "open": "13:00",
+          "close": "14:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "open": "13:00",
+          "close": "14:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "open": "19:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Röda dagar stängt"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "open": "12:15",
+          "close": "13:15",
+          "timezone": "Europe/Stockholm",
+          "note": "English support"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "open": "20:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Arabic support, ojämna veckor"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-04",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-04",
+      "nextReview": "2026-12-04"
+    }
+  },
+  {
+    "id": "storasyster",
+    "slug": "storasyster",
+    "title": "Storasyster",
+    "resource": {
+      "url": "https://storasyster.org/stod-och-hjalp-efter-sexuella-overgrepp/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "chatt",
+      "webb"
+    ],
+    "phone": "",
+    "description": "Anonymt stöd för dig som utsatts för sexuella övergrepp och för anhöriga.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "direct-line",
+      "storasyster",
+      "sexuella-overgrepp",
+      "valdtakt",
+      "trauma",
+      "anhorigstod",
+      "samtalsstod",
+      "utsatta-fran-13-ar",
+      "anhoriga",
+      "alla-konsidentiteter",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Chatt: sön-tors 19-21, fre-lör 13-15",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "open": "19:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "fri",
+            "sat"
+          ],
+          "open": "13:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "wonsa",
+    "slug": "wonsa",
+    "title": "WONSA",
+    "resource": {
+      "url": "https://www.wonsa.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "e-post",
+      "webb"
+    ],
+    "phone": "",
+    "description": "Specialistorganisation och klinisk kunskapsresurs för sexuella trauman.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "organization-contact",
+      "wonsa-world-of-no-sexual-abuse",
+      "sexuella-trauman",
+      "behandling",
+      "traumakunskap",
+      "stodnatverk",
+      "professionell-vagledning",
+      "overlevare",
+      "professionella",
+      "anhoriga",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Specialistorganisation; ingen öppen stödlinje verifierad",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "gamblers-anonymous-sverige",
+    "slug": "gamblers-anonymous-sverige",
+    "title": "Gamblers Anonymous Sverige",
+    "resource": {
+      "url": "https://www.gamblersanonymous.se/m%C3%B6ten",
+      "type": "link"
+    },
+    "contactTypes": [
+      "webb",
+      "telefon"
+    ],
+    "phone": "073-775 74 52",
+    "description": "Självhjälpsmöten för personer som vill sluta spela.",
+    "category": "missbruk",
+    "urgent": false,
+    "tags": [
+      "missbruk",
+      "support-organization",
+      "ga-gamblers-anonymous-sverige",
+      "spelberoende",
+      "spelproblem",
+      "sjalvhjalpsmoten",
+      "tolvstegsprogram",
+      "gemenskap",
+      "personer-som-vill-sluta-spela",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Självhjälpsmöten enligt möteslistan",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "rfsl-ungdom-transammans",
+    "slug": "rfsl-ungdom-transammans",
+    "title": "RFSL Ungdom / Transammans",
+    "resource": {
+      "url": "https://rfslungdom.se/hbtqia/stod/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "chatt",
+      "webb",
+      "e-post"
+    ],
+    "phone": "",
+    "description": "Stöd, rådgivning och samtalsmottagning för unga hbtqia-personer, transpersoner och närstående.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "support-organization",
+      "rfsl-ungdom-och-transammans",
+      "konsidentitet",
+      "hbtqia-fragor",
+      "transfragor",
+      "komma-ut",
+      "anhorigstod",
+      "trygga-motesplatser",
+      "hbtqia-personer",
+      "unga-upp-till-30",
+      "transpersoner",
+      "personer-fran-12-ar",
+      "anhoriga",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "RFSL Ungdoms chatt: måndagar 18-20. Transformering och Transammans nås via webbformulär",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "18:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "randiga-huset",
+    "slug": "randiga-huset",
+    "title": "Randiga Huset",
+    "resource": {
+      "url": "https://www.randigahuset.se/stod",
+      "type": "link"
+    },
+    "contactTypes": [
+      "webb"
+    ],
+    "phone": "",
+    "description": "Stöd för barnfamiljer i sorg.",
+    "category": "sorg-forlust",
+    "urgent": false,
+    "tags": [
+      "sorg-forlust",
+      "support-organization",
+      "randiga-huset",
+      "barn-i-sorg",
+      "familj-i-sorg",
+      "forlust-av-narstaende",
+      "stodgrupp",
+      "enskilda-stodsamtal",
+      "barn",
+      "unga",
+      "familjer",
+      "anhoriga",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Stöd via första kontakt, stödsamtal, mötesplatser och stödgrupper",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "vi-som-forlorat-barn",
+    "slug": "vi-som-forlorat-barn",
+    "title": "Vi Som Förlorat Barn",
+    "resource": {
+      "url": "https://www.vsfb.se/VSFB-i-Sverige",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "072-225 22 11",
+    "description": "Stöd och gemenskap för föräldrar, syskon och anhöriga som har förlorat barn.",
+    "category": "sorg-forlust",
+    "urgent": false,
+    "tags": [
+      "sorg-forlust",
+      "support-organization",
+      "foreningen-vi-som-forlorat-barn",
+      "forlust-av-barn",
+      "sorg",
+      "efterlevandestod",
+      "samtalsgrupper",
+      "stodpersoner",
+      "foraldrar",
+      "syskon",
+      "anhoriga",
+      "efterlevande",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Stödsamordnare: vardagar 08-12. Kontaktpersoner och samtalsgrupper via lokala sektioner",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "08:00",
+          "close": "12:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "attention-npf-stod",
+    "slug": "attention-npf-stod",
+    "title": "Attention NPF-stöd",
+    "resource": {
+      "url": "https://attention.se/digitala-motesplatsen/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "08-642 12 34",
+    "description": "Råd, stöd och gemenskap för personer med NPF och anhöriga.",
+    "category": "anhoriga",
+    "urgent": false,
+    "tags": [
+      "anhoriga",
+      "support-organization",
+      "riksforbundet-attention",
+      "adhd",
+      "autism",
+      "npf-fragor",
+      "anhorigskap",
+      "vardagsstod",
+      "gemenskap",
+      "personer-med-npf",
+      "foraldrar",
+      "unga-med-npf",
+      "svenska"
+    ],
+    "availability": {
+      "label": "NPF-linjen: mån 11-13, ons 18-19.30. Anhörigtelefon: mån 18-19.30, ons 11-13, tors 18-19.30",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "11:00",
+          "close": "13:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Samtal begränsas till 20 minuter"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "open": "18:00",
+          "close": "19:30",
+          "timezone": "Europe/Stockholm",
+          "note": "Samtal begränsas till 20 minuter"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "invidzonen",
+    "slug": "invidzonen",
+    "title": "Invidzonen",
+    "resource": {
+      "url": "https://invidzonen.se/vart-stod/chatt/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt",
+      "e-post",
+      "webb"
+    ],
+    "phone": "0761-66 33 17",
+    "description": "Stöd för närstående till personer med internationella eller riskfyllda uppdrag.",
+    "category": "anhoriga",
+    "urgent": false,
+    "tags": [
+      "anhoriga",
+      "support-organization",
+      "invidzonen",
+      "oro-for-narstaende",
+      "utlandstjanst",
+      "riskfyllda-uppdrag",
+      "veteran-och-anhorigstod",
+      "ensamhet",
+      "familjestod",
+      "narstaende",
+      "familjer",
+      "veteraner",
+      "tjanstgorande",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Stödtelefon och e-post. Chatt: tors och sön 21-22, sommartid endast sön 21-22",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "stodlinjen-for-transpersoner",
+    "slug": "stodlinjen-for-transpersoner",
+    "title": "Stödlinjen för transpersoner",
+    "resource": {
+      "url": "https://stodlinjenfortranspersoner.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt"
+    ],
+    "phone": "020-55 00 00",
+    "description": "Nationell stödtelefon och chatt för transpersoner och ickebinära som utsatts för våld eller sexuella övergrepp.",
+    "category": "vald",
+    "urgent": true,
+    "tags": [
+      "vald",
+      "direct-line",
+      "nationellt-centrum-for-kvinnofrid-nck",
+      "vald-i-nara-relation",
+      "sexuellt-vald",
+      "hot",
+      "transspecifik-utsatthet",
+      "rad-och-stod",
+      "anhorigstod",
+      "transpersoner",
+      "ickebinara",
+      "anhoriga",
+      "yrkesverksamma",
+      "alla-aldrar",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Telefon: dygnet runt. Chatt: mån 15-21, tis 8-13, tors 15-21, fre 9-16, sön 11-17",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "rfsl-ungdoms-stodchatt",
+    "slug": "rfsl-ungdoms-stodchatt",
+    "title": "RFSL Ungdoms stödchatt",
+    "resource": {
+      "url": "https://rfslungdom.se/hbtqia/stod/chatten/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "chatt"
+    ],
+    "phone": "",
+    "description": "Chattstöd för unga hbtqia-personer och unga som funderar kring sexuell identitet eller könsidentitet.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "direct-line",
+      "rfsl-ungdom",
+      "hbtqia-fragor",
+      "konsidentitet",
+      "sexuell-identitet",
+      "relationer",
+      "vald-och-krankningar",
+      "maende",
+      "unga-hbtqia-personer",
+      "unga",
+      "personer-som-funderar-pa-konsidentitet",
+      "personer-som-funderar-pa-sexualitet",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Chatt: måndagar 18-20",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon"
+          ],
+          "open": "18:00",
+          "close": "20:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "transformering",
+    "slug": "transformering",
+    "title": "Transformering",
+    "resource": {
+      "url": "https://transfragor.transformering.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "webb"
+    ],
+    "phone": "",
+    "description": "Information, rådgivning och stöd kring trans och könsidentitet.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "support-organization",
+      "rfsl-och-rfsl-ungdom",
+      "transfragor",
+      "konsidentitet",
+      "komma-ut",
+      "konsbekraftande-vard",
+      "konsdysfori",
+      "relationer",
+      "rattigheter",
+      "transpersoner",
+      "personer-som-funderar-pa-konsidentitet",
+      "narstaende",
+      "yrkesverksamma",
+      "alla-aldrar",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Stöd och rådgivning via webbformulär",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "angestforbundet",
+    "slug": "angestforbundet",
+    "title": "Ångestförbundet",
+    "resource": {
+      "url": "https://angest.se/st-dtelefon-vardagar-kl-13-15.html",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post"
+    ],
+    "phone": "031-13 70 91",
+    "description": "Stöd och information för personer med ångestsyndrom och deras anhöriga.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "support-organization",
+      "angestforbundet-ass",
+      "angest",
+      "panikangest",
+      "social-fobi",
+      "gad",
+      "oro",
+      "anhorigstod",
+      "stod-och-radgivning",
+      "personer-med-angest",
+      "anhoriga",
+      "vuxna",
+      "svenska"
+    ],
+    "availability": {
+      "label": "ÅSS Göteborg jourtelefon: helgfria vardagar 13-15. Förbundets telefontid: vardagar 13-18",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "13:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm",
+          "note": "Helgfria vardagar"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "kollegahjalpen",
+    "slug": "kollegahjalpen",
+    "title": "Kollegahjälpen",
+    "resource": {
+      "url": "https://kollegahjalpen.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "020-59 60 00",
+    "description": "Kamratstöd för lastbilsförare efter olyckor, rån, överfall eller andra svåra händelser i arbetet.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "direct-line",
+      "sveriges-akeriforetag-och-tya",
+      "trafikolycka",
+      "ran-eller-overfall",
+      "svarkris-i-arbetet",
+      "chockreaktioner",
+      "kamratstod",
+      "yrkesrelaterat-trauma",
+      "lastbilsforare",
+      "akeriforetagare",
+      "anhoriga",
+      "kollegor",
+      "arbetsgivare",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Ring via SOS Alarm; en kollegahjälpare kontaktar den drabbade för vidare stöd",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05"
+    }
+  },
+  {
+    "id": "1177-vardguiden",
+    "slug": "1177-vardguiden",
+    "title": "1177 Vårdguiden",
+    "resource": {
+      "url": "https://www.1177.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "1177",
+    "description": "Nationell sjukvårdsrådgivning och vårdinformation.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "1177",
+      "sjukvardsradgivning",
+      "symtom",
+      "vardniva",
+      "hitta-vard",
+      "journal-och-vardtjanster",
+      "allmanheten",
+      "patienter",
+      "anhoriga",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Sjukvårdsrådgivning dygnet runt. Inte en specialiserad stödlinje",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "governmental_public_service",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "112-sos-alarm",
+    "slug": "112-sos-alarm",
+    "title": "112 / SOS Alarm",
+    "resource": {
+      "url": "https://www.sosalarm.se/112-och-andra-viktiga-nummer/viktiga-nummer/112/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "112",
+    "description": "Sveriges nödnummer vid akut fara för liv, egendom eller miljö.",
+    "category": "ovrigt",
+    "urgent": true,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "sos-alarm",
+      "akut-fara",
+      "ambulans",
+      "raddningstjanst",
+      "polis",
+      "giftinformation",
+      "socialjour",
+      "sjoraeddning",
+      "fjallraddning",
+      "allmanheten",
+      "personer-i-akut-nod",
+      "svenska",
+      "engelska",
+      "tolk"
+    ],
+    "availability": {
+      "label": "Nödnummer dygnet runt. Endast vid akut fara",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "emergency_public_service",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "giftinformationscentralen",
+    "slug": "giftinformationscentralen",
+    "title": "Giftinformationscentralen",
+    "resource": {
+      "url": "https://giftinformation.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "webb"
+    ],
+    "phone": "112",
+    "description": "Rådgivning vid akut eller misstänkt förgiftning.",
+    "category": "ovrigt",
+    "urgent": true,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "giftinformationscentralen",
+      "forgiftning",
+      "misstankt-forgiftning",
+      "akuta-atgarder",
+      "lakemedel",
+      "kemikalier",
+      "barn-och-vuxna",
+      "allmanheten",
+      "patienter",
+      "anhoriga",
+      "vardpersonal",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Akut: 112 och begär giftinformation. Mindre brådskande: 010-456 67 00 dygnet runt",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "open": "00:00",
+          "close": "24:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "governmental_public_service",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "folkhalsomyndigheten",
+    "slug": "folkhalsomyndigheten",
+    "title": "Folkhälsomyndigheten",
+    "resource": {
+      "url": "https://www.folkhalsomyndigheten.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "010-205 20 00",
+    "description": "Nationell kunskapsmyndighet för folkhälsa och smittskydd.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "folkhalsomyndigheten",
+      "folkhalsa",
+      "smittskydd",
+      "andts",
+      "statistik",
+      "kunskapsstod",
+      "myndighetsinformation",
+      "allmanheten",
+      "yrkesverksamma",
+      "myndigheter",
+      "organisationer",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Myndighetsväxel: vardagar 08-16.30. Inte en stödlinje",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "08:00",
+          "close": "16:30",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "governmental_information_resource",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "socialstyrelsen",
+    "slug": "socialstyrelsen",
+    "title": "Socialstyrelsen",
+    "resource": {
+      "url": "https://www.socialstyrelsen.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "075-247 30 00",
+    "description": "Nationell kunskapsmyndighet för vård, omsorg och socialtjänst.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "socialstyrelsen",
+      "myndighetsinformation",
+      "vard-och-omsorg",
+      "socialtjanst",
+      "juridiska-fragor",
+      "register-och-statistik",
+      "kunskapsstod",
+      "allmanheten",
+      "yrkesverksamma",
+      "vardgivare",
+      "kommuner",
+      "myndigheter",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Myndighetsväxel: vardagar 08-17. Inte en stödlinje",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "08:00",
+          "close": "17:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "governmental_information_resource",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "kyrkans-sos",
+    "slug": "kyrkans-sos",
+    "title": "Kyrkans SOS",
+    "resource": {
+      "url": "https://kyrkanssos.se/hitta-hjalp/sos-telefonen/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "chatt",
+      "webb"
+    ],
+    "phone": "0771-800 650",
+    "description": "Flera anonyma stödlinjer via telefon, chatt och digitala brev.",
+    "category": "psykisk-halsa",
+    "urgent": false,
+    "tags": [
+      "psykisk-halsa",
+      "support-organization",
+      "stiftelsen-kyrkans-sos",
+      "samtalsstod",
+      "ensamhet",
+      "psykisk-ohalsa",
+      "suicidtankar",
+      "livsfragor",
+      "hbtqia-stod",
+      "stod-till-unga",
+      "stod-till-samer",
+      "allmanheten",
+      "unga-12-25",
+      "hbtqia-personer",
+      "narstaende",
+      "samer",
+      "svenska",
+      "samiska"
+    ],
+    "availability": {
+      "label": "Flera stödlinjer med olika öppettider",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "open": "13:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "open": "16:00",
+          "close": "21:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "multi_service_support_organization",
+      "supportLine": true
+    }
+  },
+  {
+    "id": "barnombudsmannen",
+    "slug": "barnombudsmannen",
+    "title": "Barnombudsmannen",
+    "resource": {
+      "url": "https://www.barnombudsmannen.se/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "020-23 10 10",
+    "description": "Myndighetskontakt för frågor om barns rättigheter.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "barnombudsmannen",
+      "barns-rattigheter",
+      "myndighetsinformation",
+      "vagledning-till-stod",
+      "barnkonventionen",
+      "barn-och-unga",
+      "foraldrar",
+      "yrkesverksamma",
+      "allmanheten",
+      "svenska",
+      "engelska"
+    ],
+    "availability": {
+      "label": "Barntelefon: mån/ons 13-15, tis/tor/fre 10-12. Inte en stödlinje",
+      "timezone": "Europe/Stockholm",
+      "openingHours": [
+        {
+          "days": [
+            "mon",
+            "wed"
+          ],
+          "open": "13:00",
+          "close": "15:00",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "days": [
+            "tue",
+            "thu",
+            "fri"
+          ],
+          "open": "10:00",
+          "close": "12:00",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "governmental_rights_resource",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "tryggare-sverige",
+    "slug": "tryggare-sverige",
+    "title": "Tryggare Sverige",
+    "resource": {
+      "url": "https://tryggaresverige.org/",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "08-29 20 00",
+    "description": "Kunskaps- och kontaktresurs om brottsutsatthet och trygghetsfrågor.",
+    "category": "vald",
+    "urgent": false,
+    "tags": [
+      "vald",
+      "organization-contact",
+      "stiftelsen-tryggare-sverige",
+      "brottsutsatthet",
+      "trygghetsfragor",
+      "brottsforebyggande",
+      "vagledning",
+      "kontakt-med-organisation",
+      "allmanheten",
+      "brottsutsatta",
+      "kommuner",
+      "myndigheter",
+      "yrkesverksamma",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Organisationskontakt. Inte en stödlinje",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "knowledge_organization",
+      "supportLine": false
+    }
+  },
+  {
+    "id": "diskrimineringsombudsmannen",
+    "slug": "diskrimineringsombudsmannen",
+    "title": "Diskrimineringsombudsmannen",
+    "resource": {
+      "url": "https://www.do.se/anmal-diskriminering",
+      "type": "link"
+    },
+    "contactTypes": [
+      "telefon",
+      "e-post",
+      "webb"
+    ],
+    "phone": "08-120 20 700",
+    "description": "Myndighetskontakt för frågor och anmälningar om diskriminering.",
+    "category": "ovrigt",
+    "urgent": false,
+    "tags": [
+      "ovrigt",
+      "public-service",
+      "diskrimineringsombudsmannen",
+      "diskriminering",
+      "anmalan",
+      "rattighetsinformation",
+      "juridiska-fragor",
+      "tillganglighet",
+      "allmanheten",
+      "barn-och-unga",
+      "diskriminerade",
+      "arbetsgivare",
+      "utbildningsanordnare",
+      "svenska"
+    ],
+    "availability": {
+      "label": "Fråga DO: helgfria tis/tor 09:30-11:30. Inte en stödlinje",
+      "timezone": "Europe/Stockholm",
+      "openingHours": []
+    },
+    "lastVerified": "2026-06-05",
+    "active": true,
+    "metadata": {
+      "lastVerified": "2026-06-05",
+      "nextReview": "2026-12-05",
+      "resourceKind": "governmental_rights_resource",
+      "supportLine": false
+    }
   }
 ]
