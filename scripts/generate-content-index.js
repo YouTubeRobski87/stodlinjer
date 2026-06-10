@@ -90,6 +90,7 @@ function mapSupportData(data) {
       if (availabilityLabel) parts.push(`Tillgänglighet: ${availabilityLabel}`);
       if (item.phone) parts.push(`Telefon: ${item.phone}`);
       if (item.resource?.url) parts.push(`Mer info: ${item.resource.url}`);
+      if (Array.isArray(item.searchAliases)) parts.push(`Sökord: ${item.searchAliases.join(', ')}`);
 
       return {
         id: `supportline-${fallbackId}`,
@@ -100,7 +101,8 @@ function mapSupportData(data) {
         tags: normalizeTags([
           'supportline',
           item.category,
-          ...(Array.isArray(item.tags) ? item.tags : [])
+          ...(Array.isArray(item.tags) ? item.tags : []),
+          ...(Array.isArray(item.searchAliases) ? item.searchAliases : [])
         ])
       };
     });

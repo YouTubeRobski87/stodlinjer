@@ -206,6 +206,19 @@ function loadSupportLines() {
 // Filtering
 // ==========================================================================
 
+function normalizeSearchText(value) {
+  return value
+    ? value
+        .toString()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[-_]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+    : '';
+}
+
 function filterLines() {
   let filtered = state.lines.slice();
 
@@ -218,6 +231,7 @@ function filterLines() {
   }
 
   const q = state.searchQuery.trim().toLowerCase();
+  const normalizedQuery = normalizeSearchText(q);
   if (q) {
     filtered = filtered.filter((line) => {
       const haystackParts = [
@@ -226,9 +240,14 @@ function filterLines() {
         line.phone,
         line.category,
         line.availability?.label,
-        ...(Array.isArray(line.tags) ? line.tags : [])
+        ...(Array.isArray(line.tags) ? line.tags : []),
+        ...(Array.isArray(line.searchAliases) ? line.searchAliases : [])
       ];
-      return haystackParts.some((value) => value && value.toString().toLowerCase().includes(q));
+      return haystackParts.some((value) => {
+        if (!value) return false;
+        const text = value.toString().toLowerCase();
+        return text.includes(q) || normalizeSearchText(text).includes(normalizedQuery);
+      });
     });
   }
 

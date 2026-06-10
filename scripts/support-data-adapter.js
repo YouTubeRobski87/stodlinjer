@@ -21,12 +21,82 @@ const CATEGORY_MAP = {
   community_social_support: 'ovrigt'
 };
 
+const CATEGORY_LABELS = {
+  acute_emergency: ['akut', 'nödsituation', 'nödnummer'],
+  mental_health: ['psykisk hälsa', 'psykisk ohälsa', 'samtalsstöd'],
+  violence_abuse: ['våld', 'övergrepp', 'hot'],
+  children_youth: ['barn', 'unga', 'ungdom'],
+  family_parenting: ['familj', 'anhöriga', 'föräldrar'],
+  substance_use: ['beroende', 'missbruk', 'alkohol', 'droger'],
+  gambling: ['spelberoende', 'spelproblem'],
+  eating_disorders: ['ätstörningar', 'mat och kropp'],
+  grief_loss: ['sorg', 'förlust', 'efterlevande'],
+  identity_inclusion: ['identitet', 'hbtq', 'trans', 'inkludering'],
+  care_guidance: ['vård', 'rådgivning', 'sjukvård'],
+  rights_public_authority: ['rättigheter', 'myndigheter', 'anmälan'],
+  community_social_support: ['gemenskap', 'socialt stöd', 'praktiskt stöd']
+};
+
+const LEGACY_CATEGORY_LABELS = {
+  'psykisk-halsa': ['psykisk hälsa', 'psykisk ohälsa'],
+  'barn-unga': ['barn och unga', 'ungdomar'],
+  vald: ['våld', 'övergrepp'],
+  missbruk: ['missbruk', 'beroende'],
+  anhoriga: ['anhöriga', 'närstående'],
+  aldre: ['äldre'],
+  'sorg-forlust': ['sorg', 'förlust'],
+  ekonomi: ['ekonomi', 'skuld'],
+  ovrigt: ['övrigt']
+};
+
 const CHANNEL_LABELS = {
   phone: 'telefon',
   chat: 'chatt',
   web: 'webb',
   email: 'e-post',
   sms: 'sms'
+};
+
+const MANUAL_SEARCH_ALIASES = {
+  mansjouren: [
+    'stödlinjen för män',
+    'stödlinjer för män',
+    'stöd för män',
+    'män i kris',
+    'man i kris',
+    'kriscentrum för män',
+    'samtalsstöd för män',
+    'mansjour',
+    'relationer män',
+    'separation män'
+  ],
+  'killar-se': [
+    'stöd för killar',
+    'stödlinje för killar',
+    'stödlinjer för killar',
+    'unga män',
+    'pojkar',
+    'killar i kris',
+    'chatt för killar'
+  ],
+  'valj-att-sluta': [
+    'välj att sluta',
+    'stöd för våldsutövare',
+    'hjälp för våldsutövare',
+    'sluta slå',
+    'våldsamt beteende',
+    'kontrollerande beteende',
+    'män som skadar',
+    'män som utövar våld'
+  ],
+  'stodlinjen-for-transpersoner': [
+    'stöd för transpersoner',
+    'stödlinje för transpersoner',
+    'stödlinjer för transpersoner',
+    'transpersoner',
+    'ickebinära',
+    'transperson utsatt för våld'
+  ]
 };
 
 function unique(values) {
@@ -53,6 +123,40 @@ function normalizeTags(values) {
       .map((value) => slugify(value))
       .filter(Boolean)
   );
+}
+
+function humanize(value) {
+  return value
+    ? value
+        .toString()
+        .replace(/[-_]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+    : '';
+}
+
+function flattenSearchValues(values) {
+  return values.flat(Infinity).filter(Boolean);
+}
+
+function normalizeSearchAliases(values) {
+  const seen = new Set();
+  const aliases = [];
+
+  flattenSearchValues(values).forEach((value) => {
+    const raw = value.toString().trim();
+    if (!raw) return;
+
+    [raw, humanize(raw)].forEach((alias) => {
+      if (!alias || alias.length < 2) return;
+      const key = alias.toLocaleLowerCase('sv-SE');
+      if (seen.has(key)) return;
+      seen.add(key);
+      aliases.push(alias);
+    });
+  });
+
+  return aliases;
 }
 
 function getSupportLines(data) {
@@ -87,6 +191,37 @@ function getAvailability(line, primaryPhoneMethod) {
   };
 }
 
+function buildSearchAliases(line, title, category) {
+  return normalizeSearchAliases([
+    title,
+    line.id,
+    line.slug,
+    line.name,
+    line.organization,
+    line.type,
+    line.category,
+    category,
+    CATEGORY_LABELS[line.category] || [],
+    LEGACY_CATEGORY_LABELS[category] || [],
+    line.shortDescription,
+    line.longDescription,
+    line.helpsWith || [],
+    line.targetGroups || [],
+    line.accessibility?.languages || [],
+    (line.contactMethods || []).map((method) => [
+      method?.label,
+      method?.channel,
+      method?.value,
+      method?.note
+    ]),
+    line.display?.primaryLabel,
+    line.display?.availabilityLabel,
+    line.metadata?.resourceKind,
+    MANUAL_SEARCH_ALIASES[line.id] || [],
+    MANUAL_SEARCH_ALIASES[line.slug] || []
+  ]);
+}
+
 function normalizeLine(line, index) {
   const title = line.title || line.name || `Stödlinje ${index + 1}`;
   const phoneMethod = getFirstContactMethod(line, 'phone');
@@ -104,6 +239,7 @@ function normalizeLine(line, index) {
     line.targetGroups || [],
     line.accessibility?.languages || []
   ]);
+  const searchAliases = buildSearchAliases(line, title, category);
 
   return {
     id: line.id || slugify(title) || index + 1,
@@ -119,6 +255,7 @@ function normalizeLine(line, index) {
     category,
     urgent: line.urgency?.level === 'urgent' || line.category === 'acute_emergency',
     tags,
+    searchAliases,
     availability: getAvailability(line, phoneMethod),
     lastVerified: line.metadata?.lastVerified || line.source?.checkedAt || '',
     active: line.active !== false && line.status !== 'inactive',
