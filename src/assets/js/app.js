@@ -145,6 +145,32 @@ function hideLoadingState() {
 // Data Loading
 // ==========================================================================
 
+// Map of category id -> sprite symbol, read once from the embedded
+// #supportCategoriesData block (single source of truth, see src/_data/supportCategories.js).
+let categoryIconMapCache = null;
+function getCategoryIconMap() {
+  if (categoryIconMapCache) return categoryIconMapCache;
+
+  categoryIconMapCache = {};
+  const dataEl = document.getElementById('supportCategoriesData');
+  if (!dataEl) return categoryIconMapCache;
+
+  try {
+    const categories = JSON.parse(dataEl.textContent || '[]');
+    if (Array.isArray(categories)) {
+      categories.forEach((category) => {
+        if (category && category.id && category.icon) {
+          categoryIconMapCache[category.id] = category.icon;
+        }
+      });
+    }
+  } catch (err) {
+    console.error('Fel vid läsning av inbäddad kategoridata:', err);
+  }
+
+  return categoryIconMapCache;
+}
+
 function readEmbeddedSupportLines() {
   const dataEl = document.getElementById('supportLinesData');
   if (!dataEl) return [];
@@ -287,20 +313,8 @@ function renderLines() {
     }
   }
 
-  const categoryIcon = (category) => {
-    const map = {
-      'psykisk-halsa': renderIcon('brain'),
-      'barn-unga': renderIcon('family-2'),
-      vald: renderIcon('bandage'),
-      missbruk: renderIcon('wine-glass-2'),
-      anhoriga: renderIcon('group'),
-      aldre: renderIcon('old-person-walker'),
-      'sorg-forlust': renderIcon('candle'),
-      ekonomi: renderIcon('coins'),
-      ovrigt: renderIcon('asterisk')
-    };
-    return map[category] || renderIcon('life-ring-2');
-  };
+  const categoryIconMap = getCategoryIconMap();
+  const categoryIcon = (category) => renderIcon(categoryIconMap[category] || 'life-ring-2');
 
   filtered.forEach((line) => {
     const article = document.createElement('article');

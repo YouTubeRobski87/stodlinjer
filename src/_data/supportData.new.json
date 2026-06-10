@@ -1,4 +1,46 @@
 {
+	"_editGuide": {
+		"_info": "Detta fält är bara en redigeringsguide. Det ignoreras av bygget (adaptern läser endast 'categories' och 'supportLines'). JSON tillåter inte //-kommentarer, därför ligger guiden här. Lämna kvar eller ta bort – det påverkar inte sidan.",
+		"efterRedigering": [
+			"node scripts/support-data-adapter.js   (regenererar src/_data/supportData.json)",
+			"npm run build                          (bygger sidan)"
+		],
+		"supportLine_falt": {
+			"name": "Kortets titel.",
+			"shortDescription": "Beskrivningstexten på kortet (faller tillbaka på longDescription).",
+			"category": "Filterkategori + ikon. MÅSTE vara ett av giltigaCategoryIds nedan.",
+			"contactMethods": "Telefon/chatt/webb. Första channel:'phone' -> numret på kortet. En metod med 'url' -> kortets länkknapp.",
+			"display.availabilityLabel": "Texten om öppettider, t.ex. 'Telefon och chatt: dygnet runt'.",
+			"urgency.level": "'urgent' ger ett rött Akut-märke på kortet.",
+			"status": "'inactive' döljer kortet helt.",
+			"helpsWith / targetGroups / organization": "Syns inte men förbättrar sökträffar.",
+			"id / slug": "Nycklar – ÄNDRA INTE på befintliga linjer. Måste vara unika för nya."
+		},
+		"nyStodlinje": "Kopiera ett helt block i supportLines[], ge unikt id+slug, fyll i name, shortDescription, category och contactMethods.",
+		"category_falt": {
+			"label": "Texten på filterknappen.",
+			"priority": "Ordning på knapparna (lägre = tidigare).",
+			"description": "Tooltip på knappen.",
+			"id": "Nyckeln som linjernas category pekar på – ÄNDRA INTE.",
+			"icon": "Mappas om i src/_data/supportCategories.js till en sprite-symbol.",
+			"color": "Används inte än."
+		},
+		"giltigaCategoryIds": [
+			"acute_emergency",
+			"mental_health",
+			"violence_abuse",
+			"children_youth",
+			"family_parenting",
+			"substance_use",
+			"gambling",
+			"eating_disorders",
+			"grief_loss",
+			"identity_inclusion",
+			"care_guidance",
+			"rights_public_authority",
+			"community_social_support"
+		]
+	},
 	"categories": [
 		{
 			"id": "acute_emergency",

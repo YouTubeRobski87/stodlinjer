@@ -1,5 +1,5 @@
 {% from "partials/icon.njk" import icon %}
-{% macro searchFiltersSection(placeholder, stats) %}
+{% macro searchFiltersSection(placeholder, stats, categories) %}
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4" aria-labelledby="filter-heading">
     <div class="surface-card search-panel p-6 sm:p-7">
       <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-5">
@@ -32,33 +32,11 @@
           <button class="category-btn is-active" data-category="all" aria-pressed="true">
             <span>{{ icon('grid-3x3') }} Alla</span>
           </button>
-          <button class="category-btn" data-category="psykisk-halsa" aria-pressed="false">
-            <span>{{ icon('brain') }} Psykisk Hälsa</span>
-          </button>
-          <button class="category-btn" data-category="barn-unga" aria-pressed="false">
-            <span>{{ icon('family-2') }} Barn &amp; Unga</span>
-          </button>
-          <button class="category-btn" data-category="vald" aria-pressed="false">
-            <span>{{ icon('bandage') }} Våld &amp; Utsatthet</span>
-          </button>
-          <button class="category-btn" data-category="missbruk" aria-pressed="false">
-            <span>{{ icon('wine-glass-2') }} Missbruk &amp; Beroende</span>
-          </button>
-          <button class="category-btn" data-category="anhoriga" aria-pressed="false">
-            <span>{{ icon('group') }} Anhöriga</span>
-          </button>
-          <button class="category-btn" data-category="aldre" aria-pressed="false">
-            <span>{{ icon('old-person-walker') }} Äldre</span>
-          </button>
-          <button class="category-btn" data-category="sorg-forlust" aria-pressed="false">
-            <span>{{ icon('candle') }} Sorg &amp; Förlust</span>
-          </button>
-          <button class="category-btn" data-category="ekonomi" aria-pressed="false">
-            <span>{{ icon('coins') }} Ekonomisk Kris</span>
-          </button>
-          <button class="category-btn" data-category="ovrigt" aria-pressed="false">
-            <span>{{ icon('asterisk') }} Övrigt</span>
-          </button>
+          {% for category in categories %}
+            <button class="category-btn" data-category="{{ category.id }}" aria-pressed="false"{% if category.description %} title="{{ category.description }}"{% endif %}>
+              <span>{{ icon(category.icon) }} {{ category.label }}</span>
+            </button>
+          {% endfor %}
         </nav>
       </div>
     </div>

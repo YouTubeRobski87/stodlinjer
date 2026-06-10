@@ -29,6 +29,7 @@
     {% include "partials/chatbot.njk" %}
 
     <script type="application/json" id="supportLinesData">{{ supportData | json | safe }}</script>
+    <script type="application/json" id="supportCategoriesData">{{ supportCategories | json | safe }}</script>
     <script type="module" src="{{ baseUrl }}/assets/js/app.js"></script>
     <script type="module" src="{{ baseUrl }}/assets/js/chatbot.js"></script>
   </body>

@@ -227,7 +227,8 @@ function normalizeLine(line, index) {
   const phoneMethod = getFirstContactMethod(line, 'phone');
   const phone = phoneMethod?.value || line.phone || '';
   const url = getContactUrl(line);
-  const category = CATEGORY_MAP[line.category] || line.category || 'ovrigt';
+  // Preserve the source taxonomy (13 categories) instead of collapsing to legacy slugs.
+  const category = line.category || 'ovrigt';
   const contactTypes = unique(
     (line.contactMethods || []).map((method) => CHANNEL_LABELS[method?.channel] || method?.channel)
   );
