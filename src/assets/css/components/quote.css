@@ -85,4 +85,85 @@
   :root[data-theme='dark'] .quote-block {
     background: var(--card);
   }
+
+  .mood-strip__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .mood-strip__grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  .mood-strip__grid .quote-block {
+    padding: 24px 28px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+  }
+
+  .mood-strip__grid .quote-text {
+    padding: 0 48px;
+  }
+
+  .mood-strip__grid .quote-icon,
+  .mood-strip__grid .quote-icon i {
+    font-size: 42px;
+  }
+
+  .mood-strip__grid .quote-icon-left {
+    top: 18px;
+    left: 24px;
+  }
+
+  .mood-strip__grid .quote-icon-right {
+    bottom: 18px;
+    right: 24px;
+  }
+
+  .mood-strip__grid .quote-text p {
+    font-size: 1.2rem;
+  }
+
+  .mood-strip__grid .quote-author {
+    margin-top: 12px;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    .mood-strip__grid .quote-text {
+      padding: 0 56px;
+    }
+
+    .mood-strip__grid .quote-text p {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .mood-strip__grid .quote-text {
+      padding: 0 40px;
+    }
+
+    .mood-strip__grid .quote-icon,
+    .mood-strip__grid .quote-icon i {
+      font-size: 36px;
+    }
+
+    .mood-strip__grid .quote-icon-left {
+      top: 16px;
+      left: 16px;
+    }
+
+    .mood-strip__grid .quote-icon-right {
+      bottom: 16px;
+      right: 16px;
+    }
+  }
 }

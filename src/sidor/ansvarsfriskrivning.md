@@ -10,7 +10,7 @@ status: active
 toc: true
 noindex: false
 schemaType: WebPage
-canonical: https://stodlinjer.se/sidor/ansvarsfriskrivning/
+canonical: https://www.stodlinjer.se/sidor/ansvarsfriskrivning/
 heroTitle: Ansvarsfriskrivning
 heroLead: Viktig information om vad Stödlinjer kan och inte kan erbjuda.
 ---

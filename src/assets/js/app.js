@@ -299,10 +299,13 @@ function renderLines() {
 
   if (!filtered.length) {
     resultsInfo.textContent = '';
-    noResults.classList.toggle('hidden', !state.hasFiltered);
+    const shouldShowNoResults = state.hasFiltered;
+    noResults.hidden = !shouldShowNoResults;
+    noResults.classList.toggle('hidden', !shouldShowNoResults);
     return;
   }
 
+  noResults.hidden = true;
   noResults.classList.add('hidden');
   const tagInfo = state.currentTag !== 'all' ? ` | Tagg: #${state.currentTag}` : '';
   resultsInfo.textContent = `Visar ${filtered.length} av ${totalLines} stödlinjer${tagInfo}.`;
@@ -744,6 +747,26 @@ function initContactForm() {
     statusEl.textContent = text;
     statusEl.style.color = isError ? '#b91c1c' : '#0f766e';
   };
+  const isApiEnabled = form.dataset.contactApi === 'enabled';
+  const fallbackEmail = 'support@stodlinjer.se';
+
+  const buildMailtoLink = (payload) => {
+    const subject = encodeURIComponent('Kontakt från Stödlinjer.se');
+    const body = encodeURIComponent(
+      [
+        `Namn: ${payload.name || '-'}`,
+        `E-post: ${payload.email || '-'}`,
+        `Telefon: ${payload.phone || '-'}`,
+        `Kontaktmetod: ${payload.contactMethod || '-'}`,
+        `Anledning: ${payload.reason || '-'}`,
+        '',
+        'Meddelande:',
+        payload.message || ''
+      ].join('\n')
+    );
+
+    return `mailto:${fallbackEmail}?subject=${subject}&body=${body}`;
+  };
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -760,6 +783,17 @@ function initContactForm() {
       message: (formData.get('message') || '').toString().trim(),
       company: (formData.get('company') || '').toString().trim()
     };
+
+    if (payload.company) {
+      setStatus('Det gick inte att skicka just nu. Maila support@stodlinjer.se istället.', true);
+      return;
+    }
+
+    if (!isApiEnabled) {
+      setStatus('Kontaktformuläret skickas via e-post just nu. Om inget mailfönster öppnas, maila support@stodlinjer.se.', true);
+      window.location.href = buildMailtoLink(payload);
+      return;
+    }
 
     submitButton.disabled = true;
     submitButton.textContent = 'Skickar…';

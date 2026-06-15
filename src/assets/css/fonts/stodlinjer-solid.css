@@ -34,12 +34,6 @@
   width: 1em;
 }
 
-.weather-widget .stl,
-.weather-widget .sts {
-  height: 1em;
-  width: 1em;
-}
-
 /* Optional stroke helpers (for the few solid icons that carry strokes) */
 .stroke-1 use {
   stroke-width: 1px;
