@@ -128,8 +128,20 @@
     flex-shrink: 0;
   }
 
+  .header-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   @media (min-width: 640px) {
     .header-actions {
+      gap: 10px;
+    }
+
+    .header-nav {
       gap: 10px;
     }
   }
