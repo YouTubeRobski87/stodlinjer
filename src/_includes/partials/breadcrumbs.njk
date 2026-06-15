@@ -1,0 +1,8 @@
+{% macro breadcrumbs(currentLabel) %}
+  <nav class="breadcrumbs" aria-label="Brödsmulor">
+    <ol>
+      <li><a href="{{ baseUrl }}/">Start</a></li>
+      <li aria-current="page">{{ currentLabel }}</li>
+    </ol>
+  </nav>
+{% endmacro %}

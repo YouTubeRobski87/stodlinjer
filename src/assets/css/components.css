@@ -1,6 +1,7 @@
 @import './components/layout.css';
 @import './components/ui-primitives.css';
 @import './components/header.css';
+@import './components/breadcrumbs.css';
 @import './components/search.css';
 @import './components/cards.css';
 @import './components/footer.css';
