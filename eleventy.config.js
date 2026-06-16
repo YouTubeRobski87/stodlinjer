@@ -26,9 +26,11 @@ module.exports = function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy(assetsDir);
   if (hasSrc) {
+    eleventyConfig.addPassthroughCopy({ 'src/_headers': '_headers' });
     eleventyConfig.addPassthroughCopy({ 'src/manifest.webmanifest': 'manifest.webmanifest' });
     eleventyConfig.addPassthroughCopy({ 'src/sw.js': 'sw.js' });
   } else {
+    eleventyConfig.addPassthroughCopy('_headers');
     eleventyConfig.addPassthroughCopy('manifest.webmanifest');
     eleventyConfig.addPassthroughCopy('sw.js');
   }
