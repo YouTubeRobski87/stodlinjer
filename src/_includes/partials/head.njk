@@ -1,7 +1,7 @@
 {% set pageTitle = seoTitle or title or site.name %}
 {% set canonicalUrl = canonical or site.url ~ baseUrl ~ page.url %}
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="author" content="{{ site.author }}" />
 <title>{{ pageTitle }}</title>
 {% if description %}
@@ -13,6 +13,9 @@
 <link rel="canonical" href="{{ canonicalUrl }}" />
 <meta name="color-scheme" content="{{ site.colorScheme }}" />
 <meta name="theme-color" content="{{ site.themeColor }}" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 {% if noindex %}
   <meta name="robots" content="noindex, nofollow" />
 {% endif %}

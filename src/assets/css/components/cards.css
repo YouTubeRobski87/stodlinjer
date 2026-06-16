@@ -140,6 +140,64 @@
   h3 a.card-title-link {
     line-height: 1.2 !important;
   }
+
+  .offline-section {
+    min-height: calc(100svh - 92px);
+    display: grid;
+    align-items: center;
+  }
+
+  .offline-card {
+    border-left: 4px solid var(--accent);
+  }
+
+  .offline-number-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .offline-number-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 64px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: var(--pill);
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .offline-number-link:hover {
+    color: var(--accent);
+  }
+
+  .offline-number-link > span:first-child {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .offline-number-link > span:first-child span {
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+
+  .offline-number-link .phone-number {
+    color: var(--accent);
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 480px) {
+    .offline-number-link {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
   .card-title-link {
     color: var(--text);
     text-decoration: none;

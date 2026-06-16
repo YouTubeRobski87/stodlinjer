@@ -25,6 +25,11 @@ const extraDataPassthroughFiles = fs.existsSync(dataDir)
 module.exports = function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy(assetsDir);
+  if (hasSrc) {
+    eleventyConfig.addPassthroughCopy({ 'src/sw.js': 'sw.js' });
+  } else {
+    eleventyConfig.addPassthroughCopy('sw.js');
+  }
   eleventyConfig.addPassthroughCopy('data');
   extraDataPassthroughFiles.forEach((name) => {
     eleventyConfig.addPassthroughCopy({ [path.join(dataDir, name)]: `data/${name}` });

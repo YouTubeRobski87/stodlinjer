@@ -22,7 +22,9 @@ async function loadIconConfig() {
     if (!res.ok) throw new Error('Could not load icon config');
     iconConfig = await res.json();
   } catch (err) {
-    console.warn('Icon config not loaded, using defaults:', err);
+    if (navigator.onLine) {
+      console.warn('Icon config not loaded, using defaults:', err);
+    }
     iconConfig = { paths: { line: '/assets/symbols/st-line.svg', solid: '/assets/symbols/st-solid.svg' }, aliases: {} };
   }
   return iconConfig;
@@ -849,9 +851,23 @@ async function init() {
   }
 }
 
+function registerServiceWorker() {
+  if (!('serviceWorker' in navigator)) return;
+
+  const isSecureContext = window.isSecureContext || window.location.hostname === 'localhost';
+  if (!isSecureContext) return;
+
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch((error) => {
+      console.warn('Service worker registration failed:', error);
+    });
+  });
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
 }
 
+registerServiceWorker();
