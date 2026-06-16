@@ -1,21 +1,25 @@
-const CACHE_VERSION = 'stodlinjer-pwa-v2';
+const CACHE_VERSION = 'stodlinjer-pwa-v3';
 const PAGE_CACHE = `${CACHE_VERSION}-pages`;
 const ASSET_CACHE = `${CACHE_VERSION}-assets`;
 
 const SHELL_URLS = [
   '/',
   '/offline/',
+  '/manifest.webmanifest',
   '/assets/css/tailwind-built.css',
   '/assets/js/app.js',
   '/assets/js/chatbot.js',
   '/assets/js/analytics.js',
   '/assets/vendor/speed-insights.js',
-  '/assets/favicon/site.webmanifest',
   '/assets/favicon/favicon.svg',
   '/assets/favicon/favicon-96x96.png',
   '/assets/favicon/apple-touch-icon.png',
-  '/assets/favicon/web-app-manifest-192x192.png',
-  '/assets/favicon/web-app-manifest-512x512.png',
+  '/assets/icons/icon-192.png',
+  '/assets/icons/icon-512.png',
+  '/assets/icons/maskable-192.png',
+  '/assets/icons/maskable-512.png',
+  '/assets/pwa/screenshot-mobile.png',
+  '/assets/pwa/screenshot-wide.png',
   '/assets/symbols/st-line.svg',
   '/assets/symbols/st-solid.svg',
   '/data/icons.json'
