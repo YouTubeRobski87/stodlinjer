@@ -1,11 +1,9 @@
-import { injectSpeedInsights } from '@vercel/speed-insights';
 import { createAnalyticsTracker } from './analytics.js';
 
 // ==========================================================================
 // Base URL (set by template, defaults to '' for local dev)
 // ==========================================================================
 const BASE_URL = window.BASE_URL || '';
-injectSpeedInsights();
 
 // ==========================================================================
 // Icon System

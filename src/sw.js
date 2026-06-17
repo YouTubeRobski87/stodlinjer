@@ -10,7 +10,6 @@ const SHELL_URLS = [
   '/assets/js/app.js',
   '/assets/js/chatbot.js',
   '/assets/js/analytics.js',
-  '/assets/vendor/speed-insights.js',
   '/assets/favicon/favicon.svg',
   '/assets/favicon/favicon-96x96.png',
   '/assets/favicon/apple-touch-icon.png',
