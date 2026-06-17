@@ -4,7 +4,7 @@
   "description": "Hitta svenska stödlinjer för kris, ångest, våld, ensamhet och oro. Se nummer, öppettider och vart du kan vända dig för rätt stöd direkt.",
   "lang": "sv-SE",
   "dir": "ltr",
-  "id": "/",
+  "id": "https://www.stodlinjer.se/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
