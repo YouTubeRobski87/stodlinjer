@@ -849,23 +849,8 @@ async function init() {
   }
 }
 
-function registerServiceWorker() {
-  if (!('serviceWorker' in navigator)) return;
-
-  const isSecureContext = window.isSecureContext || window.location.hostname === 'localhost';
-  if (!isSecureContext) return;
-
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch((error) => {
-      console.warn('Service worker registration failed:', error);
-    });
-  });
-}
-
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
 } else {
   init();
 }
-
-registerServiceWorker();

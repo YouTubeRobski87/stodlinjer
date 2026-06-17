@@ -64,6 +64,15 @@
   })();
 </script>
 <script>window.BASE_URL = '{{ baseUrl }}';</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(function (error) {
+        console.warn('Service worker registration failed:', error);
+      });
+    });
+  }
+</script>
 <link rel="stylesheet" href="{{ baseUrl }}/assets/css/tailwind-built.css" />
 
 {# Structured data #}
