@@ -30,6 +30,11 @@
 <script>window.BASE_URL = '';</script>
 <script src="/assets/js/tailwind-config.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
 <link rel="stylesheet" href="/assets/css/main.css" />
 
   </head>
