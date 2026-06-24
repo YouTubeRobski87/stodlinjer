@@ -45,4 +45,79 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .soro-blog-section {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding: 0.75rem 1rem;
+  }
+
+  .soro-blog-panel {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    color: #f2f1f8;
+    background: linear-gradient(145deg, #1d1d27 0%, #15151c 100%);
+    border: 1px solid rgba(154, 158, 212, 0.24);
+    border-radius: 12px;
+    box-shadow: var(--shadow-strong);
+  }
+
+  .soro-blog-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: #9a9ed4;
+  }
+
+  .stodlinjer-soro-header {
+    max-width: 46rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .stodlinjer-soro-header h2 {
+    margin: 0 0 0.65rem;
+    color: #f2f1f8;
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .stodlinjer-soro-header p {
+    margin: 0;
+    color: #c4c3d1;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .soro-blog-embed {
+    min-width: 0;
+    padding-top: clamp(1.25rem, 3vw, 1.75rem);
+    border-top: 1px solid rgba(154, 158, 212, 0.2);
+  }
+
+  #soro-blog {
+    width: 100%;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .soro-blog-section {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .soro-blog-panel {
+      padding: 1.25rem;
+      border-radius: 10px;
+    }
+
+    .stodlinjer-soro-header p {
+      font-size: 0.9375rem;
+    }
+  }
 }

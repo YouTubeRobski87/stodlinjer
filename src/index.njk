@@ -93,5 +93,18 @@ header:
   } %}
   {{ dedicatedListSection(dedicatedData) }}
 
+  <section class="soro-blog-section" aria-labelledby="soro-blog-title">
+    <div class="soro-blog-panel">
+      <header class="stodlinjer-soro-header">
+        <h2 id="soro-blog-title">Artiklar om psykisk hälsa</h2>
+        <p>Läs guider och artiklar om oro, ångest, stress och stöd när livet känns svårt.</p>
+      </header>
+      <div class="soro-blog-embed">
+        <div id="soro-blog"></div>
+      </div>
+    </div>
+    <script src="https://app.trysoro.com/api/embed/9a08468b-7239-4e08-bd5f-5bf59e87b3f7?theme=dark" defer></script>
+  </section>
+
   {{ faqSection(true) }}
 {% endblock %}
