@@ -73,8 +73,9 @@
   }
 
   .stodlinjer-soro-header {
-    max-width: 46rem;
-    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto clamp(1.5rem, 3vw, 2rem);
   }
 
   .stodlinjer-soro-header h2 {
@@ -94,6 +95,9 @@
   }
 
   .soro-blog-embed {
+    width: 100%;
+    max-width: 50rem;
+    margin-inline: auto;
     min-width: 0;
     padding-top: clamp(1.25rem, 3vw, 1.75rem);
     border-top: 1px solid rgba(154, 158, 212, 0.2);
